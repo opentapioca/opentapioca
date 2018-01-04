@@ -1,0 +1,5 @@
+numpy
+scipy
+bottle
+requests
+unidecode

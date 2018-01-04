@@ -1,0 +1,136 @@
+
+h1 {
+	text-align: center;
+}
+
+.border-inner {
+	border: 3px solid #9e9e9e;
+	margin: 3px;
+	padding: 0px 5px;
+}
+
+.border-outer {
+	border: 3px solid #9e9e9e;
+}
+
+.border-white {
+	border: 3px solid white;
+	margin: 0px 1px;
+}
+
+.button-inner {
+	border: 3px solid #9e9e9e;
+	margin: 3px;
+	padding: 6px;
+}
+
+body {
+	font-family: monospace;	
+}
+
+#demo {
+	max-width: 600px;
+	margin: auto;
+	text-align: center;
+}
+
+#demo_button a {
+	padding: 15px;
+	margin: 15px;
+	display: inline-block;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+textarea {
+	border: none;
+	width: 99%;
+	height: 99%;
+	font-size: 1em;
+}
+
+#demo_input, #demo_output {
+	border: 1px solid grey;
+	width: 100%;
+	padding: 10px;
+        text-align: left;
+}
+
+#demo_output {
+        line-height: 1.5em;
+        font-size: 1.2em;
+	min-height: 200px;
+}
+
+#demo_input {
+        font-size: 1.2em;
+        height: 200px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/* annotations inside the output area */
+.bi {
+	border: 1px solid #555;
+	margin: 1px;
+	padding: 0px 4px;
+}
+
+.bo {
+	border: 1px solid #555;
+        position: relative;
+}
+
+.bw {
+	border: 1px solid white;
+	margin: 0px 1px;
+}
+
+.bw:hover {
+        border: none;
+        padding: 0px 1px;
+	margin: 0px 1px;
+}
+
+/* popups */
+.annotation-popup {
+        font-size: 0.8em;
+        position: absolute;
+        border: 1px solid #999;
+        left: 0px;
+        top: 1.4em;
+        display: none;
+        background-color: white;
+        z-index: 10;
+        min-width: 250px;
+        line-height: 1.1em; 
+}
+
+.bo:hover .annotation-popup {
+        display: initial;
+}
+
+.annotation-tag {
+        border-bottom: 1px solid #bbb;
+        font-size: 0.9em;
+        padding: 5px;
+}
+
+.annotation-tag input {
+    float: right;
+}
+
+.annotation-tag a {
+        color: #000099;
+}
+
+.predicted_valid {
+    background-color: #aaffaa;
+}
+
+.scores {
+        color: grey;
+}
