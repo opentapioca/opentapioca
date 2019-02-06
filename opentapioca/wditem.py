@@ -5,6 +5,9 @@ class WikidataItemDocument(object):
 
     def get(self, field, default_value=None):
         return self.json.get(field, default_value)
+    
+    def __repr__(self):
+        return '<WikidataItemDocument {}>'.format(self.json.get('id') or '(unknown qid)')
 
     def __iter__(self):
         return self.json.__iter__()
@@ -78,7 +81,7 @@ class WikidataItemDocument(object):
 
     def get_all_terms(self):
         """
-        All labells and aliases in all langugaes, made unique
+        All labels and aliases in all languages, made unique
         """
         all_labels = {
             label['value']

@@ -1,6 +1,7 @@
 from bottle import route, run, default_app, static_file, request, abort
 import sys
 import json
+from pynif import NIFCollection
 
 from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.languagemodel import BOWLanguageModel
@@ -8,20 +9,21 @@ from opentapioca.tagger import Tagger
 from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.goldstandard import GoldStandardDataset
 
-fname = sys.argv[1]
-print('Loading '+fname)
-bow = BOWLanguageModel()
-bow.load(fname)
-print('Loading '+sys.argv[2])
-graph = WikidataGraph()
-graph.load_pagerank(sys.argv[2])
-tagger = Tagger(bow, graph)
-print('Loading dataset')
-goldstandard = GoldStandardDataset('data/affiliations.tsv')
-classifier = None
-print('Loading classifier')
-classifier = SimpleTagClassifier(tagger)
-classifier.load(sys.argv[3])
+if __name__ == '__main__':
+    fname = sys.argv[1]
+    print('Loading '+fname)
+    bow = BOWLanguageModel()
+    bow.load(fname)
+    print('Loading '+sys.argv[2])
+    graph = WikidataGraph()
+    graph.load_pagerank(sys.argv[2])
+    tagger = Tagger(bow, graph)
+    print('Loading dataset')
+    goldstandard = GoldStandardDataset('data/affiliations.tsv')
+    classifier = None
+    print('Loading classifier')
+    classifier = SimpleTagClassifier(tagger)
+    classifier.load(sys.argv[3])
 
 def jsonp(view):
     """
@@ -69,6 +71,20 @@ def annotate_api(args):
         'text':text,
         'annotations': mentions
     }
+
+@route('/api/nif', method=['GET','POST'])
+def nif_api(args):
+    content_format = request.headers.get('Content') or 'application/x-turtle'
+    content_type_to_format = {
+        'application/x-turtle': 'turtle',
+        'text/turtle': 'turtle',
+    }
+    nif_body = request.body.read()
+    nif_doc = NIFCollection.loads(nif_body)
+    # TODO: tag, classify and return annotated NIF document
+
+    response.set_header('content-type', content_format)
+    return nif_doc.dumps()
 
 @route('/api/get_doc', method=['GET'])
 @jsonp

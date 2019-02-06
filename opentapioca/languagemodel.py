@@ -8,6 +8,9 @@ from math import log
 separator_re = re.compile(r'[,\-_/:;!?)]? [,\-_/:;!?(]?')
 
 def tokenize(phrase):
+    """
+    Split a text into lists of words
+    """
     words = [
         unidecode(word.strip())
         for word in separator_re.split(' '+phrase+' ')

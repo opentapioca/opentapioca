@@ -7,6 +7,9 @@ import pickle
 
 
 class SimpleTagClassifier(object):
+    """
+    A linear support vector classifier to predict the validity of a mention.
+    """
     def __init__(self, tagger, alpha=0.85, nb_steps=2, C=0.001, mode="markov"):
         self.tagger = tagger
         self.alpha = alpha

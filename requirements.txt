@@ -4,3 +4,4 @@ scikit-learn
 bottle
 requests
 unidecode
+pytest

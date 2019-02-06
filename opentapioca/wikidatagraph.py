@@ -9,7 +9,7 @@ class WikidataGraph(object):
         Compresses a JSON Wikidata dump in a custom, smaller format
         that only stores the edges and their weights. This file should
         then be sorted (for instance with GNU sort) before being loaded
-        as a preprocessed dump.
+        as a pre-processed dump.
         """
         output_file = open(output_fname, 'w')
 
@@ -42,7 +42,7 @@ class WikidataGraph(object):
 
     def load_from_preprocessed_dump(self, fname):
         """
-        Loads the preprocessed dump in a sparse matrix
+        Loads the pre-processed dump in a sparse matrix
         """
         batch_size = 1000000
         data_lst = []

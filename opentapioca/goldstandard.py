@@ -1,6 +1,12 @@
 import json
+import pynif
+import urllib
 
 class GoldStandardDataset(object):
+    """
+    A dataset which stores all possible annotations on each document
+    (all items with matching labels).
+    """
     def __init__(self, fname):
         self.fname = fname
         self.load()
@@ -55,3 +61,24 @@ class GoldStandardDataset(object):
         return item_choices
 
 
+    def to_nif(self):
+        """
+        Returns a NIF representation of this dataset
+        """
+        corpus_uri = 'https://zenodo.org/wd_affiliations' # temporary
+        collection = pynif.NIFCollection(uri=corpus_uri)
+        for idx, (doi,doc) in enumerate(self.doi_docs):
+            context = collection.add_context(
+                mention=doc,
+                uri=corpus_uri + '/{}'.format(idx))
+            context.sourceUrl='https://doi.org/' +urllib.parse.quote(doi)
+            item_choices = self.get_item_choices((doi,doc))
+            for (start,end) in item_choices:
+                qid = item_choices[(start,end)]
+                if qid is None:
+                    continue
+                identRef = 'http://www.wikidata.org/entity/'+ qid
+                phrase = context.add_phrase(beginIndex=start,
+                    endIndex=end,
+                    taIdentRef=identRef)
+        return collection
