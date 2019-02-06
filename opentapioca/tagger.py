@@ -11,6 +11,12 @@ from .similarities import DirectLinkSimilarity
 solr_collection = 'wd_multilingual'
 
 class Tagger(object):
+    """
+    The tagger indexes a Wikidata dump in Solr
+    and uses it to detect efficiently mentions of Wikidata
+    items in text.
+    """
+    
     def __init__(self, bow, graph):
         self.bow = bow
         self.graph = graph

@@ -3,5 +3,7 @@ scipy
 scikit-learn
 bottle
 requests
+requests-cache
+requests_mock
 unidecode
 pytest

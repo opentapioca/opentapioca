@@ -4,7 +4,7 @@ from .sparqlwikidata import sparql_wikidata
 class TypeMatcher(object):
     """
     Interface that caches the subclasses of parent classes.
-    Cached using Redis sets, with expiration.
+    Cached in memory.
     """
 
     def __init__(self):
@@ -25,8 +25,6 @@ class TypeMatcher(object):
         if not qid_2 in self.sets:
             self.prefetch_children(qid_2)
         return int(qid_1[1:]) in self.sets[qid_2]
-
-        return self.r.sismember(self._key_name(qid_2), qid_1)
 
     def prefetch_children(self, qid, force=False):
         """
