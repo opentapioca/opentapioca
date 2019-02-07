@@ -8,7 +8,7 @@ from .similarities import EdgeRatioSimilarity
 from .similarities import OneStepSimilarity
 from .similarities import DirectLinkSimilarity
 
-solr_collection = 'wd_multilingual'
+# solr_collection = 'wd_multilingual'
 
 class Tagger(object):
     """
@@ -17,23 +17,24 @@ class Tagger(object):
     items in text.
     """
     
-    def __init__(self, bow, graph):
+    def __init__(self, solr_collection, bow, graph):
+        """
+        Creates a tagger from:
+        - a solr collection name, which has been adequately initialized with a compatible index and filled with documents
+        - a bag of words language model, adequately trained, which will be used to evaluate the likelihood of phrases
+        - a wikidata graph, adequately loaded, which will be used to compute the page rank and the edges between items
+        """
         self.bow = bow
         self.graph = graph
         self.solr_endpoint = 'http://localhost:8983/solr/{}/tag'.format(solr_collection)
         self.coef = 5
         self.similarity_method = DirectLinkSimilarity()
 
-    def dictify(self, lst):
-        """
-        Converts a list of [key1,val1,key2,val2,...] to a dict
-        """
-        return {
-            lst[2*k]: lst[2*k+1]
-            for k in range(len(lst)//2)
-        }
-
     def tag_and_rank(self, phrase, prune=True):
+        """
+        Given some text, use the solr index to retrieve candidate items mentioned in the text.
+        :param prune: if True, ignores lowercase mentions shorter than 3 characters
+        """
         # Tag
         r = requests.post(self.solr_endpoint,
             params={'overlaps':'NO_SUB',
@@ -48,7 +49,7 @@ class Tagger(object):
 
         # Enhance mentions with page rank and edge similarity
         mentions = [
-            self.dictify(mention)
+            self._dictify(mention)
             for mention in resp.get('tags', [])
         ]
         docs = {
@@ -66,10 +67,14 @@ class Tagger(object):
 
         return ranked_mentions
 
-    def tag_id(self, qid, start, end):
-        return "%d-%d-%s" % (start, end, qid)
-
     def prune_mention(self, mention):
+        """
+        Should this mention be pruned? It happens when
+        it is shorter than 3 characters and appears in lowercase in the text.
+        
+        This is mostly introduced to remove matches of Wikidata items about characters,
+        or to prevent short words such as "of" or "in" to match with initials "OF", "IN".
+        """
         phrase = mention['phrase']
         # filter out small uncapitalized words
         if len(phrase) <= 2 and phrase.lower() == phrase:
@@ -79,11 +84,14 @@ class Tagger(object):
 
     def enhance_mention(self, phrase, mention, docs, mentions):
         """
+        Adds more info to the mentions returned from Solr, to prepare
+        them for ranking by the classifier.
+        
         :param phrase: the original document
-        :param mention: the mention to enhance with scores
+        :param mention: the JSON mention to enhance with scores
         :param docs: dictionary from qid to item
         :param mentions: the list of all mentions in the document
-        :returns: the enhanced mention, as a dictionary
+        :returns: the enhanced mention, as a Mention object
         """
         start = mention['startOffset']
         end = mention['endOffset']
@@ -142,6 +150,15 @@ class Tagger(object):
             'end': end,
             'log_likelihood': -surface_score,
             'tags': sorted(ranked_qids, key=lambda tag: -tag['rank'])[:10],
+        }
+        
+    def _dictify(self, lst):
+        """
+        Converts a list of [key1,val1,key2,val2,...] to a dict
+        """
+        return {
+            lst[2*k]: lst[2*k+1]
+            for k in range(len(lst)//2)
         }
 
 

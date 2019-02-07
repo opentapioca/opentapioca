@@ -1,6 +1,6 @@
 import bz2
 import json
-from .wditem import WikidataItemDocument
+from opentapioca.wditem import WikidataItemDocument
 
 class WikidataDumpReader(object):
     def __init__(self, fname):

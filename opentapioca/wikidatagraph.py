@@ -4,7 +4,8 @@ from scipy import sparse
 from .dumpreader import WikidataDumpReader
 
 class WikidataGraph(object):
-    def preprocess_dump(self, fname, output_fname):
+    @classmethod
+    def preprocess_dump(cls, fname, output_fname):
         """
         Compresses a JSON Wikidata dump in a custom, smaller format
         that only stores the edges and their weights. This file should
@@ -15,7 +16,7 @@ class WikidataGraph(object):
 
         with WikidataDumpReader(fname) as reader:
             for item in reader:
-                qid = item['id']
+                qid = item.get('id')
                 if qid[0] != 'Q':
                     continue
 
@@ -101,7 +102,7 @@ class WikidataGraph(object):
 
     def compute_pagerank(self):
         N = self.mat.shape[0]
-        print(N)
+        print(self.mat.shape)
         # create uniform vector
         data = [1./N] * N
         rows = [0]*N
