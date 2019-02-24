@@ -41,11 +41,12 @@ class WikidataGraph(object):
                 ]
                 output_file.write('\t'.join(fields)+'\n')
 
-    def load_from_preprocessed_dump(self, fname):
+    def load_from_preprocessed_dump(self, fname, batch_size=1000000):
         """
-        Loads the pre-processed dump in a sparse matrix
+        Loads the pre-processed dump in a sparse matrix. The dump must be sorted.
+        
+        :param batch_size: number of rows to process before stacking them in the sparse matrix
         """
-        batch_size = 1000000
         data_lst = []
         indices_lst = []
         indptr = [0]
@@ -55,9 +56,12 @@ class WikidataGraph(object):
 
         # First, read the last qid
         with open(fname, 'r') as f:
-            for last in f:
-                pass
-            last_qid = int(last.split('\t')[0])
+            last_qid = 0
+            for line in f:
+                qid = int(line.split('\t')[0])
+                if qid <= last_qid:
+                    raise ValueError('The dump "{}" is not sorted.'.format(fname))
+                last_qid = qid
         print('Last QID: Q%d' % last_qid)
 
         with open(fname, 'r') as f:
@@ -72,8 +76,12 @@ class WikidataGraph(object):
                 while row_offset + len(indptr) <= qid:
                     indptr.append(len(data_lst))
 
-                if indices:
+                idx_counts = [(idx, count) for idx, count in zip(indices, counts) if idx <= last_qid ]
+                
+                if idx_counts:
                     nonempty_indices.append(qid)
+                    counts = [count for idx, count in idx_counts]
+                    indices = [idx for idx, count in idx_counts]
                     sum_counts = float(sum(counts))
                     weights = [count / sum_counts for count in counts]
                     data_lst += weights
@@ -83,15 +91,17 @@ class WikidataGraph(object):
                 if len(nonempty_indices) % batch_size == 0 or qid == last_qid:
                     print(len(nonempty_indices))
                     mat = sparse.csr_matrix((data_lst, indices_lst, indptr), shape=(len(indptr)-1,last_qid+1))
+                    mat.check_format(full_check=True)
                     block_matrices.append(mat)
                     row_offset += len(indptr) - 1
                     data_lst = []
                     indices_lst = []
                     indptr = [0]
 
+
         self.mat = sparse.vstack(block_matrices)
         self.N = len(nonempty_indices)
-        self.shape = len(indptr)
+        self.shape = self.mat.shape[1]
 
     def load_from_matrix(self, fname):
         self.mat = sparse.load_npz(fname)
