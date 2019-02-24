@@ -3,6 +3,9 @@ import requests
 from opentapioca.typematcher import TypeMatcher
 from opentapioca.dumpreader import WikidataDumpReader
 
+class CollectionAlreadyExists(Exception):
+    pass
+
 class TaggerFactory(object):
     """
     This helps creating and filling solr indices
@@ -30,58 +33,9 @@ class TaggerFactory(object):
             'name':collection_name,
             'collection.configName':'affiliations',
             'numShards':num_shards})
+        if r.status_code == 400 and "already exists" in r.text:
+            raise CollectionAlreadyExists('Collection "{}" already exists.'.format(collection_name))
         r.raise_for_status()
-        tag_type="""
-                  "add-field-type":{
-            "name":"tag",
-            "class":"solr.TextField",
-            "postingsFormat":"Memory",
-            "omitNorms":true,
-            "multiValued":true,
-            "indexAnalyzer":{
-              "tokenizer":{ 
-                 "class":"solr.StandardTokenizerFactory" },
-              "filters":[
-                {"class":"solr.EnglishPossessiveFilterFactory"},
-                {"class":"solr.ASCIIFoldingFilterFactory"},
-                {"class":"solr.LowerCaseFilterFactory"},
-                {"class":"solr.ConcatenateGraphFilterFactory"}
-              ]},
-            "queryAnalyzer":{
-              "tokenizer":{ 
-                 "class":"solr.StandardTokenizerFactory" },
-              "filters":[
-                {"class":"solr.EnglishPossessiveFilterFactory"},
-                {"class":"solr.ASCIIFoldingFilterFactory"},
-                {"class":"solr.LowerCaseFilterFactory"}
-              ]}
-            },
-        """
-        # not stored as a dict because of the duplicate keys
-        index_json = """{
-          "add-field":{ "name":"label", "type":"text_general"},   
-          "add-field":{ "name":"aliases", "type":"text_general", "multiValued":true },   
-          "add-field":{ "name":"desc", "type":"text_general", "indexed":false },
-          "add-field":{ "name":"grid", "type":"text_general", "indexed":false }, 
-          "add-field":{ "name":"name_tag", "type":"tag", "stored":false, "multiValued":true },    
-          "add-copy-field":{ "source":"label", "dest":[ "name_tag" ]},
-          "add-copy-field":{ "source":"aliases", "dest":[ "name_tag" ]}
-        }"""
-        #r = requests.post(self.solr_endpoint + '{}/schema'.format(collection_name), index_json, headers={'Content-Type':'application/json'})
-        #resp = r.json()
-        #if resp.get('errors'):
-        #    raise RuntimeError('Creating the index failed:\n\n'+'\n\n'.join(['\n'.join(err.get('errorMessages')) or '' for err in resp.get('errors')]))
-        #r.raise_for_status()
-        
-        tagger_config = {
-          "add-requesthandler" : {
-            "name": "/tag",
-            "class":"org.opensextant.solrtexttagger.TaggerRequestHandler",
-            "defaults":{ "field":"name_tag" }
-          }
-        }
-        #r = requests.post(self.solr_endpoint + '{}/config'.format(collection_name), json.dumps(tagger_config))
-        #r.raise_for_status()
         
     def delete_collection(self, collection_name):
         """

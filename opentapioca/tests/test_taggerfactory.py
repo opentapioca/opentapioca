@@ -3,6 +3,7 @@ import unittest
 import requests
 import os
 from opentapioca.taggerfactory import TaggerFactory
+from opentapioca.taggerfactory import CollectionAlreadyExists
 from opentapioca.tagger import Tagger
 
 class TaggerFactoryTests(unittest.TestCase):
@@ -21,6 +22,8 @@ class TaggerFactoryTests(unittest.TestCase):
     def test_create_collection(self):
         try:
             self.tf.create_collection('test_collection')
+            with self.assertRaises(CollectionAlreadyExists):
+                self.tf.create_collection('test_collection')
         finally:
             self.tf.delete_collection('test_collection')
             pass

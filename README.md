@@ -46,21 +46,40 @@ of words in Wikidata labels.
 
 Second, we will use the dump to extract a more compact graph of entities that can be stored
 in memory. This will be used to compute the pagerank of items in this graph.
-```
-python read_graph.py preprocess latest-all.json.bz2
-sort -n -k 1 latest-all.unsorted.tsv > wikidata_graph.tsv
-python read_graph.py compile wikidata_graph.tsv
-```
+We convert a Wikidata dump into an adjacency matrix and a pagerank vector
+in four steps:
+1. preprocess the dump, only extracting the information we need: this
+   creates a TSV file containing on each line the item id (without leading Q),
+   the list of ids this item points to, and the number of occurences of such links.
+   ```
+   python read_graph.py preprocess latest-all.json.bz2
+   ```
 
-This creates a `wikidata_graph.npz` that stores the Wikidata graph in a sparse adjacency matrix in Numpy format.
-We can use it to compute the pagerank of items in this graph:
+2. this dump must be externally sorted (for instance with GNU sort). Doing
+   the sorting externally is more efficient than doing it inside Python itself.
+   ```
+   sort -n -k 1 latest-all.unsorted.tsv > wikidata_graph.tsv
+   ```
 
+3. the sorted dump is converted into a Numpy sparse adjacency matrix `wikidata_graph.npz`
+   ```
+   python read_graph.py compile wikidata_graph.tsv
+   ```
+
+4. we can compute the pagerank from the Numpy sparse matrix and store 
+   it as a dense matrix `wikidata_graph.pgrank.npy`
+   ```
+   python compute_pagerank.py wikidata_graph.npz
+   ```
+    
+This slightly convoluted setup makes it possible to compute the adjacency matrix and pagerank
+from entire dumps on a machine with little memory (8GB).
+
+We then need to index the Wikidata dump in a Solr collection. This uses the JSON dump only. Pick
+a Solr collection name and run:
 ```
-python compute_pagerank.py wikidata_graph.npz
+python index_dump.py my_collection_name latest-all.json.bz2
 ```
-
-Third, we will index the Wikidata dump: TODO 
-
 
 Running tests
 -------------

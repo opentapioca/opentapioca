@@ -4,6 +4,22 @@ from scipy import sparse
 from .dumpreader import WikidataDumpReader
 
 class WikidataGraph(object):
+    """
+    Weighted directed graph representation of a Wikidata dump.
+    We convert a Wikidata dump into an adjacency matrix and a pagerank vector
+    in four steps:
+    - first, preprocess the dump, only extracting the information we need: this
+      creates a TSV file containing on each line the item id (without leading Q),
+      the list of ids this item points to, and the number of occurences of such links.
+    - second, this dump must be externally sorted (for instance with GNU sort). Doing
+      the sorting externally is more efficient than doing it inside Python itself.
+    - third, the sorted dump is converted into a Numpy sparse adjacency matrix (.npz)
+    - fourth, we can compute the pagerank from the Numpy sparse matrix and store 
+      it as a dense matrix (.npy)
+      
+    This slightly convoluted setup makes it possible to process entire dumps on
+    a machine with little memory (8GB).
+    """
     @classmethod
     def preprocess_dump(cls, fname, output_fname):
         """
