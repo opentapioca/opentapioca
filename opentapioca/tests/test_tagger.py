@@ -39,7 +39,7 @@ class TaggerTest(unittest.TestCase):
     def test_tag_and_rank(self):
         sut = Tagger(self.collection_name, self.bow, self.graph)
         mentions = sut.tag_and_rank('I live in Vanuatu')
-        self.assertEqual(mentions[0].get('tags')[0].get('id'), 'Q686')
+        self.assertEqual(mentions[0].tags[0].id, 'Q686')
         
         
         

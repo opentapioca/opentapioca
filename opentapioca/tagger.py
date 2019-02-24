@@ -7,6 +7,8 @@ from .wikidatagraph import WikidataGraph
 from .similarities import EdgeRatioSimilarity
 from .similarities import OneStepSimilarity
 from .similarities import DirectLinkSimilarity
+from .tag import Tag
+from .mention import Mention
 
 # solr_collection = 'wd_multilingual'
 
@@ -49,7 +51,7 @@ class Tagger(object):
         resp = r.json()
 
         # Enhance mentions with page rank and edge similarity
-        mentions = [
+        mentions_json = [
             self._dictify(mention)
             for mention in resp.get('tags', [])
         ]
@@ -59,8 +61,8 @@ class Tagger(object):
         }
 
         ranked_mentions = [
-            self.enhance_mention(phrase, mention, docs, mentions)
-            for mention in mentions
+            self._create_mention(phrase, mention, docs, mentions_json)
+            for mention in mentions_json
         ]
 
         if prune:
@@ -76,14 +78,14 @@ class Tagger(object):
         This is mostly introduced to remove matches of Wikidata items about characters,
         or to prevent short words such as "of" or "in" to match with initials "OF", "IN".
         """
-        phrase = mention['phrase']
+        phrase = mention.phrase
         # filter out small uncapitalized words
         if len(phrase) <= 2 and phrase.lower() == phrase:
             return False
 
         return True
 
-    def enhance_mention(self, phrase, mention, docs, mentions):
+    def _create_mention(self, phrase, mention, docs, mentions):
         """
         Adds more info to the mentions returned from Solr, to prepare
         them for ranking by the classifier.
@@ -98,7 +100,7 @@ class Tagger(object):
         end = mention['endOffset']
         surface = phrase[start:end]
         surface_score = self.bow.log_likelihood(surface)
-        ranked_qids = []
+        ranked_tags = []
         for qid in mention['ids']:
             item = dict(docs[qid].items())
 
@@ -144,15 +146,15 @@ class Tagger(object):
                 'rank': 25. + log(self.graph.get_pagerank(qid)),
                 'similarities': similarities,
             })
-            ranked_qids.append(item)
-        return {
-            'phrase': surface,
-            'start': start,
-            'end': end,
-            'log_likelihood': -surface_score,
-            'tags': sorted(ranked_qids, key=lambda tag: -tag['rank'])[:10],
-        }
-        
+            ranked_tags.append(Tag(**item))
+        return Mention(
+            phrase=surface,
+            start=start,
+            end=end,
+            log_likelihood=-surface_score,
+            tags=sorted(ranked_tags, key=lambda tag: -tag.rank)[:10],
+        )
+                
     def _dictify(self, lst):
         """
         Converts a list of [key1,val1,key2,val2,...] to a dict
