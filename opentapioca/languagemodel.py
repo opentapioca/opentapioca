@@ -4,6 +4,7 @@ import re
 from unidecode import unidecode
 from collections import defaultdict
 from math import log
+from opentapioca.dumpreader import WikidataDumpReader
 
 separator_re = re.compile(r'[,\-_/:;!?)]? [,\-_/:;!?(]?')
 
@@ -64,22 +65,22 @@ class BOWLanguageModel(object):
         """
         self.log_quotient = log(self.smoothing*(1+len(self.word_count))+self.total_count)
 
-    def load(self, fname):
+    def load(self, filename):
         """
         Loads a pre-trained language model
         """
-        with open(fname, 'rb') as f:
+        with open(filename, 'rb') as f:
             dct = pickle.load(f)
             self.total_count = dct['total_count']
             self.word_count = defaultdict(int, dct['word_count'])
             self._update_log_quotient()
 
-    def save(self, fname):
+    def save(self, filename):
         """
         Saves the language model to a file
         """
         print('saving language model')
-        with open(fname, 'wb') as f:
+        with open(filename, 'wb') as f:
             pickle.dump(
                 {'total_count':self.total_count,
                  'word_count':[ (w,c) for w,c in self.word_count.items()
@@ -87,30 +88,26 @@ class BOWLanguageModel(object):
                 f)
 
 
-if __name__ == '__main__':
-    import sys
-    fname = sys.argv[1]
-    bow = BOWLanguageModel()
-    if fname.endswith('.pkl'):
-        bow.load(fname)
-        while True:
-            phrase = input('>>> ')
-            print(bow.log_likelihood(phrase))
-    else:
-        output_fname = 'bow.pkl'
-        if fname.endswith('.txt'):
-            with open(fname, 'r') as f:
+    @classmethod
+    def train_from_dump(filename):
+        """
+        Trains a bag of words language model from either a .txt
+        file (in which case it is read as plain text) or a .json.bz2
+        file (in which case it is read as a wikidata dump).
+        """
+        bow = BOWLanguageModel()
+        if filename.endswith('.txt'):
+            with open(filename, 'r') as f:
                 for line in f:
                     bow.ingest_phrases([line.strip()])
 
-        elif fname.endswith('.bz2'):
-            from dumpreader import WikidataDumpReader
-            with WikidataDumpReader(fname) as reader:
+        elif filename.endswith('.json.bz2'):
+            with WikidataDumpReader(filename) as reader:
                 for idx, item in enumerate(reader):
                     if idx % 10000 == 0:
                         print(idx)
                         if idx % 1000000 == 0:
-                            bow.save(output_fname)
+                            bow.save(output_filename)
 
                     enlabel = item.get('labels', {}).get('en', {}).get('value')
                     endesc = item.get('descriptions', {}).get('en', {}).get('value')
@@ -122,7 +119,9 @@ if __name__ == '__main__':
                         ]
 
                         bow.ingest_phrases(enaliases + [enlabel])
+        else:
+            raise ValueError('invalid filename provided (must end in .txt or .json.bz2)')
 
-        bow.save(output_fname)
+        return bow
 
 

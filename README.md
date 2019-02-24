@@ -39,7 +39,7 @@ wget https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.bz2
 
 We will first use this dump to train a bag of words language model:
 ```
-python opentapioca/languagemodel.py latest-all.json.bz2
+tapioca train-bow latest-all.json.bz2
 ```
 
 This will create a `bow.pkl` file which counts the number of occurences
@@ -53,7 +53,7 @@ in four steps:
    creates a TSV file containing on each line the item id (without leading Q),
    the list of ids this item points to, and the number of occurences of such links.
    ```
-   python read_graph.py preprocess latest-all.json.bz2
+   tapioca preprocess latest-all.json.bz2
    ```
 
 2. this dump must be externally sorted (for instance with GNU sort). Doing
@@ -64,13 +64,13 @@ in four steps:
 
 3. the sorted dump is converted into a Numpy sparse adjacency matrix `wikidata_graph.npz`
    ```
-   python read_graph.py compile wikidata_graph.tsv
+   tapioca compile wikidata_graph.tsv
    ```
 
 4. we can compute the pagerank from the Numpy sparse matrix and store 
    it as a dense matrix `wikidata_graph.pgrank.npy`
    ```
-   python compute_pagerank.py wikidata_graph.npz
+   tapioca compute-pagerank wikidata_graph.npz
    ```
     
 This slightly convoluted setup makes it possible to compute the adjacency matrix and pagerank
@@ -79,7 +79,7 @@ from entire dumps on a machine with little memory (8GB).
 We then need to index the Wikidata dump in a Solr collection. This uses the JSON dump only. Pick
 a Solr collection name and run:
 ```
-python index_dump.py my_collection_name latest-all.json.bz2
+tapioca my_collection_name latest-all.json.bz2
 ```
 
 Running tests
