@@ -7,7 +7,19 @@ Setup
 -----
 
 This software is a Python web service that requires Solr with SolrTextTagger.
-TODO solr install instructions.
+
+Install [Solr](https://lucene.apache.org/solr/) 7.4.0 or above.
+
+Run SolrCloud:
+
+```
+bin/solr -e cloud
+```
+
+Upload Solr configuration set to ZooKeeper:
+```
+bin/solr zk -upconfig -z localhost:9983 -n affilations -d configsets/affiliations
+```
 
 In a Virtualenv, do `pip install -r requirements.txt` to install the Python dependencies.
 
@@ -48,4 +60,11 @@ python compute_pagerank.py wikidata_graph.npz
 ```
 
 Third, we will index the Wikidata dump: TODO 
+
+
+Running tests
+-------------
+
+OpenTapioca comes with a test suite that can be run with `pytest`. This
+requires a SolrCloud server to be running on `localhost:8983`.
 
