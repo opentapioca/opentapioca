@@ -3,3 +3,5 @@
 .venv/
 .project
 .pydevproject
+.settings/
+configsets/_default/
