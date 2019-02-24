@@ -3,7 +3,7 @@ import os
 import json
 from opentapioca.wditem import WikidataItemDocument
 
-class WDitemTest(unittest.TestCase):
+class WDItemTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         testdir = os.path.dirname(os.path.abspath(__file__))

@@ -48,7 +48,7 @@ Second, we will use the dump to extract a more compact graph of entities that ca
 in memory. This will be used to compute the pagerank of items in this graph.
 ```
 python read_graph.py preprocess latest-all.json.bz2
-sort -n -k 1 latest-all.json.bz2.preprocessed.tsv > wikidata_graph.tsv
+sort -n -k 1 latest-all.unsorted.tsv > wikidata_graph.tsv
 python read_graph.py compile wikidata_graph.tsv
 ```
 

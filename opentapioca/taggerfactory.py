@@ -167,7 +167,7 @@ class TaggerFactory(object):
                     self._push_documents(batch, collection_name, commit)
                     batch = []
     
-            if batch:
+            if batch or batches_since_commit:
                 self._push_documents(batch, collection_name, True)
                 
     def _push_documents(self, docs, collection, commit=False):

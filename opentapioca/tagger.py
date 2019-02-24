@@ -45,6 +45,7 @@ class Tagger(object):
             },
             headers ={'Content-Type':'text/plain'},
             data=phrase.encode('utf-8'))
+        r.raise_for_status()
         resp = r.json()
 
         # Enhance mentions with page rank and edge similarity
