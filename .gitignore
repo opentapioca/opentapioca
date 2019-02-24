@@ -1,5 +1,8 @@
 *.pyc
 *.log
+build/
+dist/
+opentapioca.egg-info/
 .venv/
 .project
 .pydevproject

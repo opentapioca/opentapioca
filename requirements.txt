@@ -7,3 +7,5 @@ requests-cache
 requests_mock
 unidecode
 pytest
+click
+pynif

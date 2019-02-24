@@ -21,7 +21,8 @@ Upload Solr configuration set to ZooKeeper:
 bin/solr zk -upconfig -z localhost:9983 -n affilations -d configsets/affiliations
 ```
 
-In a Virtualenv, do `pip install -r requirements.txt` to install the Python dependencies.
+In a Virtualenv, do `pip install -r requirements.txt` to install the Python dependencies,
+and `python setup.py install` to install the CLI in your PATH.
 
 Training process
 ----------------
