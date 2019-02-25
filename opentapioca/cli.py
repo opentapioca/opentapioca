@@ -2,6 +2,9 @@
 import click
 
 from opentapioca.wikidatagraph import WikidataGraph
+from opentapioca.languagemodel import BOWLanguageModel
+from opentapioca.taggerfactory import TaggerFactory
+from opentapioca.taggerfactory import CollectionAlreadyExists
 
 @click.group()
 def cli():
@@ -74,16 +77,26 @@ def compute_pagerank(filename, outfile):
 @click.command()
 @click.argument('collection_name')
 @click.argument('filename')
-def index_dump(collection_name, filename, solr='http://localhost:8983/solr/'):
+@click.option('-t', '--types', default=None, help='Types to restrict the index to (comma separated qids)')
+def index_dump(collection_name, filename, types, solr='http://localhost:8983/solr/'):
     """
     Indexes a Wikidata dump in a new Solr collection with the given name.
     """
     g = TaggerFactory(solr)
+    type_list = None
+    if types is not None:
+        type_list = types.split(',')
     try:
         g.create_collection(collection_name)
     except CollectionAlreadyExists:
         pass
-    g.index_wd_dump(collection_name, filename)
+    g.index_wd_dump(collection_name, filename, restrict_type=type_list)
+
+@click.command()
+@click.argument('collection_name')
+def delete_collection(collection_name, solr='http://localhost:8983/solr/'):
+    g = TaggerFactory(solr)
+    g.delete_collection(collection_name)
 
 cli.add_command(train_bow)
 cli.add_command(bow_shell)
@@ -91,6 +104,7 @@ cli.add_command(preprocess)
 cli.add_command(compile)
 cli.add_command(compute_pagerank)
 cli.add_command(index_dump)
+cli.add_command(delete_collection)
 
 if __name__ == '__main__':
     cli()

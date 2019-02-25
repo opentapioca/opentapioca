@@ -89,7 +89,7 @@ class BOWLanguageModel(object):
 
 
     @classmethod
-    def train_from_dump(filename):
+    def train_from_dump(cls, filename):
         """
         Trains a bag of words language model from either a .txt
         file (in which case it is read as plain text) or a .json.bz2
@@ -106,8 +106,6 @@ class BOWLanguageModel(object):
                 for idx, item in enumerate(reader):
                     if idx % 10000 == 0:
                         print(idx)
-                        if idx % 1000000 == 0:
-                            bow.save(output_filename)
 
                     enlabel = item.get('labels', {}).get('en', {}).get('value')
                     endesc = item.get('descriptions', {}).get('en', {}).get('value')
