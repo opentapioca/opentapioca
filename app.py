@@ -1,4 +1,4 @@
-from bottle import route, run, default_app, static_file, request, abort
+from bottle import route, run, default_app, static_file, request, abort, response
 import sys
 import json
 from pynif import NIFCollection
@@ -74,7 +74,7 @@ def annotate_api(args):
     }
 
 @route('/api/nif', method=['GET','POST'])
-def nif_api(args):
+def nif_api(*args, **kwargs):
     content_format = request.headers.get('Content') or 'application/x-turtle'
     content_type_to_format = {
         'application/x-turtle': 'turtle',
@@ -82,7 +82,11 @@ def nif_api(args):
     }
     nif_body = request.body.read()
     nif_doc = NIFCollection.loads(nif_body)
-    # TODO: tag, classify and return annotated NIF document
+    for context in nif_doc.contexts:
+        mentions = tagger.tag_and_rank(context.mention)
+        classifier.classify_mentions(mentions)
+        for mention in mentions:
+            mention.add_phrase_to_nif_context(context)
 
     response.set_header('content-type', content_format)
     return nif_doc.dumps()

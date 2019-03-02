@@ -140,11 +140,10 @@ def train_classifier(collection, bow, pagerank, dataset, output):
 
     parameter_grid = []
     for mode in ['markov']:
-        for nb_steps in [1, 2, 4]:
-            for C in [50.0, 10.0, 1.0, 0.1, 0.01, 0.001, 0.0001]:
+        for nb_steps in [1, 2, 3, 4]:
+            for C in [50.0, 25.0, 10.0, 5.0, 1.0]:
                 parameter_grid.append({
                     'nb_steps':nb_steps,
-                    'alpha':alpha,
                     'C': C,
                     'mode': mode,
                     })

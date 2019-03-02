@@ -47,11 +47,17 @@ class Mention(object):
         By default, only adds NIF phrases for matching tags, not for
         all candidates.
         """
-        for tag in self.tags:
+        if self.best_qid and only_matching:
             context.add_phrase(
                 beginIndex=self.start,
                 endIndex=self.end,
-                taIdentRef='http://www.wikidata.org/entity/'+tag.id)
+                taIdentRef='http://www.wikidata.org/entity/'+self.best_qid)
+        elif not only_matching:
+            for tag in self.tags:
+                context.add_phrase(
+                    beginIndex=self.start,
+                    endIndex=self.end,
+                    taIdentRef='http://www.wikidata.org/entity/'+tag.id)
 
     def __repr__(self):
         return '<Mention "{}">'.format(self.phrase)

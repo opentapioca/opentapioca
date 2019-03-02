@@ -172,14 +172,14 @@ class SimpleTagClassifier(object):
                         nb_valid += validity
                         # print('{}: {}'.format(str((tag_id)), validity))
                         # print(feature_vectors[tag_indices[tag_id]])
-                        
+
         # print('nb positive {}, total {}'.format(nb_valid, len(design_matrix)))
         if not nb_valid:
             print('No positive sample found, exiting')
             return
 
         scaler = preprocessing.StandardScaler()
-        clf = svm.LinearSVC(class_weight='balanced',C=self.C, max_iter=2000)
+        clf = svm.LinearSVC(class_weight='balanced',C=self.C, max_iter=10000)
         pipeline = Pipeline([('scaler',scaler),('svm',clf)])
 
         fit = pipeline.fit(design_matrix, classes)
@@ -195,7 +195,6 @@ class SimpleTagClassifier(object):
         nb_valid_predictions = 0
         nb_predictions = 0
         nb_item_judgments = 0
-        
 
         for context in contexts:
             context_id = str(context.uri)
@@ -264,9 +263,12 @@ class SimpleTagClassifier(object):
                     adj_matrix[other_tag_idx,tag_idx] = similarity['score']
 
         if self.mode == 'markov':
-            transition_matrix = (1 - self.alpha) * adj_matrix + self.alpha*numpy.eye(len(feature_array))
+            mixed_features = feature_array
+            mixed_features_array = [feature_array]
             for i in range(self.nb_steps):
-                feature_array = numpy.dot(transition_matrix, feature_array)
+                mixed_features = numpy.dot(adj_matrix, mixed_features)
+                mixed_features_array.append(mixed_features)
+            feature_array = numpy.hstack(mixed_features_array)
         elif self.mode == "restarts":
             for i in range(self.nb_steps):
                 feature_array = self.alpha * feature_array + (1 - self.alpha) * numpy.dot(adj_matrix, feature_array)
