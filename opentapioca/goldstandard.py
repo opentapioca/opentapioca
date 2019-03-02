@@ -61,11 +61,10 @@ class GoldStandardDataset(object):
         return item_choices
 
 
-    def to_nif(self):
+    def to_nif(self, corpus_uri):
         """
         Returns a NIF representation of this dataset
         """
-        corpus_uri = 'https://zenodo.org/wd_affiliations' # temporary
         collection = pynif.NIFCollection(uri=corpus_uri)
         for idx, (doi,doc) in enumerate(self.doi_docs):
             context = collection.add_context(

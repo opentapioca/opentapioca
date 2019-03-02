@@ -14,9 +14,9 @@ class WikidataGraph(object):
     - second, this dump must be externally sorted (for instance with GNU sort). Doing
       the sorting externally is more efficient than doing it inside Python itself.
     - third, the sorted dump is converted into a Numpy sparse adjacency matrix (.npz)
-    - fourth, we can compute the pagerank from the Numpy sparse matrix and store 
+    - fourth, we can compute the pagerank from the Numpy sparse matrix and store
       it as a dense matrix (.npy)
-      
+
     This slightly convoluted setup makes it possible to process entire dumps on
     a machine with little memory (8GB).
     """
@@ -60,7 +60,7 @@ class WikidataGraph(object):
     def load_from_preprocessed_dump(self, fname, batch_size=1000000):
         """
         Loads the pre-processed dump in a sparse matrix. The dump must be sorted.
-        
+
         :param batch_size: number of rows to process before stacking them in the sparse matrix
         """
         data_lst = []
@@ -93,7 +93,7 @@ class WikidataGraph(object):
                     indptr.append(len(data_lst))
 
                 idx_counts = [(idx, count) for idx, count in zip(indices, counts) if idx <= last_qid ]
-                
+
                 if idx_counts:
                     nonempty_indices.append(qid)
                     counts = [count for idx, count in idx_counts]
@@ -135,7 +135,7 @@ class WikidataGraph(object):
         cols = list(range(N))
         v = sparse.csr_matrix((data, (rows, cols)), shape=(1,N))
 
-        max_iterations = 32
+        max_iterations = 16
         for i in range(max_iterations):
             print('---- %d ----' % i)
             nv = v.dot(self.mat)

@@ -13,7 +13,7 @@ Install [Solr](https://lucene.apache.org/solr/) 7.4.0 or above.
 Run SolrCloud:
 
 ```
-bin/solr -e cloud
+bin/solr start -cloud -p 8983 -s "example/cloud/node1/solr" -m 2g
 ```
 
 Upload Solr configuration set to ZooKeeper:
@@ -79,7 +79,7 @@ from entire dumps on a machine with little memory (8GB).
 We then need to index the Wikidata dump in a Solr collection. This uses the JSON dump only. Pick
 a Solr collection name and run:
 ```
-tapioca my_collection_name latest-all.json.bz2
+tapioca index-dump my_collection_name latest-all.json.bz2 --types Q43229,Q618123 --properties P2427,P1566
 ```
 
 Running tests

@@ -1,16 +1,22 @@
 import bz2
 import json
+import sys
 from opentapioca.wditem import WikidataItemDocument
 
 class WikidataDumpReader(object):
     def __init__(self, fname):
-        self.f = bz2.open(fname, mode='rt', encoding='utf-8')
+        self.fname = fname
+        if fname == '-':
+            self.f = sys.stdin
+        else:
+            self.f = bz2.open(fname, mode='rt', encoding='utf-8')
 
     def __enter__(self):
         return self
 
     def __exit__(self, *args, **kwargs):
-        self.f.close()
+        if self.fname != '-':
+            self.f.close()
 
     def __iter__(self):
         for line in self.f:

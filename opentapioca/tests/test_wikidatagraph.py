@@ -5,7 +5,7 @@ from opentapioca.wikidatagraph import WikidataGraph
 class WikidataGraphTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        super(WikidataGraphTest, cls).tearDownClass()
+        super(WikidataGraphTest, cls).setUpClass()
         cls.testdir = os.path.dirname(os.path.abspath(__file__))
         
     def test_compile_unordered_dump(self):

@@ -8,7 +8,7 @@ import pickle
 
 class SimpleTagClassifier(object):
     """
-    A linear support vector classifier to predict the validity of a mention.
+    A linear support vector classifier to predict the validity of a tag in a mention.
     """
     def __init__(self, tagger, alpha=0.85, nb_steps=2, C=0.001, mode="markov"):
         self.tagger = tagger
@@ -16,6 +16,7 @@ class SimpleTagClassifier(object):
         self.nb_steps = nb_steps
         self.C = C
         self.mode = mode
+        self.identifier_space = 'http://www.wikidata.org/entity/'
 
     def feature_vectors_from_mention(self, mention):
         """
@@ -23,19 +24,23 @@ class SimpleTagClassifier(object):
         in a mention
         """
         dct = {}
-        for tag in mention['tags']:
+        for tag in mention.tags:
             feature_vector = [
-                mention['log_likelihood'],
-                tag['rank'],
-                tag['nb_statements'],
-                tag['nb_sitelinks'],
+                mention.log_likelihood,
+                tag.rank,
+                tag.nb_statements,
+                tag.nb_sitelinks,
             ]
-            tag_key = (mention['start'], mention['end'], tag['id'])
+            tag_key = mention.tag_key(tag.id)
             dct[tag_key] = feature_vector
         return dct
 
-       
+
     def load(self, fname):
+        """
+        Loads the classifier from a file (.pkl format).
+        The tagger must be restored manually afterwards.
+        """
         with open(fname, 'rb') as f:
             dct = pickle.load(f)
         if 'tagger' in dct:
@@ -43,30 +48,44 @@ class SimpleTagClassifier(object):
         self.__dict__.update(dct)
 
     def save(self, fname):
+        """
+        Saves the classifier to a file (.pkl format).
+        """
         with open(fname, 'wb') as f:
             dct = dict(self.__dict__.items())
             del dct['tagger']
             pickle.dump(dct, f)
+
+    def tag_dataset(self, dataset):
+        """
+        Runs the tagger on the entire dataset and
+        returns a map docid -> mentions
+        """
+        docid_to_mentions = {}
+        for context in dataset.contexts:
+            docid = str(context.uri)
+            docid_to_mentions[docid] = self.tagger.tag_and_rank(context.mention)
+        return docid_to_mentions
 
     def crossfit_model(self, dataset, parameters=None):
         """
         Learns the model and report F1 score
         with cross-validation.
         """
-        k = 10
+        k = 5
         chunks = [ set() for i in range(k) ]
-        for idx, doi_doc in enumerate(dataset.doi_docs):
-            chunks[idx % k].add(doi_doc)
+        for idx, context in enumerate(dataset.contexts):
+            chunks[idx % k].add(context)
         print([ len(chunk) for chunk in chunks])
 
-        all_doi_docs = set(dataset.doi_docs)
+        all_contexts = set(dataset.contexts)
 
         # tag all documents once and for all
         docid_to_mentions = {}
-        for idx, doi_doc in enumerate(all_doi_docs):
+        for idx, context in enumerate(all_contexts):
             if idx % 100 == 0:
                 print("{}...".format(idx))
-            docid_to_mentions[doi_doc] = self.tagger.tag_and_rank(doi_doc[1])
+            docid_to_mentions[str(context.uri)] = self.tagger.tag_and_rank(context.mention)
 
         if parameters is None:
             parameters = [{}]
@@ -82,9 +101,9 @@ class SimpleTagClassifier(object):
             # Run cross-validation
             scores = defaultdict(float)
             for chunk_id in range(k):
-                training_chunks = all_doi_docs - chunks[chunk_id]
+                training_chunks = all_contexts - chunks[chunk_id]
                 self.train_model(dataset, training_chunks, docid_to_mentions)
-                chunk_scores = self.evaluate_model(dataset, chunks[chunk_id], docid_to_mentions)
+                chunk_scores = self.evaluate_model(chunks[chunk_id], docid_to_mentions)
                 for method, score in chunk_scores.items():
                     scores[method] += score/k
             print('-----')
@@ -95,7 +114,7 @@ class SimpleTagClassifier(object):
                 best_params = param_setting
                 best_f1 = scores['f1']
                 # Retrain on whole dev set with these parameters
-                self.train_model(dataset, all_doi_docs, docid_to_mentions)
+                self.train_model(dataset, None, docid_to_mentions)
                 best_classifier = self.fit
                 self.save('data/best_classifier_so_far.pkl')
             else:
@@ -105,73 +124,99 @@ class SimpleTagClassifier(object):
         self.fit = best_classifier
         return best_params, best_f1
 
-    def train_model(self, dataset, doi_docs=None, docid_to_mentions=None):
+    def train_model(self, dataset, docids=None, docid_to_mentions=None):
         """
-        Train the model on the given dataset, restricting
-        training samples to the given doi_docs (or no restriction if None)
-        """
+        Train the model on the given NIF dataset, restricting the training
+        to the given document identifiers.
 
-        if doi_docs is None:
-            doi_docs = dataset.doi_docs
+        :param docid_to_mentions: a map from document ids to pre-computed
+            mentions, to avoid re-tagging the dataset multiple times if training
+            is running multiple times.
+        """
+        docid_to_mentions = docid_to_mentions or {}
 
         design_matrix = []
         classes = []
         nb_valid = 0
-        for doi, doc in doi_docs:
-            judgment = dataset.judgments.get((doi, doc))
-            mentions = (docid_to_mentions[(doi,doc)] if docid_to_mentions
-                    else self.tagger.tag_and_rank(doc))
+        for context in dataset.contexts:
 
+            # Obtain all the suggested mentions from the tagger (or the cache)
+            mentions = docid_to_mentions.get(str(context.uri))
+            if mentions is None:
+                mentions = self.tagger.tag_and_rank(context.mention)
+
+            # Build the feature vectors for these mentions
             feature_vectors, tag_indices = self.build_feature_vectors_for_doc(mentions)
 
-            for decision in judgment:
-                tag_id = (decision['start'], decision['end'], decision['qid'])
-                if tag_id in tag_indices:
-                    design_matrix.append(feature_vectors[tag_indices[tag_id]])
-                    valid = 1 if decision['valid'] else 0
-                    classes.append(valid)
-                    nb_valid += valid
+            # Match the phrases in the dataset to mentions and mark them as valid
+            mention_index = {
+                mention.key() : mention for mention in mentions
+            }
+            for phrase in context.phrases:
+                if not phrase.taIdentRef or not phrase.taIdentRef.startswith(self.identifier_space):
+                    continue
+                phrase_qid = phrase.taIdentRef[len(self.identifier_space):]
+                mention = mention_index.get((phrase.beginIndex, phrase.endIndex))
+                if mention:
+                    for tag in mention.tags:
+                        tag.valid = tag.id == phrase_qid
 
+            # Construct design matrix and class vector
+            for mention in mentions:
+                for tag in mention.tags:
+                    tag_id = mention.tag_key(tag.id)
+                    if tag_id in tag_indices:
+                        design_matrix.append(feature_vectors[tag_indices[tag_id]])
+                        validity = int(tag.valid or False)
+                        classes.append(validity)
+                        nb_valid += validity
+                        # print('{}: {}'.format(str((tag_id)), validity))
+                        # print(feature_vectors[tag_indices[tag_id]])
+                        
+        # print('nb positive {}, total {}'.format(nb_valid, len(design_matrix)))
         if not nb_valid:
-            print('No positive sample found')
+            print('No positive sample found, exiting')
             return
 
         scaler = preprocessing.StandardScaler()
-        clf = svm.LinearSVC(class_weight='balanced',C=self.C)
+        clf = svm.LinearSVC(class_weight='balanced',C=self.C, max_iter=2000)
         pipeline = Pipeline([('scaler',scaler),('svm',clf)])
-
 
         fit = pipeline.fit(design_matrix, classes)
         self.fit = fit
 
-    def evaluate_model(self, dataset, doi_docs=None, docid_to_mentions=None):
+    def evaluate_model(self, contexts, docid_to_mentions=None):
         """
         Returns performance metrics for the learned model on the given dataset
 
+        :param ids: restricts the evaluation to the given context ids
         :returns: a dictionary, mapping each scoring method to its value (precision, recall, f1)
         """
-        if doi_docs is None:
-            doi_docs = dataset.doi_docs
-
         nb_valid_predictions = 0
         nb_predictions = 0
         nb_item_judgments = 0
+        
 
-        for doc_id, doc in doi_docs:
-            item_choices = dataset.get_item_choices((doc_id, doc))
-            mentions = docid_to_mentions[(doc_id, doc)]
+        for context in contexts:
+            context_id = str(context.uri)
+            mention_id_to_qid = {
+                (phrase.beginIndex,phrase.endIndex): phrase.taIdentRef[len(self.identifier_space):]
+                for phrase in context.phrases
+                if phrase.taIdentRef and phrase.taIdentRef.startswith(self.identifier_space)
+            }
+            mentions = docid_to_mentions[context_id]
             self.classify_mentions(mentions)
             for mention in mentions:
-                mention_id = (mention['start'], mention['end'])
-                if mention_id in item_choices:
-                    target_item = item_choices[mention_id]
-                    if target_item is not None and target_item == mention['best_qid']:
-                        nb_valid_predictions += 1
-                    if mention['best_qid'] is not None:
-                        nb_predictions += 1
-                    if target_item is not None:
-                        nb_item_judgments += 1
-                    
+                mention_id = mention.key()
+                target_item = mention_id_to_qid.get(mention_id)
+                if target_item is not None and target_item == mention.best_qid:
+                    nb_valid_predictions += 1
+                if mention.best_qid is not None:
+                    nb_predictions += 1
+                if target_item is not None:
+                    nb_item_judgments += 1
+
+        # print({'nb_valid_predictions':nb_valid_predictions, 'nb_predictions': nb_predictions, 'nb_item_judgments':nb_item_judgments})
         precision = float(nb_valid_predictions) / nb_predictions if nb_predictions else 1.
         recall = float(nb_valid_predictions) / nb_item_judgments if nb_item_judgments else 1
         f1 = 2*(precision*recall) / (precision + recall) if precision + recall > 0. else 0.
@@ -200,8 +245,8 @@ class SimpleTagClassifier(object):
 
         tag_key_to_idx = {}
         for mention in mentions:
-            for tag in mention['tags']:
-                tag_key = (mention['start'], mention['end'], tag['id'])
+            for tag in mention.tags:
+                tag_key = mention.tag_key(tag.id)
                 tag_key_to_idx[tag_key] = len(feature_array)
                 feature_array.append(all_feature_vectors[tag_key])
 
@@ -210,9 +255,9 @@ class SimpleTagClassifier(object):
         # Build graph adjacency matrix
         adj_matrix = numpy.zeros(shape=(len(feature_array),len(feature_array)))
         for mention in mentions:
-            for tag in mention['tags']:
-                tag_idx = tag_key_to_idx[(mention['start'],mention['end'],tag['id'])]
-                for similarity in tag['similarities']:
+            for tag in mention.tags:
+                tag_idx = tag_key_to_idx[mention.tag_key(tag.id)]
+                for similarity in tag.similarities:
                     if not similarity['tag'] in tag_key_to_idx:
                         continue # the tag was pruned
                     other_tag_idx = tag_key_to_idx[similarity['tag']]
@@ -239,16 +284,16 @@ class SimpleTagClassifier(object):
             predicted_classes = self.fit.decision_function(feature_array)
 
         for mention in mentions:
-            start = mention['start']
-            end = mention['end']
+            start = mention.start
+            end = mention.end
             max_score = 0
             best_tag = None
-            for tag in mention['tags']:
-                tag_key = (start, end, tag['id'])
-                tag['score'] = predicted_classes[tag_key_to_idx[tag_key]]
-                if tag['score'] > max_score:
-                    max_score = tag['score']
-                    best_tag = tag['id']
-            mention['best_qid'] = best_tag
+            for tag in mention.tags:
+                tag_key = (start, end, tag.id)
+                tag.score = predicted_classes[tag_key_to_idx[tag_key]]
+                if tag.score > max_score:
+                    max_score = tag.score
+                    best_tag = tag.id
+            mention.best_qid = best_tag
 
 

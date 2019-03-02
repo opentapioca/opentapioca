@@ -17,13 +17,14 @@ if __name__ == '__main__':
     print('Loading '+sys.argv[2])
     graph = WikidataGraph()
     graph.load_pagerank(sys.argv[2])
-    tagger = Tagger('wd_multilingual', bow, graph)
+    tagger = Tagger('wd_2019-02-24_affiliations', bow, graph)
     print('Loading dataset')
     goldstandard = GoldStandardDataset('data/affiliations.tsv')
     classifier = None
     print('Loading classifier')
     classifier = SimpleTagClassifier(tagger)
-    classifier.load(sys.argv[3])
+    if len(sys.argv) > 3:
+        classifier.load(sys.argv[3])
 
 def jsonp(view):
     """
@@ -69,7 +70,7 @@ def annotate_api(args):
 
     return {
         'text':text,
-        'annotations': mentions
+        'annotations': [m.json() for m in mentions]
     }
 
 @route('/api/nif', method=['GET','POST'])
@@ -94,7 +95,7 @@ def get_doc(args):
     return {
         'text': doc,
         'doi': doi,
-        'annotations': tags
+        'annotations': [t.json() for t in tags]
     }
 
 @route('/api/store_judgments', method=['POST'])
