@@ -139,14 +139,12 @@ def train_classifier(collection, bow, pagerank, dataset, output):
     clf = SimpleTagClassifier(tagger)
 
     parameter_grid = []
-    for mode in ['markov']:
-        for nb_steps in [1, 2, 3, 4]:
-            for C in [50.0, 25.0, 10.0, 5.0, 1.0]:
-                parameter_grid.append({
-                    'nb_steps':nb_steps,
-                    'C': C,
-                    'mode': mode,
-                    })
+    for C in [20.0, 10.0, 5.0, 1.0]:
+        parameter_grid.append({
+            'nb_steps':4,
+            'C': C,
+            'mode': 'markov',
+            })
 
     best_params = clf.crossfit_model(d, parameter_grid)
     print('#########')

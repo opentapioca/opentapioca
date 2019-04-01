@@ -18,7 +18,7 @@ class Tagger(object):
     and uses it to detect efficiently mentions of Wikidata
     items in text.
     """
-    
+
     def __init__(self, solr_collection, bow, graph):
         """
         Creates a tagger from:
@@ -74,7 +74,7 @@ class Tagger(object):
         """
         Should this mention be pruned? It happens when
         it is shorter than 3 characters and appears in lowercase in the text.
-        
+
         This is mostly introduced to remove matches of Wikidata items about characters,
         or to prevent short words such as "of" or "in" to match with initials "OF", "IN".
         """
@@ -89,7 +89,7 @@ class Tagger(object):
         """
         Adds more info to the mentions returned from Solr, to prepare
         them for ranking by the classifier.
-        
+
         :param phrase: the original document
         :param mention: the JSON mention to enhance with scores
         :param docs: dictionary from qid to item
@@ -143,7 +143,7 @@ class Tagger(object):
             ]
 
             item.update({
-                'rank': 25. + log(self.graph.get_pagerank(qid)),
+                'rank': 23. + log(self.graph.get_pagerank(qid)),
                 'similarities': similarities,
             })
             ranked_tags.append(Tag(**item))
@@ -154,7 +154,7 @@ class Tagger(object):
             log_likelihood=-surface_score,
             tags=sorted(ranked_tags, key=lambda tag: -tag.rank)[:10],
         )
-                
+
     def _dictify(self, lst):
         """
         Converts a list of [key1,val1,key2,val2,...] to a dict

@@ -30,6 +30,7 @@ class SimpleTagClassifier(object):
                 tag.rank,
                 tag.nb_statements,
                 tag.nb_sitelinks,
+                1,
             ]
             tag_key = mention.tag_key(tag.id)
             dct[tag_key] = feature_vector
@@ -179,7 +180,7 @@ class SimpleTagClassifier(object):
             return
 
         scaler = preprocessing.StandardScaler()
-        clf = svm.LinearSVC(class_weight='balanced',C=self.C, max_iter=10000)
+        clf = svm.LinearSVC(class_weight='balanced',C=self.C, max_iter=100)
         pipeline = Pipeline([('scaler',scaler),('svm',clf)])
 
         fit = pipeline.fit(design_matrix, classes)
