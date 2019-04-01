@@ -95,7 +95,8 @@ def pagerank_shell(filename):
 @click.argument('filename')
 @click.option('-t', '--types', default=None, help='Types to restrict the index to (comma separated qids)')
 @click.option('-p', '--properties', default=None, help='Restrict the index to items bearings the given properties (comma separated pids)')
-def index_dump(collection_name, filename, types, properties, solr='http://localhost:8983/solr/'):
+@click.option('-s', '--shards', default=5, help='Number of shards for the index')
+def index_dump(collection_name, filename, types, properties, shards, solr='http://localhost:8983/solr/'):
     """
     Indexes a Wikidata dump in a new Solr collection with the given name.
     """
@@ -107,7 +108,7 @@ def index_dump(collection_name, filename, types, properties, solr='http://localh
     if properties is not None:
         properties_list = properties.split(',')
     try:
-        g.create_collection(collection_name)
+        g.create_collection(collection_name, num_shards=shards)
     except CollectionAlreadyExists:
         pass
     g.index_wd_dump(collection_name, filename, restrict_type=type_list, restrict_property=properties_list)
