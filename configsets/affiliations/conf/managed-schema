@@ -24,7 +24,7 @@
     <field name="label" type="string" multiValued="true" indexed="false" />
     <field name="aliases" type="string" multiValued="true" indexed="false" />
     <field name="desc" type="string" indexed="false" />
-    <field name="grid" type="string" indexed="false" />
+    <field name="types" type="string" indexed="false" />
     <field name="name_tag" type="tag" stored="false" multiValued="true" />
     
     <copyField source="label" dest="name_tag" />

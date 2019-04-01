@@ -74,17 +74,16 @@ class TaggerFactory(object):
 
                 valid_type_qids = item.get_types()
 
-                correct_type = any([
-                            any([
-                                self.type_matcher.is_subclass(qid, type_qid)
-                                for type_qid in restrict_type or []
-                            ])
-                            for qid in valid_type_qids ])
-                property_found = any([
-                    item.get_identifiers(pid) != []
+                type_features = {
+                    type_qid: self.type_matcher.is_subclass(qid, type_qid)
+                    for type_qid in restrict_type or []
+                }
+                type_features.update({
+                    pid: item.get_identifiers(pid) != []
                     for pid in restrict_property or []
-                ])
-                valid_item = correct_type or property_found or (restrict_type is None and restrict_property is None)
+                })
+                correct_type = any(type_features.values())
+                valid_item = correct_type or (restrict_type is None and restrict_property is None)
                 if not valid_item:
                     continue
 
@@ -110,7 +109,7 @@ class TaggerFactory(object):
                            'desc': endesc or '',
                            'type': numeric_types,
                            'edges': edges,
-                           'grid': ','.join(valid_grids),
+                           'types': json.dumps(type_features),
                            'aliases': list(aliases),
                            'nb_statements': nb_statements,
                            'nb_sitelinks': nb_sitelinks}
