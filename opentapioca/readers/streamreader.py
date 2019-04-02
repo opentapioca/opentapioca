@@ -1,10 +1,13 @@
 import json
 import requests
 import requests.exceptions
+import logging
+
 from opentapioca.wditem import WikidataItemDocument
 from time import sleep
-
 from sseclient import SSEClient
+
+logger = logging.getLogger(__name__)
 
 class WikidataStreamReader(object):
     """
@@ -81,10 +84,14 @@ class WikidataStreamReader(object):
                 req.raise_for_status()
                 result = req.json().get('entities').values()
                 return [WikidataItemDocument(payload) for payload in result if 'missing' not in payload]
-            except (requests.exceptions.RequestException, ValueError):
+            except (requests.exceptions.RequestException, ValueError, TypeError):
                 if retries < self.retries-1:
-                    sleep((1+retries)*self.delay)
+                    sleep_time = (1+retries)*self.delay
+                    logger.info('Retrying wbgetentities in {}'.format(sleep_time))
+                    sleep(sleep_time)
                 else:
+                    logger.error('Failed to fetch entities')
+                    logger.error(req.url)
                     raise
 
 
