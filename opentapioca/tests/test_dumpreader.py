@@ -2,14 +2,14 @@
 import unittest
 import os
 import re
-from opentapioca.dumpreader import WikidataDumpReader
+from opentapioca.readers.dumpreader import WikidataDumpReader
 
 class WikidataDumpReaderTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         testdir = os.path.dirname(os.path.abspath(__file__))
         cls.dump_fname = os.path.join(testdir, 'data/sample_wikidata_items.json.bz2')
-        
+
     def test_read_dump(self):
         count = 0
         entity_ids = re.compile(r'[QPL]\d+')

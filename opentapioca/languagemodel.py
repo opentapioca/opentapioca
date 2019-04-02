@@ -4,7 +4,7 @@ import re
 from unidecode import unidecode
 from collections import defaultdict
 from math import log
-from opentapioca.dumpreader import WikidataDumpReader
+from opentapioca.readers.dumpreader import WikidataDumpReader
 
 separator_re = re.compile(r'[,\-_/:;!?)]? [,\-_/:;!?(]?')
 

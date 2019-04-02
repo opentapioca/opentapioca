@@ -8,6 +8,7 @@ from opentapioca.taggerfactory import CollectionAlreadyExists
 from opentapioca.tagger import Tagger
 from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.indexingprofile import IndexingProfile
+from opentapioca.readers.dumpreader import WikidataDumpReader
 from pynif import NIFCollection
 
 @click.group()
@@ -106,7 +107,8 @@ def index_dump(collection_name, filename, profile, shards, solr='http://localhos
         g.create_collection(collection_name, num_shards=shards)
     except CollectionAlreadyExists:
         pass
-    g.index_wd_dump(collection_name, filename, indexing_profile)
+    dump = WikidataDumpReader(filename)
+    g.index_wd_dump(collection_name, dump, indexing_profile)
 
 @click.command()
 @click.argument('collection_name')

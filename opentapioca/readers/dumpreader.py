@@ -27,10 +27,12 @@ class WikidataDumpReader(object):
         for line in self.f:
             try:
                 # remove the trailing comma
-                line = line[:-2]
+                if line.endswith(','):
+                    line = line[:-2]
                 item = json.loads(line)
                 yield WikidataItemDocument(item)
             except ValueError as e:
+                # Happens at the beginning or end of dumps with '[', ']'
                 continue
 
 

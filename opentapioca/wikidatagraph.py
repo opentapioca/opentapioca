@@ -1,7 +1,7 @@
 import numpy
 import json
 from scipy import sparse
-from .dumpreader import WikidataDumpReader
+from .readers.dumpreader import WikidataDumpReader
 
 class WikidataGraph(object):
     """
