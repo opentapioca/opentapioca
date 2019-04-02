@@ -27,10 +27,6 @@ and `python setup.py install` to install the CLI in your PATH.
 Training process
 ----------------
 
-TODO: make language configurable
-TODO: make types configurable
-TODO: make list of additional properties to pull in as labels configurable (Twitter ID) with format
-
 Various components need to be trained in order to obtain a functional tagger. First, download
 a Wikidata JSON dump compressed in `.bz2` format:
 ```
@@ -76,10 +72,34 @@ in four steps:
 This slightly convoluted setup makes it possible to compute the adjacency matrix and pagerank
 from entire dumps on a machine with little memory (8GB).
 
-We then need to index the Wikidata dump in a Solr collection. This uses the JSON dump only. Pick
-a Solr collection name and run:
+We then need to index the Wikidata dump in a Solr collection. This uses the JSON dump only.
+This also requires creating an indexing profile, which defines which items will be indexed and how.
+A sample profile is provided to index people, organizations and places at `profiles/human_organization_place.json`:
 ```
-tapioca index-dump my_collection_name latest-all.json.bz2 --types Q43229,Q618123 --properties P2427,P1566
+{
+    "language": "en", # The preferred language
+    "name": "human_organization_location", # An identifier for the profile
+    "restrict_properties": [
+        "P2427", "P1566", "P496", # Include all items bearing any of these properties
+    ],
+    "restrict_types": [
+        # Include all items with any of these types, or subclasses of them
+        {"type": "Q43229", "property": "P31"},
+        {"type": "Q618123", "property": "P31"},
+        {"type": "Q5", "property": "P31"}
+    ],
+    "alias_properties": [
+        # Add as alias the values of these properties
+        {"property": "P496", "prefix": null},
+        {"property": "P2002", "prefix": "@"},
+        {"property": "P4550", "prefix": null}
+    ]
+}
+```
+
+Pick a Solr collection name and run:
+```
+tapioca index-dump my_collection_name latest-all.json.bz2 --profile profiles/human_organization_place.json
 ```
 Note that if you have multiple cores available, you might want to run decompression as a separate
 process, given that it is generally the bottleneck:
