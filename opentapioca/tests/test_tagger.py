@@ -1,5 +1,6 @@
 import unittest
 import os
+import requests
 from opentapioca.tagger import Tagger
 from opentapioca.languagemodel import BOWLanguageModel
 from opentapioca.wikidatagraph import WikidataGraph
@@ -27,6 +28,10 @@ class TaggerTest(unittest.TestCase):
         # Setup solr index
         cls.tf = TaggerFactory()
         cls.collection_name = 'wd_test_collection'
+        try:
+            cls.tf.delete_collection('wd_test_collection')
+        except requests.exceptions.RequestException:
+            pass
         cls.tf.create_collection(cls.collection_name)
         cls.tf.index_wd_dump('wd_test_collection',
                             os.path.join(testdir, 'data/sample_wikidata_items.json.bz2'))

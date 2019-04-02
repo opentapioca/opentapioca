@@ -1,0 +1,187 @@
+@prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+</tmp/five-affiliations.ttl> a nif:ContextCollection ;
+    nif:hasContext </tmp/five-affiliations.ttl/0>,
+        </tmp/five-affiliations.ttl/1>,
+        </tmp/five-affiliations.ttl/2>,
+        </tmp/five-affiliations.ttl/3>,
+        </tmp/five-affiliations.ttl/4> ;
+    ns1:conformsTo <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/2.1> .
+
+</tmp/five-affiliations.ttl/0#offset_101_104> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "USA" ;
+    nif:beginIndex "101"^^xsd:nonNegativeInteger ;
+    nif:endIndex "104"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/0> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q30> .
+
+</tmp/five-affiliations.ttl/0#offset_23_55> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Southwest Texas State University" ;
+    nif:beginIndex "23"^^xsd:nonNegativeInteger ;
+    nif:endIndex "55"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/0> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1495387> .
+
+</tmp/five-affiliations.ttl/0#offset_79_93> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "San Marcos, TX" ;
+    nif:beginIndex "79"^^xsd:nonNegativeInteger ;
+    nif:endIndex "93"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/0> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q982353> .
+
+</tmp/five-affiliations.ttl/1#offset_25_45> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Universität Hannover" ;
+    nif:beginIndex "25"^^xsd:nonNegativeInteger ;
+    nif:endIndex "45"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/1> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q678982> .
+
+</tmp/five-affiliations.ttl/1#offset_47_59> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Welfengarten" ;
+    nif:beginIndex "47"^^xsd:nonNegativeInteger ;
+    nif:endIndex "59"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/1> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2557511> .
+
+</tmp/five-affiliations.ttl/1#offset_73_81> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Hannover" ;
+    nif:beginIndex "73"^^xsd:nonNegativeInteger ;
+    nif:endIndex "81"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/1> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1715> .
+
+</tmp/five-affiliations.ttl/1#offset_85_112> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Federal Republic of Germany" ;
+    nif:beginIndex "85"^^xsd:nonNegativeInteger ;
+    nif:endIndex "112"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/1> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q183> .
+
+</tmp/five-affiliations.ttl/2#offset_123_129> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Ecully" ;
+    nif:beginIndex "123"^^xsd:nonNegativeInteger ;
+    nif:endIndex "129"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/2> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q273748> .
+
+</tmp/five-affiliations.ttl/2#offset_131_137> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "France" ;
+    nif:beginIndex "131"^^xsd:nonNegativeInteger ;
+    nif:endIndex "137"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/2> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q142> .
+
+</tmp/five-affiliations.ttl/2#offset_62_84> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Ecole Centrale de Lyon" ;
+    nif:beginIndex "62"^^xsd:nonNegativeInteger ;
+    nif:endIndex "84"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/2> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q10177> .
+
+</tmp/five-affiliations.ttl/3#offset_28_51> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "University of Minnesota" ;
+    nif:beginIndex "28"^^xsd:nonNegativeInteger ;
+    nif:endIndex "51"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/3> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q238101> .
+
+</tmp/five-affiliations.ttl/3#offset_80_88> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Delaware" ;
+    nif:beginIndex "80"^^xsd:nonNegativeInteger ;
+    nif:endIndex "88"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/3> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1393> .
+
+</tmp/five-affiliations.ttl/3#offset_98_113> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Minneapolis, MN" ;
+    nif:beginIndex "98"^^xsd:nonNegativeInteger ;
+    nif:endIndex "113"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/3> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q36091> .
+
+</tmp/five-affiliations.ttl/4#offset_0_20> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Konarka Technologies" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "20"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/4> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q4042306> .
+
+</tmp/five-affiliations.ttl/4#offset_46_52> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Lowell" ;
+    nif:beginIndex "46"^^xsd:nonNegativeInteger ;
+    nif:endIndex "52"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/4> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q49162> .
+
+</tmp/five-affiliations.ttl/4#offset_54_56> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "MA" ;
+    nif:beginIndex "54"^^xsd:nonNegativeInteger ;
+    nif:endIndex "56"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/4> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q771> .
+
+</tmp/five-affiliations.ttl/4#offset_64_67> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "USA" ;
+    nif:beginIndex "64"^^xsd:nonNegativeInteger ;
+    nif:endIndex "67"^^xsd:nonNegativeInteger ;
+    nif:referenceContext </tmp/five-affiliations.ttl/4> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q30> .
+
+</tmp/five-affiliations.ttl/0> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "104"^^xsd:nonNegativeInteger ;
+    nif:isString "Department of Biology, Southwest Texas State University, 601 University Drive, San Marcos, TX 78666, USA" ;
+    nif:sourceUrl <https://doi.org/10.1016/S0378-1097%2800%2900549-8> .
+
+</tmp/five-affiliations.ttl/2> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "137"^^xsd:nonNegativeInteger ;
+    nif:isString "Laboratory of Electronics, Optoelectronics, and Microsystems, Ecole Centrale de Lyon, 36 avenue Guy de Collongue, F-69134, Ecully, France" ;
+    nif:sourceUrl <https://doi.org/10.1007/978-1-4020-4998-9_12> .
+
+</tmp/five-affiliations.ttl/3> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "120"^^xsd:nonNegativeInteger ;
+    nif:isString "Rainer W. G. Gruessner, MD, University of Minnesota, Department of Surgery, 420 Delaware St S.E., Minneapolis, MN 55455." ;
+    nif:sourceUrl <https://doi.org/10.1016/S0041-1345%2897%2901345-6> .
+
+</tmp/five-affiliations.ttl/1> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "112"^^xsd:nonNegativeInteger ;
+    nif:isString "Institut für Mathematik, Universität Hannover, Welfengarten 1, D - 3000, Hannover 1, Federal Republic of Germany" ;
+    nif:sourceUrl <https://doi.org/10.1007/BFb0089916> .
+
+</tmp/five-affiliations.ttl/4> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "67"^^xsd:nonNegativeInteger ;
+    nif:isString "Konarka Technologies, 116 John St., Suite 12, Lowell, MA 01852, USA" ;
+    nif:sourceUrl <https://doi.org/10.1002/aenm.201100390> .
+

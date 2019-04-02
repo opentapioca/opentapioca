@@ -4,6 +4,11 @@ import sys
 from opentapioca.wditem import WikidataItemDocument
 
 class WikidataDumpReader(object):
+    """
+    Generates a stream of `WikidataItemDocument` from
+    a Wikidata dump.
+    """
+    
     def __init__(self, fname):
         self.fname = fname
         if fname == '-':

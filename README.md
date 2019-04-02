@@ -18,7 +18,7 @@ bin/solr start -cloud -p 8983 -s "example/cloud/node1/solr" -m 2g
 
 Upload Solr configuration set to ZooKeeper:
 ```
-bin/solr zk -upconfig -z localhost:9983 -n affilations -d configsets/affiliations
+bin/solr zk -upconfig -z localhost:9983 -n affiliations -d configsets/affiliations
 ```
 
 In a Virtualenv, do `pip install -r requirements.txt` to install the Python dependencies,
@@ -80,6 +80,11 @@ We then need to index the Wikidata dump in a Solr collection. This uses the JSON
 a Solr collection name and run:
 ```
 tapioca index-dump my_collection_name latest-all.json.bz2 --types Q43229,Q618123 --properties P2427,P1566
+```
+Note that if you have multiple cores available, you might want to run decompression as a separate
+process, given that it is generally the bottleneck:
+```
+bunzip2 < latest-all.json.bz2 | tapioca index-dump my_collection_name - --types Q43229,Q618123 --properties P2427,P1566
 ```
 
 Running tests

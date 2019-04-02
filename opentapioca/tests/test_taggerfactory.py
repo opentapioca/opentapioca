@@ -29,7 +29,10 @@ class TaggerFactoryTests(unittest.TestCase):
             pass
             
     def test_index_wd_dump(self):
-        # self.tf.delete_collection('wd_test_collection')
+        try:
+            self.tf.delete_collection('wd_test_collection')
+        except requests.exceptions.RequestException:
+            pass
         try:
             self.tf.create_collection('wd_test_collection')
             self.tf.index_wd_dump('wd_test_collection',
