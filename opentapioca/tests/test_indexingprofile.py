@@ -93,6 +93,14 @@ def test_multiple_types(sample_profile, load_item):
     assert types['Q618123']
     assert types['Q43229']
     
+def test_extra_aliases(sample_profile, load_item):
+    item = load_item('Q51783269')
+    doc = sample_profile.entity_to_document(item, TypeMatcherStub())
+    assert doc is not None
+    types = json.loads(doc['types'])
+    assert types['P2427']
+    assert set(doc['extra_aliases']) == {'@IRIF_Paris', 'UMR8243'}
+    
 def test_all_items_profile(testdir):
     profile_filename = os.path.join(testdir, 'data/all_items_profile.json')
     profile = IndexingProfile.load(profile_filename)
