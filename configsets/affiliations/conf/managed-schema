@@ -21,7 +21,7 @@
     <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
     <field name="_version_" type="plong" indexed="false" stored="false"/>
     <field name="_root_" type="string" indexed="true" stored="false" docValues="false" />
-    <field name="revid" type="plong" indexed="false" stored="false"/>
+    <field name="revid" type="plong" indexed="false" stored="true"/>
     <field name="label" type="string" multiValued="true" indexed="false" />
     <field name="aliases" type="string" multiValued="true" indexed="false" />
     <field name="extra_aliases" type="string" multiValued="true" indexed="false" />
