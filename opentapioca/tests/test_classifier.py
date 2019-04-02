@@ -7,6 +7,7 @@ from opentapioca.taggerfactory import TaggerFactory
 from opentapioca.tagger import Tagger
 from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.indexingprofile import IndexingProfile
+from opentapioca.readers.dumpreader import WikidataDumpReader
 from pynif import NIFCollection
 
 class ClassifierTest(unittest.TestCase):
@@ -34,8 +35,8 @@ class ClassifierTest(unittest.TestCase):
         cls.tf = TaggerFactory()
         cls.collection_name = 'wd_test_collection'
         cls.tf.create_collection(cls.collection_name)
-        cls.tf.index_wd_dump(cls.collection_name,
-                            os.path.join(cls.testdir, 'data/sample_wikidata_items.json.bz2'),
+        cls.tf.index_stream(cls.collection_name,
+                            WikidataDumpReader(os.path.join(cls.testdir, 'data/sample_wikidata_items.json.bz2')),
                             cls.profile)
         cls.tagger = Tagger(cls.collection_name, cls.bow, cls.graph)
         

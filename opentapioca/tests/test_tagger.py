@@ -6,6 +6,7 @@ from opentapioca.languagemodel import BOWLanguageModel
 from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.taggerfactory import TaggerFactory
 from opentapioca.indexingprofile import IndexingProfile
+from opentapioca.readers.dumpreader import WikidataDumpReader
 
 class TaggerTest(unittest.TestCase):
     
@@ -37,8 +38,8 @@ class TaggerTest(unittest.TestCase):
         except requests.exceptions.RequestException:
             pass
         cls.tf.create_collection(cls.collection_name)
-        cls.tf.index_wd_dump('wd_test_collection',
-                            os.path.join(testdir, 'data/sample_wikidata_items.json.bz2'),
+        cls.tf.index_stream('wd_test_collection',
+                            WikidataDumpReader(os.path.join(testdir, 'data/sample_wikidata_items.json.bz2')),
                             cls.profile)
         
     @classmethod

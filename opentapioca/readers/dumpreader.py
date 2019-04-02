@@ -27,7 +27,7 @@ class WikidataDumpReader(object):
         for line in self.f:
             try:
                 # remove the trailing comma
-                if line.endswith(','):
+                if line.rstrip().endswith(','):
                     line = line[:-2]
                 item = json.loads(line)
                 yield WikidataItemDocument(item)
