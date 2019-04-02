@@ -1,5 +1,6 @@
 
 import click
+import logging
 
 from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.languagemodel import BOWLanguageModel
@@ -9,10 +10,12 @@ from opentapioca.tagger import Tagger
 from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.indexingprofile import IndexingProfile
 from opentapioca.readers.dumpreader import WikidataDumpReader
+from opentapioca.readers.streamreader import WikidataStreamReader
 from pynif import NIFCollection
 
 @click.group()
 def cli():
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
     pass
 
 @click.command()
@@ -96,25 +99,44 @@ def pagerank_shell(filename):
 @click.argument('collection_name')
 @click.argument('filename')
 @click.option('-p', '--profile', help='Filename of the indexing profile to use')
-@click.option('-s', '--shards', default=5, help='Number of shards for the index')
+@click.option('-s', '--shards', default=1, help='Number of shards to use when creating the collection, if needed')
 def index_dump(collection_name, filename, profile, shards, solr='http://localhost:8983/solr/'):
     """
     Indexes a Wikidata dump in a new Solr collection with the given name.
     """
-    g = TaggerFactory(solr)
+    tagger = TaggerFactory(solr)
     indexing_profile = IndexingProfile.load(profile)
     try:
-        g.create_collection(collection_name, num_shards=shards)
+        tagger.create_collection(collection_name, num_shards=shards)
     except CollectionAlreadyExists:
         pass
     dump = WikidataDumpReader(filename)
-    g.index_wd_dump(collection_name, dump, indexing_profile)
+    tagger.index_stream(collection_name, dump, indexing_profile)
+    
+@click.command()
+@click.argument('collection_name')
+@click.option('-p', '--profile', help='Filename of the indexing profile to use')
+@click.option('-s', '--shards', default=1, help='Number of shards to use when creating the collection, if needed')
+def index_stream(collection_name, profile, shards, solr='http://localhost:8983/solr/'):
+    """
+    Listens to the Wikidata edit stream and updates a collection according to
+    the given indexing profile.
+    """
+    tagger = TaggerFactory(solr)
+    indexing_profile = IndexingProfile.load(profile)
+    try:
+        tagger.create_collection(collection_name, num_shards=shards)
+    except CollectionAlreadyExists:
+        pass
+    stream = WikidataStreamReader()
+    tagger.index_stream(collection_name, stream, indexing_profile,
+                        batch_size=50, commit_time=1, delete_excluded=True)
 
 @click.command()
 @click.argument('collection_name')
 def delete_collection(collection_name, solr='http://localhost:8983/solr/'):
-    g = TaggerFactory(solr)
-    g.delete_collection(collection_name)
+    tagger = TaggerFactory(solr)
+    tagger.delete_collection(collection_name)
 
 @click.command()
 @click.option('-c', '--collection', default=None, help='Name of the Solr collection where Wikidata is indexed.')
@@ -156,6 +178,7 @@ cli.add_command(compile)
 cli.add_command(compute_pagerank)
 cli.add_command(pagerank_shell)
 cli.add_command(index_dump)
+cli.add_command(index_stream)
 cli.add_command(delete_collection)
 cli.add_command(train_classifier)
 

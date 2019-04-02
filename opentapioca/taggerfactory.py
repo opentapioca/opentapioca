@@ -78,10 +78,8 @@ class TaggerFactory(object):
                     continue
                 
                 batch[qid] = doc
-
                 if len(batch) >= batch_size:
                     logger.info('Stream index: {}'.format(idx))
-                    logger.info(doc)
                     batches_since_commit += 1
                     commit = False
                     if batches_since_commit >= commit_time:
@@ -109,6 +107,7 @@ class TaggerFactory(object):
         """
         docs_to_add = [doc for doc in docs.values() if doc is not None]
         ids_to_delete = [id for id, doc in docs.items() if doc is None]
+        logger.info('Updating {} docs, deleting {} others'.format(len(docs_to_add), len(ids_to_delete)))
         payload = {
             'add': docs_to_add,
             'delete': ids_to_delete,
@@ -117,14 +116,6 @@ class TaggerFactory(object):
             params={'commit': 'true' if commit else 'false'},
             data=json.dumps(payload), headers={'Content-Type':'application/json'})
         r.raise_for_status()
-        logger.info(r.json())
-        
-    def _delete_documents(self, docids, collection):
-        """
-        Deletes the given doc ids (qids) from the collection in one query.
-        """
-        query = 'id:({})'.format(' OR '.join(docids))
-        r = requests.post('{endpoint}{collection}/update')
 
 
 
