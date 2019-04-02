@@ -4,6 +4,7 @@ import requests
 import os
 from opentapioca.taggerfactory import TaggerFactory
 from opentapioca.taggerfactory import CollectionAlreadyExists
+from opentapioca.indexingprofile import IndexingProfile
 from opentapioca.tagger import Tagger
 
 class TaggerFactoryTests(unittest.TestCase):
@@ -13,6 +14,10 @@ class TaggerFactoryTests(unittest.TestCase):
         cls.testdir = os.path.dirname(os.path.abspath(__file__))
         cls.solr_endpoint = 'http://localhost:8983/solr/'
         cls.tf = TaggerFactory(cls.solr_endpoint)
+        
+        # Load dummy profile
+        cls.profile = IndexingProfile.load(os.path.join(cls.testdir, 'data/all_items_profile.json'))
+        
         # Skip entire test if solr is not running
         try:
             r = requests.get(cls.solr_endpoint)
@@ -37,7 +42,9 @@ class TaggerFactoryTests(unittest.TestCase):
             self.tf.create_collection('wd_test_collection')
             self.tf.index_wd_dump('wd_test_collection',
                                   os.path.join(self.testdir, 'data/sample_wikidata_items.json.bz2'),
-                                  batch_size=20,commit_time=2)
+                                  self.profile,
+                                  batch_size=20,
+                                  commit_time=2)
             
             r = requests.post(self.solr_endpoint+'wd_test_collection/tag',
                               params={'overlaps':'NO_SUB',

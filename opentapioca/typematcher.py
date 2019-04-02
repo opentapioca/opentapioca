@@ -7,7 +7,8 @@ class TypeMatcher(object):
     Cached in memory.
     """
 
-    def __init__(self):
+    def __init__(self, subclass_pid='P279'):
+        self.subclass_pid = subclass_pid
         self.sets = {}
 
     def is_subclass(self, qid_1, qid_2):
@@ -37,8 +38,8 @@ class TypeMatcher(object):
         sparql_query = """
         PREFIX wd: <http://www.wikidata.org/entity/>
         PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-        SELECT ?child WHERE { ?child wdt:P279* wd:%s }
-        """ % qid
+        SELECT ?child WHERE { ?child wdt:%s* wd:%s }
+        """ % (self.subclass_pid, qid)
         results = sparql_wikidata(sparql_query)
 
         new_set = set()

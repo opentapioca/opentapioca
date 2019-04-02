@@ -54,11 +54,11 @@ class WikidataItemDocument(object):
         """
         return len(self.get('sitelinks', []))
 
-    def get_types(self):
+    def get_types(self, pid='P31'):
         """
         Values of P31 claims
         """
-        type_claims = self.get('claims', {}).get('P31', [])
+        type_claims = self.get('claims', {}).get(pid, [])
         type_qids = [
             claim.get('mainsnak', {}).get('datavalue', {}).get('value', {}).get('id')
             for claim in type_claims
@@ -66,18 +66,20 @@ class WikidataItemDocument(object):
         valid_type_qids = [ qid for qid in type_qids if qid ]
         return valid_type_qids
 
-    def get_default_label(self):
+    def get_default_label(self, language):
         """
         English label if provided, otherwise any other label
         """
         labels = self.get('labels', {})
+        preferred_label = labels.get(language, {}).get('value')
+        if preferred_label:
+            return preferred_label
         enlabel = labels.get('en', {}).get('value')
         if enlabel:
             return enlabel
         for other_lang in labels:
             return labels.get(other_lang, {}).get('value')
         return None
-
 
     def get_all_terms(self):
         """

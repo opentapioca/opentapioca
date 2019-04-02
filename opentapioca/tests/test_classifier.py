@@ -6,6 +6,7 @@ from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.taggerfactory import TaggerFactory
 from opentapioca.tagger import Tagger
 from opentapioca.classifier import SimpleTagClassifier
+from opentapioca.indexingprofile import IndexingProfile
 from pynif import NIFCollection
 
 class ClassifierTest(unittest.TestCase):
@@ -26,13 +27,16 @@ class ClassifierTest(unittest.TestCase):
         cls.graph.load_from_matrix(graph_fname)
         cls.graph.load_pagerank(pagerank_fname)
         
+        # Load dummy profile
+        cls.profile = IndexingProfile.load(os.path.join(cls.testdir, 'data/all_items_profile.json'))
         
         # Setup solr index (TODO delete this) and tagger
         cls.tf = TaggerFactory()
         cls.collection_name = 'wd_test_collection'
         cls.tf.create_collection(cls.collection_name)
         cls.tf.index_wd_dump(cls.collection_name,
-                            os.path.join(cls.testdir, 'data/sample_wikidata_items.json.bz2'))
+                            os.path.join(cls.testdir, 'data/sample_wikidata_items.json.bz2'),
+                            cls.profile)
         cls.tagger = Tagger(cls.collection_name, cls.bow, cls.graph)
         
         # Load NIF dataset

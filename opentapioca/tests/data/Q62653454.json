@@ -1,0 +1,190 @@
+{
+  "pageid": 62450967,
+  "ns": 0,
+  "title": "Q62653454",
+  "lastrevid": 900557325,
+  "modified": "2019-04-02T10:55:25Z",
+  "type": "item",
+  "id": "Q62653454",
+  "labels": {
+    "fr": {
+      "language": "fr",
+      "value": "Elisabeth Hauterive"
+    }
+  },
+  "descriptions": {
+    "fr": {
+      "language": "fr",
+      "value": "abbesse de Saint-Corentin"
+    }
+  },
+  "aliases": {},
+  "claims": {
+    "P106": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P106",
+          "hash": "7b4717cccfb9e830324aab2b9897fa9f1384dd20",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 191808,
+              "id": "Q191808"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q62653454$49F6F2F2-7249-4D9F-BC21-B819C9CDC869",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P106",
+          "hash": "9e1796bfe40b44a60372cb38bc7d23c1beba64e9",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 1646408,
+              "id": "Q1646408"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "qualifiers": {
+          "P937": [
+            {
+              "snaktype": "value",
+              "property": "P937",
+              "hash": "523bcdb50fc47f116e6eeaf135829ca2c2b8b195",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 2820364,
+                  "id": "Q2820364"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            }
+          ],
+          "P580": [
+            {
+              "snaktype": "value",
+              "property": "P580",
+              "hash": "88e6649c5a49f15d6f99d781489b757c42a48c80",
+              "datavalue": {
+                "value": {
+                  "time": "+1737-01-01T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 9,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                },
+                "type": "time"
+              },
+              "datatype": "time"
+            }
+          ]
+        },
+        "qualifiers-order": [
+          "P937",
+          "P580"
+        ],
+        "id": "Q62653454$F835E9BE-E996-465B-9F15-1F2B952E936D",
+        "rank": "normal"
+      }
+    ],
+    "P611": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P611",
+          "hash": "329db31f06d7d22ea8ad7615ab41e80b02315e80",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 131132,
+              "id": "Q131132"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q62653454$C4E9339F-1241-41B5-9753-128F19A4C18D",
+        "rank": "normal"
+      }
+    ],
+    "P485": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P485",
+          "hash": "acacc70698e0a8799fedc694c82c22dac532ce32",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 2860507,
+              "id": "Q2860507"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q62653454$92D3B8D1-A150-4448-9227-F9565AFA6F6B",
+        "rank": "normal"
+      }
+    ],
+    "P21": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P21",
+          "hash": "5760796ff6ebc63aae12cdcbf509b07ebf0bd201",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 6581072,
+              "id": "Q6581072"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q62653454$79031F33-4E0E-498B-9FE0-6C0118259CAF",
+        "rank": "normal"
+      }
+    ],
+    "P31": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P31",
+          "hash": "ad7d38a03cdd40cdc373de0dc4e7b7fcbccb31d9",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 5,
+              "id": "Q5"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q62653454$20243C90-3F7B-4C50-8770-C10B233E022D",
+        "rank": "normal"
+      }
+    ]
+  },
+  "sitelinks": {}
+}

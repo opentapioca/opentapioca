@@ -5,6 +5,7 @@ from opentapioca.tagger import Tagger
 from opentapioca.languagemodel import BOWLanguageModel
 from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.taggerfactory import TaggerFactory
+from opentapioca.indexingprofile import IndexingProfile
 
 class TaggerTest(unittest.TestCase):
     
@@ -25,6 +26,9 @@ class TaggerTest(unittest.TestCase):
         cls.graph.load_from_matrix(graph_fname)
         cls.graph.load_pagerank(pagerank_fname)
         
+        # Load indexing profile
+        cls.profile = IndexingProfile.load(os.path.join(testdir, 'data/all_items_profile.json'))
+        
         # Setup solr index
         cls.tf = TaggerFactory()
         cls.collection_name = 'wd_test_collection'
@@ -34,7 +38,8 @@ class TaggerTest(unittest.TestCase):
             pass
         cls.tf.create_collection(cls.collection_name)
         cls.tf.index_wd_dump('wd_test_collection',
-                            os.path.join(testdir, 'data/sample_wikidata_items.json.bz2'))
+                            os.path.join(testdir, 'data/sample_wikidata_items.json.bz2'),
+                            cls.profile)
         
     @classmethod
     def tearDownClass(cls):

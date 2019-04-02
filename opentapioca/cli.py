@@ -7,6 +7,7 @@ from opentapioca.taggerfactory import TaggerFactory
 from opentapioca.taggerfactory import CollectionAlreadyExists
 from opentapioca.tagger import Tagger
 from opentapioca.classifier import SimpleTagClassifier
+from opentapioca.indexingprofile import IndexingProfile
 from pynif import NIFCollection
 
 @click.group()
@@ -93,25 +94,19 @@ def pagerank_shell(filename):
 @click.command()
 @click.argument('collection_name')
 @click.argument('filename')
-@click.option('-t', '--types', default=None, help='Types to restrict the index to (comma separated qids)')
-@click.option('-p', '--properties', default=None, help='Restrict the index to items bearings the given properties (comma separated pids)')
+@click.option('-p', '--profile', help='Filename of the indexing profile to use')
 @click.option('-s', '--shards', default=5, help='Number of shards for the index')
-def index_dump(collection_name, filename, types, properties, shards, solr='http://localhost:8983/solr/'):
+def index_dump(collection_name, filename, profile, shards, solr='http://localhost:8983/solr/'):
     """
     Indexes a Wikidata dump in a new Solr collection with the given name.
     """
     g = TaggerFactory(solr)
-    type_list = None
-    if types is not None:
-        type_list = types.split(',')
-    properties_list = None
-    if properties is not None:
-        properties_list = properties.split(',')
+    indexing_profile = IndexingProfile.load(profile)
     try:
         g.create_collection(collection_name, num_shards=shards)
     except CollectionAlreadyExists:
         pass
-    g.index_wd_dump(collection_name, filename, restrict_type=type_list, restrict_property=properties_list)
+    g.index_wd_dump(collection_name, filename, indexing_profile)
 
 @click.command()
 @click.argument('collection_name')

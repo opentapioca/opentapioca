@@ -21,14 +21,17 @@
     <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
     <field name="_version_" type="plong" indexed="false" stored="false"/>
     <field name="_root_" type="string" indexed="true" stored="false" docValues="false" />
+    <field name="revid" type="plong" indexed="false" stored="false"/>
     <field name="label" type="string" multiValued="true" indexed="false" />
     <field name="aliases" type="string" multiValued="true" indexed="false" />
+    <field name="extra_aliases" type="string" multiValued="true" indexed="false" />
     <field name="desc" type="string" indexed="false" />
     <field name="types" type="string" indexed="false" />
     <field name="name_tag" type="tag" stored="false" multiValued="true" />
     
     <copyField source="label" dest="name_tag" />
     <copyField source="aliases" dest="name_tag" />
+    <copyField source="extra_aliases" dest="name_tag" />
     <!-- This can be enabled, in case the client does not know what fields may be searched. It isn't enabled by default
          because it's very expensive to index everything twice. -->
     <!-- <copyField source="*" dest="_text_"/> -->

@@ -7,5 +7,7 @@ requests-cache
 requests_mock
 unidecode
 pytest
+pytest_mock
 click
 pynif
+sseclient

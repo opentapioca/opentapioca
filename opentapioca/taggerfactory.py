@@ -47,22 +47,18 @@ class TaggerFactory(object):
     def index_wd_dump(self,
           collection_name,
           dump_fname,
+          profile,
           batch_size=5000,
           max_lines=100000000,
-          commit_time=100,
-          restrict_type=None,
-          restrict_property=None,
-          aliases=True):
+          commit_time=100):
         """
         Given a collection name and a path to a Wikidata .json.bz2 dump,
         index this wikidata dump in the solr collection.
 
-        :param batch_size:
+        :param batch_size: the number of updates to send together to Solr
         :param max_lines: the maximum of items to read from the dump
         :param commit_time: commit the solr documents ever commit_time items.
-        :param restrict_type: restrict the index to items of the any of the given types
-        :param restrict_type: restrict the index to properties bearing any of the given properties
-        :param aliases: index aliases
+        :param profile: the IndexingProfile to create the collection
         """
         batches_since_commit = 0
         with WikidataDumpReader(dump_fname) as reader:
@@ -71,49 +67,12 @@ class TaggerFactory(object):
             for idx, item in enumerate(reader):
                 if idx > max_lines:
                     break
-
-                valid_type_qids = item.get_types()
-
-                type_features = {
-                    type_qid: self.type_matcher.is_subclass(qid, type_qid)
-                    for type_qid in restrict_type or []
-                }
-                type_features.update({
-                    pid: item.get_identifiers(pid) != []
-                    for pid in restrict_property or []
-                })
-                correct_type = any(type_features.values())
-                valid_item = correct_type or (restrict_type is None and restrict_property is None)
-                if not valid_item:
+                
+                doc = profile.entity_to_document(item, self.type_matcher)
+                if doc is None:
                     continue
 
-                enlabel = item.get_default_label()
-                endesc = item.get('descriptions', {}).get('en', {}).get('value')
-                if enlabel:
-                    # Fetch aliases
-                    aliases = item.get_all_terms()
-                    aliases.remove(enlabel)
-                    # Edges
-                    edges = item.get_outgoing_edges(include_p31=False, numeric=True)
-                    valid_grids = item.get_identifiers('P2427')
-
-                    # Stats
-                    nb_statements = item.get_nb_statements()
-                    nb_sitelinks = item.get_nb_sitelinks()
-
-                    # numeric types
-                    numeric_types = [ int(q[1:]) for q in valid_type_qids ]
-
-                    doc = {'id': item.get('id'),
-                           'label': enlabel,
-                           'desc': endesc or '',
-                           'type': numeric_types,
-                           'edges': edges,
-                           'types': json.dumps(type_features),
-                           'aliases': list(aliases),
-                           'nb_statements': nb_statements,
-                           'nb_sitelinks': nb_sitelinks}
-                    batch.append(doc)
+                batch.append(doc)
 
                 if len(batch) >= batch_size:
                     print(idx)
