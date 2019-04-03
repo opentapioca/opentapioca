@@ -1,4 +1,5 @@
 import json
+import re
 import requests
 import requests.exceptions
 import logging
@@ -30,6 +31,7 @@ class WikidataStreamReader(object):
         self.namespaces = [0]
         self.retries = 5
         self.delay = 5
+        self.id_re = re.compile(r'^Q[1-9]\d+$')
 
     def __enter__(self):
         url = self.endpoint
@@ -66,7 +68,8 @@ class WikidataStreamReader(object):
                     change = json.loads(event.data)
                     if (change.get('wiki') == self.wiki and
                         change.get('namespace') in self.namespaces and
-                        change.get('title')):
+                        change.get('title') and
+                        self.id_re.match(change['title'])):
                         return change['title']
                 except ValueError:
                     pass
@@ -84,7 +87,8 @@ class WikidataStreamReader(object):
                 req.raise_for_status()
                 result = req.json().get('entities').values()
                 return [WikidataItemDocument(payload) for payload in result if 'missing' not in payload]
-            except (requests.exceptions.RequestException, ValueError, TypeError):
+            except (requests.exceptions.RequestException, ValueError, TypeError, AttributeError) as e:
+                logger.warning(e)
                 if retries < self.retries-1:
                     sleep_time = (1+retries)*self.delay
                     logger.info('Retrying wbgetentities in {}'.format(sleep_time))
