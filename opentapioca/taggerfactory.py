@@ -52,7 +52,7 @@ class TaggerFactory(object):
           profile,
           batch_size=5000,
           max_lines=None,
-          commit_time=100,
+          commit_time=10,
           delete_excluded=False):
         """
         Given a stream of Wikidata items, index it in the given solr collection.

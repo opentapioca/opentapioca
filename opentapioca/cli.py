@@ -111,7 +111,8 @@ def index_dump(collection_name, filename, profile, shards, solr='http://localhos
     except CollectionAlreadyExists:
         pass
     dump = WikidataDumpReader(filename)
-    tagger.index_stream(collection_name, dump, indexing_profile)
+    tagger.index_stream(collection_name, dump, indexing_profile,
+                        batch_size=500, commit_time=10, delete_excluded=False)
     
 @click.command()
 @click.argument('collection_name')

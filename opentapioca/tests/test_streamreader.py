@@ -30,9 +30,11 @@ def event_stream():
     return [
         EventStub(event='something happened'),
         EventStub(title='Q123'),
+        EventStub(title='NewItem'),
         EventStub(namespace=2),
         EventStub(title='Q456'),
         EventStub(title='Q789'),
+        EventStub(wiki='enwiki'),
     ]
 
 
