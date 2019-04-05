@@ -75,7 +75,6 @@ def test_save_indexing_profile(testdir, sample_profile, expected_json):
     finally:
         os.remove(filename)
 
-
 def test_entity_to_document(sample_profile, load_item):
     item = load_item('Q62653454')
     doc = sample_profile.entity_to_document(item, TypeMatcherStub())
@@ -92,6 +91,11 @@ def test_multiple_types(sample_profile, load_item):
     types = json.loads(doc['types'])
     assert types['Q618123']
     assert types['Q43229']
+
+def test_filtered_out_entity(sample_profile, load_item):
+    item = load_item('Q8502')
+    doc = sample_profile.entity_to_document(item, TypeMatcherStub())
+    assert doc is None
 
 def test_extra_aliases(sample_profile, load_item):
     item = load_item('Q51783269')

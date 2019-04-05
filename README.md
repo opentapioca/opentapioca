@@ -18,7 +18,7 @@ bin/solr start -cloud -p 8983 -s "example/cloud/node1/solr" -m 2g
 
 Upload Solr configuration set to ZooKeeper:
 ```
-bin/solr zk -upconfig -z localhost:9983 -n affiliations -d configsets/affiliations
+bin/solr zk -upconfig -z localhost:9983 -n tapioca -d configsets/tapioca
 ```
 
 In a Virtualenv, do `pip install -r requirements.txt` to install the Python dependencies,
