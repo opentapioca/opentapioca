@@ -40,8 +40,8 @@ class Tagger(object):
         # Tag
         r = requests.post(self.solr_endpoint,
             params={'overlaps':'NO_SUB',
-             'tagsLimit':5000,
-             'fl':'id,label,aliases,desc,grid,nb_statements,nb_sitelinks,edges,type',
+             'tagsLimit':500,
+             'fl':'id,label,aliases,extra_aliases,desc,nb_statements,nb_sitelinks,edges,types',
              'wt':'json',
              'indent':'on',
             },
