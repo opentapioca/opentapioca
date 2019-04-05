@@ -33,7 +33,7 @@ class TaggerFactory(object):
         r = requests.get(self.solr_endpoint + 'admin/collections', {
             'action':'CREATE',
             'name':collection_name,
-            'collection.configName':'affiliations',
+            'collection.configName':'tapioca',
             'numShards':num_shards})
         if r.status_code == 400 and "already exists" in r.text:
             raise CollectionAlreadyExists('Collection "{}" already exists.'.format(collection_name))

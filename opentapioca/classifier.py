@@ -1,10 +1,12 @@
 import numpy
+import logging
 from collections import defaultdict
 from sklearn import svm
 from sklearn import preprocessing
 from sklearn.pipeline import Pipeline
 import pickle
 
+logger = logging.getLogger(__name__)
 
 class SimpleTagClassifier(object):
     """
@@ -77,7 +79,8 @@ class SimpleTagClassifier(object):
         chunks = [ set() for i in range(k) ]
         for idx, context in enumerate(dataset.contexts):
             chunks[idx % k].add(context)
-        print([ len(chunk) for chunk in chunks])
+        logger.info('Chunk lengths:')
+        logger.info([ len(chunk) for chunk in chunks])
 
         all_contexts = set(dataset.contexts)
 
@@ -85,7 +88,7 @@ class SimpleTagClassifier(object):
         docid_to_mentions = {}
         for idx, context in enumerate(all_contexts):
             if idx % 100 == 0:
-                print("{}...".format(idx))
+                logger.info("{}...".format(idx))
             docid_to_mentions[str(context.uri)] = self.tagger.tag_and_rank(context.mention)
 
         if parameters is None:
@@ -107,9 +110,9 @@ class SimpleTagClassifier(object):
                 chunk_scores = self.evaluate_model(chunks[chunk_id], docid_to_mentions)
                 for method, score in chunk_scores.items():
                     scores[method] += score/k
-            print('-----')
-            print(param_setting)
-            print(dict(scores.items()))
+            logger.info('-----')
+            logger.info(param_setting)
+            logger.info(dict(scores.items()))
             if scores['f1'] > best_f1:
                 print('(best so far)')
                 best_params = param_setting
