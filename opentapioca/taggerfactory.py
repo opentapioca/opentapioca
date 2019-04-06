@@ -25,7 +25,7 @@ class TaggerFactory(object):
         self.solr_endpoint = solr_endpoint
         self.type_matcher = type_matcher or TypeMatcher()
 
-    def create_collection(self, collection_name, num_shards=1):
+    def create_collection(self, collection_name, num_shards=1, configset='tapioca'):
         """
         Creates a collection and inits it with the
         appropriate index structure to be used by a tagger object.
@@ -33,7 +33,7 @@ class TaggerFactory(object):
         r = requests.get(self.solr_endpoint + 'admin/collections', {
             'action':'CREATE',
             'name':collection_name,
-            'collection.configName':'tapioca',
+            'collection.configName':configset,
             'numShards':num_shards})
         if r.status_code == 400 and "already exists" in r.text:
             raise CollectionAlreadyExists('Collection "{}" already exists.'.format(collection_name))
@@ -45,7 +45,7 @@ class TaggerFactory(object):
         """
         r = requests.get(self.solr_endpoint + 'admin/collections', {'action':'DELETE','name':collection_name})
         r.raise_for_status()
-        
+
     def index_stream(self,
           collection_name,
           stream,
@@ -73,10 +73,10 @@ class TaggerFactory(object):
 
                 doc = profile.entity_to_document(item, self.type_matcher)
                 qid = item.get('id')
-                
+
                 if doc is None and not delete_excluded:
                     continue
-                
+
                 batch[qid] = doc
                 if len(batch) >= batch_size:
                     logger.info('Stream index: {}'.format(idx))
@@ -90,7 +90,7 @@ class TaggerFactory(object):
 
             if batch or batches_since_commit:
                 self._push_documents(batch, collection_name, True)
-                
+
     def _collection_update_endpoint(self, collection):
         """
         Returns the URL where updates are pushed.
@@ -102,7 +102,7 @@ class TaggerFactory(object):
         Sends documents to Solr for indexing.
         If configured correctly, Solr will deal with the versioning on its
         own, so we do not need to check that we are pushing outdated results.
-        
+
         :param docs: map from ids to documents. None values will be interpreted as deletions.
         """
         docs_to_add = [doc for doc in docs.values() if doc is not None]

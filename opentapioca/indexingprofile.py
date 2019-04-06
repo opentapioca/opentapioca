@@ -2,13 +2,13 @@ import json
 
 class AliasProperty(object):
     """
-    Describes how to add an additional alias based on the 
+    Describes how to add an additional alias based on the
     value of a property.
     """
     def __init__(self, property, prefix=None):
         self.property = property
         self.prefix = prefix
-        
+
     def json(self):
         """
         JSON representation of the object
@@ -17,7 +17,7 @@ class AliasProperty(object):
             'property': self.property,
             'prefix': self.prefix,
         }
-    
+
     @classmethod
     def from_json(cls, representation):
         """
@@ -25,7 +25,7 @@ class AliasProperty(object):
         """
         return cls(property=representation['property'],
                    prefix=representation.get('prefix'))
-        
+
     def extract(self, item):
         """
         Extracts the additional aliases from an item
@@ -35,7 +35,7 @@ class AliasProperty(object):
         if self.prefix:
             values = [self.prefix + value for value in values]
         return values
-    
+
 class TypeConstraint(object):
     """
     Describes a type constraint that an item should satisfy to be indexed.
@@ -48,7 +48,7 @@ class TypeConstraint(object):
         """
         self.qid = qid
         self.pid = pid
-        
+
     def json(self):
         """
         JSON serialization
@@ -57,14 +57,14 @@ class TypeConstraint(object):
             'type':self.qid,
             'property':self.pid,
         }
-        
+
     @classmethod
     def from_json(cls, representation):
         """
         Creates a TypeConstraint from its JSON representation.
         """
         return cls(qid=representation['type'], pid=representation['property'])
-    
+
     def satisfied(self, item, type_matcher):
         """
         Is the type constraint satisfied for the given item?
@@ -80,26 +80,29 @@ class IndexingProfile(object):
     and properties), pulling in the value of some properties
     as extra aliases, and using a particular language as default.
     """
-    
+
     def __init__(self,
                  name=None,
+                 solrconfig='tapioca',
                  language='en',
                  restrict_types=None,
                  restrict_properties=None,
                  alias_properties=None):
         """
         :param name: the name of the profile
+        :param solrconfig: the name of the corresponding solr configset
         :param language: the language to use to select the default labels and descriptions
         :param restrict_types: include all items of any of the given types
         :param retrict_properties: also include all items bearing these Pids
         :param alias_properties: fetch the values of these properties as extra aliases
         """
         self.name = name
+        self.solrconfig = solrconfig
         self.language = language
         self.restrict_types = restrict_types
         self.restrict_properties = restrict_properties
         self.alias_properties = alias_properties or []
-        
+
     def entity_to_document(self, item, type_matcher):
         """
         Given a Wikibase entity, translate it to a Solr document for indexing.
@@ -125,14 +128,14 @@ class IndexingProfile(object):
         endesc = item.get('descriptions', {}).get(self.language, {}).get('value')
         if not enlabel:
             return
-        
+
         # Fetch aliases
         aliases = item.get_all_terms()
         aliases.remove(enlabel)
-        
+
         # Edges
         edges = item.get_outgoing_edges(include_p31=False, numeric=True)
-        
+
         # Extra aliases
         extra_aliases = []
         for extractor in self.alias_properties:
@@ -152,8 +155,8 @@ class IndexingProfile(object):
                'extra_aliases': extra_aliases,
                'nb_statements': nb_statements,
                'nb_sitelinks': nb_sitelinks}
-        
-        
+
+
     @classmethod
     def load(cls, filename):
         """
@@ -170,25 +173,27 @@ class IndexingProfile(object):
                 for definition in repr.get('restrict_types') or []
             ]
             return cls(
+                solrconfig=repr.get('solrconfig'),
                 language=repr.get('language'),
                 name=repr.get('name'),
                 restrict_types=types,
                 restrict_properties=repr.get('restrict_properties'),
                 alias_properties=extractors)
-        
+
     def save(self, filename):
         """
         Saves an indexing profile to a file, in JSON.
         """
         with open(filename, 'w') as f:
             json.dump(self.json(), f, indent=4)
-            
+
     def json(self):
         """
         Returns a dict representation of the profile
         """
         return {
             'name': self.name,
+            'solrconfig': self.solrconfig,
             'language': self.language,
             'restrict_types': [
                 constraint.json() for constraint in self.restrict_types
@@ -198,4 +203,4 @@ class IndexingProfile(object):
                 extractor.json() for extractor in self.alias_properties
             ],
         }
-            
+

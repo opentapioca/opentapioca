@@ -107,13 +107,13 @@ def index_dump(collection_name, filename, profile, shards, solr='http://localhos
     tagger = TaggerFactory(solr)
     indexing_profile = IndexingProfile.load(profile)
     try:
-        tagger.create_collection(collection_name, num_shards=shards)
+        tagger.create_collection(collection_name, num_shards=shards, configset=indexing_profile.solrconfig)
     except CollectionAlreadyExists:
         pass
     dump = WikidataDumpReader(filename)
     tagger.index_stream(collection_name, dump, indexing_profile,
-                        batch_size=500, commit_time=10, delete_excluded=False)
-    
+                        batch_size=5000, commit_time=10, delete_excluded=False)
+
 @click.command()
 @click.argument('collection_name')
 @click.option('-p', '--profile', help='Filename of the indexing profile to use')
@@ -126,7 +126,7 @@ def index_stream(collection_name, profile, shards, solr='http://localhost:8983/s
     tagger = TaggerFactory(solr)
     indexing_profile = IndexingProfile.load(profile)
     try:
-        tagger.create_collection(collection_name, num_shards=shards)
+        tagger.create_collection(collection_name, num_shards=shards, configset=indexing_profile.solrconfig)
     except CollectionAlreadyExists:
         pass
     stream = WikidataStreamReader()

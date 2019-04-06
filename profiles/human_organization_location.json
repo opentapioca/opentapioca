@@ -1,6 +1,7 @@
 {
         "language": "en",
         "name": "human_organization_location",
+        "solrconfig": "tapioca",
         "restrict_properties": ["P2427", "P1566", "P496"],
         "restrict_types": [
             {"type": "Q43229", "property": "P31"},
@@ -9,7 +10,6 @@
         ],
         "alias_properties": [
             {"property": "P496", "prefix": null},
-            {"property": "P2002", "prefix": "@"},
             {"property": "P4550", "prefix": null}
         ]
 }

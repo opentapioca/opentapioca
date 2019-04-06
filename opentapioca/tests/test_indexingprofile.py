@@ -35,6 +35,7 @@ def expected_json():
     return {
         'language': 'en',
         'name': 'affiliations',
+        'solrconfig': 'tapioca',
         'restrict_properties': ['P2427', 'P1566', 'P496'],
         'restrict_types': [
             {'type': 'Q43229', 'property': 'P31'},

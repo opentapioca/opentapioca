@@ -1,0 +1,3486 @@
+{
+  "pageid": 9811,
+  "ns": 0,
+  "title": "Q8502",
+  "lastrevid": 901838552,
+  "modified": "2019-04-03T21:41:03Z",
+  "type": "item",
+  "id": "Q8502",
+  "labels": {
+    "en": {
+      "language": "en",
+      "value": "mountain"
+    },
+    "nl": {
+      "language": "nl",
+      "value": "berg"
+    },
+    "fr": {
+      "language": "fr",
+      "value": "montagne"
+    },
+    "it": {
+      "language": "it",
+      "value": "montagna"
+    },
+    "de": {
+      "language": "de",
+      "value": "Berg"
+    },
+    "ace": {
+      "language": "ace",
+      "value": "gunong"
+    },
+    "af": {
+      "language": "af",
+      "value": "berg"
+    },
+    "am": {
+      "language": "am",
+      "value": "ተራራ"
+    },
+    "ang": {
+      "language": "ang",
+      "value": "beorg"
+    },
+    "an": {
+      "language": "an",
+      "value": "montanya"
+    },
+    "arc": {
+      "language": "arc",
+      "value": "ܛܘܪܐ"
+    },
+    "ar": {
+      "language": "ar",
+      "value": "جبل"
+    },
+    "ast": {
+      "language": "ast",
+      "value": "monte"
+    },
+    "az": {
+      "language": "az",
+      "value": "dağ"
+    },
+    "ba": {
+      "language": "ba",
+      "value": "тау"
+    },
+    "be": {
+      "language": "be",
+      "value": "гара"
+    },
+    "bg": {
+      "language": "bg",
+      "value": "планина"
+    },
+    "bjn": {
+      "language": "bjn",
+      "value": "gunung"
+    },
+    "bn": {
+      "language": "bn",
+      "value": "পর্বত"
+    },
+    "bpy": {
+      "language": "bpy",
+      "value": "মোন্টানহা"
+    },
+    "br": {
+      "language": "br",
+      "value": "menez"
+    },
+    "bs": {
+      "language": "bs",
+      "value": "planina"
+    },
+    "ca": {
+      "language": "ca",
+      "value": "muntanya"
+    },
+    "ce": {
+      "language": "ce",
+      "value": "лам"
+    },
+    "chr": {
+      "language": "chr",
+      "value": "ᎣᏓᎸᎢ"
+    },
+    "cr": {
+      "language": "cr",
+      "value": "ᐧᐊᔒ"
+    },
+    "cs": {
+      "language": "cs",
+      "value": "hora"
+    },
+    "cv": {
+      "language": "cv",
+      "value": "ту"
+    },
+    "cy": {
+      "language": "cy",
+      "value": "mynydd"
+    },
+    "da": {
+      "language": "da",
+      "value": "bjerg"
+    },
+    "diq": {
+      "language": "diq",
+      "value": "ko"
+    },
+    "el": {
+      "language": "el",
+      "value": "βουνό"
+    },
+    "eml": {
+      "language": "eml",
+      "value": "muntâgna"
+    },
+    "eo": {
+      "language": "eo",
+      "value": "monto"
+    },
+    "es": {
+      "language": "es",
+      "value": "montaña"
+    },
+    "et": {
+      "language": "et",
+      "value": "mägi"
+    },
+    "eu": {
+      "language": "eu",
+      "value": "mendi"
+    },
+    "fa": {
+      "language": "fa",
+      "value": "کوه"
+    },
+    "fi": {
+      "language": "fi",
+      "value": "vuori"
+    },
+    "fy": {
+      "language": "fy",
+      "value": "berch"
+    },
+    "gan": {
+      "language": "gan",
+      "value": "山"
+    },
+    "ga": {
+      "language": "ga",
+      "value": "sliabh"
+    },
+    "gd": {
+      "language": "gd",
+      "value": "beinn"
+    },
+    "glk": {
+      "language": "glk",
+      "value": "کو"
+    },
+    "gl": {
+      "language": "gl",
+      "value": "montaña"
+    },
+    "he": {
+      "language": "he",
+      "value": "הר"
+    },
+    "hif": {
+      "language": "hif",
+      "value": "pahaarr"
+    },
+    "hi": {
+      "language": "hi",
+      "value": "पर्वत"
+    },
+    "hr": {
+      "language": "hr",
+      "value": "planina"
+    },
+    "ht": {
+      "language": "ht",
+      "value": "mòn"
+    },
+    "hu": {
+      "language": "hu",
+      "value": "hegység"
+    },
+    "hy": {
+      "language": "hy",
+      "value": "լեռ"
+    },
+    "id": {
+      "language": "id",
+      "value": "gunung"
+    },
+    "ilo": {
+      "language": "ilo",
+      "value": "bantay"
+    },
+    "io": {
+      "language": "io",
+      "value": "monto"
+    },
+    "is": {
+      "language": "is",
+      "value": "fjall"
+    },
+    "ja": {
+      "language": "ja",
+      "value": "山"
+    },
+    "jbo": {
+      "language": "jbo",
+      "value": "cmana"
+    },
+    "jv": {
+      "language": "jv",
+      "value": "gunung"
+    },
+    "ka": {
+      "language": "ka",
+      "value": "მთა"
+    },
+    "kk": {
+      "language": "kk",
+      "value": "тау"
+    },
+    "kn": {
+      "language": "kn",
+      "value": "ಪರ್ವತ"
+    },
+    "ko": {
+      "language": "ko",
+      "value": "산"
+    },
+    "la": {
+      "language": "la",
+      "value": "mons"
+    },
+    "lbe": {
+      "language": "lbe",
+      "value": "зунтту"
+    },
+    "lb": {
+      "language": "lb",
+      "value": "Bierg"
+    },
+    "lez": {
+      "language": "lez",
+      "value": "сув"
+    },
+    "lmo": {
+      "language": "lmo",
+      "value": "muntagna"
+    },
+    "ln": {
+      "language": "ln",
+      "value": "ngómbá"
+    },
+    "lt": {
+      "language": "lt",
+      "value": "kalnas"
+    },
+    "lv": {
+      "language": "lv",
+      "value": "kalns"
+    },
+    "mg": {
+      "language": "mg",
+      "value": "tendrombohitra"
+    },
+    "mk": {
+      "language": "mk",
+      "value": "планина"
+    },
+    "ml": {
+      "language": "ml",
+      "value": "പർവ്വതം"
+    },
+    "mn": {
+      "language": "mn",
+      "value": "уул"
+    },
+    "ms": {
+      "language": "ms",
+      "value": "gunung"
+    },
+    "my": {
+      "language": "my",
+      "value": "တောင်"
+    },
+    "nah": {
+      "language": "nah",
+      "value": "tepētl"
+    },
+    "nds": {
+      "language": "nds",
+      "value": "Barg"
+    },
+    "ne": {
+      "language": "ne",
+      "value": "पहाड"
+    },
+    "nn": {
+      "language": "nn",
+      "value": "fjell"
+    },
+    "nrm": {
+      "language": "nrm",
+      "value": "montangne"
+    },
+    "nv": {
+      "language": "nv",
+      "value": "dził"
+    },
+    "oc": {
+      "language": "oc",
+      "value": "montanha"
+    },
+    "pa": {
+      "language": "pa",
+      "value": "ਪਹਾੜ"
+    },
+    "pi": {
+      "language": "pi",
+      "value": "पब्बतो"
+    },
+    "pl": {
+      "language": "pl",
+      "value": "góra"
+    },
+    "pnb": {
+      "language": "pnb",
+      "value": "پعاڑ"
+    },
+    "ps": {
+      "language": "ps",
+      "value": "غر"
+    },
+    "pt": {
+      "language": "pt",
+      "value": "montanha"
+    },
+    "qu": {
+      "language": "qu",
+      "value": "urqu"
+    },
+    "rm": {
+      "language": "rm",
+      "value": "muntogna"
+    },
+    "roa-tara": {
+      "language": "roa-tara",
+      "value": "mundagne"
+    },
+    "ro": {
+      "language": "ro",
+      "value": "munte"
+    },
+    "ru": {
+      "language": "ru",
+      "value": "гора"
+    },
+    "rw": {
+      "language": "rw",
+      "value": "umusozi"
+    },
+    "sah": {
+      "language": "sah",
+      "value": "хайа"
+    },
+    "sa": {
+      "language": "sa",
+      "value": "पर्वताः"
+    },
+    "scn": {
+      "language": "scn",
+      "value": "muntagna"
+    },
+    "sh": {
+      "language": "sh",
+      "value": "planina"
+    },
+    "sk": {
+      "language": "sk",
+      "value": "vrch"
+    },
+    "sl": {
+      "language": "sl",
+      "value": "gora"
+    },
+    "sn": {
+      "language": "sn",
+      "value": "gomo"
+    },
+    "so": {
+      "language": "so",
+      "value": "buur"
+    },
+    "sq": {
+      "language": "sq",
+      "value": "mal"
+    },
+    "sr": {
+      "language": "sr",
+      "value": "планина"
+    },
+    "su": {
+      "language": "su",
+      "value": "gunung"
+    },
+    "sv": {
+      "language": "sv",
+      "value": "berg"
+    },
+    "sw": {
+      "language": "sw",
+      "value": "mlima"
+    },
+    "ta": {
+      "language": "ta",
+      "value": "மலை"
+    },
+    "te": {
+      "language": "te",
+      "value": "పర్వతం"
+    },
+    "tg": {
+      "language": "tg",
+      "value": "кӯҳ"
+    },
+    "th": {
+      "language": "th",
+      "value": "ภูเขา"
+    },
+    "tk": {
+      "language": "tk",
+      "value": "dag"
+    },
+    "tl": {
+      "language": "tl",
+      "value": "bundok"
+    },
+    "tr": {
+      "language": "tr",
+      "value": "dağ"
+    },
+    "uk": {
+      "language": "uk",
+      "value": "гора"
+    },
+    "ur": {
+      "language": "ur",
+      "value": "پہاڑ"
+    },
+    "uz": {
+      "language": "uz",
+      "value": "togʻ"
+    },
+    "vi": {
+      "language": "vi",
+      "value": "núi"
+    },
+    "war": {
+      "language": "war",
+      "value": "bukid"
+    },
+    "wo": {
+      "language": "wo",
+      "value": "tangor"
+    },
+    "wuu": {
+      "language": "wuu",
+      "value": "山"
+    },
+    "xmf": {
+      "language": "xmf",
+      "value": "გვალა"
+    },
+    "yi": {
+      "language": "yi",
+      "value": "באַרג"
+    },
+    "za": {
+      "language": "za",
+      "value": "bya"
+    },
+    "zh": {
+      "language": "zh",
+      "value": "山"
+    },
+    "zu": {
+      "language": "zu",
+      "value": "intaba"
+    },
+    "be-tarask": {
+      "language": "be-tarask",
+      "value": "гара"
+    },
+    "se": {
+      "language": "se",
+      "value": "várri"
+    },
+    "ckb": {
+      "language": "ckb",
+      "value": "کێو"
+    },
+    "pt-br": {
+      "language": "pt-br",
+      "value": "montanha"
+    },
+    "de-ch": {
+      "language": "de-ch",
+      "value": "Berg"
+    },
+    "en-ca": {
+      "language": "en-ca",
+      "value": "mountain"
+    },
+    "en-gb": {
+      "language": "en-gb",
+      "value": "mountain"
+    },
+    "gv": {
+      "language": "gv",
+      "value": "slieau"
+    },
+    "km": {
+      "language": "km",
+      "value": "ភ្នំ"
+    },
+    "min": {
+      "language": "min",
+      "value": "gunuang"
+    },
+    "nb": {
+      "language": "nb",
+      "value": "fjell"
+    },
+    "yue": {
+      "language": "yue",
+      "value": "山"
+    },
+    "mr": {
+      "language": "mr",
+      "value": "पर्वत"
+    },
+    "gu": {
+      "language": "gu",
+      "value": "પર્વત"
+    },
+    "zh-hans": {
+      "language": "zh-hans",
+      "value": "山"
+    },
+    "co": {
+      "language": "co",
+      "value": "muntagna"
+    },
+    "sco": {
+      "language": "sco",
+      "value": "muntain"
+    },
+    "tt": {
+      "language": "tt",
+      "value": "тау"
+    },
+    "ku": {
+      "language": "ku",
+      "value": "çiya"
+    },
+    "gsw": {
+      "language": "gsw",
+      "value": "Bärg"
+    },
+    "or": {
+      "language": "or",
+      "value": "ପର୍ବତ"
+    },
+    "sgs": {
+      "language": "sgs",
+      "value": "kalns"
+    },
+    "lzh": {
+      "language": "lzh",
+      "value": "山"
+    },
+    "nan": {
+      "language": "nan",
+      "value": "soaⁿ"
+    },
+    "vep": {
+      "language": "vep",
+      "value": "mägi"
+    },
+    "xh": {
+      "language": "xh",
+      "value": "intaba"
+    },
+    "ii": {
+      "language": "ii",
+      "value": "ꁧ"
+    },
+    "fo": {
+      "language": "fo",
+      "value": "fjall"
+    },
+    "wa": {
+      "language": "wa",
+      "value": "montinne"
+    },
+    "new": {
+      "language": "new",
+      "value": "च्वापुगुं"
+    },
+    "ik": {
+      "language": "ik",
+      "value": "Iġġi"
+    },
+    "zh-hant": {
+      "language": "zh-hant",
+      "value": "山"
+    },
+    "zh-tw": {
+      "language": "zh-tw",
+      "value": "山"
+    },
+    "li": {
+      "language": "li",
+      "value": "berg"
+    },
+    "rup": {
+      "language": "rup",
+      "value": "munti"
+    },
+    "cdo": {
+      "language": "cdo",
+      "value": "săng"
+    },
+    "ak": {
+      "language": "ak",
+      "value": "Bepo"
+    },
+    "zh-cn": {
+      "language": "zh-cn",
+      "value": "山"
+    },
+    "zh-hk": {
+      "language": "zh-hk",
+      "value": "山"
+    },
+    "zh-mo": {
+      "language": "zh-mo",
+      "value": "山"
+    },
+    "zh-my": {
+      "language": "zh-my",
+      "value": "山"
+    },
+    "zh-sg": {
+      "language": "zh-sg",
+      "value": "山"
+    },
+    "ee": {
+      "language": "ee",
+      "value": "to"
+    },
+    "kaa": {
+      "language": "kaa",
+      "value": "taw"
+    },
+    "frr": {
+      "language": "frr",
+      "value": "berag"
+    },
+    "vls": {
+      "language": "vls",
+      "value": "berg"
+    },
+    "st": {
+      "language": "st",
+      "value": "Thaba"
+    },
+    "azb": {
+      "language": "azb",
+      "value": "داغ"
+    },
+    "sd": {
+      "language": "sd",
+      "value": "جبل"
+    },
+    "ia": {
+      "language": "ia",
+      "value": "monte"
+    },
+    "mt": {
+      "language": "mt",
+      "value": "muntanja"
+    },
+    "frp": {
+      "language": "frp",
+      "value": "moutanye"
+    },
+    "ceb": {
+      "language": "ceb",
+      "value": "bukid"
+    },
+    "jam": {
+      "language": "jam",
+      "value": "mountn"
+    },
+    "vo": {
+      "language": "vo",
+      "value": "bel"
+    },
+    "hak": {
+      "language": "hak",
+      "value": "sân"
+    },
+    "bar": {
+      "language": "bar",
+      "value": "Beag"
+    },
+    "nso": {
+      "language": "nso",
+      "value": "Thaba"
+    },
+    "pam": {
+      "language": "pam",
+      "value": "bunduk"
+    },
+    "pag": {
+      "language": "pag",
+      "value": "palandey"
+    },
+    "aeb-arab": {
+      "language": "aeb-arab",
+      "value": "جبل"
+    },
+    "de-at": {
+      "language": "de-at",
+      "value": "Berg"
+    },
+    "yo": {
+      "language": "yo",
+      "value": "àpáta"
+    },
+    "tg-cyrl": {
+      "language": "tg-cyrl",
+      "value": "кӯҳ"
+    },
+    "hsb": {
+      "language": "hsb",
+      "value": "hora"
+    },
+    "dty": {
+      "language": "dty",
+      "value": "पहाड़"
+    },
+    "bho": {
+      "language": "bho",
+      "value": "पहाड़"
+    },
+    "ha": {
+      "language": "ha",
+      "value": "dutse"
+    },
+    "inh": {
+      "language": "inh",
+      "value": "Лоам"
+    },
+    "ky": {
+      "language": "ky",
+      "value": "Тоо"
+    },
+    "gor": {
+      "language": "gor",
+      "value": "Hu'idu"
+    },
+    "rmy": {
+      "language": "rmy",
+      "value": "Paxro"
+    },
+    "lfn": {
+      "language": "lfn",
+      "value": "Monte"
+    },
+    "vec": {
+      "language": "vec",
+      "value": "Montanja"
+    }
+  },
+  "descriptions": {
+    "en": {
+      "language": "en",
+      "value": "large landform that stretches above the surrounding land"
+    },
+    "nl": {
+      "language": "nl",
+      "value": "landvorm die bestaat uit een beperkt gebied dat duidelijk hoger is dan de omgeving"
+    },
+    "it": {
+      "language": "it",
+      "value": "rilievo della superficie terrestre"
+    },
+    "ru": {
+      "language": "ru",
+      "value": "местное возвышение земной поверхности"
+    },
+    "es": {
+      "language": "es",
+      "value": "elevación natural del terreno que se destaca sobre el entorno"
+    },
+    "ilo": {
+      "language": "ilo",
+      "value": "dakkel a porma ti daga a gumay-at iti ngato"
+    },
+    "de": {
+      "language": "de",
+      "value": "Geländeform, die sich über die Umgebung erhebt"
+    },
+    "fr": {
+      "language": "fr",
+      "value": "forme topographique de relief positif se détachant du relief environnant"
+    },
+    "pt-br": {
+      "language": "pt-br",
+      "value": "grande porção de terra que se estende acima do terreno circundante numa área limitada geralmente sob a forma de um pico"
+    },
+    "lt": {
+      "language": "lt",
+      "value": "aukšta geografinė vietovė"
+    },
+    "nn": {
+      "language": "nn",
+      "value": "landformasjon som strekkjer seg over det omkringliggande landskapet"
+    },
+    "gu": {
+      "language": "gu",
+      "value": "આજુબાજુની જમીન કરતાં ઊચ્ચું વિશાળ ભૃપુષ્ઠ"
+    },
+    "fi": {
+      "language": "fi",
+      "value": "ympäröivää aluetta huomattavasti korkeampi pinnanmuoto"
+    },
+    "sr": {
+      "language": "sr",
+      "value": "узвишење на Земљиној површини"
+    },
+    "hu": {
+      "language": "hu",
+      "value": "a földfelszínből kiemelkedő geomorfológiai formáció"
+    },
+    "sv": {
+      "language": "sv",
+      "value": "geografisk plats som höjer sig över sin omgivning"
+    },
+    "wa": {
+      "language": "wa",
+      "value": "grand hôt tiene"
+    },
+    "scn": {
+      "language": "scn",
+      "value": "parti di terra inclinata ca si jisa cchiu' auta rispettu ê terri intornu"
+    },
+    "uk": {
+      "language": "uk",
+      "value": "обширна ділянка земної поверхні з різкими коливаннями висот і контрастними формами рельєфу, піднесена вище 600 м над рівнем моря"
+    },
+    "cs": {
+      "language": "cs",
+      "value": "krajinný prvek, jehož výška je větší než průměrná výška krajiny"
+    },
+    "ca": {
+      "language": "ca",
+      "value": "elevació natural del terreny"
+    },
+    "pl": {
+      "language": "pl",
+      "value": "wypukła forma ukształtowania terenu"
+    },
+    "bg": {
+      "language": "bg",
+      "value": "голямо земно образувание, което се издига над останалата земна повърхност"
+    },
+    "ro": {
+      "language": "ro",
+      "value": "formă topografică de relief care se ridică deasupra celorlalte"
+    },
+    "af": {
+      "language": "af",
+      "value": "groot landvorm wat bo die beperkte omliggende gebied strek"
+    },
+    "ja": {
+      "language": "ja",
+      "value": "周囲よりも高く盛り上がった地形"
+    },
+    "jv": {
+      "language": "jv",
+      "value": "palemahan kang gedhé dhuwur"
+    },
+    "id": {
+      "language": "id",
+      "value": "bentuk tanah yang menonjol di antara sekitarnya"
+    },
+    "de-at": {
+      "language": "de-at",
+      "value": "Geländeform, die sich über die Umgebung erhebt"
+    },
+    "de-ch": {
+      "language": "de-ch",
+      "value": "Geländeform, die sich über die Umgebung erhebt"
+    },
+    "en-ca": {
+      "language": "en-ca",
+      "value": "large landform that stretches above the surrounding land"
+    },
+    "en-gb": {
+      "language": "en-gb",
+      "value": "large landform that stretches above the surrounding land"
+    },
+    "eu": {
+      "language": "eu",
+      "value": "Nabarmena den lurraren goragune naturala"
+    },
+    "te": {
+      "language": "te",
+      "value": "పర్వత సంబంధమైన, పర్వతముమీద పుట్టిన"
+    },
+    "nb": {
+      "language": "nb",
+      "value": "landformasjon som hever seg over det omliggende landskapet"
+    },
+    "hsb": {
+      "language": "hsb",
+      "value": "wuhorbjenje krajiny"
+    },
+    "zh-hans": {
+      "language": "zh-hans",
+      "value": "山河大川"
+    },
+    "tr": {
+      "language": "tr",
+      "value": "çevresindeki karasal alanlardan daha yüksek olan kara kütlelerine verilen ad"
+    },
+    "bho": {
+      "language": "bho",
+      "value": "आसपास के जमीन से ऊँच आ तेज ढाल वाला थलरूप"
+    },
+    "pt": {
+      "language": "pt",
+      "value": "grande porção de terra que se estende acima do terreno circundante, geralmente sob a forma de um pico"
+    },
+    "sk": {
+      "language": "sk",
+      "value": "väčšia vyvýšenina v teréne"
+    },
+    "bn": {
+      "language": "bn",
+      "value": "এক প্রকার ভূভাগ"
+    },
+    "ko": {
+      "language": "ko",
+      "value": "주위보다 높이 솟아 있는 지형"
+    },
+    "zh-hant": {
+      "language": "zh-hant",
+      "value": "地面上被平地所圍繞的凸起地貌區"
+    },
+    "gsw": {
+      "language": "gsw",
+      "value": "e Form vom Gländ, wo sich dütlich abhebt"
+    },
+    "he": {
+      "language": "he",
+      "value": "אזור גאוגרפי הגבוה מסביבתו"
+    },
+    "lv": {
+      "language": "lv",
+      "value": "no visām pusēm izteikti norobežots augsts zemes virsas pacēlums"
+    }
+  },
+  "aliases": {
+    "pt-br": [
+      {
+        "language": "pt-br",
+        "value": "monte"
+      }
+    ],
+    "or": [
+      {
+        "language": "or",
+        "value": "ପାହାଡ଼"
+      }
+    ],
+    "el": [
+      {
+        "language": "el",
+        "value": "όρος"
+      }
+    ],
+    "ro": [
+      {
+        "language": "ro",
+        "value": "Munți"
+      }
+    ],
+    "sco": [
+      {
+        "language": "sco",
+        "value": "iuk"
+      }
+    ],
+    "fr": [
+      {
+        "language": "fr",
+        "value": "mont"
+      }
+    ],
+    "uk": [
+      {
+        "language": "uk",
+        "value": "гори"
+      }
+    ],
+    "pag": [
+      {
+        "language": "pag",
+        "value": "bondok"
+      }
+    ],
+    "es": [
+      {
+        "language": "es",
+        "value": "montañas"
+      }
+    ],
+    "yo": [
+      {
+        "language": "yo",
+        "value": "òkè"
+      }
+    ],
+    "ja": [
+      {
+        "language": "ja",
+        "value": "グラ (ポーランド)"
+      }
+    ],
+    "hsb": [
+      {
+        "language": "hsb",
+        "value": "hórka"
+      }
+    ],
+    "nb": [
+      {
+        "language": "nb",
+        "value": "berg"
+      }
+    ],
+    "sq": [
+      {
+        "language": "sq",
+        "value": "mali"
+      },
+      {
+        "language": "sq",
+        "value": "male"
+      }
+    ],
+    "tr": [
+      {
+        "language": "tr",
+        "value": "cebel"
+      }
+    ],
+    "bho": [
+      {
+        "language": "bho",
+        "value": "परबत"
+      },
+      {
+        "language": "bho",
+        "value": "पर्वत"
+      },
+      {
+        "language": "bho",
+        "value": "माउन्टेन"
+      },
+      {
+        "language": "bho",
+        "value": "माउंटेन"
+      }
+    ],
+    "pt": [
+      {
+        "language": "pt",
+        "value": "monte"
+      }
+    ],
+    "ha": [
+      {
+        "language": "ha",
+        "value": "tsauni"
+      }
+    ],
+    "en": [
+      {
+        "language": "en",
+        "value": "summit"
+      }
+    ],
+    "az": [
+      {
+        "language": "az",
+        "value": "داغ"
+      }
+    ],
+    "he": [
+      {
+        "language": "he",
+        "value": "פסגה"
+      }
+    ],
+    "frr": [
+      {
+        "language": "frr",
+        "value": "berig"
+      }
+    ]
+  },
+  "claims": {
+    "P1151": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1151",
+          "hash": "81549f4e44008803f0c5cb870d6c42e26114ccf6",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 14614576,
+              "id": "Q14614576"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$6e3d4a44-49f8-ea96-fc58-be5965aa5f6a",
+        "rank": "normal"
+      }
+    ],
+    "P487": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P487",
+          "hash": "4e647ebd346b18d84e11fadc7c4b94786465204b",
+          "datavalue": {
+            "value": "⛰",
+            "type": "string"
+          },
+          "datatype": "string"
+        },
+        "type": "statement",
+        "id": "Q8502$40736c1c-4cc9-ae38-c442-db95bd2d6646",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P487",
+          "hash": "22386e50949e2959ce7651f0a64b68ab59f20cca",
+          "datavalue": {
+            "value": "🏔",
+            "type": "string"
+          },
+          "datatype": "string"
+        },
+        "type": "statement",
+        "id": "Q8502$fe8c8176-4705-cfbc-896e-4c201a4e6096",
+        "rank": "normal"
+      }
+    ],
+    "P373": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P373",
+          "hash": "ad29a7b8f9ef389b31ac4c20fd65b60fd807f9b2",
+          "datavalue": {
+            "value": "Mountains",
+            "type": "string"
+          },
+          "datatype": "string"
+        },
+        "type": "statement",
+        "id": "q8502$6D479134-16F4-4AFB-9963-6310C9F1D42B",
+        "rank": "normal"
+      }
+    ],
+    "P18": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P18",
+          "hash": "3c0ae774fe0814afd486b3cb7d2a6345b9c71638",
+          "datavalue": {
+            "value": "Pico Gilbo. Agosto 2005 (editada).jpg",
+            "type": "string"
+          },
+          "datatype": "commonsMedia"
+        },
+        "type": "statement",
+        "id": "Q8502$3D641E81-D271-4E9E-A541-5F8C1D177CDF",
+        "rank": "normal"
+      }
+    ],
+    "P279": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P279",
+          "hash": "2e6793baeaaee56b9203001337e19d2bd91753ca",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 14524493,
+              "id": "Q14524493"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$47cfae26-4aab-62df-acdb-d77c49d184f4",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P279",
+          "hash": "c0b2b06f0efb0bc8817fc58b3c3a051e7f6b1d73",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 35145263,
+              "id": "Q35145263"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$58d30cee-4c4e-a804-0150-d6eb81479178",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P279",
+          "hash": "e663accf4fea6cc0523e4aa04221a31c647aa4ba",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 271669,
+              "id": "Q271669"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$4f35299a-4bd4-0420-db2a-e6ae59718ee5",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P279",
+          "hash": "10b5f8321b81071687a7c4d7cb4e0b9cbf6d8bb6",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 207326,
+              "id": "Q207326"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$e51c1cfc-4e38-2149-28d4-3f0ead6f7e0d",
+        "rank": "normal"
+      }
+    ],
+    "P227": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P227",
+          "hash": "0cf5b441ca84a19e0deda245bee75452dc9812a8",
+          "datavalue": {
+            "value": "4144619-7",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$D106A1F5-6127-40C1-8CD4-AE8F91FDE9AB",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+            "snaks": {
+              "P143": [
+                {
+                  "snaktype": "value",
+                  "property": "P143",
+                  "hash": "d38375ffe6fe142663ff55cd783aa4df4301d83d",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 48183,
+                      "id": "Q48183"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P143"
+            ]
+          }
+        ]
+      }
+    ],
+    "P646": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P646",
+          "hash": "aa1574f9f85a30195a1839eba7fce877bd52da21",
+          "datavalue": {
+            "value": "/m/09d_r",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$B96B05F2-292F-49CC-8DCA-B8DFA28C22B6",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "2b00cb481cddcac7623114367489b5c194901c4a",
+            "snaks": {
+              "P248": [
+                {
+                  "snaktype": "value",
+                  "property": "P248",
+                  "hash": "a94b740202b097dd33355e0e6c00e54b9395e5e0",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 15241312,
+                      "id": "Q15241312"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ],
+              "P577": [
+                {
+                  "snaktype": "value",
+                  "property": "P577",
+                  "hash": "fde79ecb015112d2f29229ccc1ec514ed3e71fa2",
+                  "datavalue": {
+                    "value": {
+                      "time": "+2013-10-28T00:00:00Z",
+                      "timezone": 0,
+                      "before": 0,
+                      "after": 0,
+                      "precision": 11,
+                      "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                    },
+                    "type": "time"
+                  },
+                  "datatype": "time"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P248",
+              "P577"
+            ]
+          }
+        ]
+      }
+    ],
+    "P910": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P910",
+          "hash": "7b0aa84a180dc1a884d1a75f1812730845a5dd9a",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 5741923,
+              "id": "Q5741923"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$38F324DB-4ACE-4425-922D-03CB5D868DEB",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "bd49d3e4f67bc460ce7a06b6ac3027347cf5ee55",
+            "snaks": {
+              "P143": [
+                {
+                  "snaktype": "value",
+                  "property": "P143",
+                  "hash": "e84b0343e79e2a9aa8abadd7301051e15fba52d6",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 169514,
+                      "id": "Q169514"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P143"
+            ]
+          }
+        ]
+      }
+    ],
+    "P1296": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1296",
+          "hash": "5cde0a3ddd144de399088eee0c8fda3361f90308",
+          "datavalue": {
+            "value": "0125273",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$8AF3A9C1-642F-4979-B5B6-739C94E52494",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "b3fd5e254143d8b52cd96cff43af9af5e3a82358",
+            "snaks": {
+              "P143": [
+                {
+                  "snaktype": "value",
+                  "property": "P143",
+                  "hash": "f13c99a16441677ec69fcea23f221d866f1fc98f",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 199693,
+                      "id": "Q199693"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P143"
+            ]
+          }
+        ]
+      }
+    ],
+    "P1709": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1709",
+          "hash": "43b5ac1d4e6f5059c90825f15ae445a0a6fc8a37",
+          "datavalue": {
+            "value": "http://dbpedia.org/ontology/Mountain",
+            "type": "string"
+          },
+          "datatype": "url"
+        },
+        "type": "statement",
+        "qualifiers": {
+          "P973": [
+            {
+              "snaktype": "value",
+              "property": "P973",
+              "hash": "689f36117c9d3af237ec097211537ce19c60c984",
+              "datavalue": {
+                "value": "http://mappings.dbpedia.org/index.php/OntologyClass:Mountain",
+                "type": "string"
+              },
+              "datatype": "url"
+            }
+          ],
+          "P813": [
+            {
+              "snaktype": "value",
+              "property": "P813",
+              "hash": "b85a45c0dcbef1bbaa976c2eb03b605a09a33509",
+              "datavalue": {
+                "value": {
+                  "time": "+2015-06-11T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                },
+                "type": "time"
+              },
+              "datatype": "time"
+            }
+          ]
+        },
+        "qualifiers-order": [
+          "P973",
+          "P813"
+        ],
+        "id": "Q8502$52A7FB45-C005-4810-921F-2DBCBC097436",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "8f08ac3e0839bdbc4c6eb8d671e772deb12ba423",
+            "snaks": {
+              "P143": [
+                {
+                  "snaktype": "value",
+                  "property": "P143",
+                  "hash": "250b03083f7971a02473af3e43115ef521b1440d",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 465,
+                      "id": "Q465"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P143"
+            ]
+          }
+        ]
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1709",
+          "hash": "a938e4f7cbc05b1d4aa7be8616ec26ec3f80345e",
+          "datavalue": {
+            "value": "http://schema.org/Mountain",
+            "type": "string"
+          },
+          "datatype": "url"
+        },
+        "type": "statement",
+        "id": "Q8502$3497de90-4bff-6182-4432-435a9e08262b",
+        "rank": "normal"
+      }
+    ],
+    "P1014": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1014",
+          "hash": "e3e54391f7ec2dcc017859c7f9f6b868c262b243",
+          "datavalue": {
+            "value": "300008795",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$A8F5C4F0-266F-43E2-8370-CAE3F3FE458B",
+        "rank": "normal"
+      }
+    ],
+    "P935": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P935",
+          "hash": "94d0eeef179175e134aefd953b79dafc205a9841",
+          "datavalue": {
+            "value": "Mountains",
+            "type": "string"
+          },
+          "datatype": "string"
+        },
+        "type": "statement",
+        "id": "Q8502$9B7D993B-CB21-4A98-82BF-B5F55300F4ED",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "8f6d2b4a0e3da23aca841c5dfe6b7ed894bd315a",
+            "snaks": {
+              "P143": [
+                {
+                  "snaktype": "value",
+                  "property": "P143",
+                  "hash": "c4cc8cf0417b27e19c135f9b4312453d668ab641",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 191769,
+                      "id": "Q191769"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P143"
+            ]
+          }
+        ]
+      }
+    ],
+    "P1343": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1343",
+          "hash": "eda63bed5c3d7a3460033092338ab321a2374c7f",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 2041543,
+              "id": "Q2041543"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "qualifiers": {
+          "P805": [
+            {
+              "snaktype": "value",
+              "property": "P805",
+              "hash": "b3927f022cdfdf6d0d48e62826f18ef2bac4a036",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 23858845,
+                  "id": "Q23858845"
+                },
+                "type": "wikibase-entityid"
+              },
+              "datatype": "wikibase-item"
+            }
+          ]
+        },
+        "qualifiers-order": [
+          "P805"
+        ],
+        "id": "Q8502$5C8FB484-33F8-4E3F-9907-BAD39041F9BE",
+        "rank": "normal"
+      }
+    ],
+    "P1256": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1256",
+          "hash": "def5210d9aac8792405a9707b74e32eaf9aabb04",
+          "datavalue": {
+            "value": "25H11",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$112526df-4344-5e82-8e6a-5ce5eea0dcec",
+        "rank": "normal"
+      }
+    ],
+    "P1424": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1424",
+          "hash": "808caecb96ceb46fa06a5fb9f0960de682c69e4f",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 15076798,
+              "id": "Q15076798"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$62F4AD81-806F-4038-BF49-AC834449AF46",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1424",
+          "hash": "ca3ab32aa4dbc8bffebec94214e2f65ae6703a28",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 5825897,
+              "id": "Q5825897"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$d9b138f9-427d-7ec3-8893-6f67c2826d9a",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1424",
+          "hash": "4c5715b6399fc5bac27456e51f158be31a6c3086",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 60024060,
+              "id": "Q60024060"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$A279B742-D51C-4483-9374-C09D9797782B",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "5507714b436892bdd9c01ad0f2dce29462ff756b",
+            "snaks": {
+              "P3452": [
+                {
+                  "snaktype": "value",
+                  "property": "P3452",
+                  "hash": "4845c0c1c319c350e0c4ecc820769cf8016b67d4",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 60024060,
+                      "id": "Q60024060"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P3452"
+            ]
+          }
+        ]
+      }
+    ],
+    "P1282": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1282",
+          "hash": "74a44ba936a131b1d5efa7617cabb53e549af4ef",
+          "datavalue": {
+            "value": "Tag:natural=peak",
+            "type": "string"
+          },
+          "datatype": "string"
+        },
+        "type": "statement",
+        "id": "Q8502$cb950f63-4981-20d6-df52-3d9528c78c87",
+        "rank": "deprecated"
+      }
+    ],
+    "P508": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P508",
+          "hash": "595cf8c01213f15d6ae4cfb956f32036d2ec24b8",
+          "datavalue": {
+            "value": "9426",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$74DD3572-89A4-4BD7-81EB-37445CFF4616",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "7002ae52473b0b693b7c7aced9f9184ce0b29751",
+            "snaks": {
+              "P143": [
+                {
+                  "snaktype": "value",
+                  "property": "P143",
+                  "hash": "69c026c251f75d0291b3d466e54c44ef90ce1db7",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 16583225,
+                      "id": "Q16583225"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P143"
+            ]
+          }
+        ]
+      }
+    ],
+    "P2579": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P2579",
+          "hash": "6d5da34bee7d3ec0c633df63bd00a6d11e87fb91",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 52109,
+              "id": "Q52109"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$355b7891-4e6f-7f93-df8b-e89269bd517f",
+        "rank": "normal"
+      }
+    ],
+    "P3827": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P3827",
+          "hash": "48fe1ed2e9368e289c0cdbcca67698a09560eebf",
+          "datavalue": {
+            "value": "mountains",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$C91E626C-751D-40B0-A43E-28F05C0AAA95",
+        "rank": "normal"
+      }
+    ],
+    "P1417": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1417",
+          "hash": "9bf695886a79ae3d94f51d675edec462e630c50b",
+          "datavalue": {
+            "value": "science/mountain-landform",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$D74ABBCF-2A75-4151-928B-30D5F7637FA1",
+        "rank": "normal"
+      }
+    ],
+    "P2910": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P2910",
+          "hash": "7e046243f30dd30dc6a31c4bcb2b9cc1f812b397",
+          "datavalue": {
+            "value": "Noun 154483 cc Franco Mateo mountain icon.svg",
+            "type": "string"
+          },
+          "datatype": "commonsMedia"
+        },
+        "type": "statement",
+        "id": "Q8502$dbef3ab6-490a-b332-88ef-fef2a168ce68",
+        "rank": "normal"
+      }
+    ],
+    "P1963": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1963",
+          "hash": "0fac95ff6eec440686a004f7beeae78555d819f3",
+          "datavalue": {
+            "value": {
+              "entity-type": "property",
+              "numeric-id": 3907,
+              "id": "P3907"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-property"
+        },
+        "type": "statement",
+        "id": "Q8502$89dfa445-4815-4be7-5697-6dfeb67986db",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1963",
+          "hash": "c73719c3d867c60d26ef80e3dbb8c0c446f8ffcd",
+          "datavalue": {
+            "value": {
+              "entity-type": "property",
+              "numeric-id": 3109,
+              "id": "P3109"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-property"
+        },
+        "type": "statement",
+        "id": "Q8502$838774eb-42fa-3863-dbbf-fe1632ad9692",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1963",
+          "hash": "d2462f2b2f50d00becbbb9a5d97fccde71b603fb",
+          "datavalue": {
+            "value": {
+              "entity-type": "property",
+              "numeric-id": 3309,
+              "id": "P3309"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-property"
+        },
+        "type": "statement",
+        "id": "Q8502$634dbc13-47a8-bd70-7541-0ca845457744",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1963",
+          "hash": "667f02047f1858e1b3adcab836b0817aff13f6ab",
+          "datavalue": {
+            "value": {
+              "entity-type": "property",
+              "numeric-id": 3513,
+              "id": "P3513"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-property"
+        },
+        "type": "statement",
+        "id": "Q8502$60c8daf4-414b-4ebd-f479-196487f5f153",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1963",
+          "hash": "13b5f6991324774c0dad21cfeb01e089abb98bba",
+          "datavalue": {
+            "value": {
+              "entity-type": "property",
+              "numeric-id": 3770,
+              "id": "P3770"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-property"
+        },
+        "type": "statement",
+        "id": "Q8502$70575d3a-4e0e-3f21-ed39-8566f5598e78",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1963",
+          "hash": "74b99dad921ead280e4d0a0fa4bc32d832495b08",
+          "datavalue": {
+            "value": {
+              "entity-type": "property",
+              "numeric-id": 3507,
+              "id": "P3507"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-property"
+        },
+        "type": "statement",
+        "id": "Q8502$05ac61b4-4032-0d12-609c-664a6b75e9f1",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1963",
+          "hash": "9f501f84d80a8e3395bbd275081294f5beaee1ec",
+          "datavalue": {
+            "value": {
+              "entity-type": "property",
+              "numeric-id": 3514,
+              "id": "P3514"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-property"
+        },
+        "type": "statement",
+        "id": "Q8502$18249bc1-49f9-aedb-c9ea-45fa29892dcb",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1963",
+          "hash": "a9485a79e6f901d9466e061cbda3c7048459bb00",
+          "datavalue": {
+            "value": {
+              "entity-type": "property",
+              "numeric-id": 2660,
+              "id": "P2660"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-property"
+        },
+        "type": "statement",
+        "id": "Q8502$686AC684-8C4B-4869-968A-F090521D5312",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1963",
+          "hash": "5854b92b7e76a6151b0ad13a85bd7f74f56fdac5",
+          "datavalue": {
+            "value": {
+              "entity-type": "property",
+              "numeric-id": 4552,
+              "id": "P4552"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-property"
+        },
+        "type": "statement",
+        "id": "Q8502$dbc80b4c-4c36-0188-ca12-cf86c56a46bf",
+        "rank": "normal"
+      }
+    ],
+    "P2354": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P2354",
+          "hash": "3709b81ee587a5569b9ea577eebb17515a815c7e",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 11985041,
+              "id": "Q11985041"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$536edf8c-4f59-2efe-f4f0-dc1de0576e82",
+        "rank": "normal"
+      }
+    ],
+    "P3916": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P3916",
+          "hash": "319d25181108570c43039c2c491e1d10b8f15841",
+          "datavalue": {
+            "value": "concept13164",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$742F7840-AAF6-43F2-97E5-606CA0FDD6DE",
+        "rank": "normal"
+      }
+    ],
+    "P1225": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1225",
+          "hash": "e83a071715b955abc51284717e28d7f977c80d5b",
+          "datavalue": {
+            "value": "10647488",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$5CE9B1F9-268B-42EB-B804-CE4388C200B4",
+        "rank": "normal"
+      }
+    ],
+    "P2452": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P2452",
+          "hash": "61701e2573ecb4e4df9cd951bf45c2503f198b8a",
+          "datavalue": {
+            "value": "T.MT",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$1887d2c3-4174-4dae-fb58-a650ae7a1ab2",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P2452",
+          "hash": "08178080c2bb50d26a70a2599575e4d864534002",
+          "datavalue": {
+            "value": "U.MTU",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$9041AA7C-F45C-4193-ACAA-1A4913A764F3",
+        "rank": "normal"
+      }
+    ],
+    "P527": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P527",
+          "hash": "a75dda0dda219f47e91d7b8710974150264c7ae2",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 944588,
+              "id": "Q944588"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$0d46f0a5-4996-4d85-b54a-092f544e668c",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P527",
+          "hash": "03a5a3a2b6c8ab278fe9bac8752383bf34f24108",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 207326,
+              "id": "Q207326"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$c8bf4ee6-4974-19e0-32d9-e8cae5aaed1d",
+        "rank": "normal"
+      }
+    ],
+    "P2581": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P2581",
+          "hash": "47474079fe3575a1d56c0254305fbc50c1c8292f",
+          "datavalue": {
+            "value": "00056068n",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$A544706F-9080-42CC-A6EB-B40D57F4E506",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "bd0ee81488cd8c23d4b655e417aac78dca370283",
+            "snaks": {
+              "P143": [
+                {
+                  "snaktype": "value",
+                  "property": "P143",
+                  "hash": "a0b4f55dbedbadaf83e7d2461b47b7aeaba86359",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 4837690,
+                      "id": "Q4837690"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P143"
+            ]
+          }
+        ]
+      }
+    ],
+    "P3219": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P3219",
+          "hash": "0bfd18883a7fc6c7d646ee8ee1ede3ad419d1f6d",
+          "datavalue": {
+            "value": "montagnes-geomorphologie",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$031DD0B0-065D-4EBA-B6DD-C4E8A42CA644",
+        "rank": "normal"
+      }
+    ],
+    "P5008": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P5008",
+          "hash": "d8037e40c3d12c404489a97a78937213939ff1cd",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 5460604,
+              "id": "Q5460604"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$8F335F3C-B938-4D6B-B19E-FF406A646303",
+        "rank": "normal"
+      }
+    ],
+    "P5429": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P5429",
+          "hash": "2c00f5875d4b927f702ab8c8f44424598b6e019d",
+          "datavalue": {
+            "value": "mediatopic/20000434",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$0825B538-07E2-4357-83AB-FE0A48912696",
+        "rank": "normal"
+      }
+    ],
+    "P5869": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P5869",
+          "hash": "a8671299ed1410f1786a1a6e57c50fd561b4cc62",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 513,
+              "id": "Q513"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$0d20572b-4d2b-f582-661e-f8583931f2b7",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P5869",
+          "hash": "7c0cfd85900a919349f264a1f968e5181e0b1775",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 43512,
+              "id": "Q43512"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$7b643ae4-4b95-6390-72b1-281ad1b4ec6d",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P5869",
+          "hash": "b1e55edec6c2d9ce998890d94cc5bce9c78aa2c1",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 213360,
+              "id": "Q213360"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$62002336-48f7-21d2-c6e7-b028bbc5e02e",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P5869",
+          "hash": "838c69c88d349bef121e754cdcc47c436d5c96a3",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 1374,
+              "id": "Q1374"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$ab133997-4ca4-6033-dd59-c342da788a6e",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P5869",
+          "hash": "8412e13af29b5b0b56181030e5c9a7ff966d4bef",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 80344,
+              "id": "Q80344"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q8502$fdbb4f32-4fcd-5ff6-fd62-07f9d8124638",
+        "rank": "normal"
+      }
+    ],
+    "P244": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P244",
+          "hash": "ed7c73174fd8a59e9d45da73eda0d17980c077b4",
+          "datavalue": {
+            "value": "sh85087823",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q8502$73A77187-D766-4B70-882E-53886DA2BDA3",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "ac5d47e9fbcc281bc0d27a205ae02e22ad24ce31",
+            "snaks": {
+              "P854": [
+                {
+                  "snaktype": "value",
+                  "property": "P854",
+                  "hash": "b560dc6b281a39d061e189d2eb299a426a06f1a2",
+                  "datavalue": {
+                    "value": "https://github.com/JohnMarkOckerbloom/ftl/blob/master/data/wikimap",
+                    "type": "string"
+                  },
+                  "datatype": "url"
+                }
+              ],
+              "P813": [
+                {
+                  "snaktype": "value",
+                  "property": "P813",
+                  "hash": "0dcf4f64e93fdcc654e2c7534285881fe48b9f3d",
+                  "datavalue": {
+                    "value": {
+                      "time": "+2019-04-03T00:00:00Z",
+                      "timezone": 0,
+                      "before": 0,
+                      "after": 0,
+                      "precision": 11,
+                      "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                    },
+                    "type": "time"
+                  },
+                  "datatype": "time"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P854",
+              "P813"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "sitelinks": {
+    "acewiki": {
+      "site": "acewiki",
+      "title": "Gunong",
+      "badges": []
+    },
+    "afwiki": {
+      "site": "afwiki",
+      "title": "Berg",
+      "badges": []
+    },
+    "alswiki": {
+      "site": "alswiki",
+      "title": "Berg",
+      "badges": []
+    },
+    "amwiki": {
+      "site": "amwiki",
+      "title": "ተራራ",
+      "badges": []
+    },
+    "angwiki": {
+      "site": "angwiki",
+      "title": "Beorg",
+      "badges": []
+    },
+    "anwiki": {
+      "site": "anwiki",
+      "title": "Montanya",
+      "badges": []
+    },
+    "arcwiki": {
+      "site": "arcwiki",
+      "title": "ܛܘܪܐ",
+      "badges": []
+    },
+    "arwiki": {
+      "site": "arwiki",
+      "title": "جبل",
+      "badges": []
+    },
+    "astwiki": {
+      "site": "astwiki",
+      "title": "Monte",
+      "badges": []
+    },
+    "azbwiki": {
+      "site": "azbwiki",
+      "title": "داغ",
+      "badges": []
+    },
+    "azwiki": {
+      "site": "azwiki",
+      "title": "Dağ",
+      "badges": []
+    },
+    "barwiki": {
+      "site": "barwiki",
+      "title": "Beag",
+      "badges": []
+    },
+    "bat_smgwiki": {
+      "site": "bat_smgwiki",
+      "title": "Kalns",
+      "badges": []
+    },
+    "bawiki": {
+      "site": "bawiki",
+      "title": "Тау",
+      "badges": []
+    },
+    "be_x_oldwiki": {
+      "site": "be_x_oldwiki",
+      "title": "Гара",
+      "badges": []
+    },
+    "bewiki": {
+      "site": "bewiki",
+      "title": "Гара",
+      "badges": []
+    },
+    "bgwiki": {
+      "site": "bgwiki",
+      "title": "Планина",
+      "badges": []
+    },
+    "bhwiki": {
+      "site": "bhwiki",
+      "title": "पहाड़",
+      "badges": []
+    },
+    "bjnwiki": {
+      "site": "bjnwiki",
+      "title": "Gunung",
+      "badges": []
+    },
+    "bnwiki": {
+      "site": "bnwiki",
+      "title": "পর্বত",
+      "badges": []
+    },
+    "bpywiki": {
+      "site": "bpywiki",
+      "title": "মোন্টানহা",
+      "badges": []
+    },
+    "brwiki": {
+      "site": "brwiki",
+      "title": "Menez",
+      "badges": []
+    },
+    "bswiki": {
+      "site": "bswiki",
+      "title": "Planina",
+      "badges": []
+    },
+    "cawiki": {
+      "site": "cawiki",
+      "title": "Muntanya",
+      "badges": []
+    },
+    "cawikiquote": {
+      "site": "cawikiquote",
+      "title": "Muntanya",
+      "badges": []
+    },
+    "cdowiki": {
+      "site": "cdowiki",
+      "title": "Săng",
+      "badges": []
+    },
+    "cebwiki": {
+      "site": "cebwiki",
+      "title": "Bukid",
+      "badges": []
+    },
+    "cewiki": {
+      "site": "cewiki",
+      "title": "Лам",
+      "badges": []
+    },
+    "chrwiki": {
+      "site": "chrwiki",
+      "title": "ᎣᏓᎸᎢ",
+      "badges": []
+    },
+    "ckbwiki": {
+      "site": "ckbwiki",
+      "title": "کێو",
+      "badges": []
+    },
+    "commonswiki": {
+      "site": "commonswiki",
+      "title": "Mountains",
+      "badges": []
+    },
+    "cowiki": {
+      "site": "cowiki",
+      "title": "Muntagna",
+      "badges": []
+    },
+    "crwiki": {
+      "site": "crwiki",
+      "title": "ᐧᐊᔒ",
+      "badges": []
+    },
+    "cswiki": {
+      "site": "cswiki",
+      "title": "Hora",
+      "badges": []
+    },
+    "cswikiquote": {
+      "site": "cswikiquote",
+      "title": "Hora",
+      "badges": []
+    },
+    "cvwiki": {
+      "site": "cvwiki",
+      "title": "Ту",
+      "badges": []
+    },
+    "cywiki": {
+      "site": "cywiki",
+      "title": "Mynydd",
+      "badges": []
+    },
+    "dawiki": {
+      "site": "dawiki",
+      "title": "Bjerg",
+      "badges": []
+    },
+    "dewiki": {
+      "site": "dewiki",
+      "title": "Berg",
+      "badges": []
+    },
+    "dewikiquote": {
+      "site": "dewikiquote",
+      "title": "Berg",
+      "badges": []
+    },
+    "diqwiki": {
+      "site": "diqwiki",
+      "title": "Ko",
+      "badges": []
+    },
+    "elwiki": {
+      "site": "elwiki",
+      "title": "Βουνό",
+      "badges": []
+    },
+    "emlwiki": {
+      "site": "emlwiki",
+      "title": "Muntâgna",
+      "badges": []
+    },
+    "enwiki": {
+      "site": "enwiki",
+      "title": "Mountain",
+      "badges": []
+    },
+    "enwikiquote": {
+      "site": "enwikiquote",
+      "title": "Mountains",
+      "badges": []
+    },
+    "eowiki": {
+      "site": "eowiki",
+      "title": "Monto",
+      "badges": []
+    },
+    "eswiki": {
+      "site": "eswiki",
+      "title": "Montaña",
+      "badges": []
+    },
+    "eswikiquote": {
+      "site": "eswikiquote",
+      "title": "Montaña",
+      "badges": []
+    },
+    "etwiki": {
+      "site": "etwiki",
+      "title": "Mägi",
+      "badges": []
+    },
+    "euwiki": {
+      "site": "euwiki",
+      "title": "Mendi",
+      "badges": []
+    },
+    "fawiki": {
+      "site": "fawiki",
+      "title": "کوه",
+      "badges": []
+    },
+    "fiwiki": {
+      "site": "fiwiki",
+      "title": "Vuori",
+      "badges": []
+    },
+    "fiwikiquote": {
+      "site": "fiwikiquote",
+      "title": "Vuori",
+      "badges": []
+    },
+    "fowiki": {
+      "site": "fowiki",
+      "title": "Fjall",
+      "badges": []
+    },
+    "frpwiki": {
+      "site": "frpwiki",
+      "title": "Moutanye",
+      "badges": []
+    },
+    "frrwiki": {
+      "site": "frrwiki",
+      "title": "Berag",
+      "badges": []
+    },
+    "frwiki": {
+      "site": "frwiki",
+      "title": "Montagne",
+      "badges": [
+        "Q17437798"
+      ]
+    },
+    "frwikiquote": {
+      "site": "frwikiquote",
+      "title": "Montagne",
+      "badges": []
+    },
+    "fywiki": {
+      "site": "fywiki",
+      "title": "Berch",
+      "badges": []
+    },
+    "ganwiki": {
+      "site": "ganwiki",
+      "title": "山",
+      "badges": []
+    },
+    "gawiki": {
+      "site": "gawiki",
+      "title": "Sliabh",
+      "badges": []
+    },
+    "gdwiki": {
+      "site": "gdwiki",
+      "title": "Beinn",
+      "badges": []
+    },
+    "glwiki": {
+      "site": "glwiki",
+      "title": "Montaña",
+      "badges": []
+    },
+    "gorwiki": {
+      "site": "gorwiki",
+      "title": "Hu'idu",
+      "badges": []
+    },
+    "guwiki": {
+      "site": "guwiki",
+      "title": "પર્વત",
+      "badges": []
+    },
+    "gvwiki": {
+      "site": "gvwiki",
+      "title": "Slieau",
+      "badges": []
+    },
+    "hakwiki": {
+      "site": "hakwiki",
+      "title": "Sân",
+      "badges": []
+    },
+    "hewiki": {
+      "site": "hewiki",
+      "title": "הר",
+      "badges": []
+    },
+    "hifwiki": {
+      "site": "hifwiki",
+      "title": "Pahaarr",
+      "badges": []
+    },
+    "hiwiki": {
+      "site": "hiwiki",
+      "title": "पर्वत",
+      "badges": []
+    },
+    "hrwiki": {
+      "site": "hrwiki",
+      "title": "Planine",
+      "badges": []
+    },
+    "htwiki": {
+      "site": "htwiki",
+      "title": "Mòn",
+      "badges": []
+    },
+    "huwiki": {
+      "site": "huwiki",
+      "title": "Hegység",
+      "badges": []
+    },
+    "hywiki": {
+      "site": "hywiki",
+      "title": "Լեռ",
+      "badges": []
+    },
+    "iawiki": {
+      "site": "iawiki",
+      "title": "Monte",
+      "badges": []
+    },
+    "idwiki": {
+      "site": "idwiki",
+      "title": "Gunung",
+      "badges": []
+    },
+    "iiwiki": {
+      "site": "iiwiki",
+      "title": "ꁧ",
+      "badges": []
+    },
+    "ikwiki": {
+      "site": "ikwiki",
+      "title": "Iġġi",
+      "badges": []
+    },
+    "ilowiki": {
+      "site": "ilowiki",
+      "title": "Bantay",
+      "badges": []
+    },
+    "inhwiki": {
+      "site": "inhwiki",
+      "title": "Лоам",
+      "badges": []
+    },
+    "iowiki": {
+      "site": "iowiki",
+      "title": "Monto",
+      "badges": []
+    },
+    "iswiki": {
+      "site": "iswiki",
+      "title": "Fjall",
+      "badges": []
+    },
+    "itwiki": {
+      "site": "itwiki",
+      "title": "Montagna",
+      "badges": []
+    },
+    "itwikiquote": {
+      "site": "itwikiquote",
+      "title": "Montagna",
+      "badges": []
+    },
+    "jamwiki": {
+      "site": "jamwiki",
+      "title": "Mountn",
+      "badges": []
+    },
+    "jawiki": {
+      "site": "jawiki",
+      "title": "山",
+      "badges": []
+    },
+    "jawikiquote": {
+      "site": "jawikiquote",
+      "title": "山",
+      "badges": []
+    },
+    "jbowiki": {
+      "site": "jbowiki",
+      "title": "cmana",
+      "badges": []
+    },
+    "jvwiki": {
+      "site": "jvwiki",
+      "title": "Gunung",
+      "badges": []
+    },
+    "kaawiki": {
+      "site": "kaawiki",
+      "title": "Taw",
+      "badges": []
+    },
+    "kawiki": {
+      "site": "kawiki",
+      "title": "მთა",
+      "badges": []
+    },
+    "kkwiki": {
+      "site": "kkwiki",
+      "title": "Тау",
+      "badges": []
+    },
+    "kmwiki": {
+      "site": "kmwiki",
+      "title": "ភ្នំ",
+      "badges": []
+    },
+    "knwiki": {
+      "site": "knwiki",
+      "title": "ಪರ್ವತ",
+      "badges": []
+    },
+    "kowiki": {
+      "site": "kowiki",
+      "title": "산",
+      "badges": []
+    },
+    "kuwiki": {
+      "site": "kuwiki",
+      "title": "Çiya",
+      "badges": []
+    },
+    "kywiki": {
+      "site": "kywiki",
+      "title": "Тоо",
+      "badges": []
+    },
+    "lawiki": {
+      "site": "lawiki",
+      "title": "Mons",
+      "badges": []
+    },
+    "lawikiquote": {
+      "site": "lawikiquote",
+      "title": "Mons",
+      "badges": []
+    },
+    "lbewiki": {
+      "site": "lbewiki",
+      "title": "Зунтту",
+      "badges": []
+    },
+    "lbwiki": {
+      "site": "lbwiki",
+      "title": "Bierg",
+      "badges": []
+    },
+    "lezwiki": {
+      "site": "lezwiki",
+      "title": "Сув",
+      "badges": []
+    },
+    "lfnwiki": {
+      "site": "lfnwiki",
+      "title": "Monte",
+      "badges": []
+    },
+    "liwiki": {
+      "site": "liwiki",
+      "title": "Berg (geologie)",
+      "badges": []
+    },
+    "lmowiki": {
+      "site": "lmowiki",
+      "title": "Muntagna",
+      "badges": []
+    },
+    "lnwiki": {
+      "site": "lnwiki",
+      "title": "Ngómbá",
+      "badges": []
+    },
+    "ltwiki": {
+      "site": "ltwiki",
+      "title": "Kalnas",
+      "badges": []
+    },
+    "ltwikiquote": {
+      "site": "ltwikiquote",
+      "title": "Kalnas",
+      "badges": []
+    },
+    "lvwiki": {
+      "site": "lvwiki",
+      "title": "Kalns",
+      "badges": []
+    },
+    "mgwiki": {
+      "site": "mgwiki",
+      "title": "Tendrombohitra",
+      "badges": []
+    },
+    "minwiki": {
+      "site": "minwiki",
+      "title": "Gunuang",
+      "badges": []
+    },
+    "mkwiki": {
+      "site": "mkwiki",
+      "title": "Планина",
+      "badges": []
+    },
+    "mlwiki": {
+      "site": "mlwiki",
+      "title": "പർവ്വതം",
+      "badges": []
+    },
+    "mnwiki": {
+      "site": "mnwiki",
+      "title": "Уул",
+      "badges": []
+    },
+    "mrwiki": {
+      "site": "mrwiki",
+      "title": "पर्वत",
+      "badges": []
+    },
+    "mswiki": {
+      "site": "mswiki",
+      "title": "Gunung",
+      "badges": []
+    },
+    "mywiki": {
+      "site": "mywiki",
+      "title": "တောင်",
+      "badges": []
+    },
+    "nahwiki": {
+      "site": "nahwiki",
+      "title": "Tepetl",
+      "badges": []
+    },
+    "ndswiki": {
+      "site": "ndswiki",
+      "title": "Barg",
+      "badges": []
+    },
+    "newiki": {
+      "site": "newiki",
+      "title": "पहाड",
+      "badges": []
+    },
+    "newwiki": {
+      "site": "newwiki",
+      "title": "च्वापुगुं",
+      "badges": []
+    },
+    "nlwiki": {
+      "site": "nlwiki",
+      "title": "Berg (landvorm)",
+      "badges": []
+    },
+    "nnwiki": {
+      "site": "nnwiki",
+      "title": "Fjell",
+      "badges": []
+    },
+    "nnwikiquote": {
+      "site": "nnwikiquote",
+      "title": "Fjell",
+      "badges": []
+    },
+    "nowiki": {
+      "site": "nowiki",
+      "title": "Fjell",
+      "badges": []
+    },
+    "nrmwiki": {
+      "site": "nrmwiki",
+      "title": "Montangne",
+      "badges": []
+    },
+    "nsowiki": {
+      "site": "nsowiki",
+      "title": "Thaba",
+      "badges": []
+    },
+    "nvwiki": {
+      "site": "nvwiki",
+      "title": "Dził",
+      "badges": []
+    },
+    "ocwiki": {
+      "site": "ocwiki",
+      "title": "Montanha",
+      "badges": []
+    },
+    "pawiki": {
+      "site": "pawiki",
+      "title": "ਪਹਾੜ",
+      "badges": []
+    },
+    "piwiki": {
+      "site": "piwiki",
+      "title": "पब्बतो",
+      "badges": []
+    },
+    "plwiki": {
+      "site": "plwiki",
+      "title": "Góra",
+      "badges": []
+    },
+    "plwikiquote": {
+      "site": "plwikiquote",
+      "title": "Góry",
+      "badges": []
+    },
+    "pnbwiki": {
+      "site": "pnbwiki",
+      "title": "پہاڑ",
+      "badges": []
+    },
+    "pswiki": {
+      "site": "pswiki",
+      "title": "غر",
+      "badges": []
+    },
+    "ptwiki": {
+      "site": "ptwiki",
+      "title": "Montanha",
+      "badges": []
+    },
+    "ptwikiquote": {
+      "site": "ptwikiquote",
+      "title": "Montanha",
+      "badges": []
+    },
+    "quwiki": {
+      "site": "quwiki",
+      "title": "Urqu",
+      "badges": []
+    },
+    "rmwiki": {
+      "site": "rmwiki",
+      "title": "Muntogna",
+      "badges": []
+    },
+    "rmywiki": {
+      "site": "rmywiki",
+      "title": "Paxro",
+      "badges": []
+    },
+    "roa_rupwiki": {
+      "site": "roa_rupwiki",
+      "title": "Munti",
+      "badges": []
+    },
+    "roa_tarawiki": {
+      "site": "roa_tarawiki",
+      "title": "Mundagne",
+      "badges": []
+    },
+    "rowiki": {
+      "site": "rowiki",
+      "title": "Munte",
+      "badges": []
+    },
+    "ruwiki": {
+      "site": "ruwiki",
+      "title": "Гора",
+      "badges": []
+    },
+    "rwwiki": {
+      "site": "rwwiki",
+      "title": "Umusozi",
+      "badges": []
+    },
+    "sahwiki": {
+      "site": "sahwiki",
+      "title": "Хайа",
+      "badges": []
+    },
+    "sawiki": {
+      "site": "sawiki",
+      "title": "पर्वताः",
+      "badges": []
+    },
+    "scnwiki": {
+      "site": "scnwiki",
+      "title": "Muntagna",
+      "badges": []
+    },
+    "scowiki": {
+      "site": "scowiki",
+      "title": "Moontain",
+      "badges": []
+    },
+    "sdwiki": {
+      "site": "sdwiki",
+      "title": "جبل",
+      "badges": []
+    },
+    "sewiki": {
+      "site": "sewiki",
+      "title": "Várri",
+      "badges": []
+    },
+    "shwiki": {
+      "site": "shwiki",
+      "title": "Planina",
+      "badges": []
+    },
+    "simplewiki": {
+      "site": "simplewiki",
+      "title": "Mountain",
+      "badges": []
+    },
+    "skwiki": {
+      "site": "skwiki",
+      "title": "Vrch (vyvýšenina)",
+      "badges": []
+    },
+    "skwikiquote": {
+      "site": "skwikiquote",
+      "title": "Hora",
+      "badges": []
+    },
+    "slwiki": {
+      "site": "slwiki",
+      "title": "Gora",
+      "badges": []
+    },
+    "slwikiquote": {
+      "site": "slwikiquote",
+      "title": "Gora",
+      "badges": []
+    },
+    "snwiki": {
+      "site": "snwiki",
+      "title": "Gomo",
+      "badges": []
+    },
+    "sowiki": {
+      "site": "sowiki",
+      "title": "Buur",
+      "badges": []
+    },
+    "sqwiki": {
+      "site": "sqwiki",
+      "title": "Mali (gjeografi)",
+      "badges": []
+    },
+    "srwiki": {
+      "site": "srwiki",
+      "title": "Планина",
+      "badges": []
+    },
+    "suwiki": {
+      "site": "suwiki",
+      "title": "Gunung",
+      "badges": []
+    },
+    "svwiki": {
+      "site": "svwiki",
+      "title": "Berg",
+      "badges": []
+    },
+    "swwiki": {
+      "site": "swwiki",
+      "title": "Mlima",
+      "badges": []
+    },
+    "tawiki": {
+      "site": "tawiki",
+      "title": "மலை",
+      "badges": []
+    },
+    "tewiki": {
+      "site": "tewiki",
+      "title": "పర్వతం",
+      "badges": []
+    },
+    "tgwiki": {
+      "site": "tgwiki",
+      "title": "Кӯҳ",
+      "badges": []
+    },
+    "thwiki": {
+      "site": "thwiki",
+      "title": "ภูเขา",
+      "badges": []
+    },
+    "tkwiki": {
+      "site": "tkwiki",
+      "title": "Dag",
+      "badges": []
+    },
+    "tlwiki": {
+      "site": "tlwiki",
+      "title": "Bundok",
+      "badges": []
+    },
+    "trwiki": {
+      "site": "trwiki",
+      "title": "Dağ",
+      "badges": []
+    },
+    "ttwiki": {
+      "site": "ttwiki",
+      "title": "Тау",
+      "badges": []
+    },
+    "ukwiki": {
+      "site": "ukwiki",
+      "title": "Гора",
+      "badges": []
+    },
+    "ukwikiquote": {
+      "site": "ukwikiquote",
+      "title": "Гора",
+      "badges": []
+    },
+    "urwiki": {
+      "site": "urwiki",
+      "title": "پہاڑ",
+      "badges": []
+    },
+    "urwikiquote": {
+      "site": "urwikiquote",
+      "title": "پہاڑ",
+      "badges": []
+    },
+    "uzwiki": {
+      "site": "uzwiki",
+      "title": "Togʻlar",
+      "badges": []
+    },
+    "vecwiki": {
+      "site": "vecwiki",
+      "title": "Montanja",
+      "badges": []
+    },
+    "vepwiki": {
+      "site": "vepwiki",
+      "title": "Mägi",
+      "badges": []
+    },
+    "viwiki": {
+      "site": "viwiki",
+      "title": "Núi",
+      "badges": []
+    },
+    "vlswiki": {
+      "site": "vlswiki",
+      "title": "Berg",
+      "badges": []
+    },
+    "warwiki": {
+      "site": "warwiki",
+      "title": "Bukid",
+      "badges": []
+    },
+    "wawiki": {
+      "site": "wawiki",
+      "title": "Montinne",
+      "badges": []
+    },
+    "wowiki": {
+      "site": "wowiki",
+      "title": "Tangor",
+      "badges": []
+    },
+    "wuuwiki": {
+      "site": "wuuwiki",
+      "title": "山",
+      "badges": []
+    },
+    "xhwiki": {
+      "site": "xhwiki",
+      "title": "Intaba",
+      "badges": []
+    },
+    "xmfwiki": {
+      "site": "xmfwiki",
+      "title": "გვალა",
+      "badges": []
+    },
+    "yiwiki": {
+      "site": "yiwiki",
+      "title": "באַרג",
+      "badges": []
+    },
+    "zawiki": {
+      "site": "zawiki",
+      "title": "Bya",
+      "badges": []
+    },
+    "zh_classicalwiki": {
+      "site": "zh_classicalwiki",
+      "title": "山",
+      "badges": []
+    },
+    "zh_min_nanwiki": {
+      "site": "zh_min_nanwiki",
+      "title": "Soaⁿ",
+      "badges": []
+    },
+    "zh_yuewiki": {
+      "site": "zh_yuewiki",
+      "title": "山",
+      "badges": []
+    },
+    "zhwiki": {
+      "site": "zhwiki",
+      "title": "山",
+      "badges": []
+    },
+    "zhwikiquote": {
+      "site": "zhwikiquote",
+      "title": "山",
+      "badges": []
+    },
+    "zuwiki": {
+      "site": "zuwiki",
+      "title": "Intaba",
+      "badges": []
+    }
+  }
+}

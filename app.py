@@ -17,7 +17,7 @@ if __name__ == '__main__':
     print('Loading '+sys.argv[2])
     graph = WikidataGraph()
     graph.load_pagerank(sys.argv[2])
-    tagger = Tagger('wd_2019-02-24_hol_case', bow, graph)
+    tagger = Tagger('wd_live', bow, graph)
     print('Loading dataset')
     goldstandard = GoldStandardDataset('data/affiliations.tsv')
     classifier = None
