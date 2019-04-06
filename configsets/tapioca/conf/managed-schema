@@ -62,13 +62,13 @@
     -->
     <fieldType name="tag" class="solr.TextField" postingsFormat="FST50" omitNorms="true" multiValued="true">
       <analyzer type="index">
-        <tokenizer class="solr.StandardTokenizerFactory" />
+        <tokenizer class="solr.ClassicTokenizerFactory" />
         <filter class="solr.EnglishPossessiveFilterFactory" />
         <filter class="solr.ASCIIFoldingFilterFactory" />
         <filter class="solr.ConcatenateGraphFilterFactory" preservePositionIncrements="false" />
       </analyzer>
       <analyzer type="query">
-        <tokenizer class="solr.StandardTokenizerFactory" />
+        <tokenizer class="solr.ClassicTokenizerFactory" />
         <filter class="solr.EnglishPossessiveFilterFactory" />
         <filter class="solr.ASCIIFoldingFilterFactory" />
       </analyzer>
@@ -108,11 +108,11 @@
 
     <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100" multiValued="true">
       <analyzer type="index">
-        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <tokenizer class="solr.ClassicTokenizerFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
       <analyzer type="query">
-        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <tokenizer class="solr.ClassicTokenizerFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
     </fieldType>
