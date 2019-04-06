@@ -104,12 +104,22 @@ tapioca index-dump my_collection_name latest-all.json.bz2 --profile profiles/hum
 Note that if you have multiple cores available, you might want to run decompression as a separate
 process, given that it is generally the bottleneck:
 ```
-bunzip2 < latest-all.json.bz2 | tapioca index-dump my_collection_name - --types Q43229,Q618123 --properties P2427,P1566
+bunzip2 < latest-all.json.bz2 | tapioca index-dump my_collection_name - --profile profiles/human_organization_place.json
 ```
+
+Custom analyzers
+----------------
+
+Some profiles require custom Solr analyzers and tokenizers. For instance the Twitter profile can be used
+to index Twitter usernames and hashtags as labels, which is useful to annotate mentions in Twitter feeds.
+This requires a special tokenizer which handles these tokens appropriately. This tokenizer is provided as 
+a Solr plugin in the `plugins` directory. It can be installed by adding this jar in the `server/solr/lib` directory
+of your Solr instance (the `lib` subfolder needs to be created first).
 
 Running tests
 -------------
 
 OpenTapioca comes with a test suite that can be run with `pytest`. This
 requires a SolrCloud server to be running on `localhost:8983`.
+
 
