@@ -36,7 +36,7 @@ class WikidataStreamReader(object):
     def __enter__(self):
         url = self.endpoint
         if self.from_time is not None:
-             url += '?since='+from_time.isoformat().replace('+00:00', 'Z')
+             url += '?since='+self.from_time.isoformat().replace('+00:00', 'Z')
         self.stream = SSEClient(url)
         return self
     

@@ -11,3 +11,4 @@ pytest_mock
 click
 pynif
 sseclient
+python-dateutil

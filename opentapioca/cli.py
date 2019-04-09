@@ -1,6 +1,7 @@
 
 import click
 import logging
+import dateutil.parser
 
 from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.languagemodel import BOWLanguageModel
@@ -118,7 +119,8 @@ def index_dump(collection_name, filename, profile, shards, solr='http://localhos
 @click.argument('collection_name')
 @click.option('-p', '--profile', help='Filename of the indexing profile to use')
 @click.option('-s', '--shards', default=1, help='Number of shards to use when creating the collection, if needed')
-def index_stream(collection_name, profile, shards, solr='http://localhost:8983/solr/'):
+@click.option('-a', '--after', default=None, help='Start indexing the stream after the given point in time (in the past)')
+def index_stream(collection_name, profile, shards, after, solr='http://localhost:8983/solr/'):
     """
     Listens to the Wikidata edit stream and updates a collection according to
     the given indexing profile.
@@ -129,7 +131,9 @@ def index_stream(collection_name, profile, shards, solr='http://localhost:8983/s
         tagger.create_collection(collection_name, num_shards=shards, configset=indexing_profile.solrconfig)
     except CollectionAlreadyExists:
         pass
-    stream = WikidataStreamReader()
+    if after is not None:
+        after = dateutil.parser.parse(after)
+    stream = WikidataStreamReader(from_time=after)
     tagger.index_stream(collection_name, stream, indexing_profile,
                         batch_size=50, commit_time=1, delete_excluded=True)
 
