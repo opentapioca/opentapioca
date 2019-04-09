@@ -2,6 +2,7 @@ from bottle import route, run, default_app, static_file, request, abort, respons
 import sys
 import json
 from pynif import NIFCollection
+import logging
 
 from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.languagemodel import BOWLanguageModel
@@ -9,21 +10,23 @@ from opentapioca.tagger import Tagger
 from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.goldstandard import GoldStandardDataset
 
+logger = logging.getLogger(__name__)
+
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
     fname = sys.argv[1]
-    print('Loading '+fname)
+    logger.info('Loading '+fname)
     bow = BOWLanguageModel()
     bow.load(fname)
-    print('Loading '+sys.argv[2])
+    logger.info('Loading '+sys.argv[2])
     graph = WikidataGraph()
     graph.load_pagerank(sys.argv[2])
     tagger = Tagger('wd_2019-02-24_twitter', bow, graph)
-    print('Loading dataset')
+    logger.info('Loading dataset')
     goldstandard = GoldStandardDataset('data/affiliations.tsv')
     classifier = None
-    classifier = None
     if len(sys.argv) > 3:
-        print('Loading classifier')
+        logger.info('Loading classifier')
         classifier = SimpleTagClassifier(tagger)
         classifier.load(sys.argv[3])
 
@@ -84,7 +87,7 @@ def nif_api(*args, **kwargs):
     nif_body = request.body.read()
     nif_doc = NIFCollection.loads(nif_body)
     for context in nif_doc.contexts:
-        print(context.mention)
+        logger.debug(context.mention)
         mentions = tagger.tag_and_rank(context.mention)
         classifier.classify_mentions(mentions)
         for mention in mentions:

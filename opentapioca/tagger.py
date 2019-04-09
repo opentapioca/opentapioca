@@ -1,5 +1,6 @@
 import json
 import requests
+import logging
 from math import log
 
 from .languagemodel import BOWLanguageModel
@@ -11,6 +12,7 @@ from .tag import Tag
 from .mention import Mention
 
 # solr_collection = 'wd_multilingual'
+logger = logging.getLogger(__name__)
 
 class Tagger(object):
     """
@@ -30,6 +32,7 @@ class Tagger(object):
         self.graph = graph
         self.solr_endpoint = 'http://localhost:8983/solr/{}/tag'.format(solr_collection)
         self.max_similarity_distance = 100
+        self.max_length = 2500
         self.similarity_method = DirectLinkSimilarity()
 
     def tag_and_rank(self, phrase, prune=True):
@@ -38,6 +41,8 @@ class Tagger(object):
         :param prune: if True, ignores lowercase mentions shorter than 3 characters
         """
         # Tag
+        phrase = phrase[:self.max_length]
+        logger.debug('Tagging text with solr (length {})'.format(len(phrase)))
         r = requests.post(self.solr_endpoint,
             params={'overlaps':'NO_SUB',
              'tagsLimit':500,
@@ -48,6 +53,7 @@ class Tagger(object):
             headers ={'Content-Type':'text/plain'},
             data=phrase.encode('utf-8'))
         r.raise_for_status()
+        logger.debug('Tagging succeeded')
         resp = r.json()
 
         # Enhance mentions with page rank and edge similarity
@@ -64,6 +70,7 @@ class Tagger(object):
             self._create_mention(phrase, mention, docs, mentions_json)
             for mention in mentions_json
         ]
+        logger.debug('Similarity computation suceeded')
 
         if prune:
             ranked_mentions = list(filter(self.prune_mention, ranked_mentions))

@@ -288,8 +288,10 @@ class SimpleTagClassifier(object):
         """
         feature_array, tag_key_to_idx = self.build_feature_vectors_for_doc(mentions)
 
+        logger.debug('Classifying mentions')
         if tag_key_to_idx:
             predicted_classes = self.fit.decision_function(feature_array)
+        nb_tags = 0
 
         for mention in mentions:
             start = mention.start
@@ -297,11 +299,13 @@ class SimpleTagClassifier(object):
             max_score = 0
             best_tag = None
             for tag in mention.tags:
+                nb_tags += 1
                 tag_key = (start, end, tag.id)
                 tag.score = predicted_classes[tag_key_to_idx[tag_key]]
                 if tag.score > max_score:
                     max_score = tag.score
                     best_tag = tag.id
             mention.best_qid = best_tag
+        logger.debug('Mentions classified ({} tags)'.format(nb_tags))
 
 
