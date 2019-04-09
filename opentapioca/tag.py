@@ -38,10 +38,10 @@ class Tag(object):
         self.nb_sitelinks = nb_sitelinks
         if isinstance(nb_sitelinks, list):
             self.nb_sitelinks = nb_sitelinks[0]
-        self.edges = edges
-        self.types = json.loads(types)
+        self.edges = edges or []
+        self.types = json.loads(types) if types else {}
         self.rank = rank
-        self.similarities = similarities
+        self.similarities = similarities or []
         self.score = score
         self.valid = valid
 

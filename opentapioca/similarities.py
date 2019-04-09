@@ -7,16 +7,15 @@ items
 class EdgeSimilarityMeasure(object):
     def compute_similarity(self, a, b):
         """
-        Computes the similarity between two 
-        items (represented by dictionaries of various things)
+        Computes the similarity between two tags.
 
         :param a: the starting item
         :param b: the target item
         """
-        qid_a = int(a['id'][1:])
-        qid_b = int(b['id'][1:])
-        edges_a = set(a.get('edges', []))
-        edges_b = set(b.get('edges', []))
+        qid_a = int(a.id[1:])
+        qid_b = int(b.id[1:])
+        edges_a = set(a.edges)
+        edges_b = set(b.edges)
         
         return self.similarity_from_edges(qid_a, qid_b, edges_a, edges_b)
 
