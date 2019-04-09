@@ -84,6 +84,7 @@ def nif_api(*args, **kwargs):
     nif_body = request.body.read()
     nif_doc = NIFCollection.loads(nif_body)
     for context in nif_doc.contexts:
+        print(context.mention)
         mentions = tagger.tag_and_rank(context.mention)
         classifier.classify_mentions(mentions)
         for mention in mentions:

@@ -29,7 +29,7 @@ class Tagger(object):
         self.bow = bow
         self.graph = graph
         self.solr_endpoint = 'http://localhost:8983/solr/{}/tag'.format(solr_collection)
-        self.coef = 5
+        self.max_similarity_distance = 100
         self.similarity_method = DirectLinkSimilarity()
 
     def tag_and_rank(self, phrase, prune=True):
@@ -43,7 +43,7 @@ class Tagger(object):
              'tagsLimit':500,
              'fl':'id,label,aliases,extra_aliases,desc,nb_statements,nb_sitelinks,edges,types',
              'wt':'json',
-             'indent':'on',
+             'indent':'off',
             },
             headers ={'Content-Type':'text/plain'},
             data=phrase.encode('utf-8'))
@@ -110,7 +110,8 @@ class Tagger(object):
             for other_mention in mentions:
                 other_start = other_mention['startOffset']
                 other_end = other_mention['endOffset']
-                if other_start == start and other_end == end:
+                distance = abs((other_end - other_start - end + start) / 2)
+                if (other_start == start and other_end == end) or distance > self.max_similarity_distance:
                     continue
                 for other_qid in other_mention['ids']:
                     other_tag_id = (other_start, other_end, other_qid)

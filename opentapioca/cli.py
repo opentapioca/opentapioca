@@ -15,7 +15,7 @@ from pynif import NIFCollection
 
 @click.group()
 def cli():
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
     pass
 
 @click.command()
