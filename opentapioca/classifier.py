@@ -4,6 +4,9 @@ from collections import defaultdict
 from sklearn import svm
 from sklearn import preprocessing
 from sklearn.pipeline import Pipeline
+from .similarities import EdgeRatioSimilarity
+from .similarities import OneStepSimilarity
+from .similarities import DirectLinkSimilarity
 import pickle
 
 logger = logging.getLogger(__name__)
@@ -12,13 +15,16 @@ class SimpleTagClassifier(object):
     """
     A linear support vector classifier to predict the validity of a tag in a mention.
     """
-    def __init__(self, tagger, alpha=0.85, nb_steps=2, C=0.001, mode="markov"):
+    def __init__(self, tagger, alpha=0.85, nb_steps=2, C=0.001, mode="markov", max_similarity_distance=100, similarity_smoothing=0.1):
         self.tagger = tagger
         self.alpha = alpha
         self.nb_steps = nb_steps
         self.C = C
         self.mode = mode
         self.identifier_space = 'http://www.wikidata.org/entity/'
+        self.max_similarity_distance = max_similarity_distance
+        self.similarity_method = DirectLinkSimilarity()
+        self.similarity_smoothing = similarity_smoothing
 
     def feature_vectors_from_mention(self, mention):
         """
@@ -58,6 +64,16 @@ class SimpleTagClassifier(object):
             dct = dict(self.__dict__.items())
             del dct['tagger']
             pickle.dump(dct, f)
+            
+    def create_mentions(self, phrase):
+        """
+        Runs the Solr tagger to create the mentions
+        and compute the similarities between them.
+        """
+        mentions = self.tagger.tag_and_rank(phrase)
+        for mention in mentions:
+            self.compute_similarities(mention, mentions)
+        return mentions
 
     def tag_dataset(self, dataset):
         """
@@ -67,7 +83,7 @@ class SimpleTagClassifier(object):
         docid_to_mentions = {}
         for context in dataset.contexts:
             docid = str(context.uri)
-            docid_to_mentions[docid] = self.tagger.tag_and_rank(context.mention)
+            docid_to_mentions[docid] = self.create_mentions(context.mention)
         return docid_to_mentions
 
     def crossfit_model(self, dataset, parameters=None, max_iter=100):
@@ -89,7 +105,7 @@ class SimpleTagClassifier(object):
         for idx, context in enumerate(all_contexts):
             if idx % 100 == 0:
                 logger.info("{}...".format(idx))
-            docid_to_mentions[str(context.uri)] = self.tagger.tag_and_rank(context.mention)
+            docid_to_mentions[str(context.uri)] = self.create_mentions(context.mention)
 
         if parameters is None:
             parameters = [{}]
@@ -308,4 +324,35 @@ class SimpleTagClassifier(object):
             mention.best_qid = best_tag
         logger.debug('Mentions classified ({} tags)'.format(nb_tags))
 
+    def compute_similarities(self, mention, all_mentions):
+        """
+        Compute similarity on each tag of a mention, to other tags in the same document
+        """
+        start = mention.start
+        end = mention.end
+        for tag in mention.tags:
+            similarities = [{'tag':mention.tag_key(tag.id), 'score':self.similarity_smoothing}]
+            other_tag_ids = []
+            for other_mention in all_mentions:
+                other_start = other_mention.start
+                other_end = other_mention.end
+                distance = abs((other_end + other_start - end - start) / 2)
+                if (other_start == start and other_end == end) or distance > self.max_similarity_distance:
+                    continue
+                for other_tag in other_mention.tags:
+                    other_tag_id = other_mention.tag_key(other_tag.id)
+                    similarity = self.similarity_smoothing + self.similarity_method.compute_similarity(tag, other_tag)
+                    other_tag_ids.append(other_tag_id)
+                    if similarity > 0.:
+                        similarities.append(
+                                {'tag': other_tag_id,
+                                 'score': similarity })
+                        
+            # Normalize
+            weight_sum = sum(similarity['score'] for similarity in similarities)
+
+            tag.similarities = [
+                    {'tag':sim['tag'],'score': sim['score']/weight_sum}
+                    for sim in similarities
+            ]
 

@@ -1,13 +1,11 @@
 import json
 import requests
 import logging
+import re
 from math import log
 
 from .languagemodel import BOWLanguageModel
 from .wikidatagraph import WikidataGraph
-from .similarities import EdgeRatioSimilarity
-from .similarities import OneStepSimilarity
-from .similarities import DirectLinkSimilarity
 from .tag import Tag
 from .mention import Mention
 
@@ -31,9 +29,7 @@ class Tagger(object):
         self.bow = bow
         self.graph = graph
         self.solr_endpoint = 'http://localhost:8983/solr/{}/tag'.format(solr_collection)
-        self.max_similarity_distance = 100
-        self.max_length = 2500
-        self.similarity_method = DirectLinkSimilarity()
+        self.prune_re = re.compile(r'^(\w\w?|[\d ]{,4})$')
 
     def tag_and_rank(self, phrase, prune=True):
         """
@@ -66,31 +62,30 @@ class Tagger(object):
             for doc in resp.get('response', {}).get('docs', [])
         }
 
-        ranked_mentions = [
+        mentions = [
             self._create_mention(phrase, mention, docs, mentions_json)
             for mention in mentions_json
         ]
-        logger.debug('Similarity computation suceeded')
+        
+        pruned_mentions = [
+            mention
+            for mention in mentions
+            if not self.prune_phrase(mention.phrase)
+        ]
 
-        if prune:
-            ranked_mentions = list(filter(self.prune_mention, ranked_mentions))
+        return pruned_mentions
 
-        return ranked_mentions
-
-    def prune_mention(self, mention):
+    def prune_phrase(self, phrase):
         """
-        Should this mention be pruned? It happens when
-        it is shorter than 3 characters and appears in lowercase in the text.
+        Should this phrase be pruned? It happens when
+        it is shorter than 3 characters and appears in lowercase in the text,
+        or only consists of digits.
 
         This is mostly introduced to remove matches of Wikidata items about characters,
-        or to prevent short words such as "of" or "in" to match with initials "OF", "IN".
+        or to prevent short words such as "of" or "in" to match with initials "OF", "IN",
+        as well as sport scores, postcodes, and so on.
         """
-        phrase = mention.phrase
-        # filter out small uncapitalized words
-        if len(phrase) <= 2 and phrase.lower() == phrase:
-            return False
-
-        return True
+        return self.prune_re.match(phrase) is not None and phrase.lower() == phrase
 
     def _create_mention(self, phrase, mention, docs, mentions):
         """
@@ -110,51 +105,9 @@ class Tagger(object):
         ranked_tags = []
         for qid in mention['ids']:
             item = dict(docs[qid].items())
-
-            # Compute similarity to other items in the same document
-            similarities = []
-            other_tag_ids = []
-            for other_mention in mentions:
-                other_start = other_mention['startOffset']
-                other_end = other_mention['endOffset']
-                distance = abs((other_end - other_start - end + start) / 2)
-                if (other_start == start and other_end == end) or distance > self.max_similarity_distance:
-                    continue
-                for other_qid in other_mention['ids']:
-                    other_tag_id = (other_start, other_end, other_qid)
-                    other_item = docs[other_qid]
-                    similarity = self.similarity_method.compute_similarity(item, other_item)
-                    other_tag_ids.append(other_tag_id)
-                    if similarity > 0.:
-                        similarities.append(
-                                {'tag': other_tag_id,
-                                 'score': similarity })
-
-            # Normalize
-            weight_sum = sum(similarity['score'] for similarity in similarities)
-            if weight_sum == 0.:
-                # the item is not similar to anything else
-                # we add dummy edges to all other tags, so that the probability
-                # mass is retained
-                similarities.append({
-                    'tag':(start,end,qid),
-                    'score':1.})
-                for tag in other_tag_ids:
-                    similarities.append({
-                        'tag':tag,
-                        'score':1.})
-                weight_sum = len(other_tag_ids)+1
-
-            similarities = [
-                    {'tag':sim['tag'],'score': sim['score']/weight_sum}
-                    for sim in similarities
-            ]
-
-            item.update({
-                'rank': 23. + log(self.graph.get_pagerank(qid)),
-                'similarities': similarities,
-            })
+            item['rank'] = 23. + log(self.graph.get_pagerank(qid))
             ranked_tags.append(Tag(**item))
+            
         return Mention(
             phrase=surface,
             start=start,

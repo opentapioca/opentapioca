@@ -42,15 +42,23 @@ class TaggerTest(unittest.TestCase):
                             WikidataDumpReader(os.path.join(testdir, 'data/sample_wikidata_items.json.bz2')),
                             cls.profile)
         
+        cls.sut = Tagger(cls.collection_name, cls.bow, cls.graph)
+        
     @classmethod
     def tearDownClass(cls):
         super(TaggerTest, cls).tearDownClass()
         cls.tf.delete_collection(cls.collection_name)
         
     def test_tag_and_rank(self):
-        sut = Tagger(self.collection_name, self.bow, self.graph)
-        mentions = sut.tag_and_rank('I live in Vanuatu')
+        mentions = self.sut.tag_and_rank('I live in Vanuatu')
         self.assertEqual(mentions[0].tags[0].id, 'Q686')
+        
+    def test_prune_mention(self):
+        self.assertTrue(self.sut.prune_phrase('of'))
+        self.assertTrue(self.sut.prune_phrase('1 1'))
+        self.assertFalse(self.sut.prune_phrase('orcid'))
+        self.assertFalse(self.sut.prune_phrase('75005'))
+        self.assertFalse(self.sut.prune_phrase('UK'))
         
         
         
