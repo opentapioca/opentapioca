@@ -112,7 +112,7 @@ def index_dump(collection_name, filename, profile, shards, solr='http://localhos
         pass
     dump = WikidataDumpReader(filename)
     tagger.index_stream(collection_name, dump, indexing_profile,
-                        batch_size=5000, commit_time=10, delete_excluded=False)
+                        batch_size=2000, commit_time=10, delete_excluded=False)
 
 @click.command()
 @click.argument('collection_name')
@@ -145,7 +145,8 @@ def delete_collection(collection_name, solr='http://localhost:8983/solr/'):
 @click.option('-p', '--pagerank', default=None, help='Path of the trained PageRank (.npy file)')
 @click.option('-d', '--dataset', default=None, help='Path to the NIF dataset to use as training dataset.')
 @click.option('-o', '--output', default=None, help='Path where the trained classifier should be written.')
-def train_classifier(collection, bow, pagerank, dataset, output):
+@click.option('-m', '--max-iter', default=500, help='Maximum number of iterations for SVM training.')
+def train_classifier(collection, bow, pagerank, dataset, output, max_iter):
     """
     Trains a tag classifier on a NIF dataset.
     """
@@ -158,16 +159,17 @@ def train_classifier(collection, bow, pagerank, dataset, output):
     tagger = Tagger(collection, b, graph)
     d = NIFCollection.load(dataset)
     clf = SimpleTagClassifier(tagger)
+    max_iter = int(max_iter)
 
     parameter_grid = []
-    for C in [20.0, 10.0, 5.0, 1.0]:
+    for C in [10.0, 5.0, 1.0, 0.5, 0.1, 0.05, 0.01]:
         parameter_grid.append({
             'nb_steps':4,
             'C': C,
             'mode': 'markov',
             })
 
-    best_params = clf.crossfit_model(d, parameter_grid)
+    best_params = clf.crossfit_model(d, parameter_grid, max_iter=max_iter)
     print('#########')
     print(best_params)
     clf.save(output)

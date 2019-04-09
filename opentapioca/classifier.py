@@ -70,7 +70,7 @@ class SimpleTagClassifier(object):
             docid_to_mentions[docid] = self.tagger.tag_and_rank(context.mention)
         return docid_to_mentions
 
-    def crossfit_model(self, dataset, parameters=None):
+    def crossfit_model(self, dataset, parameters=None, max_iter=100):
         """
         Learns the model and report F1 score
         with cross-validation.
@@ -118,7 +118,7 @@ class SimpleTagClassifier(object):
                 best_params = param_setting
                 best_f1 = scores['f1']
                 # Retrain on whole dev set with these parameters
-                self.train_model(dataset, None, docid_to_mentions)
+                self.train_model(dataset, None, docid_to_mentions, max_iter=max_iter)
                 best_classifier = self.fit
                 self.save('data/best_classifier_so_far.pkl')
             else:
@@ -128,7 +128,7 @@ class SimpleTagClassifier(object):
         self.fit = best_classifier
         return best_params, best_f1
 
-    def train_model(self, dataset, docids=None, docid_to_mentions=None):
+    def train_model(self, dataset, docids=None, docid_to_mentions=None, max_iter=100):
         """
         Train the model on the given NIF dataset, restricting the training
         to the given document identifiers.
@@ -183,7 +183,7 @@ class SimpleTagClassifier(object):
             return
 
         scaler = preprocessing.StandardScaler()
-        clf = svm.LinearSVC(class_weight='balanced',C=self.C, max_iter=100)
+        clf = svm.LinearSVC(class_weight='balanced',C=self.C, max_iter=max_iter)
         pipeline = Pipeline([('scaler',scaler),('svm',clf)])
 
         fit = pipeline.fit(design_matrix, classes)
