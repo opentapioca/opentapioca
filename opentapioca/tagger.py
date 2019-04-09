@@ -30,6 +30,7 @@ class Tagger(object):
         self.graph = graph
         self.solr_endpoint = 'http://localhost:8983/solr/{}/tag'.format(solr_collection)
         self.prune_re = re.compile(r'^(\w\w?|[\d ]{,4})$')
+        self.max_length = 10000
 
     def tag_and_rank(self, phrase, prune=True):
         """

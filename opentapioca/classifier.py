@@ -15,15 +15,20 @@ class SimpleTagClassifier(object):
     """
     A linear support vector classifier to predict the validity of a tag in a mention.
     """
-    def __init__(self, tagger, alpha=0.85, nb_steps=2, C=0.001, mode="markov", max_similarity_distance=100, similarity_smoothing=0.1):
+    def __init__(self, tagger, beta=0.85, nb_steps=2, C=0.001, max_similarity_distance=100, similarity_smoothing=0.1, similarity="direct_link"):
         self.tagger = tagger
-        self.alpha = alpha
+        self.beta = beta
         self.nb_steps = nb_steps
         self.C = C
-        self.mode = mode
         self.identifier_space = 'http://www.wikidata.org/entity/'
+        self.similarity = similarity
         self.max_similarity_distance = max_similarity_distance
-        self.similarity_method = DirectLinkSimilarity()
+        if similarity == "direct_link":
+            self.similarity_method = DirectLinkSimilarity()
+        elif similarity == "edge_ratio":
+            self.similarity_method = EdgeRatioSimilarity()
+        else:
+            self.similarity_method = OneStepSimilarity(beta)
         self.similarity_smoothing = similarity_smoothing
 
     def feature_vectors_from_mention(self, mention):
@@ -284,16 +289,13 @@ class SimpleTagClassifier(object):
                     other_tag_idx = tag_key_to_idx[similarity['tag']]
                     adj_matrix[other_tag_idx,tag_idx] = similarity['score']
 
-        if self.mode == 'markov':
-            mixed_features = feature_array
-            mixed_features_array = [feature_array]
-            for i in range(self.nb_steps):
-                mixed_features = numpy.dot(adj_matrix, mixed_features)
-                mixed_features_array.append(mixed_features)
-            feature_array = numpy.hstack(mixed_features_array)
-        elif self.mode == "restarts":
-            for i in range(self.nb_steps):
-                feature_array = self.alpha * feature_array + (1 - self.alpha) * numpy.dot(adj_matrix, feature_array)
+        mixed_features = feature_array
+        mixed_features_array = [feature_array]
+        for i in range(self.nb_steps):
+            mixed_features = numpy.dot(adj_matrix, mixed_features)
+            mixed_features_array.append(mixed_features)
+        feature_array = numpy.hstack(mixed_features_array)
+
         return feature_array, tag_key_to_idx
 
     def classify_mentions(self, mentions):
@@ -351,8 +353,9 @@ class SimpleTagClassifier(object):
             # Normalize
             weight_sum = sum(similarity['score'] for similarity in similarities)
 
-            tag.similarities = [
-                    {'tag':sim['tag'],'score': sim['score']/weight_sum}
-                    for sim in similarities
-            ]
+            if weight_sum > 0.:
+                tag.similarities = [
+                        {'tag':sim['tag'],'score': sim['score']/weight_sum}
+                        for sim in similarities
+                ]
 

@@ -68,8 +68,10 @@ def jsonp(view):
 @jsonp
 def annotate_api(args):
     text = args['query']
-    mentions = tagger.tag_and_rank(text)
-    if classifier:
+    if not classifier:
+        mentions = tagger.tag_and_rank(text)
+    else:
+        mentions = classifier.create_mentions(text)
         classifier.classify_mentions(mentions)
 
     return {
@@ -88,7 +90,7 @@ def nif_api(*args, **kwargs):
     nif_doc = NIFCollection.loads(nif_body)
     for context in nif_doc.contexts:
         logger.debug(context.mention)
-        mentions = tagger.tag_and_rank(context.mention)
+        mentions = classifier.create_mentions(context.mention)
         classifier.classify_mentions(mentions)
         for mention in mentions:
             mention.add_phrase_to_nif_context(context)

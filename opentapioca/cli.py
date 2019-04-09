@@ -2,6 +2,7 @@
 import click
 import logging
 import dateutil.parser
+import os
 
 from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.languagemodel import BOWLanguageModel
@@ -16,7 +17,7 @@ from pynif import NIFCollection
 
 @click.group()
 def cli():
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
+    logging.basicConfig(level=os.environ.get('TAPIOCA_LOGLEVEL', 'INFO'), format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
     pass
 
 @click.command()
@@ -166,12 +167,16 @@ def train_classifier(collection, bow, pagerank, dataset, output, max_iter):
     max_iter = int(max_iter)
 
     parameter_grid = []
-    for C in [10.0, 5.0, 1.0, 0.5, 0.1, 0.05, 0.01]:
-        parameter_grid.append({
-            'nb_steps':4,
-            'C': C,
-            'mode': 'markov',
-            })
+    for C in [10.0, 1.0, 0.1, 0.01, 0.01]:
+        for similarity, beta in [('direct_link', None), ('edge_ratio', None), ('one_step', 0.1), ('one_step', 0.2), ('one_step', 0.5), ('one_step', 0.8), ('one_step', 0.85)]:
+            for smoothing in [1, 0.7, 0.5, 0.1]:
+                parameter_grid.append({
+                    'nb_steps':4,
+                    'C': C,
+                    'similarity': similarity,
+                    'beta': beta,
+                    'similarity_smoothing': smoothing,
+                    })
 
     best_params = clf.crossfit_model(d, parameter_grid, max_iter=max_iter)
     print('#########')
