@@ -218,6 +218,8 @@ class SimpleTagClassifier(object):
                     nb_predictions += 1
                 if target_item is not None:
                     nb_item_judgments += 1
+                if target_item is None and mention.best_qid is not None:
+                    logger.debug("False positive: {} in context {}".format(mention, context))
 
         # print({'nb_valid_predictions':nb_valid_predictions, 'nb_predictions': nb_predictions, 'nb_item_judgments':nb_item_judgments})
         precision = float(nb_valid_predictions) / nb_predictions if nb_predictions else 1.
