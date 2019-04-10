@@ -1,0 +1,3020 @@
+@prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://aksw.org/N3/RSS-500/100#char=68,74> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Boston" ;
+    nif:beginIndex "68"^^xsd:nonNegativeInteger ;
+    nif:endIndex "74"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/100#char=0,112> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q213959> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/100#char=80,92> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Johnny Pesky" ;
+    nif:beginIndex "80"^^xsd:nonNegativeInteger ;
+    nif:endIndex "92"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/100#char=0,112> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1320754> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/105#char=63,77> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Brendan Cassar" ;
+    nif:beginIndex "63"^^xsd:nonNegativeInteger ;
+    nif:endIndex "77"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/105#char=0,245> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Brendan_Cassar> .
+
+<http://aksw.org/N3/RSS-500/105#char=92,98> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "UNESCO" ;
+    nif:beginIndex "92"^^xsd:nonNegativeInteger ;
+    nif:endIndex "98"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/105#char=0,245> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q7809> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/11#char=39,47> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Aeroflot" ;
+    nif:beginIndex "39"^^xsd:nonNegativeInteger ;
+    nif:endIndex "47"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/11#char=0,184> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q58707> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/11#char=60,76> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Irina Dannenberg" ;
+    nif:beginIndex "60"^^xsd:nonNegativeInteger ;
+    nif:endIndex "76"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/11#char=0,184> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Irina_Dannenberg> .
+
+<http://aksw.org/N3/RSS-500/112#char=13,22> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bud Bunce" ;
+    nif:beginIndex "13"^^xsd:nonNegativeInteger ;
+    nif:endIndex "22"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/112#char=0,144> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Bud_Bunce> .
+
+<http://aksw.org/N3/RSS-500/112#char=43,63> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Portland Archdiocese" ;
+    nif:beginIndex "43"^^xsd:nonNegativeInteger ;
+    nif:endIndex "63"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/112#char=0,144> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q45525> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/113#char=26,31> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bulls" ;
+    nif:beginIndex "26"^^xsd:nonNegativeInteger ;
+    nif:endIndex "31"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/113#char=0,152> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q128109> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/113#char=38,51> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Tom Thibodeau" ;
+    nif:beginIndex "38"^^xsd:nonNegativeInteger ;
+    nif:endIndex "51"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/113#char=0,152> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q586579> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/129#char=267,287> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "CapStone Investments" ;
+    nif:beginIndex "267"^^xsd:nonNegativeInteger ;
+    nif:endIndex "287"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/129#char=0,313> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/CapStone_Investments> .
+
+<http://aksw.org/N3/RSS-500/129#char=296,306> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Rory Maher" ;
+    nif:beginIndex "296"^^xsd:nonNegativeInteger ;
+    nif:endIndex "306"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/129#char=0,313> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Rory_Maher> .
+
+<http://aksw.org/N3/RSS-500/132#char=12,21> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Cardinals" ;
+    nif:beginIndex "12"^^xsd:nonNegativeInteger ;
+    nif:endIndex "21"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/132#char=0,148> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q224164> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/132#char=27,34> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Daytona" ;
+    nif:beginIndex "27"^^xsd:nonNegativeInteger ;
+    nif:endIndex "34"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/132#char=0,148> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q490595> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/136#char=0,15> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Carroll College" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "15"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/136#char=0,82> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5046531> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/136#char=27,41> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Mike Van Diest" ;
+    nif:beginIndex "27"^^xsd:nonNegativeInteger ;
+    nif:endIndex "41"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/136#char=0,82> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6849134> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/145#char=110,135> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Jet Propulsion Laboratory" ;
+    nif:beginIndex "110"^^xsd:nonNegativeInteger ;
+    nif:endIndex "135"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/145#char=0,180> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q189325> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/145#char=77,91> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Charles Elachi" ;
+    nif:beginIndex "77"^^xsd:nonNegativeInteger ;
+    nif:endIndex "91"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/145#char=0,180> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1950678> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/148#char=35,42> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Charlie" ;
+    nif:beginIndex "35"^^xsd:nonNegativeInteger ;
+    nif:endIndex "42"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/148#char=0,141> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Charlie> .
+
+<http://aksw.org/N3/RSS-500/148#char=53,56> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Lee" ;
+    nif:beginIndex "53"^^xsd:nonNegativeInteger ;
+    nif:endIndex "56"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/148#char=0,141> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Lee> .
+
+<http://aksw.org/N3/RSS-500/149#char=10,21> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Chart House" ;
+    nif:beginIndex "10"^^xsd:nonNegativeInteger ;
+    nif:endIndex "21"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/149#char=0,131> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Chart_House> .
+
+<http://aksw.org/N3/RSS-500/149#char=28,39> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Joey Cabell" ;
+    nif:beginIndex "28"^^xsd:nonNegativeInteger ;
+    nif:endIndex "39"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/149#char=0,131> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Joey_Cabell> .
+
+<http://aksw.org/N3/RSS-500/151#char=0,7> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Chelsea" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "7"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/151#char=0,24> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q9616> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/151#char=16,22> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "FA Cup" ;
+    nif:beginIndex "16"^^xsd:nonNegativeInteger ;
+    nif:endIndex "22"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/151#char=0,24> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q11151> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/152#char=18,34> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Cherokee Village" ;
+    nif:beginIndex "18"^^xsd:nonNegativeInteger ;
+    nif:endIndex "34"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/152#char=0,72> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q79323> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/152#char=50,70> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Highland High School" ;
+    nif:beginIndex "50"^^xsd:nonNegativeInteger ;
+    nif:endIndex "70"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/152#char=0,72> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Highland_High_School_(Arkansas)> .
+
+<http://aksw.org/N3/RSS-500/153#char=0,7> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Chevron" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "7"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/153#char=0,74> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q319642> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/153#char=18,30> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Justin Higgs" ;
+    nif:beginIndex "18"^^xsd:nonNegativeInteger ;
+    nif:endIndex "30"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/153#char=0,74> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Justin_Higgs> .
+
+<http://aksw.org/N3/RSS-500/154#char=0,17> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Chicago White Sox" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "17"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/154#char=0,83> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q335169> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/154#char=32,46> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Kevin Youkilis" ;
+    nif:beginIndex "32"^^xsd:nonNegativeInteger ;
+    nif:endIndex "46"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/154#char=0,83> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1208322> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/156#char=178,184> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Diaoyu" ;
+    nif:beginIndex "178"^^xsd:nonNegativeInteger ;
+    nif:endIndex "184"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/156#char=0,186> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q29460> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/156#char=89,94> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "China" ;
+    nif:beginIndex "89"^^xsd:nonNegativeInteger ;
+    nif:endIndex "94"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/156#char=0,186> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q148> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/163#char=32,40> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Chrysler" ;
+    nif:beginIndex "32"^^xsd:nonNegativeInteger ;
+    nif:endIndex "40"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/163#char=0,66> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q181114> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/163#char=53,64> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Jodi Tinson" ;
+    nif:beginIndex "53"^^xsd:nonNegativeInteger ;
+    nif:endIndex "64"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/163#char=0,66> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Jodi_Tinson> .
+
+<http://aksw.org/N3/RSS-500/165#char=70,77> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Churkin" ;
+    nif:beginIndex "70"^^xsd:nonNegativeInteger ;
+    nif:endIndex "77"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/165#char=0,172> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1394102> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/165#char=93,97> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "U.S." ;
+    nif:beginIndex "93"^^xsd:nonNegativeInteger ;
+    nif:endIndex "97"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/165#char=0,172> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q30> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/166#char=47,57> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Cincinnati" ;
+    nif:beginIndex "47"^^xsd:nonNegativeInteger ;
+    nif:endIndex "57"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/166#char=0,90> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5386868> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/166#char=69,75> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Husted" ;
+    nif:beginIndex "69"^^xsd:nonNegativeInteger ;
+    nif:endIndex "75"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/166#char=0,90> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6270269> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/167#char=35,42> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Gannett" ;
+    nif:beginIndex "35"^^xsd:nonNegativeInteger ;
+    nif:endIndex "42"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/167#char=0,106> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1345971> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/167#char=6,19> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Clark-Johnson" ;
+    nif:beginIndex "6"^^xsd:nonNegativeInteger ;
+    nif:endIndex "19"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/167#char=0,106> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Sue_Clark-Johnson> .
+
+<http://aksw.org/N3/RSS-500/175#char=0,23> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Coalition Avenir Quebec" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "23"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/175#char=0,153> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2348226> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/175#char=31,47> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Francois Legault" ;
+    nif:beginIndex "31"^^xsd:nonNegativeInteger ;
+    nif:endIndex "47"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/175#char=0,153> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/Fran%C3%A7ois_Legault> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/177#char=105,124> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "International Joint" ;
+    nif:beginIndex "105"^^xsd:nonNegativeInteger ;
+    nif:endIndex "124"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/177#char=0,156> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/International_Joint_Command> .
+
+<http://aksw.org/N3/RSS-500/177#char=67,84> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Col. Hagen Messer" ;
+    nif:beginIndex "67"^^xsd:nonNegativeInteger ;
+    nif:endIndex "84"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/177#char=0,156> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Hagen_Messer> .
+
+<http://aksw.org/N3/RSS-500/180#char=0,10> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Commission" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "10"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/180#char=0,126> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Commission> .
+
+<http://aksw.org/N3/RSS-500/180#char=20,32> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Dan McCranie" ;
+    nif:beginIndex "20"^^xsd:nonNegativeInteger ;
+    nif:endIndex "32"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/180#char=0,126> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Dan_McCranie> .
+
+<http://aksw.org/N3/RSS-500/184#char=22,28> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Conway" ;
+    nif:beginIndex "22"^^xsd:nonNegativeInteger ;
+    nif:endIndex "28"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/184#char=0,67> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q79853> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/184#char=49,53> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "City" ;
+    nif:beginIndex "49"^^xsd:nonNegativeInteger ;
+    nif:endIndex "53"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/184#char=0,67> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/City_of_Colleges> .
+
+<http://aksw.org/N3/RSS-500/185#char=15,27> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Corey Mulloy" ;
+    nif:beginIndex "15"^^xsd:nonNegativeInteger ;
+    nif:endIndex "27"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/185#char=0,304> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Corey_Mulloy> .
+
+<http://aksw.org/N3/RSS-500/185#char=48,73> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Highland Capital Partners" ;
+    nif:beginIndex "48"^^xsd:nonNegativeInteger ;
+    nif:endIndex "73"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/185#char=0,304> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5758699> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/186#char=0,8> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Gregoire" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "8"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/186#char=0,135> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Gregoire> .
+
+<http://aksw.org/N3/RSS-500/186#char=19,30> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Cory Curtis" ;
+    nif:beginIndex "19"^^xsd:nonNegativeInteger ;
+    nif:endIndex "30"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/186#char=0,135> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Cory_Curtis> .
+
+<http://aksw.org/N3/RSS-500/187#char=44,49> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Cosmo" ;
+    nif:beginIndex "44"^^xsd:nonNegativeInteger ;
+    nif:endIndex "49"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/187#char=0,89> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q333644> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/187#char=57,75> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Helen Gurley Brown" ;
+    nif:beginIndex "57"^^xsd:nonNegativeInteger ;
+    nif:endIndex "75"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/187#char=0,89> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q254738> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/191#char=38,52> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Cupsuptic Lake" ;
+    nif:beginIndex "38"^^xsd:nonNegativeInteger ;
+    nif:endIndex "52"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/191#char=0,98> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Cupsuptic_Lake> .
+
+<http://aksw.org/N3/RSS-500/191#char=67,96> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Rangeley Lakes Heritage Trust" ;
+    nif:beginIndex "67"^^xsd:nonNegativeInteger ;
+    nif:endIndex "96"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/191#char=0,98> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Rangeley_Lakes_Heritage_Trust> .
+
+<http://aksw.org/N3/RSS-500/193#char=147,150> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "DIA" ;
+    nif:beginIndex "147"^^xsd:nonNegativeInteger ;
+    nif:endIndex "150"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/193#char=0,177> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q330015> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/193#char=164,175> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Laura Coale" ;
+    nif:beginIndex "164"^^xsd:nonNegativeInteger ;
+    nif:endIndex "175"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/193#char=0,177> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Laura_Coale> .
+
+<http://aksw.org/N3/RSS-500/195#char=0,3> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "DMV" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/195#char=0,110> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q539809> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/195#char=16,27> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Jan Mendoza" ;
+    nif:beginIndex "16"^^xsd:nonNegativeInteger ;
+    nif:endIndex "27"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/195#char=0,110> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Jan_Mendoza> .
+
+<http://aksw.org/N3/RSS-500/20#char=122,135> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Alvaro Enciso" ;
+    nif:beginIndex "122"^^xsd:nonNegativeInteger ;
+    nif:endIndex "135"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/20#char=0,201> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Alvaro_Enciso> .
+
+<http://aksw.org/N3/RSS-500/20#char=155,161> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "La Luz" ;
+    nif:beginIndex "155"^^xsd:nonNegativeInteger ;
+    nif:endIndex "161"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/20#char=0,201> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/La_Luz_Fundation> .
+
+<http://aksw.org/N3/RSS-500/21#char=31,37> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Amazon" ;
+    nif:beginIndex "31"^^xsd:nonNegativeInteger ;
+    nif:endIndex "37"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/21#char=0,226> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3884> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/21#char=46,56> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Jeff Bezos" ;
+    nif:beginIndex "46"^^xsd:nonNegativeInteger ;
+    nif:endIndex "56"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/21#char=0,226> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q312556> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/215#char=0,5> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Delta" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "5"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/215#char=0,162> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q188920> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/215#char=16,30> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Morgan Durrant" ;
+    nif:beginIndex "16"^^xsd:nonNegativeInteger ;
+    nif:endIndex "30"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/215#char=0,162> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Morgan_Durrant> .
+
+<http://aksw.org/N3/RSS-500/22#char=59,65> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Amazon" ;
+    nif:beginIndex "59"^^xsd:nonNegativeInteger ;
+    nif:endIndex "65"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/22#char=0,86> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3884> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/22#char=74,84> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Jeff Bezos" ;
+    nif:beginIndex "74"^^xsd:nonNegativeInteger ;
+    nif:endIndex "84"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/22#char=0,86> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q312556> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/221#char=0,12> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Detroit News" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "12"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/221#char=0,52> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2703792> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/221#char=22,38> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "David Shepardson" ;
+    nif:beginIndex "22"^^xsd:nonNegativeInteger ;
+    nif:endIndex "38"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/221#char=0,52> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/David_Shepardson> .
+
+<http://aksw.org/N3/RSS-500/223#char=134,155> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Development Authority" ;
+    nif:beginIndex "134"^^xsd:nonNegativeInteger ;
+    nif:endIndex "155"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/223#char=0,411> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Development_Authority> .
+
+<http://aksw.org/N3/RSS-500/223#char=172,178> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Tigers" ;
+    nif:beginIndex "172"^^xsd:nonNegativeInteger ;
+    nif:endIndex "178"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/223#char=0,411> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Tigers> .
+
+<http://aksw.org/N3/RSS-500/224#char=134,155> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Development Authority" ;
+    nif:beginIndex "134"^^xsd:nonNegativeInteger ;
+    nif:endIndex "155"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/224#char=0,411> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Development_Authority> .
+
+<http://aksw.org/N3/RSS-500/224#char=172,178> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Tigers" ;
+    nif:beginIndex "172"^^xsd:nonNegativeInteger ;
+    nif:endIndex "178"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/224#char=0,411> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Tigers> .
+
+<http://aksw.org/N3/RSS-500/229#char=16,20> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Dish" ;
+    nif:beginIndex "16"^^xsd:nonNegativeInteger ;
+    nif:endIndex "20"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/229#char=0,110> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1199757> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/229#char=34,39> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Maine" ;
+    nif:beginIndex "34"^^xsd:nonNegativeInteger ;
+    nif:endIndex "39"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/229#char=0,110> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q724> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/23#char=37,54> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Ambassador Bridge" ;
+    nif:beginIndex "37"^^xsd:nonNegativeInteger ;
+    nif:endIndex "54"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/23#char=0,175> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q12575> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/23#char=61,73> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Matty Maroun" ;
+    nif:beginIndex "61"^^xsd:nonNegativeInteger ;
+    nif:endIndex "73"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/23#char=0,175> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Manuel_Moroun> .
+
+<http://aksw.org/N3/RSS-500/232#char=50,58> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Dolphins" ;
+    nif:beginIndex "50"^^xsd:nonNegativeInteger ;
+    nif:endIndex "58"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/232#char=0,108> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q223243> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/232#char=64,74> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Dan Marino" ;
+    nif:beginIndex "64"^^xsd:nonNegativeInteger ;
+    nif:endIndex "74"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/232#char=0,108> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q195367> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/233#char=0,14> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Donna Williams" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "14"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/233#char=0,191> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Donna_Williams> .
+
+<http://aksw.org/N3/RSS-500/233#char=34,63> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Northern Wake Republican Club" ;
+    nif:beginIndex "34"^^xsd:nonNegativeInteger ;
+    nif:endIndex "63"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/233#char=0,191> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Northern_Wake_Republican_Club> .
+
+<http://aksw.org/N3/RSS-500/235#char=35,47> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Donny Schatz" ;
+    nif:beginIndex "35"^^xsd:nonNegativeInteger ;
+    nif:endIndex "47"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/235#char=0,235> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5296750> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/235#char=56,75> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Knoxville Nationals" ;
+    nif:beginIndex "56"^^xsd:nonNegativeInteger ;
+    nif:endIndex "75"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/235#char=0,235> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q16998614> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/237#char=0,9> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Dr. Moran" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "9"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/237#char=0,107> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Benjamin_J._Moran> .
+
+<http://aksw.org/N3/RSS-500/237#char=29,53> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "New York Medical College" ;
+    nif:beginIndex "29"^^xsd:nonNegativeInteger ;
+    nif:endIndex "53"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/237#char=0,107> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q4115972> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/244#char=15,21> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Duncan" ;
+    nif:beginIndex "15"^^xsd:nonNegativeInteger ;
+    nif:endIndex "21"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/244#char=0,208> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q349922> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/244#char=33,43> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Washington" ;
+    nif:beginIndex "33"^^xsd:nonNegativeInteger ;
+    nif:endIndex "43"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/244#char=0,208> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q61> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/245#char=40,54> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Dunkin' Donuts" ;
+    nif:beginIndex "40"^^xsd:nonNegativeInteger ;
+    nif:endIndex "54"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/245#char=0,121> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/Dunkin%27_Donuts> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/245#char=67,73> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Boston" ;
+    nif:beginIndex "67"^^xsd:nonNegativeInteger ;
+    nif:endIndex "73"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/245#char=0,121> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q100> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/246#char=51,55> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "ESPN" ;
+    nif:beginIndex "51"^^xsd:nonNegativeInteger ;
+    nif:endIndex "55"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/246#char=0,77> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/ESPN_(United_States)> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/246#char=66,75> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Andy Hall" ;
+    nif:beginIndex "66"^^xsd:nonNegativeInteger ;
+    nif:endIndex "75"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/246#char=0,77> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Andy_Hall> .
+
+<http://aksw.org/N3/RSS-500/247#char=20,24> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "ESPN" ;
+    nif:beginIndex "20"^^xsd:nonNegativeInteger ;
+    nif:endIndex "24"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/247#char=0,204> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/ESPN_(United_States)> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/247#char=35,45> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Dave Nagle" ;
+    nif:beginIndex "35"^^xsd:nonNegativeInteger ;
+    nif:endIndex "45"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/247#char=0,204> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Dave_Nagle> .
+
+<http://aksw.org/N3/RSS-500/248#char=62,74> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "East Jackson" ;
+    nif:beginIndex "62"^^xsd:nonNegativeInteger ;
+    nif:endIndex "74"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/248#char=0,99> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/East_Jackson> .
+
+<http://aksw.org/N3/RSS-500/248#char=81,92> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Brian Smith" ;
+    nif:beginIndex "81"^^xsd:nonNegativeInteger ;
+    nif:endIndex "92"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/248#char=0,99> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Brian_Smith_(Coach)> .
+
+<http://aksw.org/N3/RSS-500/249#char=35,73> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "State Secretariat for Economic Affairs" ;
+    nif:beginIndex "35"^^xsd:nonNegativeInteger ;
+    nif:endIndex "73"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/249#char=0,227> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/State_Secretariat_for_Economic_Affairs> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/249#char=85,89> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "SECO" ;
+    nif:beginIndex "85"^^xsd:nonNegativeInteger ;
+    nif:endIndex "89"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/249#char=0,227> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/State_Secretariat_for_Economic_Affairs> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/251#char=37,57> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Education Department" ;
+    nif:beginIndex "37"^^xsd:nonNegativeInteger ;
+    nif:endIndex "57"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/251#char=0,90> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2612019> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/251#char=70,83> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Liza Cordeiro" ;
+    nif:beginIndex "70"^^xsd:nonNegativeInteger ;
+    nif:endIndex "83"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/251#char=0,90> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Liza_Cordeiro> .
+
+<http://aksw.org/N3/RSS-500/261#char=123,138> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Manchester City" ;
+    nif:beginIndex "123"^^xsd:nonNegativeInteger ;
+    nif:endIndex "138"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/261#char=0,201> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q50602> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/261#char=90,112> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "English Premier League" ;
+    nif:beginIndex "90"^^xsd:nonNegativeInteger ;
+    nif:endIndex "112"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/261#char=0,201> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q9448> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/264#char=0,21> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Environmental Defense" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "21"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/264#char=0,182> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1345899> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/264#char=30,46> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Spreck Rosekrans" ;
+    nif:beginIndex "30"^^xsd:nonNegativeInteger ;
+    nif:endIndex "46"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/264#char=0,182> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Spreck_Rosekrans> .
+
+<http://aksw.org/N3/RSS-500/266#char=138,150> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Eric Gregory" ;
+    nif:beginIndex "138"^^xsd:nonNegativeInteger ;
+    nif:endIndex "150"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/266#char=0,205> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Eric_Gregory> .
+
+<http://aksw.org/N3/RSS-500/266#char=170,189> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Kentucky Distillers" ;
+    nif:beginIndex "170"^^xsd:nonNegativeInteger ;
+    nif:endIndex "189"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/266#char=0,205> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Kentucky_Distillers_Association> .
+
+<http://aksw.org/N3/RSS-500/269#char=134,140> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Eslite" ;
+    nif:beginIndex "134"^^xsd:nonNegativeInteger ;
+    nif:endIndex "140"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/269#char=0,217> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q391988> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/269#char=149,158> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Robert Wu" ;
+    nif:beginIndex "149"^^xsd:nonNegativeInteger ;
+    nif:endIndex "158"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/269#char=0,217> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Robert_Wu> .
+
+<http://aksw.org/N3/RSS-500/274#char=72,81> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Ewa Beach" ;
+    nif:beginIndex "72"^^xsd:nonNegativeInteger ;
+    nif:endIndex "81"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/274#char=0,96> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/%CA%BBEwa_Beach,_Hawaii> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/274#char=90,94> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Aiea" ;
+    nif:beginIndex "90"^^xsd:nonNegativeInteger ;
+    nif:endIndex "94"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/274#char=0,96> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q423505> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/281#char=0,12> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Fayetteville" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "12"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/281#char=0,95> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2131289> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/281#char=22,30> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Tom Rist" ;
+    nif:beginIndex "22"^^xsd:nonNegativeInteger ;
+    nif:endIndex "30"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/281#char=0,95> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Tom_Rist> .
+
+<http://aksw.org/N3/RSS-500/283#char=140,170> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Federal Highway Administration" ;
+    nif:beginIndex "140"^^xsd:nonNegativeInteger ;
+    nif:endIndex "170"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/283#char=0,192> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q800112> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/283#char=177,190> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Victor Mendez" ;
+    nif:beginIndex "177"^^xsd:nonNegativeInteger ;
+    nif:endIndex "190"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/283#char=0,192> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q7926150> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/287#char=0,15> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Felix Hernandez" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "15"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/287#char=0,171> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/F%C3%A9lix_Hern%C3%A1ndez> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/287#char=28,44> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Seattle Mariners" ;
+    nif:beginIndex "28"^^xsd:nonNegativeInteger ;
+    nif:endIndex "44"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/287#char=0,171> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q466586> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/289#char=0,8> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Ferguson" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "8"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/289#char=0,132> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Bobby_Ferguson> .
+
+<http://aksw.org/N3/RSS-500/289#char=16,29> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Gerald Evelyn" ;
+    nif:beginIndex "16"^^xsd:nonNegativeInteger ;
+    nif:endIndex "29"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/289#char=0,132> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Gerald_Evelyn> .
+
+<http://aksw.org/N3/RSS-500/29#char=28,39> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Timea Babos" ;
+    nif:beginIndex "28"^^xsd:nonNegativeInteger ;
+    nif:endIndex "39"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/29#char=0,68> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/T%C3%ADmea_Babos> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/29#char=6,22> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Angelique Kerber" ;
+    nif:beginIndex "6"^^xsd:nonNegativeInteger ;
+    nif:endIndex "22"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/29#char=0,68> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q77178> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/290#char=32,46> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Fikile Mbalula" ;
+    nif:beginIndex "32"^^xsd:nonNegativeInteger ;
+    nif:endIndex "46"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/290#char=0,240> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1412305> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/290#char=55,62> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Semenya" ;
+    nif:beginIndex "55"^^xsd:nonNegativeInteger ;
+    nif:endIndex "62"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/290#char=0,240> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5834> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/296#char=56,61> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Foote" ;
+    nif:beginIndex "56"^^xsd:nonNegativeInteger ;
+    nif:endIndex "61"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/296#char=0,233> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Harry_Foote> .
+
+<http://aksw.org/N3/RSS-500/296#char=74,82> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Portland" ;
+    nif:beginIndex "74"^^xsd:nonNegativeInteger ;
+    nif:endIndex "82"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/296#char=0,233> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q49201> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/300#char=150,162> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Kang Shu-hua" ;
+    nif:beginIndex "150"^^xsd:nonNegativeInteger ;
+    nif:endIndex "162"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/300#char=0,185> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Kang_Shu-hua> .
+
+<http://aksw.org/N3/RSS-500/300#char=92,130> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Taipei City Women 's Rescue Foundation" ;
+    nif:beginIndex "92"^^xsd:nonNegativeInteger ;
+    nif:endIndex "130"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/300#char=0,185> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Taipei_City_Womens_Rescue_Foundation> .
+
+<http://aksw.org/N3/RSS-500/301#char=122,125> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Fox" ;
+    nif:beginIndex "122"^^xsd:nonNegativeInteger ;
+    nif:endIndex "125"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/301#char=0,158> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q8331> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/301#char=136,144> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Dan Bell" ;
+    nif:beginIndex "136"^^xsd:nonNegativeInteger ;
+    nif:endIndex "144"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/301#char=0,158> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Dan_Bell> .
+
+<http://aksw.org/N3/RSS-500/305#char=19,25> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "France" ;
+    nif:beginIndex "19"^^xsd:nonNegativeInteger ;
+    nif:endIndex "25"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/305#char=0,228> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q33881> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/305#char=33,48> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Lance Armstrong" ;
+    nif:beginIndex "33"^^xsd:nonNegativeInteger ;
+    nif:endIndex "48"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/305#char=0,228> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2172> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/308#char=0,2> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "GM" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "2"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/308#char=0,121> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q81965> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/308#char=13,21> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Jim Cain" ;
+    nif:beginIndex "13"^^xsd:nonNegativeInteger ;
+    nif:endIndex "21"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/308#char=0,121> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Jim_Cain> .
+
+<http://aksw.org/N3/RSS-500/309#char=152,154> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "GM" ;
+    nif:beginIndex "152"^^xsd:nonNegativeInteger ;
+    nif:endIndex "154"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/309#char=0,180> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q81965> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/309#char=165,178> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Tom Wilkinson" ;
+    nif:beginIndex "165"^^xsd:nonNegativeInteger ;
+    nif:endIndex "178"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/309#char=0,180> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Tom_Wilkinson> .
+
+<http://aksw.org/N3/RSS-500/31#char=22,39> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Appalachian Power" ;
+    nif:beginIndex "22"^^xsd:nonNegativeInteger ;
+    nif:endIndex "39"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/31#char=0,68> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/Appalachian_Power> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/31#char=53,66> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "West Virginia" ;
+    nif:beginIndex "53"^^xsd:nonNegativeInteger ;
+    nif:endIndex "66"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/31#char=0,68> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1371> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/319#char=0,15> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Gander Mountain" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "15"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/319#char=0,347> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5520637> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/319#char=26,36> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Jeff Myers" ;
+    nif:beginIndex "26"^^xsd:nonNegativeInteger ;
+    nif:endIndex "36"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/319#char=0,347> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Jeff_Myers> .
+
+<http://aksw.org/N3/RSS-500/327#char=40,46> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Giants" ;
+    nif:beginIndex "40"^^xsd:nonNegativeInteger ;
+    nif:endIndex "46"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/327#char=0,73> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q190618> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/327#char=55,66> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bruce Bochy" ;
+    nif:beginIndex "55"^^xsd:nonNegativeInteger ;
+    nif:endIndex "66"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/327#char=0,73> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q586449> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/328#char=61,67> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Giroux" ;
+    nif:beginIndex "61"^^xsd:nonNegativeInteger ;
+    nif:endIndex "67"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/328#char=0,89> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Giroux> .
+
+<http://aksw.org/N3/RSS-500/328#char=77,87> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Daily News" ;
+    nif:beginIndex "77"^^xsd:nonNegativeInteger ;
+    nif:endIndex "87"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/328#char=0,89> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Daily_News> .
+
+<http://aksw.org/N3/RSS-500/330#char=50,74> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Russia in Global Affairs" ;
+    nif:beginIndex "50"^^xsd:nonNegativeInteger ;
+    nif:endIndex "74"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/330#char=0,104> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/Russia_in_Global_Affairs> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/330#char=82,97> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Fyodor Lukyanov" ;
+    nif:beginIndex "82"^^xsd:nonNegativeInteger ;
+    nif:endIndex "97"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/330#char=0,104> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Fyodor_Lukyanov> .
+
+<http://aksw.org/N3/RSS-500/332#char=109,122> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Goldman Sachs" ;
+    nif:beginIndex "109"^^xsd:nonNegativeInteger ;
+    nif:endIndex "122"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/332#char=0,164> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q193326> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/332#char=131,141> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Robert Yen" ;
+    nif:beginIndex "131"^^xsd:nonNegativeInteger ;
+    nif:endIndex "141"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/332#char=0,164> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Robert_Yen> .
+
+<http://aksw.org/N3/RSS-500/335#char=122,134> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Grand Cathay" ;
+    nif:beginIndex "122"^^xsd:nonNegativeInteger ;
+    nif:endIndex "134"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/335#char=0,163> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Grand_Cathay> .
+
+<http://aksw.org/N3/RSS-500/335#char=143,156> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Meissen Chang" ;
+    nif:beginIndex "143"^^xsd:nonNegativeInteger ;
+    nif:endIndex "156"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/335#char=0,163> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Meissen_Chang> .
+
+<http://aksw.org/N3/RSS-500/339#char=66,79> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Halekulani PR" ;
+    nif:beginIndex "66"^^xsd:nonNegativeInteger ;
+    nif:endIndex "79"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/339#char=0,200> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Halekulani_PR> .
+
+<http://aksw.org/N3/RSS-500/339#char=89,98> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Diane Ako" ;
+    nif:beginIndex "89"^^xsd:nonNegativeInteger ;
+    nif:endIndex "98"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/339#char=0,200> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Diane_Ako> .
+
+<http://aksw.org/N3/RSS-500/340#char=51,58> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Hampden" ;
+    nif:beginIndex "51"^^xsd:nonNegativeInteger ;
+    nif:endIndex "58"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/340#char=0,85> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5645975> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/340#char=65,78> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "McLean Poulin" ;
+    nif:beginIndex "65"^^xsd:nonNegativeInteger ;
+    nif:endIndex "78"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/340#char=0,85> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/McLean_Poulin> .
+
+<http://aksw.org/N3/RSS-500/354#char=107,124> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Hidenori Sakanaka" ;
+    nif:beginIndex "107"^^xsd:nonNegativeInteger ;
+    nif:endIndex "124"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/354#char=0,220> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Hidenori_Sakanaka> .
+
+<http://aksw.org/N3/RSS-500/354#char=143,177> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Japan Immigration Policy Institute" ;
+    nif:beginIndex "143"^^xsd:nonNegativeInteger ;
+    nif:endIndex "177"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/354#char=0,220> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Japan_Immigration_Policy_Institute> .
+
+<http://aksw.org/N3/RSS-500/358#char=145,158> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Hillary Cohen" ;
+    nif:beginIndex "145"^^xsd:nonNegativeInteger ;
+    nif:endIndex "158"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/358#char=0,211> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Hillary_Cohen> .
+
+<http://aksw.org/N3/RSS-500/358#char=183,209> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "U.S. Chemical Safety Board" ;
+    nif:beginIndex "183"^^xsd:nonNegativeInteger ;
+    nif:endIndex "209"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/358#char=0,211> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2466264> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/36#char=0,5> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Apple" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "5"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/36#char=0,217> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q312> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/36#char=13,21> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bill Lee" ;
+    nif:beginIndex "13"^^xsd:nonNegativeInteger ;
+    nif:endIndex "21"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/36#char=0,217> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Bill_Lee> .
+
+<http://aksw.org/N3/RSS-500/364#char=49,57> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Honolulu" ;
+    nif:beginIndex "49"^^xsd:nonNegativeInteger ;
+    nif:endIndex "57"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/364#char=0,99> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Ralph_Honma> .
+
+<http://aksw.org/N3/RSS-500/364#char=69,82> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Choice Bakery" ;
+    nif:beginIndex "69"^^xsd:nonNegativeInteger ;
+    nif:endIndex "82"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/364#char=0,99> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Choice_Bakery> .
+
+<http://aksw.org/N3/RSS-500/365#char=40,46> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Hooker" ;
+    nif:beginIndex "40"^^xsd:nonNegativeInteger ;
+    nif:endIndex "46"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/365#char=0,112> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Hooker_Furniture> .
+
+<http://aksw.org/N3/RSS-500/365#char=59,69> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Kim Shaver" ;
+    nif:beginIndex "59"^^xsd:nonNegativeInteger ;
+    nif:endIndex "69"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/365#char=0,112> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Kim_Shaver> .
+
+<http://aksw.org/N3/RSS-500/367#char=183,198> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Hope Foundation" ;
+    nif:beginIndex "183"^^xsd:nonNegativeInteger ;
+    nif:endIndex "198"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/367#char=0,245> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Garden_of_Hope_Foundation> .
+
+<http://aksw.org/N3/RSS-500/367#char=215,227> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Chi Hui-jung" ;
+    nif:beginIndex "215"^^xsd:nonNegativeInteger ;
+    nif:endIndex "227"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/367#char=0,245> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Chi_Hui-jung> .
+
+<http://aksw.org/N3/RSS-500/37#char=160,169> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Argentina" ;
+    nif:beginIndex "160"^^xsd:nonNegativeInteger ;
+    nif:endIndex "169"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/37#char=0,194> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q79800> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/37#char=178,192> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Agustin Pichot" ;
+    nif:beginIndex "178"^^xsd:nonNegativeInteger ;
+    nif:endIndex "192"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/37#char=0,194> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/Agust%C3%ADn_Pichot> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/375#char=0,4> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "ILVA" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "4"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/375#char=0,153> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q4993283> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/375#char=14,28> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bruno Ferrante" ;
+    nif:beginIndex "14"^^xsd:nonNegativeInteger ;
+    nif:endIndex "28"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/375#char=0,153> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3645751> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/38#char=17,34> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Arizona Cardinals" ;
+    nif:beginIndex "17"^^xsd:nonNegativeInteger ;
+    nif:endIndex "34"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/38#char=0,152> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q224164> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/38#char=44,60> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Larry Fitzgerald" ;
+    nif:beginIndex "44"^^xsd:nonNegativeInteger ;
+    nif:endIndex "60"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/38#char=0,152> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q944199> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/380#char=49,56> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Indians" ;
+    nif:beginIndex "49"^^xsd:nonNegativeInteger ;
+    nif:endIndex "56"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/380#char=0,82> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q642553> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/380#char=65,75> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Manny Acta" ;
+    nif:beginIndex "65"^^xsd:nonNegativeInteger ;
+    nif:endIndex "75"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/380#char=0,82> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2747247> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/383#char=159,178> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Giovanni Trapattoni" ;
+    nif:beginIndex "159"^^xsd:nonNegativeInteger ;
+    nif:endIndex "178"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/383#char=0,196> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q44420> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/383#char=4,35> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Football Association of Ireland" ;
+    nif:beginIndex "4"^^xsd:nonNegativeInteger ;
+    nif:endIndex "35"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/383#char=0,196> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q497782> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/385#char=0,5> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Italy" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "5"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/385#char=0,224> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Italian_Rhythmic_Gymnastics_Team> .
+
+<http://aksw.org/N3/RSS-500/385#char=17,23> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "London" ;
+    nif:beginIndex "17"^^xsd:nonNegativeInteger ;
+    nif:endIndex "23"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/385#char=0,224> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q84> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/395#char=83,90> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Jenkins" ;
+    nif:beginIndex "83"^^xsd:nonNegativeInteger ;
+    nif:endIndex "90"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/395#char=0,151> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Jenkins> .
+
+<http://aksw.org/N3/RSS-500/395#char=96,107> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Tina Bailes" ;
+    nif:beginIndex "96"^^xsd:nonNegativeInteger ;
+    nif:endIndex "107"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/395#char=0,151> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Tina_Bailes> .
+
+<http://aksw.org/N3/RSS-500/399#char=146,159> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Jessica Joyce" ;
+    nif:beginIndex "146"^^xsd:nonNegativeInteger ;
+    nif:endIndex "159"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/399#char=0,198> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Jessica_Joyce> .
+
+<http://aksw.org/N3/RSS-500/399#char=178,186> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bed Bath" ;
+    nif:beginIndex "178"^^xsd:nonNegativeInteger ;
+    nif:endIndex "186"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/399#char=0,198> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/Bed_Bath_%26_Beyond> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/4#char=217,221> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "AIBA" ;
+    nif:beginIndex "217"^^xsd:nonNegativeInteger ;
+    nif:endIndex "221"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/4#char=0,246> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/International_Boxing_Association> .
+
+<http://aksw.org/N3/RSS-500/4#char=232,244> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Wu Ching-kuo" ;
+    nif:beginIndex "232"^^xsd:nonNegativeInteger ;
+    nif:endIndex "244"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/4#char=0,246> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q8038886> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/40#char=0,24> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Army Gen. Martin Dempsey" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "24"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/40#char=0,274> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q26093> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/40#char=43,55> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Joint Chiefs" ;
+    nif:beginIndex "43"^^xsd:nonNegativeInteger ;
+    nif:endIndex "55"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/40#char=0,274> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q609474> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/405#char=118,127> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Australia" ;
+    nif:beginIndex "118"^^xsd:nonNegativeInteger ;
+    nif:endIndex "127"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/405#char=0,158> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q229090> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/405#char=97,112> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Johanna Larsson" ;
+    nif:beginIndex "97"^^xsd:nonNegativeInteger ;
+    nif:endIndex "112"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/405#char=0,158> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/Johanna_Larsson_%28tennis%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/413#char=0,15> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Joseph Schwebel" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "15"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/413#char=0,97> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Joseph_Schwebel> .
+
+<http://aksw.org/N3/RSS-500/413#char=35,54> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Schwebel Baking Co." ;
+    nif:beginIndex "35"^^xsd:nonNegativeInteger ;
+    nif:endIndex "54"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/413#char=0,97> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Schwebel_Baking_Co.> .
+
+<http://aksw.org/N3/RSS-500/419#char=0,9> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "KATU News" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "9"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/419#char=0,58> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/KATU_News> .
+
+<http://aksw.org/N3/RSS-500/419#char=19,29> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Dan Tilkin" ;
+    nif:beginIndex "19"^^xsd:nonNegativeInteger ;
+    nif:endIndex "29"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/419#char=0,58> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Dan_Tilkin> .
+
+<http://aksw.org/N3/RSS-500/425#char=116,127> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Karl Gawell" ;
+    nif:beginIndex "116"^^xsd:nonNegativeInteger ;
+    nif:endIndex "127"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/425#char=0,187> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Karl_Gawell> .
+
+<http://aksw.org/N3/RSS-500/425#char=156,185> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Geothermal Energy Association" ;
+    nif:beginIndex "156"^^xsd:nonNegativeInteger ;
+    nif:endIndex "185"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/425#char=0,187> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5548570> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/427#char=0,5> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Kayla" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "5"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/427#char=0,119> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2358331> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/427#char=21,31> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Marblehead" ;
+    nif:beginIndex "21"^^xsd:nonNegativeInteger ;
+    nif:endIndex "31"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/427#char=0,119> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q27416> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/428#char=0,12> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Keith Bodine" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "12"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/428#char=0,191> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Keith_Bodine> .
+
+<http://aksw.org/N3/RSS-500/428#char=24,46> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Sweetgrass Farm Winery" ;
+    nif:beginIndex "24"^^xsd:nonNegativeInteger ;
+    nif:endIndex "46"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/428#char=0,191> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Sweetgrass_Farm_Winery_%26_Distillery> .
+
+<http://aksw.org/N3/RSS-500/435#char=45,56> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Kieve-Wavus" ;
+    nif:beginIndex "45"^^xsd:nonNegativeInteger ;
+    nif:endIndex "56"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/435#char=0,156> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Kieve-Wavus> .
+
+<http://aksw.org/N3/RSS-500/435#char=66,79> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Henry Kennedy" ;
+    nif:beginIndex "66"^^xsd:nonNegativeInteger ;
+    nif:endIndex "79"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/435#char=0,156> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource/Henry_H._Kennedy,_Jr.> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/438#char=0,5> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Knupp" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "5"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/438#char=0,86> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Dee_Knupp> .
+
+<http://aksw.org/N3/RSS-500/438#char=14,22> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Columbus" ;
+    nif:beginIndex "14"^^xsd:nonNegativeInteger ;
+    nif:endIndex "22"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/438#char=0,86> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q16567> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/451#char=62,78> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Larry Fitzgerald" ;
+    nif:beginIndex "62"^^xsd:nonNegativeInteger ;
+    nif:endIndex "78"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/451#char=0,306> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q944199> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/451#char=90,96> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Uganda" ;
+    nif:beginIndex "90"^^xsd:nonNegativeInteger ;
+    nif:endIndex "96"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/451#char=0,306> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1036> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/455#char=127,137> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Lee Rainie" ;
+    nif:beginIndex "127"^^xsd:nonNegativeInteger ;
+    nif:endIndex "137"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/455#char=0,215> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Lee_Rainie> .
+
+<http://aksw.org/N3/RSS-500/455#char=156,213> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Pew Research Center 's Internet and American Life Project" ;
+    nif:beginIndex "156"^^xsd:nonNegativeInteger ;
+    nif:endIndex "213"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/455#char=0,215> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Pew_Internet_and_American_Life_Project> .
+
+<http://aksw.org/N3/RSS-500/456#char=26,43> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Lenny B. Robinson" ;
+    nif:beginIndex "26"^^xsd:nonNegativeInteger ;
+    nif:endIndex "43"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/456#char=0,195> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Lenny_B._Robinson> .
+
+<http://aksw.org/N3/RSS-500/456#char=59,74> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Route 29 Batman" ;
+    nif:beginIndex "59"^^xsd:nonNegativeInteger ;
+    nif:endIndex "74"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/456#char=0,195> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Route_29_Batman> .
+
+<http://aksw.org/N3/RSS-500/459#char=24,31> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Liddell" ;
+    nif:beginIndex "24"^^xsd:nonNegativeInteger ;
+    nif:endIndex "31"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/459#char=0,50> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q317422> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/459#char=40,48> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "February" ;
+    nif:beginIndex "40"^^xsd:nonNegativeInteger ;
+    nif:endIndex "48"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/459#char=0,50> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q109> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/463#char=123,136> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Liza Cordeiro" ;
+    nif:beginIndex "123"^^xsd:nonNegativeInteger ;
+    nif:endIndex "136"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/463#char=0,184> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Liza_Cordeiro> .
+
+<http://aksw.org/N3/RSS-500/463#char=159,169> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Department" ;
+    nif:beginIndex "159"^^xsd:nonNegativeInteger ;
+    nif:endIndex "169"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/463#char=0,184> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q861556> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/47#char=0,16> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Associated Press" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "16"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/47#char=0,72> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q40469> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/47#char=24,34> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Kasie Hunt" ;
+    nif:beginIndex "24"^^xsd:nonNegativeInteger ;
+    nif:endIndex "34"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/47#char=0,72> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Kasie_Hunt> .
+
+<http://aksw.org/N3/RSS-500/471#char=421,434> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Orange County" ;
+    nif:beginIndex "421"^^xsd:nonNegativeInteger ;
+    nif:endIndex "434"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/471#char=0,1000> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Orange_County> .
+
+<http://aksw.org/N3/RSS-500/471#char=485,497> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Luis Luciano" ;
+    nif:beginIndex "485"^^xsd:nonNegativeInteger ;
+    nif:endIndex "497"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/471#char=0,1000> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Luis_Luciano> .
+
+<http://aksw.org/N3/RSS-500/48#char=0,16> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Associated Press" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "16"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/48#char=0,64> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q40469> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/48#char=24,40> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Sameer N. Yacoub" ;
+    nif:beginIndex "24"^^xsd:nonNegativeInteger ;
+    nif:endIndex "40"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/48#char=0,64> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Sameer_N._Yacoub> .
+
+<http://aksw.org/N3/RSS-500/480#char=23,37> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Marnie Maclean" ;
+    nif:beginIndex "23"^^xsd:nonNegativeInteger ;
+    nif:endIndex "37"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/480#char=0,96> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Marnie_Maclean> .
+
+<http://aksw.org/N3/RSS-500/480#char=8,13> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Maine" ;
+    nif:beginIndex "8"^^xsd:nonNegativeInteger ;
+    nif:endIndex "13"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/480#char=0,96> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q7007173> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/490#char=0,6> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Maruti" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "6"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/490#char=0,176> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q963718> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/490#char=23,39> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Shinzo Nakanishi" ;
+    nif:beginIndex "23"^^xsd:nonNegativeInteger ;
+    nif:endIndex "39"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/490#char=0,176> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Shinzo_Nakanishi> .
+
+<http://aksw.org/N3/RSS-500/493#char=127,165> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Retailers Association of Massachusetts" ;
+    nif:beginIndex "127"^^xsd:nonNegativeInteger ;
+    nif:endIndex "165"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/493#char=0,346> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Retailers_Association_of_Massachusetts> .
+
+<http://aksw.org/N3/RSS-500/493#char=176,185> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Jon Hurst" ;
+    nif:beginIndex "176"^^xsd:nonNegativeInteger ;
+    nif:endIndex "185"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/493#char=0,346> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Jon_Hurst> .
+
+<http://aksw.org/N3/RSS-500/496#char=0,11> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Mayo Clinic" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "11"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/496#char=0,57> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1130172> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/496#char=24,35> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Traci Klein" ;
+    nif:beginIndex "24"^^xsd:nonNegativeInteger ;
+    nif:endIndex "35"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/496#char=0,57> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Traci_Klein> .
+
+<http://aksw.org/N3/RSS-500/51#char=0,16> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Associated Press" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "16"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/51#char=0,203> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q40469> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/51#char=25,36> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Eric Tucker" ;
+    nif:beginIndex "25"^^xsd:nonNegativeInteger ;
+    nif:endIndex "36"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/51#char=0,203> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Eric_Tucker> .
+
+<http://aksw.org/N3/RSS-500/61#char=123,140> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Baltimore Orioles" ;
+    nif:beginIndex "123"^^xsd:nonNegativeInteger ;
+    nif:endIndex "140"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/61#char=0,201> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q650816> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/61#char=146,158> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Josh Beckett" ;
+    nif:beginIndex "146"^^xsd:nonNegativeInteger ;
+    nif:endIndex "158"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/61#char=0,201> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1365880> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/63#char=123,132> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Baltimore" ;
+    nif:beginIndex "123"^^xsd:nonNegativeInteger ;
+    nif:endIndex "132"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/63#char=0,186> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q650816> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/63#char=138,150> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Josh Beckett" ;
+    nif:beginIndex "138"^^xsd:nonNegativeInteger ;
+    nif:endIndex "150"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/63#char=0,186> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1365880> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/64#char=61,67> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bangor" ;
+    nif:beginIndex "61"^^xsd:nonNegativeInteger ;
+    nif:endIndex "67"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/64#char=0,104> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q4855527> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/64#char=75,92> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Sgt. Paul Edwards" ;
+    nif:beginIndex "75"^^xsd:nonNegativeInteger ;
+    nif:endIndex "92"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/64#char=0,104> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Paul_Edwards> .
+
+<http://aksw.org/N3/RSS-500/68#char=110,141> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Springboard Healthcare Staffing" ;
+    nif:beginIndex "110"^^xsd:nonNegativeInteger ;
+    nif:endIndex "141"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/68#char=0,239> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Springboard_Healthcare_Staffing_and_Search> .
+
+<http://aksw.org/N3/RSS-500/68#char=74,89> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Barbara Yeninas" ;
+    nif:beginIndex "74"^^xsd:nonNegativeInteger ;
+    nif:endIndex "89"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/68#char=0,239> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Barbara_Yeninas> .
+
+<http://aksw.org/N3/RSS-500/7#char=74,85> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Action News" ;
+    nif:beginIndex "74"^^xsd:nonNegativeInteger ;
+    nif:endIndex "85"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/7#char=0,107> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2027951> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/7#char=95,105> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Ryan Simms" ;
+    nif:beginIndex "95"^^xsd:nonNegativeInteger ;
+    nif:endIndex "105"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/7#char=0,107> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Ryan_Simms> .
+
+<http://aksw.org/N3/RSS-500/74#char=129,137> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Benhabib" ;
+    nif:beginIndex "129"^^xsd:nonNegativeInteger ;
+    nif:endIndex "137"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/74#char=0,208> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Djemila_Benhabib> .
+
+<http://aksw.org/N3/RSS-500/74#char=153,161> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Gatineau" ;
+    nif:beginIndex "153"^^xsd:nonNegativeInteger ;
+    nif:endIndex "161"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/74#char=0,208> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q141844> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/77#char=115,128> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Terry Hackney" ;
+    nif:beginIndex "115"^^xsd:nonNegativeInteger ;
+    nif:endIndex "128"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/77#char=0,130> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Terry_Hackney> .
+
+<http://aksw.org/N3/RSS-500/77#char=83,106> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Beverly Heritage Center" ;
+    nif:beginIndex "83"^^xsd:nonNegativeInteger ;
+    nif:endIndex "106"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/77#char=0,130> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Beverly_Heritage_Center> .
+
+<http://aksw.org/N3/RSS-500/83#char=61,71> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bob Emrich" ;
+    nif:beginIndex "61"^^xsd:nonNegativeInteger ;
+    nif:endIndex "71"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/83#char=0,110> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Bob_Emrich> .
+
+<http://aksw.org/N3/RSS-500/83#char=86,108> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Protect Marriage Maine" ;
+    nif:beginIndex "86"^^xsd:nonNegativeInteger ;
+    nif:endIndex "108"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/83#char=0,110> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Protect_Marriage_Maine> .
+
+<http://aksw.org/N3/RSS-500/87#char=45,55> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bob Martin" ;
+    nif:beginIndex "45"^^xsd:nonNegativeInteger ;
+    nif:endIndex "55"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/87#char=0,258> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Bob_Martin> .
+
+<http://aksw.org/N3/RSS-500/87#char=71,84> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Internet REIT" ;
+    nif:beginIndex "71"^^xsd:nonNegativeInteger ;
+    nif:endIndex "84"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/87#char=0,258> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Internet_REIT> .
+
+<http://aksw.org/N3/RSS-500/9#char=107,115> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "I.I.H.S." ;
+    nif:beginIndex "107"^^xsd:nonNegativeInteger ;
+    nif:endIndex "115"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/9#char=0,149> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6042346> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/9#char=76,87> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Adrian Lund" ;
+    nif:beginIndex "76"^^xsd:nonNegativeInteger ;
+    nif:endIndex "87"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/9#char=0,149> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Adrian_Lund> .
+
+<http://aksw.org/N3/RSS-500/95#char=0,14> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Boston Red Sox" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "14"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/95#char=0,167> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q213959> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/95#char=23,38> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bobby Valentine" ;
+    nif:beginIndex "23"^^xsd:nonNegativeInteger ;
+    nif:endIndex "38"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/95#char=0,167> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1101104> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/98#char=0,6> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Boston" ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "6"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/98#char=0,79> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q213959> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/98#char=15,30> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Bobby Valentine" ;
+    nif:beginIndex "15"^^xsd:nonNegativeInteger ;
+    nif:endIndex "30"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/98#char=0,79> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1101104> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/test> a nif:ContextCollection ;
+    nif:hasContext <http://aksw.org/N3/RSS-500/100#char=0,112>,
+        <http://aksw.org/N3/RSS-500/105#char=0,245>,
+        <http://aksw.org/N3/RSS-500/11#char=0,184>,
+        <http://aksw.org/N3/RSS-500/112#char=0,144>,
+        <http://aksw.org/N3/RSS-500/113#char=0,152>,
+        <http://aksw.org/N3/RSS-500/129#char=0,313>,
+        <http://aksw.org/N3/RSS-500/132#char=0,148>,
+        <http://aksw.org/N3/RSS-500/136#char=0,82>,
+        <http://aksw.org/N3/RSS-500/145#char=0,180>,
+        <http://aksw.org/N3/RSS-500/148#char=0,141>,
+        <http://aksw.org/N3/RSS-500/149#char=0,131>,
+        <http://aksw.org/N3/RSS-500/151#char=0,24>,
+        <http://aksw.org/N3/RSS-500/152#char=0,72>,
+        <http://aksw.org/N3/RSS-500/153#char=0,74>,
+        <http://aksw.org/N3/RSS-500/154#char=0,83>,
+        <http://aksw.org/N3/RSS-500/156#char=0,186>,
+        <http://aksw.org/N3/RSS-500/163#char=0,66>,
+        <http://aksw.org/N3/RSS-500/165#char=0,172>,
+        <http://aksw.org/N3/RSS-500/166#char=0,90>,
+        <http://aksw.org/N3/RSS-500/167#char=0,106>,
+        <http://aksw.org/N3/RSS-500/175#char=0,153>,
+        <http://aksw.org/N3/RSS-500/177#char=0,156>,
+        <http://aksw.org/N3/RSS-500/180#char=0,126>,
+        <http://aksw.org/N3/RSS-500/184#char=0,67>,
+        <http://aksw.org/N3/RSS-500/185#char=0,304>,
+        <http://aksw.org/N3/RSS-500/186#char=0,135>,
+        <http://aksw.org/N3/RSS-500/187#char=0,89>,
+        <http://aksw.org/N3/RSS-500/191#char=0,98>,
+        <http://aksw.org/N3/RSS-500/193#char=0,177>,
+        <http://aksw.org/N3/RSS-500/195#char=0,110>,
+        <http://aksw.org/N3/RSS-500/20#char=0,201>,
+        <http://aksw.org/N3/RSS-500/21#char=0,226>,
+        <http://aksw.org/N3/RSS-500/215#char=0,162>,
+        <http://aksw.org/N3/RSS-500/22#char=0,86>,
+        <http://aksw.org/N3/RSS-500/221#char=0,52>,
+        <http://aksw.org/N3/RSS-500/223#char=0,411>,
+        <http://aksw.org/N3/RSS-500/224#char=0,411>,
+        <http://aksw.org/N3/RSS-500/229#char=0,110>,
+        <http://aksw.org/N3/RSS-500/23#char=0,175>,
+        <http://aksw.org/N3/RSS-500/232#char=0,108>,
+        <http://aksw.org/N3/RSS-500/233#char=0,191>,
+        <http://aksw.org/N3/RSS-500/235#char=0,235>,
+        <http://aksw.org/N3/RSS-500/237#char=0,107>,
+        <http://aksw.org/N3/RSS-500/244#char=0,208>,
+        <http://aksw.org/N3/RSS-500/245#char=0,121>,
+        <http://aksw.org/N3/RSS-500/246#char=0,77>,
+        <http://aksw.org/N3/RSS-500/247#char=0,204>,
+        <http://aksw.org/N3/RSS-500/248#char=0,99>,
+        <http://aksw.org/N3/RSS-500/249#char=0,227>,
+        <http://aksw.org/N3/RSS-500/251#char=0,90>,
+        <http://aksw.org/N3/RSS-500/261#char=0,201>,
+        <http://aksw.org/N3/RSS-500/264#char=0,182>,
+        <http://aksw.org/N3/RSS-500/266#char=0,205>,
+        <http://aksw.org/N3/RSS-500/269#char=0,217>,
+        <http://aksw.org/N3/RSS-500/274#char=0,96>,
+        <http://aksw.org/N3/RSS-500/281#char=0,95>,
+        <http://aksw.org/N3/RSS-500/283#char=0,192>,
+        <http://aksw.org/N3/RSS-500/287#char=0,171>,
+        <http://aksw.org/N3/RSS-500/289#char=0,132>,
+        <http://aksw.org/N3/RSS-500/29#char=0,68>,
+        <http://aksw.org/N3/RSS-500/290#char=0,240>,
+        <http://aksw.org/N3/RSS-500/296#char=0,233>,
+        <http://aksw.org/N3/RSS-500/300#char=0,185>,
+        <http://aksw.org/N3/RSS-500/301#char=0,158>,
+        <http://aksw.org/N3/RSS-500/305#char=0,228>,
+        <http://aksw.org/N3/RSS-500/308#char=0,121>,
+        <http://aksw.org/N3/RSS-500/309#char=0,180>,
+        <http://aksw.org/N3/RSS-500/31#char=0,68>,
+        <http://aksw.org/N3/RSS-500/319#char=0,347>,
+        <http://aksw.org/N3/RSS-500/327#char=0,73>,
+        <http://aksw.org/N3/RSS-500/328#char=0,89>,
+        <http://aksw.org/N3/RSS-500/330#char=0,104>,
+        <http://aksw.org/N3/RSS-500/332#char=0,164>,
+        <http://aksw.org/N3/RSS-500/335#char=0,163>,
+        <http://aksw.org/N3/RSS-500/339#char=0,200>,
+        <http://aksw.org/N3/RSS-500/340#char=0,85>,
+        <http://aksw.org/N3/RSS-500/354#char=0,220>,
+        <http://aksw.org/N3/RSS-500/358#char=0,211>,
+        <http://aksw.org/N3/RSS-500/36#char=0,217>,
+        <http://aksw.org/N3/RSS-500/364#char=0,99>,
+        <http://aksw.org/N3/RSS-500/365#char=0,112>,
+        <http://aksw.org/N3/RSS-500/367#char=0,245>,
+        <http://aksw.org/N3/RSS-500/37#char=0,194>,
+        <http://aksw.org/N3/RSS-500/375#char=0,153>,
+        <http://aksw.org/N3/RSS-500/38#char=0,152>,
+        <http://aksw.org/N3/RSS-500/380#char=0,82>,
+        <http://aksw.org/N3/RSS-500/383#char=0,196>,
+        <http://aksw.org/N3/RSS-500/385#char=0,224>,
+        <http://aksw.org/N3/RSS-500/395#char=0,151>,
+        <http://aksw.org/N3/RSS-500/399#char=0,198>,
+        <http://aksw.org/N3/RSS-500/4#char=0,246>,
+        <http://aksw.org/N3/RSS-500/40#char=0,274>,
+        <http://aksw.org/N3/RSS-500/405#char=0,158>,
+        <http://aksw.org/N3/RSS-500/413#char=0,97>,
+        <http://aksw.org/N3/RSS-500/419#char=0,58>,
+        <http://aksw.org/N3/RSS-500/425#char=0,187>,
+        <http://aksw.org/N3/RSS-500/427#char=0,119>,
+        <http://aksw.org/N3/RSS-500/428#char=0,191>,
+        <http://aksw.org/N3/RSS-500/435#char=0,156>,
+        <http://aksw.org/N3/RSS-500/438#char=0,86>,
+        <http://aksw.org/N3/RSS-500/451#char=0,306>,
+        <http://aksw.org/N3/RSS-500/455#char=0,215>,
+        <http://aksw.org/N3/RSS-500/456#char=0,195>,
+        <http://aksw.org/N3/RSS-500/459#char=0,50>,
+        <http://aksw.org/N3/RSS-500/463#char=0,184>,
+        <http://aksw.org/N3/RSS-500/47#char=0,72>,
+        <http://aksw.org/N3/RSS-500/471#char=0,1000>,
+        <http://aksw.org/N3/RSS-500/48#char=0,64>,
+        <http://aksw.org/N3/RSS-500/480#char=0,96>,
+        <http://aksw.org/N3/RSS-500/490#char=0,176>,
+        <http://aksw.org/N3/RSS-500/493#char=0,346>,
+        <http://aksw.org/N3/RSS-500/496#char=0,57>,
+        <http://aksw.org/N3/RSS-500/51#char=0,203>,
+        <http://aksw.org/N3/RSS-500/61#char=0,201>,
+        <http://aksw.org/N3/RSS-500/63#char=0,186>,
+        <http://aksw.org/N3/RSS-500/64#char=0,104>,
+        <http://aksw.org/N3/RSS-500/68#char=0,239>,
+        <http://aksw.org/N3/RSS-500/7#char=0,107>,
+        <http://aksw.org/N3/RSS-500/74#char=0,208>,
+        <http://aksw.org/N3/RSS-500/77#char=0,130>,
+        <http://aksw.org/N3/RSS-500/83#char=0,110>,
+        <http://aksw.org/N3/RSS-500/87#char=0,258>,
+        <http://aksw.org/N3/RSS-500/9#char=0,149>,
+        <http://aksw.org/N3/RSS-500/95#char=0,167>,
+        <http://aksw.org/N3/RSS-500/98#char=0,79> ;
+    ns1:conformsTo <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/2.1> .
+
+<http://aksw.org/N3/RSS-500/100#char=0,112> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "112"^^xsd:nonNegativeInteger ;
+    nif:isString "NOTES : A moment of silence was observed before the game for former Boston star Johnny Pesky , who died Monday ." .
+
+<http://aksw.org/N3/RSS-500/105#char=0,245> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "245"^^xsd:nonNegativeInteger ;
+    nif:isString "`` The safest place is to leave heritage underground , '' says Brendan Cassar , head of the UNESCO mission in Afghanistan , adding that policing the thousands of prehistoric , Buddhist and Islamic sites dotted around the country was impossible ." .
+
+<http://aksw.org/N3/RSS-500/11#char=0,184> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "184"^^xsd:nonNegativeInteger ;
+    nif:isString "Russia 's ITAR-Tass news agency quoted Aeroflot spokeswoman Irina Dannenberg as saying the bomb warning came from an anonymous caller to New York City police after the plane took off ." .
+
+<http://aksw.org/N3/RSS-500/112#char=0,144> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "144"^^xsd:nonNegativeInteger ;
+    nif:isString "According to Bud Bunce , spokesman for the Portland Archdiocese , Perez has been a priest for 10 years working first in Corvallis and Coos Bay ." .
+
+<http://aksw.org/N3/RSS-500/113#char=0,152> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "152"^^xsd:nonNegativeInteger ;
+    nif:isString "Kenny Smith did n't blame Bulls coach Tom Thibodeau for leaving Rose in at the end of the Bulls ' Game 1 playoff win against the Philadelphia 76ers . ''" .
+
+<http://aksw.org/N3/RSS-500/129#char=0,313> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "313"^^xsd:nonNegativeInteger ;
+    nif:isString "The information is important `` because if you are an investor who has been sitting on the sidelines waiting for a good time to buy the stock , you might decide to stay on the sidelines for a little longer after seeing which insiders decided to sell their stock , '' CapStone Investments analyst Rory Maher said ." .
+
+<http://aksw.org/N3/RSS-500/132#char=0,148> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "148"^^xsd:nonNegativeInteger ;
+    nif:isString "Instead the Cardinals left Daytona with only half the task completed , finishing first in Coed and Small Coed , and second in Dance , and All-Girl ." .
+
+<http://aksw.org/N3/RSS-500/136#char=0,82> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "82"^^xsd:nonNegativeInteger ;
+    nif:isString "Carroll College head coach Mike Van Diest during an NAIA news conference Tuesday ." .
+
+<http://aksw.org/N3/RSS-500/145#char=0,180> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "180"^^xsd:nonNegativeInteger ;
+    nif:isString "`` The team went to the Olympics and we were n't sure what would happen , '' Charles Elachi , director of the Jet Propulsion Laboratory , told the crowd at the Jet Propulsion Lab ." .
+
+<http://aksw.org/N3/RSS-500/148#char=0,141> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "141"^^xsd:nonNegativeInteger ;
+    nif:isString "Our thoughts and prayers go out to Charlie 's wife , Lee , and their children , grandchildren and to all who called Charlie their friend . ''" .
+
+<http://aksw.org/N3/RSS-500/149#char=0,131> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "131"^^xsd:nonNegativeInteger ;
+    nif:isString "Ruth said Chart House owner Joey Cabell was also in the restaurant ... JIMMY BORGES will undergo surgery July 18 for liver cancer ." .
+
+<http://aksw.org/N3/RSS-500/151#char=0,24> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "24"^^xsd:nonNegativeInteger ;
+    nif:isString "Chelsea won the FA Cup ." .
+
+<http://aksw.org/N3/RSS-500/152#char=0,72> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "72"^^xsd:nonNegativeInteger ;
+    nif:isString "Darian Stewart of Cherokee Village graduated from Highland High School ." .
+
+<http://aksw.org/N3/RSS-500/153#char=0,74> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "74"^^xsd:nonNegativeInteger ;
+    nif:isString "Chevron spokesman Justin Higgs said the company would review the lawsuit ." .
+
+<http://aksw.org/N3/RSS-500/154#char=0,83> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "83"^^xsd:nonNegativeInteger ;
+    nif:isString "Chicago White Sox third baseman Kevin Youkilis is coming back to Boston a new man ." .
+
+<http://aksw.org/N3/RSS-500/156#char=0,186> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "186"^^xsd:nonNegativeInteger ;
+    nif:isString "The arrests at the islands two days earlier led to the latest flare-up between Japan and China , both of which claim sovereignty over the uninhabited islands , which China calls Diaoyu ." .
+
+<http://aksw.org/N3/RSS-500/163#char=0,66> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "66"^^xsd:nonNegativeInteger ;
+    nif:isString "`` They ca n't strike , '' said Chrysler spokeswoman Jodi Tinson ." .
+
+<http://aksw.org/N3/RSS-500/165#char=0,172> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "172"^^xsd:nonNegativeInteger ;
+    nif:isString "While the Security Council united behind Ban 's proposals , Russia 's Churkin criticized the U.S. and its European allies who opposed an extension of the observer mission ." .
+
+<http://aksw.org/N3/RSS-500/166#char=0,90> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "90"^^xsd:nonNegativeInteger ;
+    nif:isString "State Senate Democratic Leader Eric Kearney of Cincinnati criticized Husted 's directive ." .
+
+<http://aksw.org/N3/RSS-500/167#char=0,106> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "106"^^xsd:nonNegativeInteger ;
+    nif:isString "• Sue Clark-Johnson , president of Gannett 's nationwide newspaper division , elected NAA head this week ." .
+
+<http://aksw.org/N3/RSS-500/175#char=0,153> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "153"^^xsd:nonNegativeInteger ;
+    nif:isString "Coalition Avenir Quebec leader Francois Legault smiles as he sits in front of an Asian menu at a sports bar in Quebec City , Tuesday , August 14 , 2012 ." .
+
+<http://aksw.org/N3/RSS-500/177#char=0,156> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "156"^^xsd:nonNegativeInteger ;
+    nif:isString "The assailant was shot and killed and an investigation has begun , Col. Hagen Messer , spokesman for the International Joint Command in the country , said ." .
+
+<http://aksw.org/N3/RSS-500/180#char=0,126> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "126"^^xsd:nonNegativeInteger ;
+    nif:isString "Commission chairman Dan McCranie requested Bonner meet with Peacock following the meeting so they could research his concern ." .
+
+<http://aksw.org/N3/RSS-500/184#char=0,67> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "67"^^xsd:nonNegativeInteger ;
+    nif:isString "That 's a big deal in Conway , also known as the City of Colleges ." .
+
+<http://aksw.org/N3/RSS-500/185#char=0,304> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "304"^^xsd:nonNegativeInteger ;
+    nif:isString "The Investor : Corey Mulloy , general partner , Highland Capital Partners What he 's backed : AccentCare , Archemix , Yoga Works What he wants now : An engineering team to design implantable wireless devices capable of 24\\/7 patient and data monitoring for conditions such as heart disease and diabetes ." .
+
+<http://aksw.org/N3/RSS-500/186#char=0,135> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "135"^^xsd:nonNegativeInteger ;
+    nif:isString "Gregoire spokesman Cory Curtis says that Gregoire plans to be back in the state next week , but is getting hourly updates on the fire ." .
+
+<http://aksw.org/N3/RSS-500/187#char=0,89> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "89"^^xsd:nonNegativeInteger ;
+    nif:isString "`` We 're very sad to report that legendary Cosmo editor Helen Gurley Brown passed away ." .
+
+<http://aksw.org/N3/RSS-500/191#char=0,98> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "98"^^xsd:nonNegativeInteger ;
+    nif:isString "A common loon prepares to launch from Cupsuptic Lake , part of the Rangeley Lakes Heritage Trust ." .
+
+<http://aksw.org/N3/RSS-500/193#char=0,177> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "177"^^xsd:nonNegativeInteger ;
+    nif:isString "At Denver International Airport , `` Sometimes it 's a session sponsorship , such as a video and then users are directed to the internet , '' said DIA spokesperson Laura Coale ." .
+
+<http://aksw.org/N3/RSS-500/195#char=0,110> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "110"^^xsd:nonNegativeInteger ;
+    nif:isString "DMV spokeswoman Jan Mendoza said some people might be rescheduled as staff works around the computer problem ." .
+
+<http://aksw.org/N3/RSS-500/20#char=0,201> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "201"^^xsd:nonNegativeInteger ;
+    nif:isString "Petro 's proposal `` has started a debate on the domestic consumption of cannabis , cocaine , basuko and heroin , '' said Alvaro Enciso , president of the La Luz foundation that supports drug addicts ." .
+
+<http://aksw.org/N3/RSS-500/21#char=0,226> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "226"^^xsd:nonNegativeInteger ;
+    nif:isString "It 's interesting to note that Amazon founder Jeff Bezos recently gave $ 2.5 million to promote a pro-gay marriage amendment in Washington State , yet no conservative elected official has threatened to undermine his business ." .
+
+<http://aksw.org/N3/RSS-500/215#char=0,162> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "162"^^xsd:nonNegativeInteger ;
+    nif:isString "Delta spokesman Morgan Durrant says the carrier has no restrictions but tries to seat children flying alone next to the galley area where flight attendants work ." .
+
+<http://aksw.org/N3/RSS-500/22#char=0,86> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "86"^^xsd:nonNegativeInteger ;
+    nif:isString "Blue Origin , a Kent , Wash.-based start-up , is backed by Amazon founder Jeff Bezos ." .
+
+<http://aksw.org/N3/RSS-500/221#char=0,52> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "52"^^xsd:nonNegativeInteger ;
+    nif:isString "Detroit News reporter David Shepardson contributed ." .
+
+<http://aksw.org/N3/RSS-500/223#char=0,411> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "411"^^xsd:nonNegativeInteger ;
+    nif:isString "On The Agenda The following items will be on the agenda for action Monday night : • approval of a schedule of events for the Downtown Development Authority , including the Tigers on the Town Pep Rally Aug. 30 , a movie in the park on Sept. 28 , a `` Commerce goes Pink Party '' on Oct. 4 with Northridge Medical Center ; the Fall and Winter Fashion Show on Oct. 25 , and the downtown trick-or-treat on Oct. 31 ." .
+
+<http://aksw.org/N3/RSS-500/224#char=0,411> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "411"^^xsd:nonNegativeInteger ;
+    nif:isString "On The Agenda The following items will be on the agenda for action Monday night : • approval of a schedule of events for the Downtown Development Authority , including the Tigers on the Town Pep Rally Aug. 30 , a movie in the park on Sept. 28 , a `` Commerce goes Pink Party '' on Oct. 4 with Northridge Medical Center ; the Fall and Winter Fashion Show on Oct. 25 , and the downtown trick-or-treat on Oct. 31 ." .
+
+<http://aksw.org/N3/RSS-500/229#char=0,110> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "110"^^xsd:nonNegativeInteger ;
+    nif:isString "WGME had warned Dish customers in Maine they could lose WGME if a new agreement or extension was not reached ." .
+
+<http://aksw.org/N3/RSS-500/23#char=0,175> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "175"^^xsd:nonNegativeInteger ;
+    nif:isString "The People Should Decide , backed by Ambassador Bridge owner Matty Maroun , proposes a constitutional amendment requiring voter approval for an international bridge crossing ." .
+
+<http://aksw.org/N3/RSS-500/232#char=0,108> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "108"^^xsd:nonNegativeInteger ;
+    nif:isString "But former Bengals QB Boomer Esiason and ex-Miami Dolphins star Dan Marino defended the 31-year old Palmer ." .
+
+<http://aksw.org/N3/RSS-500/233#char=0,191> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "191"^^xsd:nonNegativeInteger ;
+    nif:isString "Donna Williams , president of the Northern Wake Republican Club , which helped elect the majority members on the school board , believes that the outrage over community schools is unfounded ." .
+
+<http://aksw.org/N3/RSS-500/235#char=0,235> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "235"^^xsd:nonNegativeInteger ;
+    nif:isString "KNOXVILLE , Iowa -LRB- AP -RRB- -- Donny Schatz won the Knoxville Nationals for the sixth time in seven years , holding off local favorite Brian Brown by 0.117 seconds Saturday night in the signature World of Outlaws sprint-car event ." .
+
+<http://aksw.org/N3/RSS-500/237#char=0,107> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "107"^^xsd:nonNegativeInteger ;
+    nif:isString "Dr. Moran graduated from the New York Medical College , Valhalla , NY in a ceremony held at Carnegie Hall ." .
+
+<http://aksw.org/N3/RSS-500/244#char=0,208> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "208"^^xsd:nonNegativeInteger ;
+    nif:isString "When Obama and Duncan arrived in Washington , the Harvard-educated , basketball-playing buddies stormed onto the field of education reform like a pair of Chicago Bulls in a china shop , and appropriately so ." .
+
+<http://aksw.org/N3/RSS-500/245#char=0,121> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "121"^^xsd:nonNegativeInteger ;
+    nif:isString "But Steven Smith , 29 , a customer at a Dunkin' Donuts in downtown Boston , said he would rather pay with a credit card ." .
+
+<http://aksw.org/N3/RSS-500/246#char=0,77> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "77"^^xsd:nonNegativeInteger ;
+    nif:isString "`` We sold out all those races last year , '' says ESPN spokesman Andy Hall ." .
+
+<http://aksw.org/N3/RSS-500/247#char=0,204> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "204"^^xsd:nonNegativeInteger ;
+    nif:isString "Then , according to ESPN spokesman Dave Nagle on Sunday , the network just decided to stay on to cover Serena and Venus Williams winning the women 's doubles -- essentially adding four hours of coverage ." .
+
+<http://aksw.org/N3/RSS-500/248#char=0,99> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "99"^^xsd:nonNegativeInteger ;
+    nif:isString "`` We lost the kids that moved the ball for us last year , '' East Jackson coach Brian Smith said ." .
+
+<http://aksw.org/N3/RSS-500/249#char=0,227> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "227"^^xsd:nonNegativeInteger ;
+    nif:isString "Spokeswoman Antje Baertschi of the State Secretariat for Economic Affairs , known as SECO , said the action makes Switzerland 's sanctions applied to Syria last year `` consistent '' with those of the 27-nation European Union ." .
+
+<http://aksw.org/N3/RSS-500/251#char=0,90> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "90"^^xsd:nonNegativeInteger ;
+    nif:isString "She 'll earn a daily rate of $ 350 , Education Department spokeswoman Liza Cordeiro said ." .
+
+<http://aksw.org/N3/RSS-500/261#char=0,201> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "201"^^xsd:nonNegativeInteger ;
+    nif:isString "Recently appointed French coach Sabri Lamouchi included brothers Kolo and Yaya Toure from English Premier League champions Manchester City , plus Shanghai-based veteran Drogba and Gervinho of Arsenal ." .
+
+<http://aksw.org/N3/RSS-500/264#char=0,182> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "182"^^xsd:nonNegativeInteger ;
+    nif:isString "Environmental Defense analyst Spreck Rosekrans , left , and fellow analyst Ann H. Hayden look over O'Shaughnessy Dam and Hetch Hetchy reservoir near Yosemite National Park , Calif. ." .
+
+<http://aksw.org/N3/RSS-500/266#char=0,205> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "205"^^xsd:nonNegativeInteger ;
+    nif:isString "Distilleries along the trail have recorded more than 2 million visits in the past five years , including 450,000 last year , according to Eric Gregory , president of the Kentucky Distillers ' Association ." .
+
+<http://aksw.org/N3/RSS-500/269#char=0,217> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "217"^^xsd:nonNegativeInteger ;
+    nif:isString "`` Hong Kong is like a second home to me and I hope the new shop can help Hong Kongers show their friendly natures to each other , '' Eslite founder Robert Wu -LRB- 吳清友 -RRB- said at the bookshop 's opening ceremony ." .
+
+<http://aksw.org/N3/RSS-500/274#char=0,96> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "96"^^xsd:nonNegativeInteger ;
+    nif:isString "Maloaufa'atasi Faumuina Aug. 1 , 2012 Maloaufa'atasi Faumuina , 51 , of Ewa Beach died in Aiea ." .
+
+<http://aksw.org/N3/RSS-500/281#char=0,95> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "95"^^xsd:nonNegativeInteger ;
+    nif:isString "Fayetteville attorney Tom Rist said Thursday he believes his clients are owed about $ 100,000 ." .
+
+<http://aksw.org/N3/RSS-500/283#char=0,192> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "192"^^xsd:nonNegativeInteger ;
+    nif:isString "U.S. Rep. Mike Michaud , D-Maine , is also questioning the state 's allocation of federal funds , but he has yet to receive a response from Federal Highway Administration chief Victor Mendez ." .
+
+<http://aksw.org/N3/RSS-500/287#char=0,171> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "171"^^xsd:nonNegativeInteger ;
+    nif:isString "Felix Hernandez pitched the Seattle Mariners ' first perfect game and the 23rd in baseball history , overpowering the Tampa Bay Rays in a brilliant 1-0 victory Wednesday ." .
+
+<http://aksw.org/N3/RSS-500/289#char=0,132> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "132"^^xsd:nonNegativeInteger ;
+    nif:isString "Ferguson lawyer Gerald Evelyn disclosed in a court filing Wednesday that he defended Hardiman in an unrelated assault case in 2005 ." .
+
+<http://aksw.org/N3/RSS-500/29#char=0,68> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "68"^^xsd:nonNegativeInteger ;
+    nif:isString "No. 5 Angelique Kerber beat Timea Babos of Hungary 3-6 , 6-1 , 6-2 ." .
+
+<http://aksw.org/N3/RSS-500/290#char=0,240> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "240"^^xsd:nonNegativeInteger ;
+    nif:isString "South Africa 's sports minister Fikile Mbalula praised Semenya , a shy 21-year-old from an obscure rural village in South Africa 's northernmost province of Limpopo , as an inspiration to all those coming from similarly modest upbringings ." .
+
+<http://aksw.org/N3/RSS-500/296#char=0,233> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "233"^^xsd:nonNegativeInteger ;
+    nif:isString "After serving in the Marine Corps during World War II , Foote returned to Portland and rose through the ranks to the position of city editor in charge of news for the Press Herald , the Evening Express and the Maine Sunday Telegram ." .
+
+<http://aksw.org/N3/RSS-500/300#char=0,185> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "185"^^xsd:nonNegativeInteger ;
+    nif:isString "At the time , there were 58 former comfort women , but now , only nine are still alive , '' Taipei City Women 's Rescue Foundation executive director Kang Shu-hua -LRB- 康淑華 -RRB- said ." .
+
+<http://aksw.org/N3/RSS-500/301#char=0,158> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "158"^^xsd:nonNegativeInteger ;
+    nif:isString "`` We think Scott is a very talented broadcaster who would be a great asset to any broadcast or cable sports network , '' Fox spokesman Dan Bell said Sunday ." .
+
+<http://aksw.org/N3/RSS-500/305#char=0,228> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "228"^^xsd:nonNegativeInteger ;
+    nif:isString "Seven-time Tour de France winner Lance Armstrong has asked a federal judge in Texas to stop a doping case brought against him by the United States Anti-Doping Agency , which has never lost a legal challenge of its jurisdiction ." .
+
+<http://aksw.org/N3/RSS-500/308#char=0,121> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "121"^^xsd:nonNegativeInteger ;
+    nif:isString "GM spokesman Jim Cain said the purchase of the shares Wednesday at $ 20.35 on the open market was a personal investment ." .
+
+<http://aksw.org/N3/RSS-500/309#char=0,180> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "180"^^xsd:nonNegativeInteger ;
+    nif:isString "`` We 've got sort of this life-size timeline , Corvette timeline , we 're setting up that will have real Corvettes and real Corvette engines , '' said GM spokesman Tom Wilkinson ." .
+
+<http://aksw.org/N3/RSS-500/31#char=0,68> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "68"^^xsd:nonNegativeInteger ;
+    nif:isString "That included 330,000 Appalachian Power customers in West Virginia ." .
+
+<http://aksw.org/N3/RSS-500/319#char=0,347> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "347"^^xsd:nonNegativeInteger ;
+    nif:isString "Gander Mountain spokesman Jeff Myers said , `` Gander Mountain always welcomes healthy competition , and we feel that when shoppers compare the selection and quality of our goods and prices available across our network of 114 stores in 23 states and online at GanderMountain.com , they 'll continue to be fans and customers of Gander Mountain . ''" .
+
+<http://aksw.org/N3/RSS-500/327#char=0,73> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "73"^^xsd:nonNegativeInteger ;
+    nif:isString "`` There 's not a whole lot to say , '' Giants manager Bruce Bochy said ." .
+
+<http://aksw.org/N3/RSS-500/328#char=0,89> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "89"^^xsd:nonNegativeInteger ;
+    nif:isString "`` I feel lucky to have had the chance to play with him , '' Giroux told the Daily News ." .
+
+<http://aksw.org/N3/RSS-500/330#char=0,104> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "104"^^xsd:nonNegativeInteger ;
+    nif:isString "`` It 's a diplomatic game for Sergei Lavrov , '' Russia in Global Affairs editor Fyodor Lukyanov said ." .
+
+<http://aksw.org/N3/RSS-500/332#char=0,164> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "164"^^xsd:nonNegativeInteger ;
+    nif:isString "Compared with leading manufacturers , HTC needs to address several challenges before it makes a turnaround , Goldman Sachs analyst Robert Yen -LRB- 嚴柏宇 -RRB- said ." .
+
+<http://aksw.org/N3/RSS-500/335#char=0,163> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "163"^^xsd:nonNegativeInteger ;
+    nif:isString "`` TSMC currently enjoys a lead over Samsung by about one year in the 28-nanometer -LRB- nm -RRB- technology process , '' Grand Cathay analyst Meissen Chang said ." .
+
+<http://aksw.org/N3/RSS-500/339#char=0,200> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "200"^^xsd:nonNegativeInteger ;
+    nif:isString "... DENMARK 'S HAWAII honorary consul Claus Hansen and his wife , Halekulani PR director Diane Ako , traveled to Washington , D.C. , last week to meet Denmark 's Queen Margrethe II and Prince Henrik ." .
+
+<http://aksw.org/N3/RSS-500/340#char=0,85> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "85"^^xsd:nonNegativeInteger ;
+    nif:isString "`` Matt Martin threw one hell of a game today , '' Hampden coach McLean Poulin said ." .
+
+<http://aksw.org/N3/RSS-500/354#char=0,220> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "220"^^xsd:nonNegativeInteger ;
+    nif:isString "`` The government would do much better spending its money to recruit , educate and nurture immigrants , '' Hidenori Sakanaka , director of the Japan Immigration Policy Institute , a Tokyo research group , told the Post ." .
+
+<http://aksw.org/N3/RSS-500/358#char=0,211> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "211"^^xsd:nonNegativeInteger ;
+    nif:isString "Federal and state investigators are discussing plans for how to make the Richmond site safe so the faulty pipe can be removed for testing , said Hillary Cohen , a spokeswoman for the U.S. Chemical Safety Board ." .
+
+<http://aksw.org/N3/RSS-500/36#char=0,217> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "217"^^xsd:nonNegativeInteger ;
+    nif:isString "Apple lawyer Bill Lee went after Yang , noting that none of the inventors on the patents testified as part of the trial , and furthermore that Samsung was n't actually using any of the patents in its own smartphones ." .
+
+<http://aksw.org/N3/RSS-500/364#char=0,99> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "99"^^xsd:nonNegativeInteger ;
+    nif:isString "Ralph Honma July 22 , 2012 Ralph Honma , 98 , of Honolulu , owner of Choice Bakery , died at home ." .
+
+<http://aksw.org/N3/RSS-500/365#char=0,112> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "112"^^xsd:nonNegativeInteger ;
+    nif:isString "`` It 's a merger with modern , '' says Hooker spokeswoman Kim Shaver , `` pretty and soft , not hard-edged . ''" .
+
+<http://aksw.org/N3/RSS-500/367#char=0,245> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "245"^^xsd:nonNegativeInteger ;
+    nif:isString "The three members are National Chung Cheng University associate professor Hu Yuan-hui -LRB- 胡元輝 -RRB- , National Chengchi University professor Liu Yu-li -LRB- 劉幼俐 -RRB- and Garden of Hope Foundation chief executive Chi Hui-jung -LRB- 紀惠容 -RRB- ." .
+
+<http://aksw.org/N3/RSS-500/37#char=0,194> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "194"^^xsd:nonNegativeInteger ;
+    nif:isString "Finally getting the opportunity to play in a regular competition against top-tier nations would be `` tough , '' but equally as rewarding , according to former Argentina captain Agustin Pichot ." .
+
+<http://aksw.org/N3/RSS-500/375#char=0,153> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "153"^^xsd:nonNegativeInteger ;
+    nif:isString "ILVA chairman Bruno Ferrante told Corriere della Sera that `` saying no to production means stopping the heart of the company , its reason for being . ''" .
+
+<http://aksw.org/N3/RSS-500/38#char=0,152> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "152"^^xsd:nonNegativeInteger ;
+    nif:isString "Previous article Arizona Cardinals receiver Larry Fitzgerald scores NFL humanitarian award Next article Blood type might be a clue to heart disease risk" .
+
+<http://aksw.org/N3/RSS-500/380#char=0,82> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "82"^^xsd:nonNegativeInteger ;
+    nif:isString "`` It was catch-up baseball from the get-go , '' Indians manager Manny Acta said ." .
+
+<http://aksw.org/N3/RSS-500/383#char=0,196> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "196"^^xsd:nonNegativeInteger ;
+    nif:isString "The Football Association of Ireland -LRB- FAI -RRB- confirmed Given 's decision on its Web site , explaining that Given had informed Republic of Ireland coach Giovanni Trapattoni of his decision ." .
+
+<http://aksw.org/N3/RSS-500/385#char=0,224> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "224"^^xsd:nonNegativeInteger ;
+    nif:isString "Italy arrived in London having won the last three world titles and had high hopes of knocking the Russians off their pedestal , but a slight improvisation in their display with five balls did not go unnoticed by the judges ." .
+
+<http://aksw.org/N3/RSS-500/395#char=0,151> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "151"^^xsd:nonNegativeInteger ;
+    nif:isString "`` I just hear you talking out of two sides and I 'm looking for some clarity , '' Jenkins told Tina Bailes , DHHR 's deputy commissioner for finance ." .
+
+<http://aksw.org/N3/RSS-500/399#char=0,198> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "198"^^xsd:nonNegativeInteger ;
+    nif:isString "You can make a big difference by adding a layer of comfort with a memory foam topper or alternatives such as a fiber or feather bed topper , says Jessica Joyce , spokeswoman for Bed Bath  & Beyond ." .
+
+<http://aksw.org/N3/RSS-500/4#char=0,246> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "246"^^xsd:nonNegativeInteger ;
+    nif:isString "Joshua 's jubilation at claiming the 13th gold in the boxing ring at the London Games was a memorable moment , but it did not match the performances of the three women champions , which were still drawing praise from AIBA president Wu Ching-kuo ." .
+
+<http://aksw.org/N3/RSS-500/40#char=0,274> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "274"^^xsd:nonNegativeInteger ;
+    nif:isString "Army Gen. Martin Dempsey , chairman of the Joint Chiefs of Staff , told Pentagon reporters that the militia , which is generally made up of Syrian Shiite forces , is being used to take the pressure off the Syrian regime forces , which have been at war for almost 18 months ." .
+
+<http://aksw.org/N3/RSS-500/405#char=0,158> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "158"^^xsd:nonNegativeInteger ;
+    nif:isString "Germany 's Julia Goerges won in straight sets over Israel 's Shahar Peer 6-3 , 6-3 and Sweden 's Johanna Larsson beat Australia 's Casey Dellacqua 6-1 , 6-3 ." .
+
+<http://aksw.org/N3/RSS-500/413#char=0,97> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "97"^^xsd:nonNegativeInteger ;
+    nif:isString "Joseph Schwebel , president of the Schwebel Baking Co. for 27 years , died just a few weeks ago ." .
+
+<http://aksw.org/N3/RSS-500/419#char=0,58> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "58"^^xsd:nonNegativeInteger ;
+    nif:isString "KATU News reporter Dan Tilkin contributed to this report ." .
+
+<http://aksw.org/N3/RSS-500/425#char=0,187> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "187"^^xsd:nonNegativeInteger ;
+    nif:isString "`` All renewable technologies have a constant challenge to be as ` green ' as the public wants them to be , '' said Karl Gawell , executive director of the Geothermal Energy Association ." .
+
+<http://aksw.org/N3/RSS-500/427#char=0,119> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "119"^^xsd:nonNegativeInteger ;
+    nif:isString "Kayla , who lives in Marblehead , is the first United States athlete to ever win a gold medal at the Olympics in judo ." .
+
+<http://aksw.org/N3/RSS-500/428#char=0,191> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "191"^^xsd:nonNegativeInteger ;
+    nif:isString "Keith Bodine , owner of Sweetgrass Farm Winery  & Distillery and the maker of Back River Gin and Three Crow Rum , says he thinks it 's `` great '' to have more craft distillers in the state ." .
+
+<http://aksw.org/N3/RSS-500/435#char=0,156> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "156"^^xsd:nonNegativeInteger ;
+    nif:isString "At the youth camp across a sliver of ocean , Kieve-Wavus director Henry Kennedy said Audubon campers should use his camp 's boat and captain to save costs ." .
+
+<http://aksw.org/N3/RSS-500/438#char=0,86> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "86"^^xsd:nonNegativeInteger ;
+    nif:isString "Knupp went to Columbus for a month and underwent extensive training with her new dog ." .
+
+<http://aksw.org/N3/RSS-500/451#char=0,306> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "306"^^xsd:nonNegativeInteger ;
+    nif:isString "FLAGSTAFF , Ariz. -- No sooner had six-time Pro Bowl receiver Larry Fitzgerald arrived in Uganda in July on a humanitarian mission than former president Bill Clinton hit him with the question : Does n't matter who is quarterback is , Larry Fitzgerald still finds a way to make big plays for the Cardinals ." .
+
+<http://aksw.org/N3/RSS-500/455#char=0,215> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "215"^^xsd:nonNegativeInteger ;
+    nif:isString "But the explosion of social media is the one big change in the media landscape that would explain the increased ratings , said Lee Rainie , director of the Pew Research Center 's Internet and American Life Project ." .
+
+<http://aksw.org/N3/RSS-500/456#char=0,195> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "195"^^xsd:nonNegativeInteger ;
+    nif:isString "The Batman in question is Lenny B. Robinson , known as the Route 29 Batman - a Maryland businessman who has committed himself to brightening the days of children hospitalized across the country ." .
+
+<http://aksw.org/N3/RSS-500/459#char=0,50> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "50"^^xsd:nonNegativeInteger ;
+    nif:isString "Word had just come that Liddell died in February ." .
+
+<http://aksw.org/N3/RSS-500/463#char=0,184> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "184"^^xsd:nonNegativeInteger ;
+    nif:isString "`` The core message -LRB- of the program -RRB- is that it does matter what you say , what you do and how you act , '' said Liza Cordeiro , spokeswoman for the Department of Education ." .
+
+<http://aksw.org/N3/RSS-500/47#char=0,72> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "72"^^xsd:nonNegativeInteger ;
+    nif:isString "Associated Press writer Kasie Hunt in Miami contributed to this report ." .
+
+<http://aksw.org/N3/RSS-500/471#char=0,1000> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "1000"^^xsd:nonNegativeInteger ;
+    nif:isString "CALHOUN COUNTY Aug. 1 : Timothy Peavy , violation of state probation ; Crystal Wooten , violation of state probation ; John Curry , murder in the 1st degree Aug. 2 : Terri Butler , possession of prescription drug without prescription ; Shannon Murphy , violation of state probation ; Melvin Dawson , violation of injunction LIBERTY COUNTY July 29 : Joshua J. Schoelles , failure to appear July 30 : Chad Smith , hold for Orange County July 31 : Jose Ramirez , hold for Orange County ; Luis Luciano , hold for Orange County ; Vernon Burch , hold for Orange County ; Michael Teuyaw , hold for Orange County Aug. 1 : Deandra Powell , violation of county probation ; Daniel Persinger , failure to appear , violation of county probation ; Carol Feagan , hold for Calhoun County ; December Wilson , violation of county probation Aug. 2 : Jennifer White , violation of county probation ; Brenda Toole , hold for Calhoun County ; Tracy Pullam , violation of probation ; Terrie Butler , hold for Calhoun Co. ." .
+
+<http://aksw.org/N3/RSS-500/48#char=0,64> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "64"^^xsd:nonNegativeInteger ;
+    nif:isString "Associated Press writer Sameer N. Yacoub contributed reporting ." .
+
+<http://aksw.org/N3/RSS-500/480#char=0,96> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "96"^^xsd:nonNegativeInteger ;
+    nif:isString "For our Maine reporter Marnie Maclean , her summer always includes a day at this special beach ." .
+
+<http://aksw.org/N3/RSS-500/490#char=0,176> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "176"^^xsd:nonNegativeInteger ;
+    nif:isString "Maruti chief executive Shinzo Nakanishi has said the plant would stay shut until the managers ' safety can be guaranteed and some executives have voiced fears about returning ." .
+
+<http://aksw.org/N3/RSS-500/493#char=0,346> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "346"^^xsd:nonNegativeInteger ;
+    nif:isString "The law includes reduced health insurance financial penalties for businesses that employ between 12 and 21 workers , something Retailers Association of Massachusetts president Jon Hurst said `` hopefully will also boost some employment in small businesses '' by removing a disincentive for 11-worker companies to hire a 12th employee and beyond ." .
+
+<http://aksw.org/N3/RSS-500/496#char=0,57> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "57"^^xsd:nonNegativeInteger ;
+    nif:isString "Mayo Clinic spokeswoman Traci Klein declined to comment ." .
+
+<http://aksw.org/N3/RSS-500/51#char=0,203> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "203"^^xsd:nonNegativeInteger ;
+    nif:isString "Associated Press writers Eric Tucker in Washington , Paul Davenport in Phoenix and Ed White and Mike Householder in Detroit contributed to this report , as did AP researcher Jennifer Farrar in New York ." .
+
+<http://aksw.org/N3/RSS-500/61#char=0,201> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "201"^^xsd:nonNegativeInteger ;
+    nif:isString "BALTIMORE -LRB- AP -RRB- -- Mark Reynolds homered twice and drove in four runs , Omar Quintanilla also went deep , and the Baltimore Orioles beat Josh Beckett and the Boston Red Sox 7-1 Tuesday night ." .
+
+<http://aksw.org/N3/RSS-500/63#char=0,186> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "186"^^xsd:nonNegativeInteger ;
+    nif:isString "-LRB- AP Photo\\/Nick Wass -RRB- Mark Reynolds homered twice and drove in four runs , Omar Quintanilla also went deep , and Baltimore beat Josh Beckett and the Red Sox 7-1 Tuesday night ." .
+
+<http://aksw.org/N3/RSS-500/64#char=0,104> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "104"^^xsd:nonNegativeInteger ;
+    nif:isString "Video showed someone walking or running away from the fire , Bangor police Sgt. Paul Edwards confirmed ." .
+
+<http://aksw.org/N3/RSS-500/68#char=0,239> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "239"^^xsd:nonNegativeInteger ;
+    nif:isString "`` It seems that what happens in Pittsburgh stays in Pittsburgh , '' said Barbara Yeninas , a spokeswoman for Springboard Healthcare Staffing and Search , one of at least seven medical staffing agencies that lined up jobs for Kwiatkowski ." .
+
+<http://aksw.org/N3/RSS-500/7#char=0,107> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "107"^^xsd:nonNegativeInteger ;
+    nif:isString "`` We put in eight more along with security around the door , '' he tells Action News reporter Ryan Simms ." .
+
+<http://aksw.org/N3/RSS-500/74#char=0,208> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "208"^^xsd:nonNegativeInteger ;
+    nif:isString "Later in the day , the mayor of Trois-Rivieres , where she is running for the PQ , questioned the party 's decision to parachute Benhabib , who lives in Gatineau near Ottawa , into the central Quebec riding ." .
+
+<http://aksw.org/N3/RSS-500/77#char=0,130> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "130"^^xsd:nonNegativeInteger ;
+    nif:isString "`` We want a fun , new fundraising event that can be done mostly outside , '' said Beverly Heritage Center manager Terry Hackney ." .
+
+<http://aksw.org/N3/RSS-500/83#char=0,110> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "110"^^xsd:nonNegativeInteger ;
+    nif:isString "`` Matt and Megan are a great addition to our team , '' said Bob Emrich , chairman of Protect Marriage Maine ." .
+
+<http://aksw.org/N3/RSS-500/87#char=0,258> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "258"^^xsd:nonNegativeInteger ;
+    nif:isString "`` The amount he will pay is crazy , '' says Bob Martin , president of Internet REIT , a domain investment firm that has raised more than $ 125 million from private investors , including Maveron , the venture firm backed by Starbucks founder Howard Schultz ." .
+
+<http://aksw.org/N3/RSS-500/9#char=0,149> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "149"^^xsd:nonNegativeInteger ;
+    nif:isString "`` We know more than 10,000 occupants die in frontal crashes each year , '' Adrian Lund , president of the I.I.H.S. , said in a telephone interview ." .
+
+<http://aksw.org/N3/RSS-500/95#char=0,167> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "167"^^xsd:nonNegativeInteger ;
+    nif:isString "Boston Red Sox manager Bobby Valentine watches during batting practice before a baseball game against the Baltimore Orioles , Tuesday , Aug. 14 , 2012 , in Baltimore ." .
+
+<http://aksw.org/N3/RSS-500/98#char=0,79> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "79"^^xsd:nonNegativeInteger ;
+    nif:isString "Boston manager Bobby Valentine said simply , `` Kelly was claimed by the Mets ." .
+
