@@ -118,7 +118,7 @@ class SimpleTagClassifier(object):
         best_params = {}
         best_f1 = 0.
         best_classifier = None
-        for param_setting in parameters:
+        for idx, param_setting in enumerate(parameters):
             # Set the parameters
             for param, val in param_setting.items():
                 setattr(self, param, val)
@@ -131,7 +131,7 @@ class SimpleTagClassifier(object):
                 chunk_scores = self.evaluate_model(chunks[chunk_id], docid_to_mentions)
                 for method, score in chunk_scores.items():
                     scores[method] += score/k
-            logger.info('-----')
+            logger.info('----- {}/{}'.format(idx, len(parameters)))
             logger.info(param_setting)
             logger.info(dict(scores.items()))
             if scores['f1'] > best_f1:
