@@ -69,7 +69,7 @@ class SimpleTagClassifier(object):
             dct = dict(self.__dict__.items())
             del dct['tagger']
             pickle.dump(dct, f)
-            
+
     def create_mentions(self, phrase):
         """
         Runs the Solr tagger to create the mentions
@@ -244,7 +244,7 @@ class SimpleTagClassifier(object):
 
         # print({'nb_valid_predictions':nb_valid_predictions, 'nb_predictions': nb_predictions, 'nb_item_judgments':nb_item_judgments})
         precision = float(nb_valid_predictions) / nb_predictions if nb_predictions else 1.
-        recall = float(nb_valid_predictions) / nb_item_judgments if nb_item_judgments else 1
+        recall = float(nb_valid_predictions) / len(mention_id_to_qid) if mention_id_to_qid else 1
         f1 = 2*(precision*recall) / (precision + recall) if precision + recall > 0. else 0.
         return {
                 'precision':precision,
@@ -351,7 +351,7 @@ class SimpleTagClassifier(object):
                         similarities.append(
                                 {'tag': other_tag_id,
                                  'score': similarity })
-                        
+
             # Normalize
             weight_sum = sum(similarity['score'] for similarity in similarities)
 
