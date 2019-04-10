@@ -168,15 +168,17 @@ def train_classifier(collection, bow, pagerank, dataset, output, max_iter):
 
     parameter_grid = []
     for C in [10.0, 1.0, 0.1, 0.01, 0.01]:
-        for similarity, beta in [('direct_link', None), ('edge_ratio', None), ('one_step', 0.1), ('one_step', 0.2), ('one_step', 0.5), ('one_step', 0.8), ('one_step', 0.85)]:
-            for smoothing in [1, 0.7, 0.5, 0.1]:
-                parameter_grid.append({
-                    'nb_steps':4,
-                    'C': C,
-                    'similarity': similarity,
-                    'beta': beta,
-                    'similarity_smoothing': smoothing,
-                    })
+        for similarity, beta in [('one_step', 0.1), ('one_step', 0.2), ('one_step', 0.3),]:
+            for smoothing in [1, 0.7, 0.5]:
+                for max_distance in [50, 75, 100, 150]:
+                    parameter_grid.append({
+                        'nb_steps':4,
+                        'max_similarity_distance': max_distance,
+                        'C': C,
+                        'similarity': similarity,
+                        'beta': beta,
+                        'similarity_smoothing': smoothing,
+                        })
 
     best_params = clf.crossfit_model(d, parameter_grid, max_iter=max_iter)
     print('#########')

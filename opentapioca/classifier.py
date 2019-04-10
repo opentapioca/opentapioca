@@ -338,12 +338,14 @@ class SimpleTagClassifier(object):
             for other_mention in all_mentions:
                 other_start = other_mention.start
                 other_end = other_mention.end
-                distance = abs((other_end + other_start - end - start) / 2)
+                distance = max(start - other_end, other_start - end)
+                # distance = abs((other_end + other_start - end - start) / 2)
                 if (other_start == start and other_end == end) or distance > self.max_similarity_distance:
                     continue
                 for other_tag in other_mention.tags:
                     other_tag_id = other_mention.tag_key(other_tag.id)
                     similarity = self.similarity_smoothing + self.similarity_method.compute_similarity(tag, other_tag)
+                    similarity *= float(self.max_similarity_distance - distance) / self.max_similarity_distance
                     other_tag_ids.append(other_tag_id)
                     if similarity > 0.:
                         similarities.append(
