@@ -123,6 +123,11 @@ class SimpleTagClassifier(object):
             for param, val in param_setting.items():
                 setattr(self, param, val)
 
+            # Recompute similarities
+            for uri, mentions in docid_to_mentions.items():
+                for mention in mentions:
+                    self.compute_similarities(mention, mentions)
+
             # Run cross-validation
             scores = defaultdict(float)
             for chunk_id in range(k):

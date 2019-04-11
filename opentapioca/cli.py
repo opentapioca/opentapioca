@@ -167,10 +167,10 @@ def train_classifier(collection, bow, pagerank, dataset, output, max_iter):
     max_iter = int(max_iter)
 
     parameter_grid = []
-    for C in [10.0, 1.0, 0.1, 0.01, 0.01]:
-        for similarity, beta in [('one_step', 0.1), ('one_step', 0.2), ('one_step', 0.3),]:
-            for smoothing in [1, 0.7, 0.5]:
-                for max_distance in [50, 75, 100, 150]:
+    for max_distance in [50, 75, 100, 150]:
+        for similarity, beta in [('one_step', 0.2), ('one_step', 0.5), ('one_step', 0.8), ('direct_link', None), ('edge_ratio', None)]:
+            for C in [10.0, 1.0, 0.1, 0.01, 0.01]:
+                for smoothing in [1, 0.5, 0.1, 0.01]:
                     parameter_grid.append({
                         'nb_steps':4,
                         'max_similarity_distance': max_distance,

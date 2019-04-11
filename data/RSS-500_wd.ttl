@@ -592,7 +592,7 @@
     nif:beginIndex "27"^^xsd:nonNegativeInteger ;
     nif:endIndex "39"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/101#char=0,157> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Chad_Johnson_(cornerback)> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Chad_Johnson_(cornerback)> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/102#char=48,52> a nif:OffsetBasedString,
@@ -672,7 +672,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "14"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/106#char=0,180> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Brian_Hemphill> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q27916444> .
 
 <http://aksw.org/N3/RSS-500/106#char=30,60> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -689,7 +689,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "14"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/107#char=0,189> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Brian_Hemphill> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q27916444> .
 
 <http://aksw.org/N3/RSS-500/107#char=30,60> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -836,13 +836,13 @@
     nif:referenceContext <http://aksw.org/N3/RSS-500/114#char=0,122> ;
     itsrdf:taIdentRef <http://aksw.org/notInWiki/Andrew_Fishkin> .
 
-<http://aksw.org/N3/RSS-500/115#char=0,7> a nif:OffsetBasedString,
+<http://aksw.org/N3/RSS-500/115#char=0,3> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "CBS NFL" ;
+    nif:anchorOf "CBS" ;
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "7"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/115#char=0,85> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/CBS_NFL> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q43380> .
 
 <http://aksw.org/N3/RSS-500/115#char=16,30> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -852,6 +852,14 @@
     nif:referenceContext <http://aksw.org/N3/RSS-500/115#char=0,85> ;
     itsrdf:taIdentRef <http://www.wikidata.org/entity/Q725373> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://aksw.org/N3/RSS-500/115#char=4,7> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "NFL" ;
+    nif:beginIndex "4"^^xsd:nonNegativeInteger ;
+    nif:endIndex "7"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/115#char=0,85> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1215884> .
 
 <http://aksw.org/N3/RSS-500/116#char=23,33> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -1115,7 +1123,7 @@
     nif:beginIndex "33"^^xsd:nonNegativeInteger ;
     nif:endIndex "43"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/13#char=0,154> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Al-Shabaab> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/wiki/Q309998> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/13#char=58,67> a nif:OffsetBasedString,
@@ -1210,7 +1218,7 @@
     nif:beginIndex "18"^^xsd:nonNegativeInteger ;
     nif:endIndex "29"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/134#char=0,150> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Steve_Smith_(wide_receiver,_born_1979)> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q683017> .
 
 <http://aksw.org/N3/RSS-500/135#char=0,14> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -1304,7 +1312,7 @@
     nif:beginIndex "112"^^xsd:nonNegativeInteger ;
     nif:endIndex "123"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/14#char=0,218> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Bobby_Wyatt> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q27656025> .
 
 <http://aksw.org/N3/RSS-500/14#char=97,104> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -1370,7 +1378,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "8"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/143#char=0,136> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Chandler,_Arizona> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q49272> .
 
 <http://aksw.org/N3/RSS-500/143#char=16,32> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -1549,7 +1557,7 @@
     nif:beginIndex "50"^^xsd:nonNegativeInteger ;
     nif:endIndex "70"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/152#char=0,72> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Highland_High_School_(Arkansas)> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5758798> .
 
 <http://aksw.org/N3/RSS-500/153#char=0,7> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -1688,13 +1696,13 @@
     nif:referenceContext <http://aksw.org/N3/RSS-500/16#char=0,300> ;
     itsrdf:taIdentRef <http://aksw.org/notInWiki/Eagle_View_Farms> .
 
-<http://aksw.org/N3/RSS-500/160#char=137,153> a nif:OffsetBasedString,
+<http://aksw.org/N3/RSS-500/160#char=137,178> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "Texas Department" ;
+    nif:anchorOf "Texas Department of State Health Services" ;
     nif:beginIndex "137"^^xsd:nonNegativeInteger ;
-    nif:endIndex "153"^^xsd:nonNegativeInteger ;
+    nif:endIndex "178"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/160#char=0,180> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/State_Health_Services> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5649489> .
 
 <http://aksw.org/N3/RSS-500/160#char=98,112> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -1863,7 +1871,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "18"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/17#char=0,181> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Alejandro_Mayorkas> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q4714600> .
 
 <http://aksw.org/N3/RSS-500/17#char=33,37> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -1975,7 +1983,7 @@
     nif:beginIndex "31"^^xsd:nonNegativeInteger ;
     nif:endIndex "47"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/175#char=0,153> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Fran%C3%A7ois_Legault> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3085147> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/176#char=0,24> a nif:OffsetBasedString,
@@ -2017,7 +2025,7 @@
     nif:beginIndex "2"^^xsd:nonNegativeInteger ;
     nif:endIndex "10"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/178#char=0,74> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Colorado_College_Tigers> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q21524257> .
 
 <http://aksw.org/N3/RSS-500/178#char=20,28> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2025,7 +2033,7 @@
     nif:beginIndex "20"^^xsd:nonNegativeInteger ;
     nif:endIndex "28"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/178#char=0,74> ;
-    itsrdf:taIdentRef <http://dbpedia.org/page/Nebraska_Cornhuskers_football> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6984693> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/179#char=0,14> a nif:OffsetBasedString,
@@ -2051,7 +2059,7 @@
     nif:beginIndex "11"^^xsd:nonNegativeInteger ;
     nif:endIndex "29"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/18#char=0,91> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Alejandro_Mayorkas> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q4714600> .
 
 <http://aksw.org/N3/RSS-500/18#char=48,52> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2139,13 +2147,13 @@
     itsrdf:taIdentRef <http://www.wikidata.org/entity/Q79853> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
-<http://aksw.org/N3/RSS-500/184#char=49,53> a nif:OffsetBasedString,
+<http://aksw.org/N3/RSS-500/184#char=45,65> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "City" ;
-    nif:beginIndex "49"^^xsd:nonNegativeInteger ;
-    nif:endIndex "53"^^xsd:nonNegativeInteger ;
+    nif:anchorOf "the City of Colleges" ;
+    nif:beginIndex "45"^^xsd:nonNegativeInteger ;
+    nif:endIndex "65"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/184#char=0,67> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/City_of_Colleges> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q79853> .
 
 <http://aksw.org/N3/RSS-500/185#char=15,27> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2393,7 +2401,7 @@
     nif:beginIndex "36"^^xsd:nonNegativeInteger ;
     nif:endIndex "57"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/198#char=0,93> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Daiwa_Capital_Markets> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5209834> .
 
 <http://aksw.org/N3/RSS-500/198#char=66,75> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2436,7 +2444,7 @@
     nif:beginIndex "200"^^xsd:nonNegativeInteger ;
     nif:endIndex "215"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/2#char=0,275> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Catherine_Crump> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q20035599> .
 
 <http://aksw.org/N3/RSS-500/20#char=122,135> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2460,7 +2468,7 @@
     nif:beginIndex "129"^^xsd:nonNegativeInteger ;
     nif:endIndex "150"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/200#char=0,184> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/California_Department_of_Forestry_and_Fire_Protection> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5020422> .
 
 <http://aksw.org/N3/RSS-500/200#char=92,106> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2485,7 +2493,7 @@
     nif:beginIndex "48"^^xsd:nonNegativeInteger ;
     nif:endIndex "88"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/201#char=0,161> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/IHS_Cambridge_Energy_Research_Associates> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1662481> .
 
 <http://aksw.org/N3/RSS-500/202#char=25,37> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2527,7 +2535,7 @@
     nif:beginIndex "212"^^xsd:nonNegativeInteger ;
     nif:endIndex "225"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/204#char=0,558> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Darrell_Brock> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5224589> .
 
 <http://aksw.org/N3/RSS-500/204#char=244,260> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2601,7 +2609,7 @@
     nif:beginIndex "69"^^xsd:nonNegativeInteger ;
     nif:endIndex "78"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/208#char=0,138> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/David_Eby> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5233252> .
 
 <http://aksw.org/N3/RSS-500/209#char=107,121> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2617,7 +2625,7 @@
     nif:beginIndex "140"^^xsd:nonNegativeInteger ;
     nif:endIndex "146"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/209#char=0,221> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Benjamin_Lawsky> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q4888951> .
 
 <http://aksw.org/N3/RSS-500/21#char=31,37> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2745,7 +2753,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "8"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/216#char=0,201> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Gilles_Demailly> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3106193> .
 
 <http://aksw.org/N3/RSS-500/216#char=23,31> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2826,13 +2834,13 @@
     itsrdf:taIdentRef <http://www.wikidata.org/entity/Q312556> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
-<http://aksw.org/N3/RSS-500/220#char=78,87> a nif:OffsetBasedString,
+<http://aksw.org/N3/RSS-500/220#char=70,87> a nif:OffsetBasedString,
         nif:Phrase ;
-    nif:anchorOf "Deputy PM" ;
-    nif:beginIndex "78"^^xsd:nonNegativeInteger ;
+    nif:anchorOf "Russian Deputy PM" ;
+    nif:beginIndex "70"^^xsd:nonNegativeInteger ;
     nif:endIndex "87"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/220#char=0,353> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Deputy_PM> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q14805701> .
 
 <http://aksw.org/N3/RSS-500/220#char=94,101> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -2946,7 +2954,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "49"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/227#char=0,261> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Chinese_Association_for_Protecting_the_Diaoyutais> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q16924297> .
 
 <http://aksw.org/N3/RSS-500/227#char=59,64> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3007,7 +3015,7 @@
     nif:beginIndex "61"^^xsd:nonNegativeInteger ;
     nif:endIndex "73"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/23#char=0,175> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Manuel_Moroun> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6752755> .
 
 <http://aksw.org/N3/RSS-500/230#char=52,59> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3042,7 +3050,7 @@
     nif:beginIndex "34"^^xsd:nonNegativeInteger ;
     nif:endIndex "46"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/231#char=0,199> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Chad_Johnson_(wide_receiver)> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q471833> .
 
 <http://aksw.org/N3/RSS-500/232#char=50,58> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3084,7 +3092,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "6"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/234#char=0,187> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Donnan> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6194672> .
 
 <http://aksw.org/N3/RSS-500/234#char=16,25> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3284,7 +3292,7 @@
     nif:beginIndex "40"^^xsd:nonNegativeInteger ;
     nif:endIndex "54"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/245#char=0,121> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Dunkin%27_Donuts> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q847743> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/245#char=67,73> a nif:OffsetBasedString,
@@ -3302,7 +3310,7 @@
     nif:beginIndex "51"^^xsd:nonNegativeInteger ;
     nif:endIndex "55"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/246#char=0,77> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/ESPN_(United_States)> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q217776> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/246#char=66,75> a nif:OffsetBasedString,
@@ -3319,7 +3327,7 @@
     nif:beginIndex "20"^^xsd:nonNegativeInteger ;
     nif:endIndex "24"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/247#char=0,204> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/ESPN_(United_States)> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q217776> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/247#char=35,45> a nif:OffsetBasedString,
@@ -3344,7 +3352,7 @@
     nif:beginIndex "81"^^xsd:nonNegativeInteger ;
     nif:endIndex "92"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/248#char=0,99> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Brian_Smith_(Coach)> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q16186493> .
 
 <http://aksw.org/N3/RSS-500/249#char=35,73> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3352,7 +3360,7 @@
     nif:beginIndex "35"^^xsd:nonNegativeInteger ;
     nif:endIndex "73"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/249#char=0,227> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/State_Secretariat_for_Economic_Affairs> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q662528> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/249#char=85,89> a nif:OffsetBasedString,
@@ -3361,7 +3369,7 @@
     nif:beginIndex "85"^^xsd:nonNegativeInteger ;
     nif:endIndex "89"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/249#char=0,227> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/State_Secretariat_for_Economic_Affairs> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q662528> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/25#char=177,198> a nif:OffsetBasedString,
@@ -3492,7 +3500,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "4"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/256#char=0,122> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Emma_Veary> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q55174075> .
 
 <http://aksw.org/N3/RSS-500/256#char=19,33> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3562,7 +3570,7 @@
     nif:beginIndex "149"^^xsd:nonNegativeInteger ;
     nif:endIndex "166"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/26#char=0,232> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Andrea_Hlav%C3%A1%C4%8Dkov%C3%A1> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q11581> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/26#char=176,197> a nif:OffsetBasedString,
@@ -3642,7 +3650,7 @@
     nif:beginIndex "17"^^xsd:nonNegativeInteger ;
     nif:endIndex "24"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/263#char=0,135> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Charles_E._Summers,_Jr.> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5085579> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/264#char=0,21> a nif:OffsetBasedString,
@@ -3692,7 +3700,7 @@
     nif:beginIndex "170"^^xsd:nonNegativeInteger ;
     nif:endIndex "189"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/266#char=0,205> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Kentucky_Distillers_Association> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q18628135> .
 
 <http://aksw.org/N3/RSS-500/267#char=166,182> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3742,7 +3750,7 @@
     nif:beginIndex "149"^^xsd:nonNegativeInteger ;
     nif:endIndex "158"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/269#char=0,217> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Robert_Wu> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q9063013> .
 
 <http://aksw.org/N3/RSS-500/27#char=0,14> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3775,7 +3783,7 @@
     nif:beginIndex "72"^^xsd:nonNegativeInteger ;
     nif:endIndex "85"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/270#char=0,98> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Mina_Andreeva> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q45207298> .
 
 <http://aksw.org/N3/RSS-500/271#char=0,17> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3791,7 +3799,7 @@
     nif:beginIndex "24"^^xsd:nonNegativeInteger ;
     nif:endIndex "36"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/271#char=0,87> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Phillip_Dees> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5249941> .
 
 <http://aksw.org/N3/RSS-500/272#char=22,36> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3832,7 +3840,7 @@
     nif:beginIndex "72"^^xsd:nonNegativeInteger ;
     nif:endIndex "81"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/274#char=0,96> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/%CA%BBEwa_Beach,_Hawaii> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2138861> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/274#char=90,94> a nif:OffsetBasedString,
@@ -3859,7 +3867,7 @@
     nif:beginIndex "28"^^xsd:nonNegativeInteger ;
     nif:endIndex "30"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/275#char=0,145> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Hu_Yu-wei> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q8279730> .
 
 <http://aksw.org/N3/RSS-500/276#char=0,3> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3912,7 +3920,7 @@
     nif:beginIndex "8"^^xsd:nonNegativeInteger ;
     nif:endIndex "12"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/278#char=0,151> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Hall_of_fame> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6621997> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/279#char=85,89> a nif:OffsetBasedString,
@@ -3921,7 +3929,7 @@
     nif:beginIndex "85"^^xsd:nonNegativeInteger ;
     nif:endIndex "89"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/279#char=0,121> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Hall_of_fame> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6621997> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/279#char=99,112> a nif:OffsetBasedString,
@@ -3947,7 +3955,7 @@
     nif:beginIndex "30"^^xsd:nonNegativeInteger ;
     nif:endIndex "61"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/28#char=0,192> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/San_Francisco_Police_Commission> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q16867298> .
 
 <http://aksw.org/N3/RSS-500/280#char=106,110> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -3955,7 +3963,7 @@
     nif:beginIndex "106"^^xsd:nonNegativeInteger ;
     nif:endIndex "110"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/280#char=0,142> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Hall_of_fame> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6621997> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/280#char=120,133> a nif:OffsetBasedString,
@@ -4044,7 +4052,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "15"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/285#char=0,174> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/F%C3%A9lix_Hern%C3%A1ndez> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1196594> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/285#char=28,44> a nif:OffsetBasedString,
@@ -4062,7 +4070,7 @@
     nif:beginIndex "36"^^xsd:nonNegativeInteger ;
     nif:endIndex "51"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/286#char=0,207> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/F%C3%A9lix_Hern%C3%A1ndez> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1196594> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/286#char=64,80> a nif:OffsetBasedString,
@@ -4080,7 +4088,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "15"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/287#char=0,171> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/F%C3%A9lix_Hern%C3%A1ndez> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1196594> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/287#char=28,44> a nif:OffsetBasedString,
@@ -4098,7 +4106,7 @@
     nif:beginIndex "26"^^xsd:nonNegativeInteger ;
     nif:endIndex "41"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/288#char=0,144> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/F%C3%A9lix_Hern%C3%A1ndez> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1196594> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/288#char=3,10> a nif:OffsetBasedString,
@@ -4132,7 +4140,7 @@
     nif:beginIndex "28"^^xsd:nonNegativeInteger ;
     nif:endIndex "39"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/29#char=0,68> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/T%C3%ADmea_Babos> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q239765> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/29#char=6,22> a nif:OffsetBasedString,
@@ -4168,7 +4176,7 @@
     nif:beginIndex "243"^^xsd:nonNegativeInteger ;
     nif:endIndex "275"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/291#char=0,442> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Financial_Supervisory_Commission_(Republic_of_China)> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5449676> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/291#char=285,287> a nif:OffsetBasedString,
@@ -4177,7 +4185,7 @@
     nif:beginIndex "285"^^xsd:nonNegativeInteger ;
     nif:endIndex "287"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/291#char=0,442> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Hu_Sheng-cheng> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q15919713> .
 
 <http://aksw.org/N3/RSS-500/292#char=0,5> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -4269,7 +4277,7 @@
     nif:beginIndex "67"^^xsd:nonNegativeInteger ;
     nif:endIndex "82"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/297#char=0,176> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Ministry_of_Foreign_Affairs_(Republic_of_China)> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q697158> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/297#char=93,103> a nif:OffsetBasedString,
@@ -4387,7 +4395,7 @@
     nif:beginIndex "43"^^xsd:nonNegativeInteger ;
     nif:endIndex "49"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/302#char=0,78> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/France_women%27s_national_basketball_team> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1342224> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/302#char=58,71> a nif:OffsetBasedString,
@@ -4477,7 +4485,7 @@
     nif:beginIndex "123"^^xsd:nonNegativeInteger ;
     nif:endIndex "132"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/307#char=0,211> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Fuji_Rock> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1151186> .
 
 <http://aksw.org/N3/RSS-500/307#char=143,153> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -4485,7 +4493,7 @@
     nif:beginIndex "143"^^xsd:nonNegativeInteger ;
     nif:endIndex "153"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/307#char=0,211> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Freddy_Lim> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q9292454> .
 
 <http://aksw.org/N3/RSS-500/308#char=0,2> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -4527,7 +4535,7 @@
     nif:beginIndex "22"^^xsd:nonNegativeInteger ;
     nif:endIndex "39"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/31#char=0,68> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Appalachian_Power> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q464092> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/31#char=53,66> a nif:OffsetBasedString,
@@ -4635,7 +4643,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "13"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/315#char=0,168> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Gabriel_Boric> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q16297876> .
 
 <http://aksw.org/N3/RSS-500/315#char=37,75> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -4643,7 +4651,7 @@
     nif:beginIndex "37"^^xsd:nonNegativeInteger ;
     nif:endIndex "75"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/315#char=0,168> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/University_of_Chile_Student_Federation> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q7895265> .
 
 <http://aksw.org/N3/RSS-500/316#char=0,8> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -4651,7 +4659,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "8"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/316#char=0,181> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Paolo_Gabriele> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q4130964> .
 
 <http://aksw.org/N3/RSS-500/316#char=21,32> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -4726,7 +4734,7 @@
     nif:beginIndex "80"^^xsd:nonNegativeInteger ;
     nif:endIndex "97"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/32#char=0,164> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Appalachian_Power> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q464092> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/320#char=192,204> a nif:OffsetBasedString,
@@ -4922,7 +4930,7 @@
     nif:beginIndex "50"^^xsd:nonNegativeInteger ;
     nif:endIndex "74"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/330#char=0,104> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Russia_in_Global_Affairs> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3453515> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/330#char=82,97> a nif:OffsetBasedString,
@@ -4931,7 +4939,7 @@
     nif:beginIndex "82"^^xsd:nonNegativeInteger ;
     nif:endIndex "97"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/330#char=0,104> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Fyodor_Lukyanov> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3067956> .
 
 <http://aksw.org/N3/RSS-500/331#char=114,128> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -4974,7 +4982,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "8"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/333#char=0,131> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Gio_Gonzalez> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1525217> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/333#char=25,33> a nif:OffsetBasedString,
@@ -5128,7 +5136,7 @@
     nif:beginIndex "41"^^xsd:nonNegativeInteger ;
     nif:endIndex "53"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/341#char=0,157> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Hanwha_Group> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q489202> .
 
 <http://aksw.org/N3/RSS-500/341#char=63,66> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -5177,7 +5185,7 @@
     nif:beginIndex "48"^^xsd:nonNegativeInteger ;
     nif:endIndex "56"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/344#char=0,84> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Harmonix_Music_Systems> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2607531> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/344#char=68,82> a nif:OffsetBasedString,
@@ -5264,7 +5272,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "12"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/349#char=0,219> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Hearst_Corporation> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1065024> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/349#char=29,45> a nif:OffsetBasedString,
@@ -5324,7 +5332,7 @@
     nif:beginIndex "82"^^xsd:nonNegativeInteger ;
     nif:endIndex "100"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/351#char=0,158> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Dale_Earnhardt,_Jr.> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q355388> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/352#char=0,9> a nif:OffsetBasedString,
@@ -5333,7 +5341,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "9"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/352#char=0,165> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/F%C3%A9lix_Hern%C3%A1ndez> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1196594> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/352#char=22,38> a nif:OffsetBasedString,
@@ -5369,7 +5377,7 @@
     nif:beginIndex "107"^^xsd:nonNegativeInteger ;
     nif:endIndex "124"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/354#char=0,220> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Hidenori_Sakanaka> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q11424851> .
 
 <http://aksw.org/N3/RSS-500/354#char=143,177> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -5409,7 +5417,7 @@
     nif:beginIndex "63"^^xsd:nonNegativeInteger ;
     nif:endIndex "89"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/356#char=0,168> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Greater_Portland_Landmarks> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q30295192> .
 
 <http://aksw.org/N3/RSS-500/357#char=150,165> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -5417,7 +5425,7 @@
     nif:beginIndex "150"^^xsd:nonNegativeInteger ;
     nif:endIndex "165"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/357#char=0,228> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Hillary_Rodham_Clinton> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6294> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/357#char=171,176> a nif:OffsetBasedString,
@@ -5528,7 +5536,7 @@
     nif:beginIndex "21"^^xsd:nonNegativeInteger ;
     nif:endIndex "41"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/362#char=0,57> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Cincinnati_Children%27s_Hospital_Medical_Center> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5120231> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/363#char=0,7> a nif:OffsetBasedString,
@@ -5545,7 +5553,7 @@
     nif:beginIndex "21"^^xsd:nonNegativeInteger ;
     nif:endIndex "41"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/363#char=0,88> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Cincinnati_Children%27s_Hospital_Medical_Center> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5120231> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/364#char=49,57> a nif:OffsetBasedString,
@@ -5603,7 +5611,7 @@
     nif:beginIndex "183"^^xsd:nonNegativeInteger ;
     nif:endIndex "198"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/367#char=0,245> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Garden_of_Hope_Foundation> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q7254799> .
 
 <http://aksw.org/N3/RSS-500/367#char=215,227> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -5661,7 +5669,7 @@
     nif:beginIndex "178"^^xsd:nonNegativeInteger ;
     nif:endIndex "192"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/37#char=0,194> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Agust%C3%ADn_Pichot> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q399410> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/370#char=125,141> a nif:OffsetBasedString,
@@ -5713,7 +5721,7 @@
     nif:beginIndex "11"^^xsd:nonNegativeInteger ;
     nif:endIndex "15"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/372#char=0,180> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Chang_Sung-taek> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q496004> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/373#char=28,33> a nif:OffsetBasedString,
@@ -5780,7 +5788,7 @@
     nif:beginIndex "39"^^xsd:nonNegativeInteger ;
     nif:endIndex "57"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/376#char=0,226> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/U.S.-Japan_Council> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q17087853> .
 
 <http://aksw.org/N3/RSS-500/377#char=19,27> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -5797,7 +5805,7 @@
     nif:beginIndex "40"^^xsd:nonNegativeInteger ;
     nif:endIndex "57"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/377#char=0,110> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Jesse_Jackson,_Jr.> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q609189> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/378#char=48,56> a nif:OffsetBasedString,
@@ -5815,7 +5823,7 @@
     nif:beginIndex "69"^^xsd:nonNegativeInteger ;
     nif:endIndex "83"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/378#char=0,118> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Luis_Guti%C3%A9rrez> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q718127> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/379#char=14,21> a nif:OffsetBasedString,
@@ -6191,7 +6199,7 @@
     nif:beginIndex "228"^^xsd:nonNegativeInteger ;
     nif:endIndex "240"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/398#char=0,417> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Donald_Young_%28tennis%29> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q54694> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/399#char=146,159> a nif:OffsetBasedString,
@@ -6208,7 +6216,7 @@
     nif:beginIndex "178"^^xsd:nonNegativeInteger ;
     nif:endIndex "186"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/399#char=0,198> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Bed_Bath_%26_Beyond> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q813782> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/4#char=217,221> a nif:OffsetBasedString,
@@ -6217,7 +6225,7 @@
     nif:beginIndex "217"^^xsd:nonNegativeInteger ;
     nif:endIndex "221"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/4#char=0,246> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/International_Boxing_Association> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q743239> .
 
 <http://aksw.org/N3/RSS-500/4#char=232,244> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -6277,7 +6285,7 @@
     nif:beginIndex "93"^^xsd:nonNegativeInteger ;
     nif:endIndex "103"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/401#char=0,105> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/G%C3%A1bor_Vona> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q555669> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/402#char=0,16> a nif:OffsetBasedString,
@@ -6343,7 +6351,7 @@
     nif:beginIndex "97"^^xsd:nonNegativeInteger ;
     nif:endIndex "112"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/405#char=0,158> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Johanna_Larsson_%28tennis%29> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q233328> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/406#char=100,110> a nif:OffsetBasedString,
@@ -6575,7 +6583,7 @@
     nif:beginIndex "140"^^xsd:nonNegativeInteger ;
     nif:endIndex "200"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/418#char=0,202> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/National_Association_of_Student_Financial_Aid_Administrators> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q30268209> .
 
 <http://aksw.org/N3/RSS-500/419#char=0,9> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -6616,7 +6624,7 @@
     nif:beginIndex "12"^^xsd:nonNegativeInteger ;
     nif:endIndex "16"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/420#char=0,109> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/KHOU_%28TV%29> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q731804> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/420#char=26,38> a nif:OffsetBasedString,
@@ -6633,7 +6641,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "4"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/421#char=0,235> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Kenneth_Kahn> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3195178> .
 
 <http://aksw.org/N3/RSS-500/421#char=21,26> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -6641,7 +6649,7 @@
     nif:beginIndex "21"^^xsd:nonNegativeInteger ;
     nif:endIndex "26"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/421#char=0,235> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Kenny_the_Clown> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3195178> .
 
 <http://aksw.org/N3/RSS-500/422#char=71,84> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -6665,7 +6673,7 @@
     nif:beginIndex "28"^^xsd:nonNegativeInteger ;
     nif:endIndex "40"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/423#char=0,124> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Herman_Edwards> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q2852014> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/423#char=3,21> a nif:OffsetBasedString,
@@ -6724,7 +6732,7 @@
     nif:beginIndex "38"^^xsd:nonNegativeInteger ;
     nif:endIndex "59"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/426#char=0,130> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/New_York_City_Department_of_Sanitation> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q8354833> .
 
 <http://aksw.org/N3/RSS-500/427#char=0,5> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -6886,7 +6894,7 @@
     nif:beginIndex "45"^^xsd:nonNegativeInteger ;
     nif:endIndex "56"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/435#char=0,156> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Kieve-Wavus> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q43895787> .
 
 <http://aksw.org/N3/RSS-500/435#char=66,79> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -6894,7 +6902,7 @@
     nif:beginIndex "66"^^xsd:nonNegativeInteger ;
     nif:endIndex "79"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/435#char=0,156> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Henry_H._Kennedy,_Jr.> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q16121417> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/436#char=0,5> a nif:OffsetBasedString,
@@ -7024,7 +7032,7 @@
     nif:beginIndex "101"^^xsd:nonNegativeInteger ;
     nif:endIndex "128"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/442#char=0,130> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/National_School_Choice_Week> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q17125817> .
 
 <http://aksw.org/N3/RSS-500/442#char=66,76> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -7074,7 +7082,7 @@
     nif:beginIndex "101"^^xsd:nonNegativeInteger ;
     nif:endIndex "104"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/445#char=0,127> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/LSU_Tigers> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1325166> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/445#char=111,120> a nif:OffsetBasedString,
@@ -7092,7 +7100,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "3"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/446#char=0,169> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/LSU_Tigers> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1325166> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/446#char=10,19> a nif:OffsetBasedString,
@@ -7110,7 +7118,7 @@
     nif:beginIndex "28"^^xsd:nonNegativeInteger ;
     nif:endIndex "31"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/447#char=0,141> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/LSU_Tigers> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q1325166> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/447#char=38,47> a nif:OffsetBasedString,
@@ -7279,7 +7287,7 @@
     nif:beginIndex "26"^^xsd:nonNegativeInteger ;
     nif:endIndex "43"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/456#char=0,195> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Lenny_B._Robinson> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q20872861> .
 
 <http://aksw.org/N3/RSS-500/456#char=59,74> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -7303,7 +7311,7 @@
     nif:beginIndex "31"^^xsd:nonNegativeInteger ;
     nif:endIndex "54"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/457#char=0,143> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/U.S._Commercial_Service> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q7889637> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/458#char=58,70> a nif:OffsetBasedString,
@@ -7357,7 +7365,15 @@
     nif:beginIndex "24"^^xsd:nonNegativeInteger ;
     nif:endIndex "34"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/46#char=0,64> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Julie_Pace> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q34666768> .
+
+<http://aksw.org/N3/RSS-500/46#char=54,64> a nif:OffsetBasedString,
+        nif:Phrase ;
+    nif:anchorOf "Washington" ;
+    nif:beginIndex "54"^^xsd:nonNegativeInteger ;
+    nif:endIndex "64"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://aksw.org/N3/RSS-500/46#char=0,64> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q61> .
 
 <http://aksw.org/N3/RSS-500/460#char=43,52> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -7408,7 +7424,7 @@
     nif:beginIndex "135"^^xsd:nonNegativeInteger ;
     nif:endIndex "161"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/462#char=0,194> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/First_Student_%28United_States%29> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5453855> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/463#char=123,136> a nif:OffsetBasedString,
@@ -7434,7 +7450,7 @@
     nif:beginIndex "47"^^xsd:nonNegativeInteger ;
     nif:endIndex "49"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/464#char=0,301> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Lo_Fu-chen> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q8999898> .
 
 <http://aksw.org/N3/RSS-500/464#char=61,83> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -7547,7 +7563,7 @@
     nif:beginIndex "24"^^xsd:nonNegativeInteger ;
     nif:endIndex "34"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/47#char=0,72> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Kasie_Hunt> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q20977764> .
 
 <http://aksw.org/N3/RSS-500/470#char=56,72> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -7667,7 +7683,7 @@
     nif:beginIndex "39"^^xsd:nonNegativeInteger ;
     nif:endIndex "51"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/476#char=0,53> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Doc_Holliday_%28American_football%29> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5287062> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/477#char=105,119> a nif:OffsetBasedString,
@@ -7685,7 +7701,7 @@
     nif:beginIndex "89"^^xsd:nonNegativeInteger ;
     nif:endIndex "92"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/477#char=0,278> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Most_Valuable_Player> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q652965> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/478#char=177,183> a nif:OffsetBasedString,
@@ -7703,7 +7719,7 @@
     nif:beginIndex "193"^^xsd:nonNegativeInteger ;
     nif:endIndex "207"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/478#char=0,219> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/%C3%81ngel_di_Mar%C3%ADa> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q251683> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/479#char=124,140> a nif:OffsetBasedString,
@@ -7867,7 +7883,7 @@
     nif:beginIndex "116"^^xsd:nonNegativeInteger ;
     nif:endIndex "152"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/487#char=0,154> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/National_Venture_Capital_Association> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6979295> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/487#char=85,96> a nif:OffsetBasedString,
@@ -7953,7 +7969,7 @@
     nif:beginIndex "163"^^xsd:nonNegativeInteger ;
     nif:endIndex "173"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/491#char=0,237> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Mary_Keefe> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q13562370> .
 
 <http://aksw.org/N3/RSS-500/491#char=192,235> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8277,7 +8293,7 @@
     nif:beginIndex "11"^^xsd:nonNegativeInteger ;
     nif:endIndex "26"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/59#char=0,179> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Baf%C3%A9timbi_Gomis> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q11966> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/59#char=31,37> a nif:OffsetBasedString,
@@ -8320,7 +8336,7 @@
     nif:beginIndex "16"^^xsd:nonNegativeInteger ;
     nif:endIndex "23"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/60#char=0,80> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Haskell_Invitational_Stakes> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q5679217> .
 
 <http://aksw.org/N3/RSS-500/61#char=123,140> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8441,7 +8457,7 @@
     nif:beginIndex "33"^^xsd:nonNegativeInteger ;
     nif:endIndex "56"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/67#char=0,75> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Stanford_Design_Program> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q7598761> .
 
 <http://aksw.org/N3/RSS-500/68#char=110,141> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8517,7 +8533,7 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "10"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/71#char=0,138> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/San_Francisco_%E2%80%93_Oakland_Bay_Bridge> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q771404> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/71#char=21,29> a nif:OffsetBasedString,
@@ -8559,7 +8575,7 @@
     nif:beginIndex "29"^^xsd:nonNegativeInteger ;
     nif:endIndex "42"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/73#char=0,162> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Prevent_Child_Abuse_America> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q30268569> .
 
 <http://aksw.org/N3/RSS-500/74#char=129,137> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8567,7 +8583,7 @@
     nif:beginIndex "129"^^xsd:nonNegativeInteger ;
     nif:endIndex "137"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/74#char=0,208> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Djemila_Benhabib> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3032881> .
 
 <http://aksw.org/N3/RSS-500/74#char=153,161> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8640,7 +8656,7 @@
     nif:beginIndex "135"^^xsd:nonNegativeInteger ;
     nif:endIndex "156"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/78#char=0,324> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Mohr_Davidow_Ventures> ;
+    itsrdf:taIdentRef <http://aksw.org/notInWiki/Mohr_Davidow_Ventures> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/79#char=100,120> a nif:OffsetBasedString,
@@ -8649,7 +8665,7 @@
     nif:beginIndex "100"^^xsd:nonNegativeInteger ;
     nif:endIndex "120"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/79#char=0,189> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Bridgemont_Community_and_Technical_College> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q6360819> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/79#char=67,84> a nif:OffsetBasedString,
@@ -8675,7 +8691,7 @@
     nif:beginIndex "50"^^xsd:nonNegativeInteger ;
     nif:endIndex "56"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/8#char=0,93> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Miriam_Adelson> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q55950925> .
 
 <http://aksw.org/N3/RSS-500/80#char=0,14> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8700,7 +8716,7 @@
     nif:beginIndex "255"^^xsd:nonNegativeInteger ;
     nif:endIndex "264"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/81#char=0,302> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/BlueScope_Steel> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q885589> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/81#char=281,294> a nif:OffsetBasedString,
@@ -8840,7 +8856,7 @@
     nif:beginIndex "155"^^xsd:nonNegativeInteger ;
     nif:endIndex "160"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/89#char=0,162> ;
-    itsrdf:taIdentRef <http://dbpedia.org/resource/Yahoo> ;
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q37093> ;
     itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
 
 <http://aksw.org/N3/RSS-500/9#char=107,115> a nif:OffsetBasedString,
@@ -8900,7 +8916,7 @@
     nif:beginIndex "4"^^xsd:nonNegativeInteger ;
     nif:endIndex "25"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/92#char=0,150> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Boise_Fire_Department> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q30596201> .
 
 <http://aksw.org/N3/RSS-500/92#char=40,57> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -8925,7 +8941,7 @@
     nif:beginIndex "18"^^xsd:nonNegativeInteger ;
     nif:endIndex "34"^^xsd:nonNegativeInteger ;
     nif:referenceContext <http://aksw.org/N3/RSS-500/93#char=0,196> ;
-    itsrdf:taIdentRef <http://aksw.org/notInWiki/Claudio_Sabatini> .
+    itsrdf:taIdentRef <http://www.wikidata.org/entity/Q3680221> .
 
 <http://aksw.org/N3/RSS-500/94#char=10,15> a nif:OffsetBasedString,
         nif:Phrase ;
@@ -9146,12 +9162,6 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "122"^^xsd:nonNegativeInteger ;
     nif:isString "Bustos went to Andrew Fishkin 's law office in Bakersfield Wednesday hoping to find out if she qualifies for the program ." .
-
-<http://aksw.org/N3/RSS-500/115#char=0,85> a nif:Context,
-        nif:OffsetBasedString ;
-    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-    nif:endIndex "85"^^xsd:nonNegativeInteger ;
-    nif:isString "CBS NFL analyst Boomer Esiason is n't a fan of Tim Tebow 's chances to be a star QB ." .
 
 <http://aksw.org/N3/RSS-500/116#char=0,138> a nif:Context,
         nif:OffsetBasedString ;
@@ -12032,4 +12042,10 @@
     nif:beginIndex "0"^^xsd:nonNegativeInteger ;
     nif:endIndex "157"^^xsd:nonNegativeInteger ;
     nif:isString "No longer are the Yankees baseball 's `` Evil Empire , '' as Boston president Larry Lucchino labeled them when his team was repeatedly trying to catch them ." .
+
+<http://aksw.org/N3/RSS-500/115#char=0,85> a nif:Context,
+        nif:OffsetBasedString ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "85"^^xsd:nonNegativeInteger ;
+    nif:isString "CBS NFL analyst Boomer Esiason is n't a fan of Tim Tebow 's chances to be a star QB ." .
 
