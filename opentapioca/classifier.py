@@ -233,6 +233,7 @@ class SimpleTagClassifier(object):
                 for phrase in context.phrases
                 if phrase.taIdentRef and phrase.taIdentRef.startswith(self.identifier_space)
             }
+            nb_item_judgments += len(mention_id_to_qid)
             mentions = docid_to_mentions[context_id]
             self.classify_mentions(mentions)
             for mention in mentions:
@@ -242,14 +243,12 @@ class SimpleTagClassifier(object):
                     nb_valid_predictions += 1
                 if mention.best_qid is not None:
                     nb_predictions += 1
-                if target_item is not None:
-                    nb_item_judgments += 1
                 if target_item is None and mention.best_qid is not None:
                     logger.debug("False positive: {} in context {}".format(mention, context))
 
         # print({'nb_valid_predictions':nb_valid_predictions, 'nb_predictions': nb_predictions, 'nb_item_judgments':nb_item_judgments})
         precision = float(nb_valid_predictions) / nb_predictions if nb_predictions else 1.
-        recall = float(nb_valid_predictions) / len(mention_id_to_qid) if mention_id_to_qid else 1
+        recall = float(nb_valid_predictions) / nb_item_judgments if mention_id_to_qid else 1
         f1 = 2*(precision*recall) / (precision + recall) if precision + recall > 0. else 0.
         return {
                 'precision':precision,

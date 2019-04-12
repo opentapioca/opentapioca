@@ -1,6 +1,8 @@
 from bottle import route, run, default_app, static_file, request, abort, response
+import bottle
 import sys
 import json
+import os
 from pynif import NIFCollection
 import logging
 
@@ -11,24 +13,28 @@ from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.goldstandard import GoldStandardDataset
 
 logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
+
+tapioca_dir = os.path.dirname(__file__)
+
+bow_fname = os.path.join(tapioca_dir, 'data/wd_2019-02-24.bow.pkl')
+pgrank_fname = os.path.join(tapioca_dir, 'data/wd_2019-02-24.pgrank.npy')
+classifier_fname = os.path.join(tapioca_dir, 'data/rss_istex_classifier.pkl')
+collection_name = 'wd_2019-02-24_twitter'
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
-    fname = sys.argv[1]
-    logger.info('Loading '+fname)
-    bow = BOWLanguageModel()
-    bow.load(fname)
-    logger.info('Loading '+sys.argv[2])
-    graph = WikidataGraph()
-    graph.load_pagerank(sys.argv[2])
-    tagger = Tagger('wd_2019-02-24_twitter', bow, graph)
-    logger.info('Loading dataset')
-    goldstandard = GoldStandardDataset('data/affiliations.tsv')
-    classifier = None
+    bow_fname = sys.argv[1]
+    pgrank_fname = sys.argv[2]
     if len(sys.argv) > 3:
-        logger.info('Loading classifier')
-        classifier = SimpleTagClassifier(tagger)
-        classifier.load(sys.argv[3])
+        classifier_fname = sys.argv[3]
+
+bow = BOWLanguageModel()
+bow.load(bow_fname)
+graph = WikidataGraph()
+graph.load_pagerank(pgrank_fname)
+tagger = Tagger(collection_name, bow, graph)
+classifier = SimpleTagClassifier(tagger)
+classifier.load(classifier_fname)
 
 def jsonp(view):
     """
@@ -98,44 +104,20 @@ def nif_api(*args, **kwargs):
     response.set_header('content-type', content_format)
     return nif_doc.dumps()
 
-@route('/api/get_doc', method=['GET'])
-@jsonp
-def get_doc(args):
-    doi, doc = goldstandard.get_unannotated_doi_doc()
-    tags = tagger.tag_and_rank(doc)
-    return {
-        'text': doc,
-        'doi': doi,
-        'annotations': [t.json() for t in tags]
-    }
-
-@route('/api/store_judgments', method=['POST'])
-@jsonp
-def store_judgments(args):
-    doi = args.get('doi')
-    if doi:
-        doc = args.get('doc')
-        judgments = json.loads(args.get('judgments'))
-        goldstandard.set_judgments(doi, doc, judgments)
-        goldstandard.save()
-
 @route('/')
 def home():
-    return static_file('index.html', root='html/')
-
-@route('/judge')
-def judge():
-    return static_file('judge.html', root='html/')
+    return static_file('index.html', root=os.path.join(tapioca_dir, 'html/'))
 
 @route('/css/<fname>')
 def css(fname):
-    return static_file(fname, root='html/css/')
+    return static_file(fname, root=os.path.join(tapioca_dir, 'html/css/'))
 
 @route('/js/<fname>')
 def js(fname):
-    return static_file(fname, root='html/js/')
+    return static_file(fname, root=os.path.join(tapioca_dir, 'html/js/'))
 
 if __name__ == '__main__':
     run(host='0.0.0.0', port=8457, debug=True)
 
+bottle.debug(True)
 app = application = default_app()

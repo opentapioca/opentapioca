@@ -3,6 +3,10 @@ h1 {
 	text-align: center;
 }
 
+p.intro {
+	text-align: left;
+}
+
 .border-inner {
 	border: 3px solid #9e9e9e;
 	margin: 3px;
@@ -70,6 +74,10 @@ textarea {
 a {
 	text-decoration: none;
 	color: black;
+}
+
+.intro a {
+	text-decoration: underline;
 }
 
 /* annotations inside the output area */
