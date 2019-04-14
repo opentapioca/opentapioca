@@ -8,9 +8,14 @@ before_install:
   - wget http://archive.apache.org/dist/lucene/solr/7.6.0/solr-7.6.0.tgz  
   - tar xzf solr-7.6.0.tgz && ./solr-7.6.0/bin/solr -c
   - popd
+  - ln -s ../solr/solr-7.6.0/bin/solr .
 
 install:
   - pip install pytest coveralls -r requirements.txt
+
+before_script:
+  - ./solr zk -upconfig -z localhost:9983 -n tapioca -d configsets/tapioca
+
 script:
   - coverage run --source=pynif --omit="*/tests/*" -m py.test
 

@@ -13,7 +13,7 @@ Install [Solr](https://lucene.apache.org/solr/) 7.4.0 or above.
 Run SolrCloud:
 
 ```
-bin/solr start -cloud -p 8983 -s "example/cloud/node1/solr" -m 2g
+bin/solr start -c -m 4g
 ```
 
 Upload Solr configuration set to ZooKeeper:
