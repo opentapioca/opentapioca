@@ -5,7 +5,8 @@ Running the web app
 
 Once a classifier is trained, you can run the web app. This requires supplying
 the filenames to the various preprocessed files and the Solr collection name in the
-``settings.py`` file. You can run the application locally for development as follows::
+``settings.py`` file. A template for this file is provided as ``settings_template.py``.
+You can then run the application locally for development as follows::
 
    python app.py 
 

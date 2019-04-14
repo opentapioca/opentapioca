@@ -14,6 +14,7 @@ install:
 
 before_script:
   - ./solr zk -upconfig -z localhost:9983 -n tapioca -d configsets/tapioca
+  - cp settings_template.py settings.py
 
 script:
   - coverage run --source=opentapioca --omit="*/tests/*" -m py.test
