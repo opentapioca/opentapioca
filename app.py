@@ -17,24 +17,30 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)-12s %(leveln
 
 tapioca_dir = os.path.dirname(__file__)
 
-bow_fname = os.path.join(tapioca_dir, 'data/wd_2019-02-24.bow.pkl')
-pgrank_fname = os.path.join(tapioca_dir, 'data/wd_2019-02-24.pgrank.npy')
-classifier_fname = os.path.join(tapioca_dir, 'data/rss_istex_classifier.pkl')
-collection_name = 'wd_2019-02-24_twitter'
+bow_fname = os.getenv('TAPIOCA_BOW')
+pgrank_fname = os.getenv('TAPIOCA_PAGERANK')
+classifier_fname = os.getenv('TAPIOCA_CLASSIFIER')
+collection_name = os.getenv('TAPIOCA_COLLECTION')
 
-if __name__ == '__main__':
+if __name__ == '__main__' and len(sys.argv) > 1:
     bow_fname = sys.argv[1]
     pgrank_fname = sys.argv[2]
     if len(sys.argv) > 3:
         classifier_fname = sys.argv[3]
+        collection_name = sys.argv[4]
+
 
 bow = BOWLanguageModel()
-bow.load(bow_fname)
+if bow_fname:
+    bow.load(bow_fname)
 graph = WikidataGraph()
-graph.load_pagerank(pgrank_fname)
-tagger = Tagger(collection_name, bow, graph)
-classifier = SimpleTagClassifier(tagger)
-classifier.load(classifier_fname)
+if pgrank_fname:
+    graph.load_pagerank(pgrank_fname)
+if collection_name:
+    tagger = Tagger(collection_name, bow, graph)
+    classifier = SimpleTagClassifier(tagger)
+    if classifier_fname:
+        classifier.load(classifier_fname)
 
 def jsonp(view):
     """

@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - "3.6"
+
+before_install:  
+  - mkdir ../solr && pushd ../solr  
+  - wget http://archive.apache.org/dist/lucene/solr/7.6.0/solr-7.6.0.tgz  
+  - tar xzf solr-7.6.0.tgz && ./solr-5.3.1/bin/solr -c
+
+install:
+  - pip install pytest coveralls -r requirements.txt
+
+script:
+  - coverage run --source=opentapioca --omit="*/tests/*" -m py.test
+
+after_success:
+  - coveralls

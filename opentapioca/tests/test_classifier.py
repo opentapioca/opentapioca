@@ -1,6 +1,7 @@
 
 import unittest
 import os
+import pytest
 from opentapioca.languagemodel import BOWLanguageModel
 from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.taggerfactory import TaggerFactory
@@ -74,8 +75,8 @@ class ClassifierTest(unittest.TestCase):
         id3 = (48, 50, 'Q458')
         expected_similarities = [
             [{'tag': id1, 'score': 1.0}],
-            [{'tag': id2, 'score': 0.4}, {'tag': id3, 'score': 0.6}],
-            [{'tag': id3, 'score': 0.4}, {'tag': id2, 'score': 0.6}]
+            [{'tag': id2, 'score': pytest.approx(0.57, abs=0.01)}, {'tag': id3, 'score': pytest.approx(0.42, abs=0.01)}],
+            [{'tag': id3, 'score': pytest.approx(0.57, abs=0.01)}, {'tag': id2, 'score': pytest.approx(0.42, abs=0.01)}]
         ]
             
         self.assertEqual(expected_similarities, [mention.tags[0].similarities for mention in mentions])
