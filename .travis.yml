@@ -16,7 +16,7 @@ before_script:
   - ./solr zk -upconfig -z localhost:9983 -n tapioca -d configsets/tapioca
 
 script:
-  - coverage run --source=pynif --omit="*/tests/*" -m py.test
+  - coverage run --source=opentapioca --omit="*/tests/*" -m py.test
 
 after_success:
   - coveralls

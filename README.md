@@ -1,6 +1,6 @@
 OpenTapioca
 ===========
-[![Build Status](https://travis-ci.org/wetneb/opentapioca.svg?branch=master)](https://travis-ci.org/wetneb/opentapioca)
+[![Build Status](https://travis-ci.org/wetneb/opentapioca.svg?branch=master)](https://travis-ci.org/wetneb/opentapioca) [![Coverage Status](https://coveralls.io/repos/github/wetneb/opentapioca/badge.svg)](https://coveralls.io/github/wetneb/opentapioca)
 
 Simple entity linking system for Wikidata.
 
