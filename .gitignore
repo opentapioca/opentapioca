@@ -8,3 +8,4 @@ opentapioca.egg-info/
 .pydevproject
 .settings/
 configsets/_default/
+settings.py

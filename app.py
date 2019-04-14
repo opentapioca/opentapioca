@@ -5,6 +5,7 @@ import json
 import os
 from pynif import NIFCollection
 import logging
+import settings
 
 from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.languagemodel import BOWLanguageModel
@@ -16,30 +17,19 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)-12s %(leveln
 
 tapioca_dir = os.path.dirname(__file__)
 
-bow_fname = os.getenv('TAPIOCA_BOW')
-pgrank_fname = os.getenv('TAPIOCA_PAGERANK')
-classifier_fname = os.getenv('TAPIOCA_CLASSIFIER')
-collection_name = os.getenv('TAPIOCA_COLLECTION')
-
-if __name__ == '__main__' and len(sys.argv) > 1:
-    bow_fname = sys.argv[1]
-    pgrank_fname = sys.argv[2]
-    if len(sys.argv) > 3:
-        classifier_fname = sys.argv[3]
-        collection_name = sys.argv[4]
-
-
 bow = BOWLanguageModel()
-if bow_fname:
-    bow.load(bow_fname)
+if settings.LANGUAGE_MODEL_PATH:
+    bow.load(settings.LANGUAGE_MODEL_PATH)
 graph = WikidataGraph()
-if pgrank_fname:
-    graph.load_pagerank(pgrank_fname)
-if collection_name:
-    tagger = Tagger(collection_name, bow, graph)
+if settings.PAGERANK_PATH:
+    graph.load_pagerank(settings.PAGERANK_PATH)
+tagger = None
+classifier = None
+if settings.SOLR_COLLECTION:
+    tagger = Tagger(settings.SOLR_COLLECTION, bow, graph)
     classifier = SimpleTagClassifier(tagger)
-    if classifier_fname:
-        classifier.load(classifier_fname)
+    if settings.CLASSIFIER_PATH:
+        classifier.load(settings.CLASSIFIER_PATH)
 
 def jsonp(view):
     """
