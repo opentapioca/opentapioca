@@ -1,9 +1,13 @@
 language: python
 python:
-  - "2.7"
-  - "3.4"
   - "3.5"
   - "3.6"
+
+before_install:  
+  - mkdir ../solr && pushd ../solr  
+  - wget http://archive.apache.org/dist/lucene/solr/7.6.0/solr-7.6.0.tgz  
+  - tar xzf solr-7.6.0.tgz && ./solr-7.6.0/bin/solr -c
+
 install:
   - pip install pytest coveralls -r requirements.txt
 script:
