@@ -1,6 +1,0 @@
-X better language model (more words)
-- feature scaling before multiplication by transition matrix
-- better wikidata graph (with wikipedia)
-- add Lucene filter for acronyms (P.R. -> PR)
-- add stop words removal in labels (language specific so opentapioca-side)
-- 
