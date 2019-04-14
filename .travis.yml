@@ -7,6 +7,7 @@ before_install:
   - mkdir ../solr && pushd ../solr  
   - wget http://archive.apache.org/dist/lucene/solr/7.6.0/solr-7.6.0.tgz  
   - tar xzf solr-7.6.0.tgz && ./solr-7.6.0/bin/solr -c
+  - popd
 
 install:
   - pip install pytest coveralls -r requirements.txt
