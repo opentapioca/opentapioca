@@ -10,7 +10,6 @@ from opentapioca.wikidatagraph import WikidataGraph
 from opentapioca.languagemodel import BOWLanguageModel
 from opentapioca.tagger import Tagger
 from opentapioca.classifier import SimpleTagClassifier
-from opentapioca.goldstandard import GoldStandardDataset
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
