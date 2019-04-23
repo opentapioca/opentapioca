@@ -7,6 +7,8 @@ tasks by contributing back to Wikidata.
 
 A live instance is running at https://opentapioca.org/.
 
+A [NIF endpoint](https://github.com/dice-group/gerbil/wiki/How-to-create-a-NIF-based-web-service) is available at https://opentapioca.org/api/nif.
+
 See [the docs](https://opentapioca.readthedocs.io/en/latest/) for more information about how it works and how to run it. See [the paper](https://arxiv.org/abs/1904.09131) for more some motivation about the design of the system.
 
 OpenTapioca is released under the Apache-2.0 license.
