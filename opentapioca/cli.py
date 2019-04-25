@@ -102,7 +102,8 @@ def pagerank_shell(filename):
 @click.argument('filename')
 @click.option('-p', '--profile', help='Filename of the indexing profile to use')
 @click.option('-s', '--shards', default=1, help='Number of shards to use when creating the collection, if needed')
-def index_dump(collection_name, filename, profile, shards, solr='http://localhost:8983/solr/'):
+@click.option('-k', '--skip', default=0, help='Number of documents to skip because they are already indexed')
+def index_dump(collection_name, filename, profile, shards, skip, solr='http://localhost:8983/solr/'):
     """
     Indexes a Wikidata dump in a new Solr collection with the given name.
     """
@@ -114,7 +115,7 @@ def index_dump(collection_name, filename, profile, shards, solr='http://localhos
         pass
     dump = WikidataDumpReader(filename)
     tagger.index_stream(collection_name, dump, indexing_profile,
-                        batch_size=2000, commit_time=10, delete_excluded=False)
+                        batch_size=2000, commit_time=10, delete_excluded=False, skip_docs=skip)
 
 @click.command()
 @click.argument('collection_name')

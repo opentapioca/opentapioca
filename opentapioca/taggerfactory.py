@@ -53,7 +53,8 @@ class TaggerFactory(object):
           batch_size=5000,
           max_lines=None,
           commit_time=10,
-          delete_excluded=False):
+          delete_excluded=False,
+          skip_docs=0):
         """
         Given a stream of Wikidata items, index it in the given solr collection.
 
@@ -70,6 +71,8 @@ class TaggerFactory(object):
             for idx, item in enumerate(reader):
                 if max_lines is not None and idx > max_lines:
                     break
+                if skip_docs > 0 and idx < skip_docs:
+                    continue
 
                 doc = profile.entity_to_document(item, self.type_matcher)
                 qid = item.get('id')
