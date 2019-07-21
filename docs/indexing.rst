@@ -95,6 +95,8 @@ provided to index people, organizations and places at
        ]
    }
 
+Of course the comments in the sample above should not be included: the raw JSON file can be found `here  <https://raw.githubusercontent.com/wetneb/opentapioca/master/profiles/human_organization_location.json>`_.
+
 Pick a Solr collection name and run:
 
 ::
