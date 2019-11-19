@@ -97,12 +97,13 @@ provided to index people, organizations and places at
 
 Of course the comments in the sample above should not be included: the raw JSON file can be found `here  <https://raw.githubusercontent.com/wetneb/opentapioca/master/profiles/human_organization_location.json>`_.
 
-Pick a Solr collection name and run:
+Pick a Solr collection name (without creating the collection in advance) and run:
 
 ::
 
    tapioca index-dump my_collection_name latest-all.json.bz2 --profile profiles/human_organization_place.json
 
+Tapioca will create the collection for you, using the appropriate configuration.
 Note that if you have multiple cores available, you might want to run
 decompression as a separate process, given that it is generally the
 bottleneck:
