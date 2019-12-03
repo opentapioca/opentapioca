@@ -32,11 +32,16 @@ PageRank computation
 Second, we will use the dump to extract a more compact graph of entities
 that can be stored in memory. This will be used to compute the pagerank
 of items in this graph. We convert a Wikidata dump into an adjacency
-matrix and a pagerank vector in four steps: 1. preprocess the dump, only
-extracting the information we need: this creates a TSV file containing
-on each line the item id (without leading Q), the list of ids this item
-points to, and the number of occurences of such links.
-``tapioca preprocess latest-all.json.bz2``
+matrix and a pagerank vector in four steps:
+
+1. preprocess the dump, only
+  extracting the information we need: this creates a TSV file containing
+   on each line the item id (without leading Q), the list of ids this item
+  points to, and the number of occurences of such links.
+  
+  ::
+
+      tapioca preprocess latest-all.json.bz2
 
 2. this dump must be externally sorted (for instance with GNU sort).
    Doing the sorting externally is more efficient than doing it inside
