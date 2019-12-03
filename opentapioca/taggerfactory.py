@@ -20,7 +20,7 @@ class TaggerFactory(object):
                  type_matcher=None):
         """
         A type matcher can be provided to restrict the indexed
-        items to particular classes..exceptions.RequestException
+        items to particular classes.
         """
         self.solr_endpoint = solr_endpoint
         self.type_matcher = type_matcher or TypeMatcher()
