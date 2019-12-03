@@ -20,7 +20,7 @@ class TaggerFactory(object):
                  type_matcher=None):
         """
         A type matcher can be provided to restrict the indexed
-        items to particular classes.
+        items to particular classes..exceptions.RequestException
         """
         self.solr_endpoint = solr_endpoint
         self.type_matcher = type_matcher or TypeMatcher()
@@ -120,8 +120,8 @@ class TaggerFactory(object):
             data=json.dumps(payload), headers={'Content-Type':'application/json'})
         try:
             r.raise_for_status()
-        except:
-            print('Data format problem. Skip.')
+        except requests.exceptions.RequestException as e:
+            logger.warning('Skipping batch: {}'.format(e))
 
 
 
