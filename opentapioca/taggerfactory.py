@@ -118,7 +118,10 @@ class TaggerFactory(object):
         r = requests.post(self._collection_update_endpoint(collection),
             params={'commit': 'true' if commit else 'false'},
             data=json.dumps(payload), headers={'Content-Type':'application/json'})
-        r.raise_for_status()
+        try:
+            r.raise_for_status()
+        except requests.exceptions.RequestException as e:
+            logger.warning('Skipping batch: {}'.format(e))
 
 
 
