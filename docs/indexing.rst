@@ -35,11 +35,11 @@ of items in this graph. We convert a Wikidata dump into an adjacency
 matrix and a pagerank vector in four steps:
 
 1. preprocess the dump, only
-  extracting the information we need: this creates a TSV file containing
+   extracting the information we need: this creates a TSV file containing
    on each line the item id (without leading Q), the list of ids this item
-  points to, and the number of occurences of such links.
+   points to, and the number of occurences of such links.
   
-  ::
+   ::
 
       tapioca preprocess latest-all.json.bz2
 
