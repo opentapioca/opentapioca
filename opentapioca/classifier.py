@@ -295,6 +295,8 @@ class SimpleTagClassifier(object):
 
         mixed_features = feature_array
         mixed_features_array = [feature_array]
+        mixed_features = mixed_features.astype(float)
+        
         for i in range(self.nb_steps):
             mixed_features = numpy.dot(adj_matrix, mixed_features)
             mixed_features_array.append(mixed_features)
