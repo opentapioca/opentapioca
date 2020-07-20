@@ -1,6 +1,7 @@
 language: python
 python:
   - "3.6"
+  - "3.7"
 
 before_install:  
   - mkdir ../solr && pushd ../solr  
