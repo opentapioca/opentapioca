@@ -83,6 +83,7 @@ provided to index people, organizations and places at
    {
        "language": "en", # The preferred language
        "name": "human_organization_location", # An identifier for the profile
+       "solrconfig": "tapioca", # the name of the Solr pipeline to index the dumps
        "restrict_properties": [
            "P2427", "P1566", "P496", # Include all items bearing any of these properties
        ],
@@ -117,4 +118,19 @@ bottleneck:
 
    bunzip2 < latest-all.json.bz2 | tapioca index-dump my_collection_name - --profile profiles/human_organization_place.json
 
+
+Indexing via SPARQL
+-------------------
+
+If the collection of items to ingest is small enough, it can be fetched by a SPARQL query. In that
+case we can avoid processing an entire dump and selectively index the items which are returned by the SPARQL
+query. The SPARQL query is written in a file:
+
+::
+
+   tapioca index-sparql my_collection_name my_sparql_query_file --propfile profiles/human_organization_place.json
+
+
+The SPARQL query is required to have a variable `item` which ranges over the items to index. It is recommended
+that the query returns distinct items.
 

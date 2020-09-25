@@ -8,6 +8,7 @@ from pytest_mock import mocker
 from opentapioca.readers.streamreader import WikidataStreamReader
 from collections import namedtuple
 from .test_fixtures import testdir
+from .test_fixtures import wbgetentities_response
 from opentapioca.wditem import WikidataItemDocument
 
 EventStubBase = namedtuple('EventStubBase', ['data', 'event'])
@@ -17,12 +18,6 @@ def EventStub(event='message', wiki='wikidatawiki', namespace=0, title='Q123'):
     return EventStubBase(event=event, data=json.dumps(
             {'wiki':wiki, 'namespace':namespace, 'title':title}
             ))
-
-
-@pytest.fixture
-def wbgetentities_response(testdir):
-    with open(os.path.join(testdir, 'data', 'wbgetentities_response.json'), 'r') as f:
-        return f.read()
 
 
 @pytest.fixture

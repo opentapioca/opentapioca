@@ -119,6 +119,26 @@ def index_dump(collection_name, filename, profile, shards, skip, solr='http://lo
 
 @click.command()
 @click.argument('collection_name')
+@click.argument('sparql_query_file')
+@click.option('-p', '--profile', help='Filename of the indexing profile to use')
+@click.option('-s', '--shards', default=1, help='Number of shards to use when creating the collection, if needed')
+def index_sparql(collection_name, sparql_query_file, profile, shards, solr='http://localhost:8983/solr/'):
+    """
+    Indexes the results of a SPARQL query which contains an "item" variable pointing to items to index
+    """
+    tagger = TaggerFactory(solr)
+    indexing_profile = IndexingProfile.load(profile)
+    try:
+        tagger.create_collection(collection_name, num_shards=shards, configset=indexing_profile.solrconfig)
+    except CollectionAlreadyExists:
+        pass
+    with open(sparql_query_file, 'r') as f:
+        query = f.read()
+    query_results = SparqlReader(query)
+    tagger.index_stream(collection_name, query_results, indexing_profile, batch_size=50, commit_time=10, delete_excluded=False)
+
+@click.command()
+@click.argument('collection_name')
 @click.option('-p', '--profile', help='Filename of the indexing profile to use')
 @click.option('-s', '--shards', default=1, help='Number of shards to use when creating the collection, if needed')
 @click.option('-a', '--after', default=None, help='Start indexing the stream after the given point in time (in the past)')
@@ -193,6 +213,7 @@ cli.add_command(compile)
 cli.add_command(compute_pagerank)
 cli.add_command(pagerank_shell)
 cli.add_command(index_dump)
+cli.add_command(index_sparql)
 cli.add_command(index_stream)
 cli.add_command(delete_collection)
 cli.add_command(train_classifier)

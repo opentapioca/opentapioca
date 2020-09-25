@@ -12,7 +12,7 @@ def cache_requests():
     requests_cache.install_cache(cache_name=location)
     yield
     requests_cache.uninstall_cache()
-    
+
 @pytest.fixture
 def testdir():
     return os.path.dirname(os.path.abspath(__file__))
@@ -24,3 +24,11 @@ def load_item():
         with open(filename, 'r') as f:
             return WikidataItemDocument(json.load(f))
     return load
+
+@pytest.fixture
+def wbgetentities_response(testdir):
+    with open(os.path.join(testdir, 'data', 'wbgetentities_response.json'), 'r') as f:
+        return f.read()
+
+
+
