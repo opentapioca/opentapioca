@@ -13,6 +13,7 @@ from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.indexingprofile import IndexingProfile
 from opentapioca.readers.dumpreader import WikidataDumpReader
 from opentapioca.readers.streamreader import WikidataStreamReader
+from opentapioca.readers.sparqlreader import SparqlReader
 from pynif import NIFCollection
 
 @click.group()
