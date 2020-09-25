@@ -39,7 +39,7 @@ class SparqlReader(APIReaderBase):
             self.query_results = self.query_results[self.batch_size:]
 
             qids = [to_q(result['item']['value']) for result in batch if 'item' in result]
-            qids_without_none = {qid for qid in qids if qid}
+            qids_without_none = [qid for qid in qids if qid]
 
             # Fetch item contents
             for item in self.fetch_items(qids_without_none):
