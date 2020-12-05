@@ -32,7 +32,7 @@ class WikidataStreamReader(APIReaderBase):
         url = self.endpoint
         if self.from_time is not None:
              url += '?since='+self.from_time.isoformat().replace('+00:00', 'Z')
-        self.stream = SSEClient(url)
+        self.stream = SSEClient(url, timeout=30)
         return self
 
     def __exit__(self, *args, **kwargs):
