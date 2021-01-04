@@ -16,11 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9]
+        python-version: [3.6]
         solr-version: [8.7]
     steps:
       - name: checkout
         uses: actions/checkout@v2
+      - name: run solr
+        run: >
+          docker run -d --rm -v "/var/run/docker.sock":"/var/run/docker.sock" \
+            -v "${{ github.workspace }}/configsets/tapioca":"/opt/solr/server/solr/configsets/tapioca" \
+            -p 8983:8983 solr:${{ matrix.solr-version }} && \
+            timeout 300 bash -c 'while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:8983/solr/admin/info/system)" != "200" ]]; do sleep 5; done' || false && \
+            curl http://localhost:8983/solr/admin/configs\?action\=LIST\&omitHeader\=true
       - name: setup python
         uses: actions/setup-python@v2
         with:
@@ -29,11 +36,5 @@ jobs:
         run: cp settings_travis.py settings.py
       - name: install requirements
         run: pip install pytest coveralls -r requirements.txt
-      - name: run solr
-        run: >
-          docker run -d --rm -v "/var/run/docker.sock":"/var/run/docker.sock" \
-            -v "${{ github.workspace }}/configsets/tapioca":"/opt/solr/server/solr/configsets/tapioca" \
-            -p 8983:8983 solr:${{ matrix.solr-version }} && \
-            timeout 300 bash -c 'while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:8983/solr/admin/info/system)" != "200" ]]; do sleep 5; done' || false
       - name: run coverage
         run: coverage run --source=opentapioca --omit="*/tests/*" -m py.test && coveralls
