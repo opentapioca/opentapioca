@@ -23,7 +23,7 @@ jobs:
         ports:
           - 8983:8983
         volumes:
-          ${{ github.workspace }}/configsets/tapioca:/opt/solr/server/solr/configsets/tapioca
+          - ${{ github.workspace }}/configsets/tapioca:/opt/solr/server/solr/configsets/tapioca
     steps:
       - name: checkout
         uses: actions/checkout@v2
