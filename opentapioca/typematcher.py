@@ -45,7 +45,8 @@ class TypeMatcher(object):
         new_set = set()
         for result in results["bindings"]:
             child_qid = to_q(result["child"]["value"])
-            new_set.add(int(child_qid[1:]))
+            if child_qid: # this can fail if the entity is a property, lexeme…
+                new_set.add(int(child_qid[1:]))
 
         self.sets[qid] = new_set
 
