@@ -17,13 +17,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.6, 3.7, 3.8, 3.9]
-    services:
-      solr:
-        image: solr:8.7
-        ports:
-          - 8983:8983
-        volumes:
-          - ${{ github.workspace }}/configsets/tapioca:/opt/solr/server/solr/configsets/tapioca
+        solr-version: [8.7]
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -35,5 +29,11 @@ jobs:
         run: cp settings_travis.py settings.py
       - name: install requirements
         run: pip install pytest coveralls -r requirements.txt
+      - name: run solr
+        run: >
+          docker run --rm -v "/var/run/docker.sock":"/var/run/docker.sock" \
+            -v $GITHUB_WORKSPACE/configsets/tapioca:/opt/solr/server/solr/configsets/tapioca \
+            --network $(docker network ls --format="{{ .Name }}" --filter "Name=^github_network_") \
+              solr:${{ matrix.solr-version }}
       - name: run coverage
         run: coverage run --source=opentapioca --omit="*/tests/*" -m py.test && coveralls
