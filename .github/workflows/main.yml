@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+      - 'release/**'
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8, 3.9]
+    services:
+      solr:
+        image: solr:8.7
+        ports:
+          - 8983:8983
+        volumes:
+          ${{ github.workspace }}/configsets/tapioca:/opt/solr/server/solr/configsets/tapioca
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: copy settings
+        run: cp settings_travis.py settings.py
+      - name: install requirements
+        run: pip install pytest coveralls -r requirements.txt
+      - name: run coverage
+        run: coverage run --source=opentapioca --omit="*/tests/*" -m py.test && coveralls
