@@ -28,8 +28,7 @@ jobs:
             -v "${{ github.workspace }}":"/github/workspace" \
             -p 8983:8983 solr:${{ matrix.solr-version }} -c && \
             timeout 300 bash -c 'while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:8983/solr/admin/info/system)" != "200" ]]; do sleep 5; done' || false && \
-            docker exec solr /opt/solr/bin/solr zk -upconfig -z localhost:9983 -n tapioca -d /github/workspace/configsets/tapioca && \
-            curl http://localhost:8983/solr/admin/configs\?action\=LIST\&omitHeader\=true
+            docker exec solr /opt/solr/bin/solr zk -upconfig -z localhost:9983 -n tapioca -d /github/workspace/configsets/tapioca
       - name: setup python
         uses: actions/setup-python@v2
         with:
@@ -39,4 +38,6 @@ jobs:
       - name: install requirements
         run: pip install pytest coveralls -r requirements.txt
       - name: run coverage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: coverage run --source=opentapioca --omit="*/tests/*" -m py.test && coveralls
