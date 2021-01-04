@@ -23,10 +23,12 @@ jobs:
         uses: actions/checkout@v2
       - name: run solr
         run: >
-          docker run -d --rm -v "/var/run/docker.sock":"/var/run/docker.sock" \
-            -v "${{ github.workspace }}/configsets/tapioca":"/opt/solr/server/solr/configsets/tapioca" \
-            -p 8983:8983 solr:${{ matrix.solr-version }} && \
+          docker run -d --name solr --rm \
+            -v "/var/run/docker.sock":"/var/run/docker.sock" \
+            -v "${{ github.workspace }}":"/github/workspace" \
+            -p 8983:8983 solr:${{ matrix.solr-version }} -c && \
             timeout 300 bash -c 'while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:8983/solr/admin/info/system)" != "200" ]]; do sleep 5; done' || false && \
+            docker exec solr /opt/solr/bin/solr zk -upconfig -z localhost:9983 -n tapioca -d /github/workspace/configsets/tapioca && \
             curl http://localhost:8983/solr/admin/configs\?action\=LIST\&omitHeader\=true
       - name: setup python
         uses: actions/setup-python@v2
