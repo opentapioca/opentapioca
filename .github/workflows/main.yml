@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+      - 'release/**'
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  test:
+    name: python-${{ matrix.python-version }}_solr-${{ matrix.solr-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.6", "3.7", "3.8", "3.9"]
+        solr-version: ["7.4", "7.5", "7.6", "7.7", "8.0", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "8.7"]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: run solr
+        run: >
+          docker run -d --name solr --rm \
+            -v "/var/run/docker.sock":"/var/run/docker.sock" \
+            -v "${{ github.workspace }}":"/github/workspace" \
+            -p 8983:8983 solr:${{ matrix.solr-version }} -c && \
+            timeout 300 bash -c 'while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:8983/solr/admin/info/system)" != "200" ]]; do sleep 5; done' || false && \
+            docker exec solr /opt/solr/bin/solr zk -upconfig -z localhost:9983 -n tapioca -d /github/workspace/configsets/tapioca
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: copy settings
+        run: cp settings_travis.py settings.py
+      - name: install requirements
+        run: pip install pytest coveralls -r requirements.txt
+      - name: run coverage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: coverage run --source=opentapioca --omit="*/tests/*" -m py.test && coveralls

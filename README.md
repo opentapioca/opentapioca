@@ -1,6 +1,6 @@
 OpenTapioca
 ===========
-[![Documentation Status](https://readthedocs.org/projects/opentapioca/badge/?version=latest)](https://opentapioca.readthedocs.io/en/latest/?badge=latest) [![Build Status](https://travis-ci.org/wetneb/opentapioca.svg?branch=master)](https://travis-ci.org/wetneb/opentapioca) [![Coverage Status](https://coveralls.io/repos/github/wetneb/opentapioca/badge.svg)](https://coveralls.io/github/wetneb/opentapioca)
+[![Documentation Status](https://readthedocs.org/projects/opentapioca/badge/?version=latest)](https://opentapioca.readthedocs.io/en/latest/?badge=latest) [![Build Status](https://github.com/wetneb/opentapioca/workflows/CI/badge.svg)](https://github.com/wetneb/opentapioca/actions) [![Coverage Status](https://coveralls.io/repos/github/wetneb/opentapioca/badge.svg)](https://coveralls.io/github/wetneb/opentapioca)
 
 OpenTapioca is a simple and fast [Named Entity Linking system](https://en.wikipedia.org/wiki/Entity_linking) for [Wikidata](https://www.wikidata.org/). It is kept synchronous with Wikidata in real time, encouraging users to improve the results of their entity linking
 tasks by contributing back to Wikidata.
