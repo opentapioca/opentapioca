@@ -37,7 +37,7 @@ jobs:
       - name: copy settings
         run: cp settings_travis.py settings.py
       - name: install requirements
-        run: pip install pytest coveralls -r requirements.txt
+        run: pip install pytest coveralls -r requirements.txt && pip freeze
       - name: run coverage
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
