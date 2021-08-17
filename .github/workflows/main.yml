@@ -41,4 +41,4 @@ jobs:
       - name: run coverage
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: coverage run --source=opentapioca --omit="*/tests/*" -m py.test && coveralls
+        run: coverage run --source=opentapioca --omit="*/tests/*" -m py.test && coveralls --service=github
