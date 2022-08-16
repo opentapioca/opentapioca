@@ -8,7 +8,7 @@ the filenames to the various preprocessed files and the Solr collection name in 
 ``settings.py`` file. A template for this file is provided as ``settings_template.py``.
 You can then run the application locally for development as follows::
 
-   python app.py 
+   python -m opentapioca.app
 
 This will expose a development web server at http://localhost:8457/.
 

@@ -38,6 +38,5 @@ services:
       - .:/app/
     env_file:
       - .envs/.local/.tapioca
-    command: ["/usr/local/bin/python", "app.py"]
     ports:
       - "8457:8457"

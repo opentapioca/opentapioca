@@ -107,17 +107,17 @@ def nif_api(*args, **kwargs):
 
 @route("/")
 def home():
-    return static_file("index.html", root=os.path.join(tapioca_dir, "html/"))
+    return static_file("index.html", root=os.path.join(tapioca_dir, "../html/"))
 
 
 @route("/css/<fname>")
 def css(fname):
-    return static_file(fname, root=os.path.join(tapioca_dir, "html/css/"))
+    return static_file(fname, root=os.path.join(tapioca_dir, "../html/css/"))
 
 
 @route("/js/<fname>")
 def js(fname):
-    return static_file(fname, root=os.path.join(tapioca_dir, "html/js/"))
+    return static_file(fname, root=os.path.join(tapioca_dir, "../html/js/"))
 
 
 if __name__ == "__main__":

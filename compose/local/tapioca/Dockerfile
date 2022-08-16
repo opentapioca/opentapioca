@@ -42,13 +42,13 @@ COPY --from=python-build-stage /usr/src/app/wheels  /wheels/
 RUN pip install --no-cache-dir --no-index --find-links=/wheels/ /wheels/* \
 	&& rm -rf /wheels/
 
-COPY ./compose/local/tapioca/entrypoint /entrypoint
-RUN sed -i 's/\r$//g' /entrypoint
-RUN chmod +x /entrypoint
+COPY ./compose/local/tapioca/start /start
+RUN sed -i 's/\r$//g' /start
+RUN chmod +x /start
 
 COPY ./compose/local/tapioca/wait-for-solr.sh /wait-for-solr.sh
 RUN sed -i 's/\r$//g' /wait-for-solr.sh
 RUN chmod +x /wait-for-solr.sh
 
 
-ENTRYPOINT ["/entrypoint"]
+CMD ["/start"]

@@ -12,7 +12,7 @@ logs: ## attaches to docker logs
 	docker-compose -f local.yml logs -f --tail="100"
 
 test: ## launches tests inside image
-	docker-compose -f local.yml run tapioca py.test --cache-clear
+	docker-compose -f local.yml run tapioca python -m pytest tests
 
 stop: ## stop docker images
 	docker-compose -f local.yml stop

@@ -21,9 +21,9 @@ echo "Wait for Solr"
 /wait-for-solr.sh
 
 echo "Loading $SOLR_COLLECTION"
-#/usr/local/bin/python /app/cli.py index-dump "$SOLR_COLLECTION" dump/"$WIKIPEDIA_FILE" --profile profiles/human_organization_location.json
+/usr/local/bin/python -m opentapioca.cli index-dump "$SOLR_COLLECTION" dump/"$WIKIPEDIA_FILE" --profile profiles/human_organization_location.json
 
 
 echo "Starting Tapioca"
-exec "$@"
+/usr/local/bin/python -m opentapioca.app
 
