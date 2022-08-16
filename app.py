@@ -1,16 +1,16 @@
-from bottle import route, run, default_app, static_file, request, abort, response
-import bottle
-import sys
 import json
-import os
-from pynif import NIFCollection
 import logging
-import settings
+import os
 
-from opentapioca.wikidatagraph import WikidataGraph
-from opentapioca.languagemodel import BOWLanguageModel
-from opentapioca.tagger import Tagger
+import bottle
+from bottle import route, run, default_app, static_file, request, abort, response
+from pynif import NIFCollection
+
 from opentapioca.classifier import SimpleTagClassifier
+from opentapioca.languagemodel import BOWLanguageModel
+from opentapioca.settings import LANGUAGE_MODEL_PATH, PAGERANK_PATH, SOLR_COLLECTION, CLASSIFIER_PATH
+from opentapioca.tagger import Tagger
+from opentapioca.wikidatagraph import WikidataGraph
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
@@ -18,18 +18,18 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)-12s %(leveln
 tapioca_dir = os.path.dirname(__file__)
 
 bow = BOWLanguageModel()
-if settings.LANGUAGE_MODEL_PATH:
-    bow.load(settings.LANGUAGE_MODEL_PATH)
+if LANGUAGE_MODEL_PATH:
+    bow.load(LANGUAGE_MODEL_PATH)
 graph = WikidataGraph()
-if settings.PAGERANK_PATH:
-    graph.load_pagerank(settings.PAGERANK_PATH)
+if PAGERANK_PATH:
+    graph.load_pagerank(PAGERANK_PATH)
 tagger = None
 classifier = None
-if settings.SOLR_COLLECTION:
-    tagger = Tagger(settings.SOLR_COLLECTION, bow, graph)
+if SOLR_COLLECTION:
+    tagger = Tagger(SOLR_COLLECTION, bow, graph)
     classifier = SimpleTagClassifier(tagger)
-    if settings.CLASSIFIER_PATH:
-        classifier.load(settings.CLASSIFIER_PATH)
+    if CLASSIFIER_PATH:
+        classifier.load(CLASSIFIER_PATH)
 
 def jsonp(view):
     """

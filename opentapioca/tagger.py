@@ -1,16 +1,18 @@
 import json
-import requests
 import logging
 import re
 from math import log
 
+import requests
+
 from .languagemodel import BOWLanguageModel
-from .wikidatagraph import WikidataGraph
-from .tag import Tag
 from .mention import Mention
+from .tag import Tag
+from .wikidatagraph import WikidataGraph
 
 # solr_collection = 'wd_multilingual'
 logger = logging.getLogger(__name__)
+
 
 class Tagger(object):
     """
@@ -26,9 +28,11 @@ class Tagger(object):
         - a bag of words language model, adequately trained, which will be used to evaluate the likelihood of phrases
         - a wikidata graph, adequately loaded, which will be used to compute the page rank and the edges between items
         """
+        from opentapioca.settings import SOLR_ENDPOINT
+
         self.bow = bow
         self.graph = graph
-        self.solr_endpoint = 'http://localhost:8983/solr/{}/tag'.format(solr_collection)
+        self.solr_endpoint = f'{SOLR_ENDPOINT}/{solr_collection}/tag'
         self.prune_re = re.compile(r'^(\w\w?|[\d ]{,4})$')
         self.max_length = 10000
 

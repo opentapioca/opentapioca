@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+/opt/docker-solr/scripts/wait-for-zookeeper.sh zookeeper
+
+/opt/solr/bin/solr zk -upconfig -z zookeeper:2181 -n tapioca -d /configsets/tapioca
+
+
+solr-foreground -cloud -p 8983 -z zookeeper:2181

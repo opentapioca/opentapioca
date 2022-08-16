@@ -1,0 +1,12 @@
+
+### Files configuration
+SOLR_COLLECTION=collection1
+LANGUAGE_MODEL_FILE=wd_2019-02-24.bow.pkl
+CLASSIFIER_FILE=rss_istex_classifier.pkl
+WIKIPEDIA_FILE=latest-all.json.bz2
+PAGERANK_FILE=wd_2019-02-24.pgrank.npy
+
+
+### Solr address and connection port
+SOLR_HOST=solr
+SOLR_PORT=8983

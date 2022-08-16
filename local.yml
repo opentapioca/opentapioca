@@ -1,0 +1,43 @@
+version: '3'
+
+volumes:
+  solr_data_local:
+
+
+services:
+  zookeeper:
+    image: zookeeper:3.6.2
+    container_name: zookeeper
+    hostname: zookeeper
+
+  solr:
+    build:
+      context: .
+      dockerfile: ./compose/local/solr/Dockerfile
+    image: opentapioca_local_solr
+    container_name: solr
+    hostname: solr
+    depends_on:
+      -   zookeeper
+    volumes:
+      -   solr_data_local:/var/solr
+    ports:
+      - "8983:8983"
+
+  tapioca:
+    build:
+      context: .
+      dockerfile: compose/local/tapioca/Dockerfile
+    image: opentapioca_local_tapioca
+    container_name: tapioca
+    depends_on:
+      -   solr
+    volumes:
+      - ./dump:/app/dump
+      - ./data:/app/data
+      - .:/app/
+    env_file:
+      - .envs/.local/.tapioca
+    command: ["/usr/local/bin/python", "app.py"]
+    ports:
+      - "8457:8457"

@@ -1,25 +1,29 @@
-
-import click
 import logging
-import dateutil.parser
 import os
 
-from opentapioca.wikidatagraph import WikidataGraph
-from opentapioca.languagemodel import BOWLanguageModel
-from opentapioca.taggerfactory import TaggerFactory
-from opentapioca.taggerfactory import CollectionAlreadyExists
-from opentapioca.tagger import Tagger
+import click
+import dateutil.parser
+from pynif import NIFCollection
+
 from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.indexingprofile import IndexingProfile
+from opentapioca.languagemodel import BOWLanguageModel
 from opentapioca.readers.dumpreader import WikidataDumpReader
-from opentapioca.readers.streamreader import WikidataStreamReader
 from opentapioca.readers.sparqlreader import SparqlReader
-from pynif import NIFCollection
+from opentapioca.readers.streamreader import WikidataStreamReader
+from opentapioca.tagger import Tagger
+from opentapioca.taggerfactory import CollectionAlreadyExists
+from opentapioca.taggerfactory import TaggerFactory
+from opentapioca.wikidatagraph import WikidataGraph
+
+
 
 @click.group()
 def cli():
-    logging.basicConfig(level=os.environ.get('TAPIOCA_LOGLEVEL', 'INFO'), format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
+    logging.basicConfig(level=os.environ.get('TAPIOCA_LOGLEVEL', 'INFO'),
+                        format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
     pass
+
 
 @click.command()
 @click.argument('filename')
@@ -104,11 +108,11 @@ def pagerank_shell(filename):
 @click.option('-p', '--profile', help='Filename of the indexing profile to use')
 @click.option('-s', '--shards', default=1, help='Number of shards to use when creating the collection, if needed')
 @click.option('-k', '--skip', default=0, help='Number of documents to skip because they are already indexed')
-def index_dump(collection_name, filename, profile, shards, skip, solr='http://localhost:8983/solr/'):
+def index_dump(collection_name, filename, profile, shards, skip):
     """
     Indexes a Wikidata dump in a new Solr collection with the given name.
     """
-    tagger = TaggerFactory(solr)
+    tagger = TaggerFactory()
     indexing_profile = IndexingProfile.load(profile)
     try:
         tagger.create_collection(collection_name, num_shards=shards, configset=indexing_profile.solrconfig)
@@ -118,16 +122,17 @@ def index_dump(collection_name, filename, profile, shards, skip, solr='http://lo
     tagger.index_stream(collection_name, dump, indexing_profile,
                         batch_size=2000, commit_time=10, delete_excluded=False, skip_docs=skip)
 
+
 @click.command()
 @click.argument('collection_name')
 @click.argument('sparql_query_file')
 @click.option('-p', '--profile', help='Filename of the indexing profile to use')
 @click.option('-s', '--shards', default=1, help='Number of shards to use when creating the collection, if needed')
-def index_sparql(collection_name, sparql_query_file, profile, shards, solr='http://localhost:8983/solr/'):
+def index_sparql(collection_name, sparql_query_file, profile, shards):
     """
     Indexes the results of a SPARQL query which contains an "item" variable pointing to items to index
     """
-    tagger = TaggerFactory(solr)
+    tagger = TaggerFactory()
     indexing_profile = IndexingProfile.load(profile)
     try:
         tagger.create_collection(collection_name, num_shards=shards, configset=indexing_profile.solrconfig)
@@ -138,17 +143,19 @@ def index_sparql(collection_name, sparql_query_file, profile, shards, solr='http
     query_results = SparqlReader(query)
     tagger.index_stream(collection_name, query_results, indexing_profile, batch_size=50, commit_time=10, delete_excluded=False)
 
+
 @click.command()
 @click.argument('collection_name')
 @click.option('-p', '--profile', help='Filename of the indexing profile to use')
 @click.option('-s', '--shards', default=1, help='Number of shards to use when creating the collection, if needed')
-@click.option('-a', '--after', default=None, help='Start indexing the stream after the given point in time (in the past)')
-def index_stream(collection_name, profile, shards, after, solr='http://localhost:8983/solr/'):
+@click.option('-a', '--after', default=None,
+              help='Start indexing the stream after the given point in time (in the past)')
+def index_stream(collection_name, profile, shards, after):
     """
     Listens to the Wikidata edit stream and updates a collection according to
     the given indexing profile.
     """
-    tagger = TaggerFactory(solr)
+    tagger = TaggerFactory()
     indexing_profile = IndexingProfile.load(profile)
     try:
         tagger.create_collection(collection_name, num_shards=shards, configset=indexing_profile.solrconfig)
@@ -160,10 +167,11 @@ def index_stream(collection_name, profile, shards, after, solr='http://localhost
     tagger.index_stream(collection_name, stream, indexing_profile,
                         batch_size=50, commit_time=1, delete_excluded=True)
 
+
 @click.command()
 @click.argument('collection_name')
-def delete_collection(collection_name, solr='http://localhost:8983/solr/'):
-    tagger = TaggerFactory(solr)
+def delete_collection(collection_name):
+    tagger = TaggerFactory()
     tagger.delete_collection(collection_name)
 
 @click.command()

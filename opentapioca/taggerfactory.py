@@ -1,6 +1,9 @@
 import json
 import requests
 import logging
+
+from opentapioca.settings import SOLR_ENDPOINT
+
 from opentapioca.typematcher import TypeMatcher
 
 logger = logging.getLogger(__name__)
@@ -10,20 +13,18 @@ class CollectionAlreadyExists(Exception):
 
 class TaggerFactory(object):
     """
-    This helps creating and filling solr indices
+    This helps create and filling solr indices
     to be used by Tagger objects to detect mentions
     of entities in text.
     """
 
-    def __init__(self,
-                 solr_endpoint='http://localhost:8983/solr/',
-                 type_matcher=None):
+    def __init__(self):
         """
         A type matcher can be provided to restrict the indexed
         items to particular classes.
         """
-        self.solr_endpoint = solr_endpoint
-        self.type_matcher = type_matcher or TypeMatcher()
+        self.solr_endpoint = SOLR_ENDPOINT
+        self.type_matcher = TypeMatcher()
 
     def create_collection(self, collection_name, num_shards=1, configset='tapioca'):
         """
