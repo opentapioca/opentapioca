@@ -1,8 +1,8 @@
-
 """
 A collection of similarity measures between
 items
 """
+
 
 class EdgeSimilarityMeasure(object):
     def compute_similarity(self, a, b):
@@ -16,7 +16,7 @@ class EdgeSimilarityMeasure(object):
         qid_b = int(b.id[1:])
         edges_a = set(a.edges)
         edges_b = set(b.edges)
-        
+
         return self.similarity_from_edges(qid_a, qid_b, edges_a, edges_b)
 
     def similarity_from_edges(self, qid_a, qid_b, edges_a, edges_b):
@@ -25,18 +25,21 @@ class EdgeSimilarityMeasure(object):
         """
         raise NotImplemented
 
+
 class DirectLinkSimilarity(EdgeSimilarityMeasure):
     """
     We just replicate Wikidata's edges - weighing is done
     downstream.
     """
+
     def similarity_from_edges(self, qid_a, qid_b, edges_a, edges_b):
-        score = 0.
+        score = 0.0
         if qid_a == qid_b or qid_b in edges_a:
-            score += 1.
+            score += 1.0
         if qid_b == qid_a or qid_a in edges_b:
-            score += 1.
+            score += 1.0
         return score
+
 
 class EdgeRatioSimilarity(EdgeSimilarityMeasure):
     def similarity_from_edges(self, qid_a, qid_b, edges_a, edges_b):
@@ -46,7 +49,7 @@ class EdgeRatioSimilarity(EdgeSimilarityMeasure):
 
         len_common = float(len(edges_a.intersection(edges_b)))
 
-        return 0.5* ( len_common  / len(edges_a) + len_common / len(edges_b))
+        return 0.5 * (len_common / len(edges_a) + len_common / len(edges_b))
 
 
 class OneStepSimilarity(EdgeSimilarityMeasure):
@@ -56,14 +59,19 @@ class OneStepSimilarity(EdgeSimilarityMeasure):
     def similarity_from_edges(self, qid_a, qid_b, edges_a, edges_b):
         beta = self.beta
         len_common = float(len(edges_a.intersection(edges_b)))
-        proba = 0.
+        proba = 0.0
         if qid_a == qid_b:
             proba += beta * beta
         if qid_b in edges_a:
-            proba += (1- beta)*beta/len(edges_a)
+            proba += (1 - beta) * beta / len(edges_a)
         if qid_a in edges_b:
-            proba += beta*(1-beta)/len(edges_b)
+            proba += beta * (1 - beta) / len(edges_b)
         if len_common:
-            proba += (1-beta)*(1-beta)*(len_common/len(edges_a))*(len_common/len(edges_b))
+            proba += (
+                (1 - beta)
+                * (1 - beta)
+                * (len_common / len(edges_a))
+                * (len_common / len(edges_b))
+            )
 
         return proba

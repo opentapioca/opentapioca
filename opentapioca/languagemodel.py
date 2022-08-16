@@ -1,22 +1,21 @@
 import pickle
-
 import re
-from unidecode import unidecode
 from collections import defaultdict
 from math import log
-from opentapioca.readers.dumpreader import WikidataDumpReader
 
-separator_re = re.compile(r'[,\-_/:;!?)]? [,\-_/:;!?(]?')
+from opentapioca.readers.dumpreader import WikidataDumpReader
+from unidecode import unidecode
+
+separator_re = re.compile(r"[,\-_/:;!?)]? [,\-_/:;!?(]?")
+
 
 def tokenize(phrase):
     """
     Split a text into lists of words
     """
-    words = [
-        unidecode(word.strip())
-        for word in separator_re.split(' '+phrase+' ')
-    ]
+    words = [unidecode(word.strip()) for word in separator_re.split(" " + phrase + " ")]
     return [w for w in words if w]
+
 
 class BOWLanguageModel(object):
     def __init__(self):
@@ -63,30 +62,37 @@ class BOWLanguageModel(object):
         """
         Updates the precomputed quotient
         """
-        self.log_quotient = log(self.smoothing*(1+len(self.word_count))+self.total_count)
+        self.log_quotient = log(
+            self.smoothing * (1 + len(self.word_count)) + self.total_count
+        )
 
     def load(self, filename):
         """
         Loads a pre-trained language model
         """
-        with open(filename, 'rb') as f:
+        with open(filename, "rb") as f:
             dct = pickle.load(f)
-            self.total_count = dct['total_count']
-            self.word_count = defaultdict(int, dct['word_count'])
+            self.total_count = dct["total_count"]
+            self.word_count = defaultdict(int, dct["word_count"])
             self._update_log_quotient()
 
     def save(self, filename):
         """
         Saves the language model to a file
         """
-        print('saving language model')
-        with open(filename, 'wb') as f:
+        print("saving language model")
+        with open(filename, "wb") as f:
             pickle.dump(
-                {'total_count':self.total_count,
-                 'word_count':[ (w,c) for w,c in self.word_count.items()
-                                if c >= self.threshold ]},
-                f)
-
+                {
+                    "total_count": self.total_count,
+                    "word_count": [
+                        (w, c)
+                        for w, c in self.word_count.items()
+                        if c >= self.threshold
+                    ],
+                },
+                f,
+            )
 
     @classmethod
     def train_from_dump(cls, filename):
@@ -96,30 +102,30 @@ class BOWLanguageModel(object):
         file (in which case it is read as a wikidata dump).
         """
         bow = BOWLanguageModel()
-        if filename.endswith('.txt'):
-            with open(filename, 'r') as f:
+        if filename.endswith(".txt"):
+            with open(filename, "r") as f:
                 for line in f:
                     bow.ingest_phrases([line.strip()])
 
-        elif filename.endswith('.json.bz2'):
+        elif filename.endswith(".json.bz2"):
             with WikidataDumpReader(filename) as reader:
                 for idx, item in enumerate(reader):
                     if idx % 10000 == 0:
                         print(idx)
 
-                    enlabel = item.get('labels', {}).get('en', {}).get('value')
-                    endesc = item.get('descriptions', {}).get('en', {}).get('value')
+                    enlabel = item.get("labels", {}).get("en", {}).get("value")
+                    endesc = item.get("descriptions", {}).get("en", {}).get("value")
                     if enlabel:
                         # Fetch aliases
                         enaliases = [
-                            alias['value']
-                            for alias in item.get('aliases', {}).get('en', [])
+                            alias["value"]
+                            for alias in item.get("aliases", {}).get("en", [])
                         ]
 
                         bow.ingest_phrases(enaliases + [enlabel])
         else:
-            raise ValueError('invalid filename provided (must end in .txt or .json.bz2)')
+            raise ValueError(
+                "invalid filename provided (must end in .txt or .json.bz2)"
+            )
 
         return bow
-
-

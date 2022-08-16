@@ -1,5 +1,6 @@
-from .utils import to_q
 from .sparqlwikidata import sparql_wikidata
+from .utils import to_q
+
 
 class TypeMatcher(object):
     """
@@ -7,7 +8,7 @@ class TypeMatcher(object):
     Cached in memory.
     """
 
-    def __init__(self, subclass_pid='P279'):
+    def __init__(self, subclass_pid="P279"):
         self.subclass_pid = subclass_pid
         self.sets = {}
 
@@ -33,21 +34,22 @@ class TypeMatcher(object):
         """
 
         if qid in self.sets:
-            return # children are already prefetched
+            return  # children are already prefetched
 
         sparql_query = """
         PREFIX wd: <http://www.wikidata.org/entity/>
         PREFIX wdt: <http://www.wikidata.org/prop/direct/>
         SELECT ?child WHERE { ?child wdt:%s* wd:%s }
-        """ % (self.subclass_pid, qid)
+        """ % (
+            self.subclass_pid,
+            qid,
+        )
         results = sparql_wikidata(sparql_query)
 
         new_set = set()
         for result in results["bindings"]:
             child_qid = to_q(result["child"]["value"])
-            if child_qid: # this can fail if the entity is a property, lexeme…
+            if child_qid:  # this can fail if the entity is a property, lexeme…
                 new_set.add(int(child_qid[1:]))
 
         self.sets[qid] = new_set
-
-
