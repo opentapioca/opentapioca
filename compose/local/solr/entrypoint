@@ -9,4 +9,4 @@ set -o nounset
 /opt/solr/bin/solr zk -upconfig -z zookeeper:2181 -n tapioca -d /configsets/tapioca
 
 
-solr-foreground -cloud -p 8983 -z zookeeper:2181
+solr-foreground -cloud -m 8192m -p 8983 -z zookeeper:2181
