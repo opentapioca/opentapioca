@@ -21,8 +21,6 @@ services:
       -   zookeeper
     volumes:
       -   solr_data_local:/var/solr
-    ports:
-      - "8983:8983"
 
   tapioca:
     build:
