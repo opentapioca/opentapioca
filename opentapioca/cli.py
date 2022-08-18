@@ -152,7 +152,7 @@ def index_dump(collection_name, filename, profile, shards, skip):
         dump,
         indexing_profile,
         batch_size=2000,
-        commit_time=10,
+        commit_time=100000000,
         delete_excluded=False,
         skip_docs=skip,
     )
