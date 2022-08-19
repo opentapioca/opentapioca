@@ -20,8 +20,12 @@ echo "Downloading Classifier"
 echo "Wait for Solr"
 /wait-for-solr.sh
 
-echo "Loading $SOLR_COLLECTION"
-/usr/local/bin/python -m opentapioca.cli index-dump "$SOLR_COLLECTION" dump/"$WIKIPEDIA_FILE" --profile profiles/human_organization_location.json
+if [[ ! -f dump_loaded ]]
+then
+  echo "Loading $SOLR_COLLECTION"
+  /usr/local/bin/python -m opentapioca.cli index-dump "$SOLR_COLLECTION" dump/"$WIKIPEDIA_FILE" --profile profiles/human_organization_location.json
+  touch dump_loaded
+fi
 
 
 echo "Starting Tapioca"

@@ -16,6 +16,7 @@ services:
       dockerfile: ./compose/local/solr/Dockerfile
     image: opentapioca_local_solr
     container_name: solr
+    restart: always
     hostname: solr
     depends_on:
       -   zookeeper
