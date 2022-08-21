@@ -2,6 +2,7 @@ import json
 import logging
 
 import requests
+from retry import retry
 
 from opentapioca.settings import SOLR_ENDPOINT
 from opentapioca.typematcher import TypeMatcher
@@ -135,11 +136,19 @@ class TaggerFactory(object):
             "add": docs_to_add,
             "delete": ids_to_delete,
         }
-        r = requests.post(
-            self._collection_update_endpoint(collection),
-            params={"commit": "true" if commit else "false"},
-            data=json.dumps(payload),
-            headers={"Content-Type": "application/json"},
+        perform_request(
+            update_endpoint=self._collection_update_endpoint(collection),
+            commit=commit,
+            payload=payload,
         )
-        r.raise_for_status()
 
+
+@retry()
+def perform_request(update_endpoint, commit, payload):
+    r = requests.post(
+        update_endpoint,
+        params={"commit": "true" if commit else "false"},
+        data=json.dumps(payload),
+        headers={"Content-Type": "application/json"},
+    )
+    r.raise_for_status()
