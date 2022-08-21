@@ -2,13 +2,13 @@ import json
 import os
 from collections import namedtuple
 
-import requests.exceptions
-
 import pytest
+import requests.exceptions
 import requests_mock
+from pytest_mock import mocker
+
 from opentapioca.readers.streamreader import WikidataStreamReader
 from opentapioca.wditem import WikidataItemDocument
-from pytest_mock import mocker
 
 from .test_fixtures import testdir, wbgetentities_response
 

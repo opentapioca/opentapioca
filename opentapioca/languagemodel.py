@@ -3,8 +3,9 @@ import re
 from collections import defaultdict
 from math import log
 
-from opentapioca.readers.dumpreader import WikidataDumpReader
 from unidecode import unidecode
+
+from opentapioca.readers.dumpreader import WikidataDumpReader
 
 separator_re = re.compile(r"[,\-_/:;!?)]? [,\-_/:;!?(]?")
 

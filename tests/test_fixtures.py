@@ -3,6 +3,7 @@ import os
 
 import pytest
 import requests_cache
+
 from opentapioca.wditem import WikidataItemDocument
 
 

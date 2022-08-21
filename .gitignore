@@ -13,3 +13,4 @@ configsets/_default/
 /data/rss_istex_classifier.pkl
 /data/wd_2019-02-24.bow.pkl
 /data/wd_2019-02-24.pgrank.npy
+dump_loaded

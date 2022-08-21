@@ -2,6 +2,7 @@ import json
 import os
 
 import pytest
+
 from opentapioca.indexingprofile import IndexingProfile, TypeConstraint
 from opentapioca.readers.dumpreader import WikidataDumpReader
 from opentapioca.typematcher import TypeMatcher

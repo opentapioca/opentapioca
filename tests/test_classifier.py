@@ -2,6 +2,8 @@ import os
 import unittest
 
 import pytest
+from pynif import NIFCollection
+
 from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.indexingprofile import IndexingProfile
 from opentapioca.languagemodel import BOWLanguageModel
@@ -11,7 +13,6 @@ from opentapioca.tag import Tag
 from opentapioca.tagger import Tagger
 from opentapioca.taggerfactory import CollectionAlreadyExists, TaggerFactory
 from opentapioca.wikidatagraph import WikidataGraph
-from pynif import NIFCollection
 
 
 class ClassifierTest(unittest.TestCase):

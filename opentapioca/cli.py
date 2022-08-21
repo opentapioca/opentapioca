@@ -3,6 +3,7 @@ import os
 
 import click
 import dateutil.parser
+from pynif import NIFCollection
 
 from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.indexingprofile import IndexingProfile
@@ -13,7 +14,6 @@ from opentapioca.readers.streamreader import WikidataStreamReader
 from opentapioca.tagger import Tagger
 from opentapioca.taggerfactory import CollectionAlreadyExists, TaggerFactory
 from opentapioca.wikidatagraph import WikidataGraph
-from pynif import NIFCollection
 
 
 @click.group()

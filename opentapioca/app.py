@@ -4,6 +4,8 @@ import os
 
 import bottle
 from bottle import abort, default_app, request, response, route, run, static_file
+from pynif import NIFCollection
+
 from opentapioca.classifier import SimpleTagClassifier
 from opentapioca.languagemodel import BOWLanguageModel
 from opentapioca.settings import (
@@ -14,7 +16,6 @@ from opentapioca.settings import (
 )
 from opentapioca.tagger import Tagger
 from opentapioca.wikidatagraph import WikidataGraph
-from pynif import NIFCollection
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -56,7 +57,8 @@ def jsonp(view):
         try:
             result = view(args, *posargs, **kwargs)
         except (KeyError) as e:  # ValueError, AttributeError, KeyError) as e:
-            import traceback, sys
+            import sys
+            import traceback
 
             traceback.print_exc(file=sys.stdout)
             result = {"status": "error", "message": "invalid query", "details": str(e)}

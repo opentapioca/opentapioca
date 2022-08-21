@@ -3,6 +3,7 @@ import re
 import unittest
 
 import requests_mock
+
 from opentapioca.typematcher import TypeMatcher
 
 from .test_fixtures import cache_requests

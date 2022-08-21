@@ -2,6 +2,7 @@ import os
 
 import pytest
 import requests_mock
+
 from opentapioca.readers.sparqlreader import SparqlReader
 
 from .test_fixtures import testdir, wbgetentities_response
