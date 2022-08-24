@@ -20,4 +20,4 @@ CLASSIFIER_PATH = str(DATA_DIR / os.environ.get("CLASSIFIER_FILE"))
 
 SOLR_HOST = os.environ.get("SOLR_HOST", default="solr")
 SOLR_PORT = os.environ.get("SOLR_PORT", default="8983")
-SOLR_ENDPOINT = f"http://{SOLR_HOST}:{SOLR_PORT}/solr/"
+SOLR_ENDPOINT = f"http://{SOLR_HOST}:{SOLR_PORT}/solr"
