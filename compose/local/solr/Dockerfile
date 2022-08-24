@@ -1,4 +1,4 @@
-FROM solr:9.0.0
+FROM solr:7.7.3
 
 COPY ./configsets /configsets
 
