@@ -1,12 +1,14 @@
 import json
-import re
 import logging
+import re
 
-from .apireaderbase import APIReaderBase
 from opentapioca.sparqlwikidata import sparql_wikidata
 from opentapioca.utils import to_q
 
+from .apireaderbase import APIReaderBase
+
 logger = logging.getLogger(__name__)
+
 
 class SparqlReader(APIReaderBase):
     """
@@ -14,10 +16,12 @@ class SparqlReader(APIReaderBase):
     a SPARQL query which contains an "item" variable.
     """
 
-    def __init__(self,
-                 query,
-                 endpoint='https://query.wikidata.org/sparql',
-                 mediawiki_api='https://www.wikidata.org/w/api.php'):
+    def __init__(
+        self,
+        query,
+        endpoint="https://query.wikidata.org/sparql",
+        mediawiki_api="https://www.wikidata.org/w/api.php",
+    ):
         super(SparqlReader, self).__init__(mediawiki_api)
         self.endpoint = endpoint
         self.query = query
@@ -25,7 +29,9 @@ class SparqlReader(APIReaderBase):
         self.query_results = None
 
     def __enter__(self):
-        self.query_results = sparql_wikidata(self.query, endpoint=self.endpoint)['bindings']
+        self.query_results = sparql_wikidata(self.query, endpoint=self.endpoint)[
+            "bindings"
+        ]
         return self
 
     def __exit__(self, *args, **kwargs):
@@ -33,15 +39,16 @@ class SparqlReader(APIReaderBase):
 
     def __iter__(self):
         if self.query_results is None:
-            raise ValueError('Query results have not been fetched.')
+            raise ValueError("Query results have not been fetched.")
         while self.query_results:
-            batch = self.query_results[:self.batch_size]
-            self.query_results = self.query_results[self.batch_size:]
+            batch = self.query_results[: self.batch_size]
+            self.query_results = self.query_results[self.batch_size :]
 
-            qids = [to_q(result['item']['value']) for result in batch if 'item' in result]
+            qids = [
+                to_q(result["item"]["value"]) for result in batch if "item" in result
+            ]
             qids_without_none = [qid for qid in qids if qid]
 
             # Fetch item contents
             for item in self.fetch_items(qids_without_none):
                 yield item
-

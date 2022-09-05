@@ -1,16 +1,18 @@
 import json
-import requests
 import logging
 import re
 from math import log
 
+import requests
+
 from .languagemodel import BOWLanguageModel
-from .wikidatagraph import WikidataGraph
-from .tag import Tag
 from .mention import Mention
+from .tag import Tag
+from .wikidatagraph import WikidataGraph
 
 # solr_collection = 'wd_multilingual'
 logger = logging.getLogger(__name__)
+
 
 class Tagger(object):
     """
@@ -26,10 +28,12 @@ class Tagger(object):
         - a bag of words language model, adequately trained, which will be used to evaluate the likelihood of phrases
         - a wikidata graph, adequately loaded, which will be used to compute the page rank and the edges between items
         """
+        from opentapioca.settings import SOLR_ENDPOINT
+
         self.bow = bow
         self.graph = graph
-        self.solr_endpoint = 'http://localhost:8983/solr/{}/tag'.format(solr_collection)
-        self.prune_re = re.compile(r'^(\w\w?|[\d ]{,4})$')
+        self.solr_endpoint = f"{SOLR_ENDPOINT}/{solr_collection}/tag"
+        self.prune_re = re.compile(r"^(\w\w?|[\d ]{,4})$")
         self.max_length = 10000
 
     def tag_and_rank(self, phrase, prune=True):
@@ -38,40 +42,35 @@ class Tagger(object):
         :param prune: if True, ignores lowercase mentions shorter than 3 characters
         """
         # Tag
-        phrase = phrase[:self.max_length]
-        logger.debug('Tagging text with solr (length {})'.format(len(phrase)))
-        r = requests.post(self.solr_endpoint,
-            params={'overlaps':'NO_SUB',
-             'tagsLimit':500,
-             'fl':'id,label,aliases,extra_aliases,desc,nb_statements,nb_sitelinks,edges,types',
-             'wt':'json',
-             'indent':'off',
+        phrase = phrase[: self.max_length]
+        logger.debug("Tagging text with solr (length {})".format(len(phrase)))
+        r = requests.post(
+            self.solr_endpoint,
+            params={
+                "overlaps": "NO_SUB",
+                "tagsLimit": 500,
+                "fl": "id,label,aliases,extra_aliases,desc,nb_statements,nb_sitelinks,edges,types",
+                "wt": "json",
+                "indent": "off",
             },
-            headers ={'Content-Type':'text/plain'},
-            data=phrase.encode('utf-8'))
+            headers={"Content-Type": "text/plain"},
+            data=phrase.encode("utf-8"),
+        )
         r.raise_for_status()
-        logger.debug('Tagging succeeded')
+        logger.debug("Tagging succeeded")
         resp = r.json()
 
         # Enhance mentions with page rank and edge similarity
-        mentions_json = [
-            self._dictify(mention)
-            for mention in resp.get('tags', [])
-        ]
-        docs = {
-            doc['id']:doc
-            for doc in resp.get('response', {}).get('docs', [])
-        }
+        mentions_json = [self._dictify(mention) for mention in resp.get("tags", [])]
+        docs = {doc["id"]: doc for doc in resp.get("response", {}).get("docs", [])}
 
         mentions = [
             self._create_mention(phrase, mention, docs, mentions_json)
             for mention in mentions_json
         ]
-        
+
         pruned_mentions = [
-            mention
-            for mention in mentions
-            if not self.prune_phrase(mention.phrase)
+            mention for mention in mentions if not self.prune_phrase(mention.phrase)
         ]
 
         return pruned_mentions
@@ -99,16 +98,16 @@ class Tagger(object):
         :param mentions: the list of all mentions in the document
         :returns: the enhanced mention, as a Mention object
         """
-        start = mention['startOffset']
-        end = mention['endOffset']
+        start = mention["startOffset"]
+        end = mention["endOffset"]
         surface = phrase[start:end]
         surface_score = self.bow.log_likelihood(surface)
         ranked_tags = []
-        for qid in mention['ids']:
+        for qid in mention["ids"]:
             item = dict(docs[qid].items())
-            item['rank'] = 23. + log(self.graph.get_pagerank(qid))
+            item["rank"] = 23.0 + log(self.graph.get_pagerank(qid))
             ranked_tags.append(Tag(**item))
-            
+
         return Mention(
             phrase=surface,
             start=start,
@@ -121,31 +120,28 @@ class Tagger(object):
         """
         Converts a list of [key1,val1,key2,val2,...] to a dict
         """
-        return {
-            lst[2*k]: lst[2*k+1]
-            for k in range(len(lst)//2)
-        }
+        return {lst[2 * k]: lst[2 * k + 1] for k in range(len(lst) // 2)}
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import sys
+
     fname = sys.argv[1]
-    print('Loading '+fname)
+    print("Loading " + fname)
     bow = BOWLanguageModel()
     bow.load(fname)
-    print('Loading '+sys.argv[2])
+    print("Loading " + sys.argv[2])
     graph = WikidataGraph()
     graph.load_pagerank(sys.argv[2])
     tagger = Tagger(bow, graph)
 
     while True:
-        phrase = input('>>> ')
+        phrase = input(">>> ")
         tags = tagger.tag_and_rank(phrase)
         for mention in tags:
-            for tag in mention.get('tags', []):
-                if 'edges' in tag:
-                    del tag['edges']
-                if 'aliases' in tag:
-                    del tag['aliases']
+            for tag in mention.get("tags", []):
+                if "edges" in tag:
+                    del tag["edges"]
+                if "aliases" in tag:
+                    del tag["aliases"]
         print(json.dumps(tags, indent=2, sort_keys=True))
-

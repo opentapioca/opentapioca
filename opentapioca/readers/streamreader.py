@@ -1,11 +1,13 @@
 import json
-import re
 import logging
+import re
 
 from sseclient import SSEClient
+
 from .apireaderbase import APIReaderBase
 
 logger = logging.getLogger(__name__)
+
 
 class WikidataStreamReader(APIReaderBase):
     """
@@ -13,11 +15,13 @@ class WikidataStreamReader(APIReaderBase):
     the Wikidata edit stream.
     """
 
-    def __init__(self,
-                 endpoint='https://stream.wikimedia.org/v2/stream/recentchange',
-                 wiki='wikidatawiki',
-                 mediawiki_api='https://www.wikidata.org/w/api.php',
-                 from_time=None):
+    def __init__(
+        self,
+        endpoint="https://stream.wikimedia.org/v2/stream/recentchange",
+        wiki="wikidatawiki",
+        mediawiki_api="https://www.wikidata.org/w/api.php",
+        from_time=None,
+    ):
         super(WikidataStreamReader, self).__init__(mediawiki_api)
         self.endpoint = endpoint
         self.wiki = wiki
@@ -26,12 +30,12 @@ class WikidataStreamReader(APIReaderBase):
         self.item_buffer = []
         self.batch_size = 50
         self.namespaces = [0]
-        self.id_re = re.compile(r'^Q[1-9]\d+$')
+        self.id_re = re.compile(r"^Q[1-9]\d+$")
 
     def __enter__(self):
         url = self.endpoint
         if self.from_time is not None:
-             url += '?since='+self.from_time.isoformat().replace('+00:00', 'Z')
+            url += "?since=" + self.from_time.isoformat().replace("+00:00", "Z")
         self.stream = SSEClient(url, timeout=30)
         return self
 
@@ -40,7 +44,7 @@ class WikidataStreamReader(APIReaderBase):
 
     def __iter__(self):
         if not self.stream:
-            raise ValueError('Stream has not been started.')
+            raise ValueError("Stream has not been started.")
         stream_ended = False
         while not stream_ended:
             # Fetch new batch of events
@@ -58,15 +62,15 @@ class WikidataStreamReader(APIReaderBase):
         Fetches the next Qid in the Wikidata edit stream
         """
         for event in self.stream:
-            if event.event == 'message':
+            if event.event == "message":
                 try:
                     change = json.loads(event.data)
-                    if (change.get('wiki') == self.wiki and
-                        change.get('namespace') in self.namespaces and
-                        change.get('title') and
-                        self.id_re.match(change['title'])):
-                        return change['title']
+                    if (
+                        change.get("wiki") == self.wiki
+                        and change.get("namespace") in self.namespaces
+                        and change.get("title")
+                        and self.id_re.match(change["title"])
+                    ):
+                        return change["title"]
                 except ValueError:
                     pass
-
-

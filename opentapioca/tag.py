@@ -1,17 +1,27 @@
 import json
 
+
 class Tag(object):
     """
     A tag is a candidate annotation for a mention.
     """
 
-    def __init__(self, id=None,
-                 label=None, aliases=None, desc=None,
-                 extra_aliases=None,
-                 nb_statements=None, nb_sitelinks=None,
-                 edges=None, types=None,
-                 rank=None, similarities=None,
-                 score=None, valid=None):
+    def __init__(
+        self,
+        id=None,
+        label=None,
+        aliases=None,
+        desc=None,
+        extra_aliases=None,
+        nb_statements=None,
+        nb_sitelinks=None,
+        edges=None,
+        types=None,
+        rank=None,
+        similarities=None,
+        score=None,
+        valid=None,
+    ):
         """
         :param id: the Wikidata Qid of the linked entity
         :param label: the label of the entity in our preferred language
@@ -47,19 +57,19 @@ class Tag(object):
 
     def json(self):
         return {
-            'id': self.id,
-            'label': self.label,
-            'aliases': self.aliases,
-            'extra_aliases': self.extra_aliases,
-            'desc': self.desc,
-            'nb_statements': self.nb_statements,
-            'nb_sitelinks': self.nb_sitelinks,
-            'edges': self.edges,
-            'types': self.types,
-            'rank': self.rank,
-            'score': self.score,
-            'valid': self.valid,
+            "id": self.id,
+            "label": self.label,
+            "aliases": self.aliases,
+            "extra_aliases": self.extra_aliases,
+            "desc": self.desc,
+            "nb_statements": self.nb_statements,
+            "nb_sitelinks": self.nb_sitelinks,
+            "edges": self.edges,
+            "types": self.types,
+            "rank": self.rank,
+            "score": self.score,
+            "valid": self.valid,
         }
 
     def __repr__(self):
-        return '<Tag: {}>'.format(self.id)
+        return "<Tag: {}>".format(self.id)

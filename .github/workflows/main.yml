@@ -35,7 +35,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: copy settings
-        run: cp settings_travis.py settings.py
+        run: cp .github/workflows/settings_ci.py opentapioca/settings.py
       - name: install requirements
         run: pip install pytest coveralls -r requirements.txt && pip freeze
       - name: run coverage

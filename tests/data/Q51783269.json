@@ -1,0 +1,366 @@
+{
+  "pageid": 52695381,
+  "ns": 0,
+  "title": "Q51783269",
+  "lastrevid": 900746645,
+  "modified": "2019-04-02T16:11:42Z",
+  "type": "item",
+  "id": "Q51783269",
+  "labels": {
+    "en": {
+      "language": "en",
+      "value": "Institut de Recherche en Informatique Fondamentale"
+    },
+    "fr": {
+      "language": "fr",
+      "value": "Institut de Recherche en Informatique Fondamentale"
+    }
+  },
+  "descriptions": {
+    "en": {
+      "language": "en",
+      "value": "research institute located in Paris"
+    },
+    "fr": {
+      "language": "fr",
+      "value": "institut de recherche à Paris"
+    }
+  },
+  "aliases": {
+    "en": [
+      {
+        "language": "en",
+        "value": "Research Institute on the Foundations of Computer Science"
+      },
+      {
+        "language": "en",
+        "value": "IRIF"
+      }
+    ],
+    "fr": [
+      {
+        "language": "fr",
+        "value": "IRIF"
+      }
+    ]
+  },
+  "claims": {
+    "P31": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P31",
+          "hash": "c0cd71831ba6296830ffe5b2f9f8d6358cbfd830",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 31855,
+              "id": "Q31855"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q51783269$260f9d13-4ac6-a173-5b56-a6a5e427455d",
+        "rank": "normal"
+      }
+    ],
+    "P17": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P17",
+          "hash": "c05db5d169c2560b9799d567a803d20a392f53e4",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 142,
+              "id": "Q142"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q51783269$0d2637e9-463e-206e-ebc5-8ec7b8bd45da",
+        "rank": "normal"
+      }
+    ],
+    "P159": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P159",
+          "hash": "4301afb1c4aa78d5c8604012a684d82e05ac1631",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 27307362,
+              "id": "Q27307362"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q51783269$3499955c-48f2-889a-45a0-d93b9d949633",
+        "rank": "normal"
+      }
+    ],
+    "P571": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P571",
+          "hash": "a4e448a3e2aa0a13f0ecc9ef71d78b7b5f8d0bab",
+          "datavalue": {
+            "value": {
+              "time": "+2016-01-00T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 10,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          },
+          "datatype": "time"
+        },
+        "type": "statement",
+        "id": "Q51783269$0bc30e30-4d13-11db-8e62-bb3651322bfd",
+        "rank": "normal"
+      }
+    ],
+    "P1365": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1365",
+          "hash": "962c6f53a8ef60e909e3fa9b6ec80e672f417dcd",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 3214402,
+              "id": "Q3214402"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q51783269$f3a4507e-47a0-6d5e-c7f3-7e83ecc439ec",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1365",
+          "hash": "8ecbf4417b682cd1a2835f5059d820247cfd4e68",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 30262418,
+              "id": "Q30262418"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q51783269$497bed1a-4475-69a4-7a74-dc714270d36a",
+        "rank": "normal"
+      }
+    ],
+    "P1037": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P1037",
+          "hash": "0b0fbebb20f32d3b59ad3ebba6dd5148badf5b2d",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 51788053,
+              "id": "Q51788053"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q51783269$dabca610-42c7-ae24-122e-25a31e0f02ed",
+        "rank": "normal"
+      }
+    ],
+    "P214": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P214",
+          "hash": "647eae126d6de51b961990754b389d28c6dfb45a",
+          "datavalue": {
+            "value": "41146825590707632877",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q51783269$40364fe0-4610-ce6d-d95c-5543117f54dd",
+        "rank": "normal"
+      }
+    ],
+    "P269": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P269",
+          "hash": "726b8eda9c62b6611cbf0238a6a7d2c1d9fac17a",
+          "datavalue": {
+            "value": "193993007",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q51783269$12bff6ce-4a47-6a91-e4b2-85f7a80997d9",
+        "rank": "normal"
+      }
+    ],
+    "P856": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P856",
+          "hash": "d6e23ff29553dbd2bb85b35fd2870ee1947a9892",
+          "datavalue": {
+            "value": "https://www.irif.fr/",
+            "type": "string"
+          },
+          "datatype": "url"
+        },
+        "type": "statement",
+        "id": "Q51783269$4339c76e-40d7-34de-b8ac-c6eeae070210",
+        "rank": "normal"
+      }
+    ],
+    "P749": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P749",
+          "hash": "963242328c6e9060784fd16c37f9a37ab970d5db",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 1235608,
+              "id": "Q1235608"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q51783269$82aa234e-401d-01a3-00b2-eac54c8740d5",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P749",
+          "hash": "efa09a19d9069b0bbbd303e7f1689ddb11d3f4bd",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 280413,
+              "id": "Q280413"
+            },
+            "type": "wikibase-entityid"
+          },
+          "datatype": "wikibase-item"
+        },
+        "type": "statement",
+        "id": "Q51783269$1d993d03-4e8c-a88c-74c9-4cb41c8fab6d",
+        "rank": "normal"
+      }
+    ],
+    "P4550": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P4550",
+          "hash": "19ae0d46e9777394bbae6bededd19a5739779479",
+          "datavalue": {
+            "value": "UMR8243",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q51783269$e6dddadf-49a5-fa4e-1f9f-654a9662ecce",
+        "rank": "normal"
+      }
+    ],
+    "P2427": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P2427",
+          "hash": "050f9fd3ce991cd734da41bb0f9ac976dedaeea7",
+          "datavalue": {
+            "value": "grid.503219.c",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q51783269$7aa17ec0-9674-418b-b192-81ab65d0818e",
+        "rank": "normal",
+        "references": [
+          {
+            "hash": "acdd6eed19743ba740368e48d41131cd591e89d4",
+            "snaks": {
+              "P248": [
+                {
+                  "snaktype": "value",
+                  "property": "P248",
+                  "hash": "071b3dfb45b4d852db0e85f853c5c3c3de0f6194",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 61868141,
+                      "id": "Q61868141"
+                    },
+                    "type": "wikibase-entityid"
+                  },
+                  "datatype": "wikibase-item"
+                }
+              ]
+            },
+            "snaks-order": [
+              "P248"
+            ]
+          }
+        ]
+      }
+    ],
+    "P2002": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P2002",
+          "hash": "d53e8b6736ed39374d2a86919a1e1a52190862e7",
+          "datavalue": {
+            "value": "IRIF_Paris",
+            "type": "string"
+          },
+          "datatype": "external-id"
+        },
+        "type": "statement",
+        "id": "Q51783269$98e29bc6-40c3-b8a3-acd7-297648a17f9b",
+        "rank": "normal"
+      }
+    ]
+  },
+  "sitelinks": {}
+}

@@ -1,7 +1,8 @@
 import re
 
-q_re = re.compile(r'(<?https?://www.wikidata.org/(entity|wiki)/)?(Q[0-9]+)>?')
-p_re = re.compile(r'(<?https?://www.wikidata.org/(entity/|wiki/Property:))?(P[0-9]+)>?')
+q_re = re.compile(r"(<?https?://www.wikidata.org/(entity|wiki)/)?(Q[0-9]+)>?")
+p_re = re.compile(r"(<?https?://www.wikidata.org/(entity/|wiki/Property:))?(P[0-9]+)>?")
+
 
 def to_q(url):
     """
@@ -18,6 +19,7 @@ def to_q(url):
     if match:
         return match.group(3)
 
+
 def to_p(url):
     """
     Normalizes a Wikidata property identifier
@@ -32,5 +34,3 @@ def to_p(url):
     match = p_re.match(url.strip())
     if match:
         return match.group(3)
-
-

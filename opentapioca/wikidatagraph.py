@@ -1,7 +1,10 @@
-import numpy
 import json
+
+import numpy
 from scipy import sparse
+
 from .readers.dumpreader import WikidataDumpReader
+
 
 class WikidataGraph(object):
     """
@@ -20,6 +23,7 @@ class WikidataGraph(object):
     This slightly convoluted setup makes it possible to process entire dumps on
     a machine with little memory (8GB).
     """
+
     @classmethod
     def preprocess_dump(cls, fname, output_fname):
         """
@@ -28,13 +32,13 @@ class WikidataGraph(object):
         then be sorted (for instance with GNU sort) before being loaded
         as a pre-processed dump.
         """
-        output_file = open(output_fname, 'w')
+        output_file = open(output_fname, "w")
 
         with WikidataDumpReader(fname) as reader:
             counter = 0
             for item in reader:
-                qid = item.get('id')
-                if qid[0] != 'Q':
+                qid = item.get("id")
+                if qid[0] != "Q":
                     continue
 
                 rowid = int(qid[1:])
@@ -47,16 +51,17 @@ class WikidataGraph(object):
                     continue
 
                 ordered_edges = list(sorted(set(edges)))
-                target_to_idx = { x:i for i,x in enumerate(ordered_edges) }
+                target_to_idx = {x: i for i, x in enumerate(ordered_edges)}
                 cur_data = [0 for x in ordered_edges]
                 for target in edges:
                     cur_data[target_to_idx[target]] += 1
 
-                fields = [str(rowid),
+                fields = [
+                    str(rowid),
                     json.dumps(ordered_edges),
                     json.dumps(cur_data),
                 ]
-                output_file.write('\t'.join(fields)+'\n')
+                output_file.write("\t".join(fields) + "\n")
                 counter = counter + 1
 
     def load_from_preprocessed_dump(self, fname, batch_size=1000000):
@@ -73,19 +78,19 @@ class WikidataGraph(object):
         block_matrices = []
 
         # First, read the last qid
-        with open(fname, 'r') as f:
+        with open(fname, "r") as f:
             last_qid = 0
             for line in f:
-                qid = int(line.split('\t')[0])
+                qid = int(line.split("\t")[0])
                 if qid <= last_qid:
                     raise ValueError('The dump "{}" is not sorted.'.format(fname))
                 last_qid = qid
-        print('Last QID: Q%d' % last_qid)
+        print("Last QID: Q%d" % last_qid)
 
-        with open(fname, 'r') as f:
+        with open(fname, "r") as f:
 
             for line in f:
-                fields = line.strip().split('\t')
+                fields = line.strip().split("\t")
                 qid = int(fields[0])
                 indices = json.loads(fields[1])
                 counts = json.loads(fields[2])
@@ -94,7 +99,11 @@ class WikidataGraph(object):
                 while row_offset + len(indptr) <= qid:
                     indptr.append(len(data_lst))
 
-                idx_counts = [(idx, count) for idx, count in zip(indices, counts) if idx <= last_qid ]
+                idx_counts = [
+                    (idx, count)
+                    for idx, count in zip(indices, counts)
+                    if idx <= last_qid
+                ]
 
                 if idx_counts:
                     nonempty_indices.append(qid)
@@ -108,14 +117,16 @@ class WikidataGraph(object):
 
                 if len(nonempty_indices) % batch_size == 0 or qid == last_qid:
                     print(len(nonempty_indices))
-                    mat = sparse.csr_matrix((data_lst, indices_lst, indptr), shape=(len(indptr)-1,last_qid+1))
+                    mat = sparse.csr_matrix(
+                        (data_lst, indices_lst, indptr),
+                        shape=(len(indptr) - 1, last_qid + 1),
+                    )
                     mat.check_format(full_check=True)
                     block_matrices.append(mat)
                     row_offset += len(indptr) - 1
                     data_lst = []
                     indices_lst = []
                     indptr = [0]
-
 
         self.mat = sparse.vstack(block_matrices)
         self.N = len(nonempty_indices)
@@ -132,19 +143,21 @@ class WikidataGraph(object):
         N = self.mat.shape[0]
         print(self.mat.shape)
         # create uniform vector
-        data = [1./N] * N
-        rows = [0]*N
+        data = [1.0 / N] * N
+        rows = [0] * N
         cols = list(range(N))
-        v = sparse.csr_matrix((data, (rows, cols)), shape=(1,N))
+        v = sparse.csr_matrix((data, (rows, cols)), shape=(1, N))
 
         max_iterations = 16
         for i in range(max_iterations):
-            print('---- %d ----' % i)
+            print("---- %d ----" % i)
             nv = v.dot(self.mat)
 
             # loss compensation
             l1norm = nv.sum()
-            comp = sparse.csr_matrix(([(1. - l1norm)/N]*N, (rows, cols)), shape=(1,N))
+            comp = sparse.csr_matrix(
+                ([(1.0 - l1norm) / N] * N, (rows, cols)), shape=(1, N)
+            )
             nv += comp
 
             # convergence control
@@ -165,8 +178,6 @@ class WikidataGraph(object):
     def get_pagerank(self, qid):
         id = int(qid[1:])
         if id < self.pagerank.shape[1]:
-            return self.pagerank[(0,int(qid[1:]))]
+            return self.pagerank[(0, int(qid[1:]))]
         else:
-            return 0.01/self.pagerank.shape[1]
-
-
+            return 0.01 / self.pagerank.shape[1]

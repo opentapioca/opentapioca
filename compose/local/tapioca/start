@@ -1,0 +1,33 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+
+echo "Downloading Wikipedia Latest dump"
+/usr/bin/wget -c https://dumps.wikimedia.org/wikidatawiki/entities/latest-all.json.bz2 -O dump/"$WIKIPEDIA_FILE"
+
+echo "Downloading BOW"
+/usr/bin/wget -c https://github.com/wetneb/opentapioca/releases/download/v0.1.0/"$LANGUAGE_MODEL_FILE" -O data/"$LANGUAGE_MODEL_FILE"
+
+echo "Downloading Pagerank"
+/usr/bin/wget -c https://github.com/wetneb/opentapioca/releases/download/v0.1.0/"$PAGERANK_FILE" -O data/"$PAGERANK_FILE"
+
+echo "Downloading Classifier"
+/usr/bin/wget -c https://github.com/wetneb/opentapioca/releases/download/v0.1.0/sample_classifier.pkl -O data/"$CLASSIFIER_FILE"
+
+echo "Wait for Solr"
+/wait-for-solr.sh
+
+if [[ ! -f dump_loaded ]]
+then
+  echo "Loading $SOLR_COLLECTION"
+  /usr/local/bin/python -m opentapioca.cli index-dump "$SOLR_COLLECTION" dump/"$WIKIPEDIA_FILE" --profile profiles/human_organization_location.json
+  touch dump_loaded
+fi
+
+
+echo "Starting Tapioca"
+/usr/local/bin/python -m opentapioca.app
+

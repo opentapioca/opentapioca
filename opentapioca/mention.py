@@ -1,5 +1,3 @@
-
-
 class Mention(object):
     """
     A mention is a phrase which can be associated
@@ -20,11 +18,11 @@ class Mention(object):
 
     def json(self):
         return {
-            'start': self.start,
-            'end': self.end,
-            'tags': [ tag.json() for tag in self.tags ],
-            'best_qid': self.best_qid,
-            'log_likelihood': self.log_likelihood,
+            "start": self.start,
+            "end": self.end,
+            "tags": [tag.json() for tag in self.tags],
+            "best_qid": self.best_qid,
+            "log_likelihood": self.log_likelihood,
         }
 
     def key(self):
@@ -51,14 +49,15 @@ class Mention(object):
             context.add_phrase(
                 beginIndex=self.start,
                 endIndex=self.end,
-                taIdentRef='http://www.wikidata.org/entity/'+self.best_qid)
+                taIdentRef="http://www.wikidata.org/entity/" + self.best_qid,
+            )
         elif not only_matching:
             for tag in self.tags:
                 context.add_phrase(
                     beginIndex=self.start,
                     endIndex=self.end,
-                    taIdentRef='http://www.wikidata.org/entity/'+tag.id)
+                    taIdentRef="http://www.wikidata.org/entity/" + tag.id,
+                )
 
     def __repr__(self):
         return '<Mention "{}">'.format(self.phrase)
-
