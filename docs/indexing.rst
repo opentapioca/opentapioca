@@ -37,7 +37,10 @@ matrix and a pagerank vector in four steps:
 1. preprocess the dump, only
    extracting the information we need: this creates a TSV file containing
    on each line the item id (without leading Q), the list of ids this item
-   points to, and the number of occurences of such links.
+   points to, and the number of occurences of such links. There will be an
+   output for every 10'000 items that have been processed. For a rough
+   estimate about the total number of pages please consult the "Content pages"
+   figure on https://www.wikidata.org/wiki/Special:Statistics
   
    ::
 

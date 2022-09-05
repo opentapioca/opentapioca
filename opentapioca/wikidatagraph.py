@@ -35,14 +35,15 @@ class WikidataGraph(object):
         output_file = open(output_fname, "w")
 
         with WikidataDumpReader(fname) as reader:
+            counter = 0
             for item in reader:
                 qid = item.get("id")
                 if qid[0] != "Q":
                     continue
 
                 rowid = int(qid[1:])
-                if rowid % 10000 == 0:
-                    print(str(rowid))
+                if counter % 10000 == 0:
+                    print(str(counter))
 
                 edges = item.get_outgoing_edges()
                 nb_edges = len(edges)
@@ -61,6 +62,7 @@ class WikidataGraph(object):
                     json.dumps(cur_data),
                 ]
                 output_file.write("\t".join(fields) + "\n")
+                counter = counter + 1
 
     def load_from_preprocessed_dump(self, fname, batch_size=1000000):
         """
