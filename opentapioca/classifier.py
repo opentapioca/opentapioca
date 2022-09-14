@@ -296,7 +296,7 @@ class SimpleTagClassifier(object):
         mixed_features = feature_array
         mixed_features_array = [feature_array]
         mixed_features = mixed_features.astype(float)
-        
+
         for i in range(self.nb_steps):
             mixed_features = numpy.dot(adj_matrix, mixed_features)
             mixed_features_array.append(mixed_features)
@@ -322,6 +322,7 @@ class SimpleTagClassifier(object):
             end = mention.end
             max_score = 0
             best_tag = None
+            best_tag_label = None
             for tag in mention.tags:
                 nb_tags += 1
                 tag_key = (start, end, tag.id)
@@ -330,6 +331,7 @@ class SimpleTagClassifier(object):
                     max_score = tag.score
                     best_tag = tag.id
             mention.best_qid = best_tag
+            mention.best_tag_label = best_tag_label
         logger.debug('Mentions classified ({} tags)'.format(nb_tags))
 
     def compute_similarities(self, mention, all_mentions):
