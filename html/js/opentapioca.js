@@ -30,7 +30,7 @@ function makePopupDiv(annotation, addCheckboxes) {
         var predicted_qid = annotation.best_qid;
         for(var i = 0; i < annotation.tags.length; i++) {
              var tag = annotation.tags[i];
-             var label = tag.label ? tag.label[0]+' ('+tag.id+')' : tag.id;
+             var label = tag.label ? tag.label+' ('+tag.id+')' : tag.id;
              var description = tag.desc ? tag.desc : '';
              var rank = tag.rank;
              var statements = tag.nb_statements;

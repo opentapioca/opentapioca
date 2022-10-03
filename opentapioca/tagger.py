@@ -67,7 +67,7 @@ class Tagger(object):
             self._create_mention(phrase, mention, docs, mentions_json)
             for mention in mentions_json
         ]
-        
+
         pruned_mentions = [
             mention
             for mention in mentions
@@ -107,8 +107,9 @@ class Tagger(object):
         for qid in mention['ids']:
             item = dict(docs[qid].items())
             item['rank'] = 23. + log(self.graph.get_pagerank(qid))
+            item['label'] = item['label'][0] if item.get('label') else None
             ranked_tags.append(Tag(**item))
-            
+
         return Mention(
             phrase=surface,
             start=start,

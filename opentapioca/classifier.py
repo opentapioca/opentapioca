@@ -330,6 +330,7 @@ class SimpleTagClassifier(object):
                 if tag.score > max_score:
                     max_score = tag.score
                     best_tag = tag.id
+                    best_tag_label = tag.label
             mention.best_qid = best_tag
             mention.best_tag_label = best_tag_label
         logger.debug('Mentions classified ({} tags)'.format(nb_tags))
