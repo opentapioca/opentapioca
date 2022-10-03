@@ -60,6 +60,7 @@ class Mention(object):
                 context.add_phrase(
                     beginIndex=self.start,
                     endIndex=self.end,
+                    score=tag.score,
                     taIdentRef='http://www.wikidata.org/entity/'+tag.id,
                     taIdentRefLabel=tag.label)
 

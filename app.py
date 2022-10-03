@@ -87,6 +87,9 @@ def nif_api(*args, **kwargs):
         'application/x-turtle': 'turtle',
         'text/turtle': 'turtle',
     }
+    # for backwards compatibility we assume that only_matching=true by default
+    only_matching = args.get('only_matching') != 'false'
+
     nif_body = request.body.read()
     nif_doc = NIFCollection.loads(nif_body)
     for context in nif_doc.contexts:
@@ -94,7 +97,7 @@ def nif_api(*args, **kwargs):
         mentions = classifier.create_mentions(context.mention)
         classifier.classify_mentions(mentions)
         for mention in mentions:
-            mention.add_phrase_to_nif_context(context)
+            mention.add_phrase_to_nif_context(context, only_matching=only_matching)
 
     response.set_header('content-type', content_format)
     return nif_doc.dumps()
