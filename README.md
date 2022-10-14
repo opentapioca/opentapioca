@@ -7,7 +7,9 @@ tasks by contributing back to Wikidata.
 
 A live instance is running at https://opentapioca.org/. To run it on a server that is powerful enough, I would need 50€/month: [please help fund the service if you can](https://en.liberapay.com/OpenTapioca).
 
-A [NIF endpoint](https://github.com/dice-group/gerbil/wiki/How-to-create-a-NIF-based-web-service) is available at https://opentapioca.org/api/nif.
+A [NIF endpoint](https://github.com/dice-group/gerbil/wiki/How-to-create-a-NIF-based-web-service) is available at:
+* https://opentapioca.org/api/nif (only exposing the matches that are deemed good enough)
+* https://opentapioca.org/api/nif?only_matching=false (also exposing all the other matches regardless of their score)
 
 See [the docs](https://opentapioca.readthedocs.io/en/latest/) for more information about how it works and how to run it. See [the paper](https://arxiv.org/abs/1904.09131) for some more motivation about the design of the system.
 
