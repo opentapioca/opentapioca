@@ -88,7 +88,7 @@ def nif_api(*args, **kwargs):
         'text/turtle': 'turtle',
     }
     # for backwards compatibility we assume that only_matching=true by default
-    only_matching = args.get('only_matching') != 'false'
+    only_matching = request.GET.get('only_matching', 'true') == 'true'
 
     nif_body = request.body.read()
     nif_doc = NIFCollection.loads(nif_body)
@@ -117,5 +117,5 @@ def js(fname):
 if __name__ == '__main__':
     run(host='0.0.0.0', port=8457, debug=True)
 
-bottle.debug(True)
+# bottle.debug(True)
 app = application = default_app()

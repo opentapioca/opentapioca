@@ -131,7 +131,7 @@ query. The SPARQL query is written in a file:
 
 ::
 
-   tapioca index-sparql my_collection_name my_sparql_query_file --propfile profiles/human_organization_place.json
+   tapioca index-sparql my_collection_name my_sparql_query_file --profile profiles/human_organization_place.json
 
 
 The SPARQL query is required to have a variable `item` which ranges over the items to index. It is recommended
