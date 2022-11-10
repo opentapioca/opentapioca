@@ -6,8 +6,9 @@ requests
 requests-cache
 requests_mock
 unidecode
-pytest
-pytest_mock
+pytest==7.0.1
+py==1.11.0
+pytest_mock==3.6.1
 click
 pynif
 sseclient
