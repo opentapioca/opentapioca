@@ -70,7 +70,7 @@ matrix and a pagerank vector in four steps:
 
 This slightly convoluted setup makes it possible to compute the
 adjacency matrix and pagerank from entire dumps on a machine with little
-memory (8GB).
+memory (32GB).
 
 Indexing for tagging
 --------------------
