@@ -41,4 +41,5 @@ jobs:
       - name: run coverage
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: "${{ matrix.solr-version == '8.7' }}"
         run: coverage run --source=opentapioca --omit="*/tests/*" -m py.test && coveralls --service=github
