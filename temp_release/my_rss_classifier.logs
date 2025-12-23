@@ -1,0 +1,562 @@
+((.env) ) matthew@MacBookPro opentapioca % tapioca train-classifier -c solr_collection -b wd_2025-12-10.bow.pkl -p wd_2025-12-10.pgrank.npy -d data/RSS-500_wd.train.ttl -o my_rss_classifier.pkl
+2025-12-22 21:25:34,370 opentapioca.classifier INFO     Chunk lengths:
+2025-12-22 21:25:34,370 opentapioca.classifier INFO     [75, 75, 75, 75, 75]
+2025-12-22 21:25:34,370 opentapioca.classifier INFO     0...
+2025-12-22 21:25:37,561 opentapioca.classifier INFO     100...
+2025-12-22 21:25:39,687 opentapioca.classifier INFO     200...
+2025-12-22 21:25:41,937 opentapioca.classifier INFO     300...
+2025-12-22 21:25:44,760 opentapioca.classifier INFO     ----- 0/180
+2025-12-22 21:25:44,760 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:25:44,760 opentapioca.classifier INFO     {'precision': 0.2048376348148843, 'recall': 0.5272127317995615, 'f1': 0.29474129270896565}
+(best so far)
+2025-12-22 21:25:46,594 opentapioca.classifier INFO     ----- 1/180
+2025-12-22 21:25:46,594 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:25:46,594 opentapioca.classifier INFO     {'precision': 0.20831951170255505, 'recall': 0.5340053773562521, 'f1': 0.2993963290086356}
+(best so far)
+2025-12-22 21:25:48,368 opentapioca.classifier INFO     ----- 2/180
+2025-12-22 21:25:48,368 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:25:48,368 opentapioca.classifier INFO     {'precision': 0.20847042299888519, 'recall': 0.5340053773562521, 'f1': 0.29956588307664855}
+(best so far)
+2025-12-22 21:25:50,105 opentapioca.classifier INFO     ----- 3/180
+2025-12-22 21:25:50,105 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:25:50,105 opentapioca.classifier INFO     {'precision': 0.2084372104459844, 'recall': 0.5340309136177434, 'f1': 0.29946808371885464}
+2025-12-22 21:25:51,803 opentapioca.classifier INFO     ----- 4/180
+2025-12-22 21:25:51,803 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:25:51,803 opentapioca.classifier INFO     {'precision': 0.20916605589571766, 'recall': 0.5342404431012026, 'f1': 0.30027064321046865}
+(best so far)
+2025-12-22 21:25:53,606 opentapioca.classifier INFO     ----- 5/180
+2025-12-22 21:25:53,606 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:25:53,606 opentapioca.classifier INFO     {'precision': 0.20466992368610631, 'recall': 0.5272127317995615, 'f1': 0.29456750299889023}
+2025-12-22 21:25:55,303 opentapioca.classifier INFO     ----- 6/180
+2025-12-22 21:25:55,303 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:25:55,303 opentapioca.classifier INFO     {'precision': 0.20850462071119347, 'recall': 0.5340053773562521, 'f1': 0.2995842400640694}
+2025-12-22 21:25:57,035 opentapioca.classifier INFO     ----- 7/180
+2025-12-22 21:25:57,035 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:25:57,036 opentapioca.classifier INFO     {'precision': 0.20827650710990203, 'recall': 0.5340053773562521, 'f1': 0.2993546666017635}
+2025-12-22 21:25:58,683 opentapioca.classifier INFO     ----- 8/180
+2025-12-22 21:25:58,683 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:25:58,683 opentapioca.classifier INFO     {'precision': 0.20734938715208506, 'recall': 0.5317837226065074, 'f1': 0.2979870950846248}
+2025-12-22 21:26:00,314 opentapioca.classifier INFO     ----- 9/180
+2025-12-22 21:26:00,314 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:26:00,314 opentapioca.classifier INFO     {'precision': 0.20917305554381285, 'recall': 0.5342404431012026, 'f1': 0.3003134727212373}
+(best so far)
+2025-12-22 21:26:02,086 opentapioca.classifier INFO     ----- 10/180
+2025-12-22 21:26:02,086 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:26:02,086 opentapioca.classifier INFO     {'precision': 0.2064040797025954, 'recall': 0.5272127317995615, 'f1': 0.2963878505782394}
+2025-12-22 21:26:03,775 opentapioca.classifier INFO     ----- 11/180
+2025-12-22 21:26:03,775 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:26:03,775 opentapioca.classifier INFO     {'precision': 0.20617581492057008, 'recall': 0.5272382680610529, 'f1': 0.29610431614393146}
+2025-12-22 21:26:05,406 opentapioca.classifier INFO     ----- 12/180
+2025-12-22 21:26:05,406 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:26:05,406 opentapioca.classifier INFO     {'precision': 0.20758923310102648, 'recall': 0.5295109953337802, 'f1': 0.29791722627435907}
+2025-12-22 21:26:07,021 opentapioca.classifier INFO     ----- 13/180
+2025-12-22 21:26:07,021 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:26:07,021 opentapioca.classifier INFO     {'precision': 0.2078881363895766, 'recall': 0.5317837226065074, 'f1': 0.29857868863999587}
+2025-12-22 21:26:08,646 opentapioca.classifier INFO     ----- 14/180
+2025-12-22 21:26:08,646 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:26:08,646 opentapioca.classifier INFO     {'precision': 0.2092070372259052, 'recall': 0.5365625591873636, 'f1': 0.3006945566616318}
+(best so far)
+2025-12-22 21:26:10,513 opentapioca.classifier INFO     ----- 15/180
+2025-12-22 21:26:10,513 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:26:10,513 opentapioca.classifier INFO     {'precision': 0.2048376348148843, 'recall': 0.5272127317995615, 'f1': 0.29474129270896565}
+2025-12-22 21:26:12,287 opentapioca.classifier INFO     ----- 16/180
+2025-12-22 21:26:12,287 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:26:12,287 opentapioca.classifier INFO     {'precision': 0.20831951170255505, 'recall': 0.5340053773562521, 'f1': 0.2993963290086356}
+2025-12-22 21:26:14,035 opentapioca.classifier INFO     ----- 17/180
+2025-12-22 21:26:14,035 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:26:14,035 opentapioca.classifier INFO     {'precision': 0.20847042299888519, 'recall': 0.5340053773562521, 'f1': 0.29956588307664855}
+2025-12-22 21:26:15,859 opentapioca.classifier INFO     ----- 18/180
+2025-12-22 21:26:15,860 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:26:15,860 opentapioca.classifier INFO     {'precision': 0.2084372104459844, 'recall': 0.5340309136177434, 'f1': 0.29946808371885464}
+2025-12-22 21:26:17,551 opentapioca.classifier INFO     ----- 19/180
+2025-12-22 21:26:17,551 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:26:17,551 opentapioca.classifier INFO     {'precision': 0.20916605589571766, 'recall': 0.5342404431012026, 'f1': 0.30027064321046865}
+2025-12-22 21:26:19,246 opentapioca.classifier INFO     ----- 20/180
+2025-12-22 21:26:19,246 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:26:19,246 opentapioca.classifier INFO     {'precision': 0.20466992368610631, 'recall': 0.5272127317995615, 'f1': 0.29456750299889023}
+2025-12-22 21:26:21,032 opentapioca.classifier INFO     ----- 21/180
+2025-12-22 21:26:21,032 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:26:21,032 opentapioca.classifier INFO     {'precision': 0.20850462071119347, 'recall': 0.5340053773562521, 'f1': 0.2995842400640694}
+2025-12-22 21:26:22,734 opentapioca.classifier INFO     ----- 22/180
+2025-12-22 21:26:22,734 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:26:22,734 opentapioca.classifier INFO     {'precision': 0.20827650710990203, 'recall': 0.5340053773562521, 'f1': 0.2993546666017635}
+2025-12-22 21:26:24,477 opentapioca.classifier INFO     ----- 23/180
+2025-12-22 21:26:24,477 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:26:24,477 opentapioca.classifier INFO     {'precision': 0.20734938715208506, 'recall': 0.5317837226065074, 'f1': 0.2979870950846248}
+2025-12-22 21:26:26,118 opentapioca.classifier INFO     ----- 24/180
+2025-12-22 21:26:26,118 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:26:26,118 opentapioca.classifier INFO     {'precision': 0.20917305554381285, 'recall': 0.5342404431012026, 'f1': 0.3003134727212373}
+2025-12-22 21:26:27,798 opentapioca.classifier INFO     ----- 25/180
+2025-12-22 21:26:27,798 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:26:27,798 opentapioca.classifier INFO     {'precision': 0.2064040797025954, 'recall': 0.5272127317995615, 'f1': 0.2963878505782394}
+2025-12-22 21:26:29,619 opentapioca.classifier INFO     ----- 26/180
+2025-12-22 21:26:29,619 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:26:29,619 opentapioca.classifier INFO     {'precision': 0.20617581492057008, 'recall': 0.5272382680610529, 'f1': 0.29610431614393146}
+2025-12-22 21:26:31,355 opentapioca.classifier INFO     ----- 27/180
+2025-12-22 21:26:31,355 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:26:31,355 opentapioca.classifier INFO     {'precision': 0.20758923310102648, 'recall': 0.5295109953337802, 'f1': 0.29791722627435907}
+2025-12-22 21:26:33,106 opentapioca.classifier INFO     ----- 28/180
+2025-12-22 21:26:33,106 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:26:33,106 opentapioca.classifier INFO     {'precision': 0.2078881363895766, 'recall': 0.5317837226065074, 'f1': 0.29857868863999587}
+2025-12-22 21:26:34,721 opentapioca.classifier INFO     ----- 29/180
+2025-12-22 21:26:34,721 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:26:34,721 opentapioca.classifier INFO     {'precision': 0.2092070372259052, 'recall': 0.5365625591873636, 'f1': 0.3006945566616318}
+2025-12-22 21:26:36,587 opentapioca.classifier INFO     ----- 30/180
+2025-12-22 21:26:36,587 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:26:36,587 opentapioca.classifier INFO     {'precision': 0.2048376348148843, 'recall': 0.5272127317995615, 'f1': 0.29474129270896565}
+2025-12-22 21:26:38,372 opentapioca.classifier INFO     ----- 31/180
+2025-12-22 21:26:38,372 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:26:38,372 opentapioca.classifier INFO     {'precision': 0.20831951170255505, 'recall': 0.5340053773562521, 'f1': 0.2993963290086356}
+2025-12-22 21:26:40,106 opentapioca.classifier INFO     ----- 32/180
+2025-12-22 21:26:40,106 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:26:40,106 opentapioca.classifier INFO     {'precision': 0.20847042299888519, 'recall': 0.5340053773562521, 'f1': 0.29956588307664855}
+2025-12-22 21:26:41,825 opentapioca.classifier INFO     ----- 33/180
+2025-12-22 21:26:41,825 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:26:41,825 opentapioca.classifier INFO     {'precision': 0.2084372104459844, 'recall': 0.5340309136177434, 'f1': 0.29946808371885464}
+2025-12-22 21:26:43,600 opentapioca.classifier INFO     ----- 34/180
+2025-12-22 21:26:43,600 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:26:43,600 opentapioca.classifier INFO     {'precision': 0.20916605589571766, 'recall': 0.5342404431012026, 'f1': 0.30027064321046865}
+2025-12-22 21:26:45,480 opentapioca.classifier INFO     ----- 35/180
+2025-12-22 21:26:45,480 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:26:45,480 opentapioca.classifier INFO     {'precision': 0.20466992368610631, 'recall': 0.5272127317995615, 'f1': 0.29456750299889023}
+2025-12-22 21:26:47,267 opentapioca.classifier INFO     ----- 36/180
+2025-12-22 21:26:47,267 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:26:47,267 opentapioca.classifier INFO     {'precision': 0.20850462071119347, 'recall': 0.5340053773562521, 'f1': 0.2995842400640694}
+2025-12-22 21:26:49,092 opentapioca.classifier INFO     ----- 37/180
+2025-12-22 21:26:49,092 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:26:49,092 opentapioca.classifier INFO     {'precision': 0.20827650710990203, 'recall': 0.5340053773562521, 'f1': 0.2993546666017635}
+2025-12-22 21:26:50,895 opentapioca.classifier INFO     ----- 38/180
+2025-12-22 21:26:50,895 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:26:50,895 opentapioca.classifier INFO     {'precision': 0.20734938715208506, 'recall': 0.5317837226065074, 'f1': 0.2979870950846248}
+2025-12-22 21:26:52,627 opentapioca.classifier INFO     ----- 39/180
+2025-12-22 21:26:52,628 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:26:52,628 opentapioca.classifier INFO     {'precision': 0.20917305554381285, 'recall': 0.5342404431012026, 'f1': 0.3003134727212373}
+2025-12-22 21:26:54,408 opentapioca.classifier INFO     ----- 40/180
+2025-12-22 21:26:54,408 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:26:54,408 opentapioca.classifier INFO     {'precision': 0.2064040797025954, 'recall': 0.5272127317995615, 'f1': 0.2963878505782394}
+2025-12-22 21:26:56,138 opentapioca.classifier INFO     ----- 41/180
+2025-12-22 21:26:56,138 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:26:56,138 opentapioca.classifier INFO     {'precision': 0.20617581492057008, 'recall': 0.5272382680610529, 'f1': 0.29610431614393146}
+2025-12-22 21:26:57,969 opentapioca.classifier INFO     ----- 42/180
+2025-12-22 21:26:57,969 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:26:57,969 opentapioca.classifier INFO     {'precision': 0.20758923310102648, 'recall': 0.5295109953337802, 'f1': 0.29791722627435907}
+2025-12-22 21:26:59,725 opentapioca.classifier INFO     ----- 43/180
+2025-12-22 21:26:59,725 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:26:59,725 opentapioca.classifier INFO     {'precision': 0.2078881363895766, 'recall': 0.5317837226065074, 'f1': 0.29857868863999587}
+2025-12-22 21:27:01,445 opentapioca.classifier INFO     ----- 44/180
+2025-12-22 21:27:01,445 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 50, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:27:01,445 opentapioca.classifier INFO     {'precision': 0.2092070372259052, 'recall': 0.5365625591873636, 'f1': 0.3006945566616318}
+2025-12-22 21:27:04,022 opentapioca.classifier INFO     ----- 45/180
+2025-12-22 21:27:04,022 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:27:04,022 opentapioca.classifier INFO     {'precision': 0.20543191212234022, 'recall': 0.5250149296017593, 'f1': 0.29493981701631405}
+2025-12-22 21:27:06,272 opentapioca.classifier INFO     ----- 46/180
+2025-12-22 21:27:06,272 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:27:06,272 opentapioca.classifier INFO     {'precision': 0.20770740063481724, 'recall': 0.5272621206129953, 'f1': 0.29762755636643373}
+2025-12-22 21:27:08,510 opentapioca.classifier INFO     ----- 47/180
+2025-12-22 21:27:08,510 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:27:08,510 opentapioca.classifier INFO     {'precision': 0.20876655552709725, 'recall': 0.5294854590722888, 'f1': 0.2990854234172212}
+2025-12-22 21:27:10,825 opentapioca.classifier INFO     ----- 48/180
+2025-12-22 21:27:10,825 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:27:10,825 opentapioca.classifier INFO     {'precision': 0.20788348839133033, 'recall': 0.5272382680610529, 'f1': 0.2978488784345876}
+2025-12-22 21:27:13,025 opentapioca.classifier INFO     ----- 49/180
+2025-12-22 21:27:13,025 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:27:13,025 opentapioca.classifier INFO     {'precision': 0.21111716928963456, 'recall': 0.5368214774842567, 'f1': 0.30273584629512545}
+(best so far)
+2025-12-22 21:27:15,500 opentapioca.classifier INFO     ----- 50/180
+2025-12-22 21:27:15,500 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:27:15,500 opentapioca.classifier INFO     {'precision': 0.20601670419882148, 'recall': 0.5250149296017593, 'f1': 0.2955652320707584}
+2025-12-22 21:27:17,767 opentapioca.classifier INFO     ----- 51/180
+2025-12-22 21:27:17,768 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:27:17,768 opentapioca.classifier INFO     {'precision': 0.20819934523342634, 'recall': 0.5295348478857226, 'f1': 0.29850094069995226}
+2025-12-22 21:27:20,062 opentapioca.classifier INFO     ----- 52/180
+2025-12-22 21:27:20,063 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:27:20,063 opentapioca.classifier INFO     {'precision': 0.20806673543554663, 'recall': 0.5272382680610529, 'f1': 0.2980161842289031}
+2025-12-22 21:27:22,421 opentapioca.classifier INFO     ----- 53/180
+2025-12-22 21:27:22,421 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:27:22,421 opentapioca.classifier INFO     {'precision': 0.2087714959268348, 'recall': 0.5272382680610529, 'f1': 0.2987644780171129}
+2025-12-22 21:27:24,594 opentapioca.classifier INFO     ----- 54/180
+2025-12-22 21:27:24,594 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:27:24,594 opentapioca.classifier INFO     {'precision': 0.21060612275082558, 'recall': 0.5345487502115294, 'f1': 0.3018708187436143}
+2025-12-22 21:27:26,823 opentapioca.classifier INFO     ----- 55/180
+2025-12-22 21:27:26,823 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:27:26,823 opentapioca.classifier INFO     {'precision': 0.20558874570559538, 'recall': 0.5227677385905234, 'f1': 0.2947845220705292}
+2025-12-22 21:27:29,028 opentapioca.classifier INFO     ----- 56/180
+2025-12-22 21:27:29,028 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:27:29,028 opentapioca.classifier INFO     {'precision': 0.20689388482464735, 'recall': 0.5250898546766845, 'f1': 0.2964792265991766}
+2025-12-22 21:27:31,211 opentapioca.classifier INFO     ----- 57/180
+2025-12-22 21:27:31,211 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:27:31,211 opentapioca.classifier INFO     {'precision': 0.2074883506040857, 'recall': 0.5250898546766845, 'f1': 0.29710129046193484}
+2025-12-22 21:27:33,469 opentapioca.classifier INFO     ----- 58/180
+2025-12-22 21:27:33,469 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:27:33,469 opentapioca.classifier INFO     {'precision': 0.20775613202833626, 'recall': 0.5253487729735774, 'f1': 0.29747279679541766}
+2025-12-22 21:27:35,624 opentapioca.classifier INFO     ----- 59/180
+2025-12-22 21:27:35,624 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:27:35,624 opentapioca.classifier INFO     {'precision': 0.2100118382188641, 'recall': 0.5320664934553428, 'f1': 0.30086885025649995}
+2025-12-22 21:27:37,984 opentapioca.classifier INFO     ----- 60/180
+2025-12-22 21:27:37,984 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:27:37,984 opentapioca.classifier INFO     {'precision': 0.20543191212234022, 'recall': 0.5250149296017593, 'f1': 0.29493981701631405}
+2025-12-22 21:27:40,234 opentapioca.classifier INFO     ----- 61/180
+2025-12-22 21:27:40,234 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:27:40,234 opentapioca.classifier INFO     {'precision': 0.20770740063481724, 'recall': 0.5272621206129953, 'f1': 0.29762755636643373}
+2025-12-22 21:27:42,554 opentapioca.classifier INFO     ----- 62/180
+2025-12-22 21:27:42,554 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:27:42,554 opentapioca.classifier INFO     {'precision': 0.20876655552709725, 'recall': 0.5294854590722888, 'f1': 0.2990854234172212}
+2025-12-22 21:27:44,904 opentapioca.classifier INFO     ----- 63/180
+2025-12-22 21:27:44,904 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:27:44,904 opentapioca.classifier INFO     {'precision': 0.20788348839133033, 'recall': 0.5272382680610529, 'f1': 0.2978488784345876}
+2025-12-22 21:27:47,172 opentapioca.classifier INFO     ----- 64/180
+2025-12-22 21:27:47,172 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:27:47,172 opentapioca.classifier INFO     {'precision': 0.21111716928963456, 'recall': 0.5368214774842567, 'f1': 0.30273584629512545}
+2025-12-22 21:27:49,761 opentapioca.classifier INFO     ----- 65/180
+2025-12-22 21:27:49,761 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:27:49,761 opentapioca.classifier INFO     {'precision': 0.20601670419882148, 'recall': 0.5250149296017593, 'f1': 0.2955652320707584}
+2025-12-22 21:27:52,133 opentapioca.classifier INFO     ----- 66/180
+2025-12-22 21:27:52,133 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:27:52,133 opentapioca.classifier INFO     {'precision': 0.20819934523342634, 'recall': 0.5295348478857226, 'f1': 0.29850094069995226}
+2025-12-22 21:27:54,575 opentapioca.classifier INFO     ----- 67/180
+2025-12-22 21:27:54,576 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:27:54,576 opentapioca.classifier INFO     {'precision': 0.20806673543554663, 'recall': 0.5272382680610529, 'f1': 0.2980161842289031}
+2025-12-22 21:27:56,911 opentapioca.classifier INFO     ----- 68/180
+2025-12-22 21:27:56,911 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:27:56,911 opentapioca.classifier INFO     {'precision': 0.2087714959268348, 'recall': 0.5272382680610529, 'f1': 0.2987644780171129}
+2025-12-22 21:27:59,162 opentapioca.classifier INFO     ----- 69/180
+2025-12-22 21:27:59,162 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:27:59,162 opentapioca.classifier INFO     {'precision': 0.21060612275082558, 'recall': 0.5345487502115294, 'f1': 0.3018708187436143}
+2025-12-22 21:28:01,483 opentapioca.classifier INFO     ----- 70/180
+2025-12-22 21:28:01,484 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:28:01,484 opentapioca.classifier INFO     {'precision': 0.20558874570559538, 'recall': 0.5227677385905234, 'f1': 0.2947845220705292}
+2025-12-22 21:28:03,755 opentapioca.classifier INFO     ----- 71/180
+2025-12-22 21:28:03,755 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:28:03,755 opentapioca.classifier INFO     {'precision': 0.20689388482464735, 'recall': 0.5250898546766845, 'f1': 0.2964792265991766}
+2025-12-22 21:28:06,081 opentapioca.classifier INFO     ----- 72/180
+2025-12-22 21:28:06,081 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:28:06,081 opentapioca.classifier INFO     {'precision': 0.2074883506040857, 'recall': 0.5250898546766845, 'f1': 0.29710129046193484}
+2025-12-22 21:28:08,335 opentapioca.classifier INFO     ----- 73/180
+2025-12-22 21:28:08,335 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:28:08,335 opentapioca.classifier INFO     {'precision': 0.20775613202833626, 'recall': 0.5253487729735774, 'f1': 0.29747279679541766}
+2025-12-22 21:28:10,564 opentapioca.classifier INFO     ----- 74/180
+2025-12-22 21:28:10,564 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:28:10,564 opentapioca.classifier INFO     {'precision': 0.2100118382188641, 'recall': 0.5320664934553428, 'f1': 0.30086885025649995}
+2025-12-22 21:28:12,964 opentapioca.classifier INFO     ----- 75/180
+2025-12-22 21:28:12,964 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:28:12,964 opentapioca.classifier INFO     {'precision': 0.20543191212234022, 'recall': 0.5250149296017593, 'f1': 0.29493981701631405}
+2025-12-22 21:28:15,287 opentapioca.classifier INFO     ----- 76/180
+2025-12-22 21:28:15,287 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:28:15,287 opentapioca.classifier INFO     {'precision': 0.20770740063481724, 'recall': 0.5272621206129953, 'f1': 0.29762755636643373}
+2025-12-22 21:28:17,749 opentapioca.classifier INFO     ----- 77/180
+2025-12-22 21:28:17,749 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:28:17,749 opentapioca.classifier INFO     {'precision': 0.20876655552709725, 'recall': 0.5294854590722888, 'f1': 0.2990854234172212}
+2025-12-22 21:28:20,112 opentapioca.classifier INFO     ----- 78/180
+2025-12-22 21:28:20,112 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:28:20,112 opentapioca.classifier INFO     {'precision': 0.20788348839133033, 'recall': 0.5272382680610529, 'f1': 0.2978488784345876}
+2025-12-22 21:28:22,539 opentapioca.classifier INFO     ----- 79/180
+2025-12-22 21:28:22,539 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:28:22,539 opentapioca.classifier INFO     {'precision': 0.21111716928963456, 'recall': 0.5368214774842567, 'f1': 0.30273584629512545}
+2025-12-22 21:28:24,913 opentapioca.classifier INFO     ----- 80/180
+2025-12-22 21:28:24,914 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:28:24,914 opentapioca.classifier INFO     {'precision': 0.20601670419882148, 'recall': 0.5250149296017593, 'f1': 0.2955652320707584}
+2025-12-22 21:28:27,282 opentapioca.classifier INFO     ----- 81/180
+2025-12-22 21:28:27,282 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:28:27,282 opentapioca.classifier INFO     {'precision': 0.20819934523342634, 'recall': 0.5295348478857226, 'f1': 0.29850094069995226}
+2025-12-22 21:28:29,791 opentapioca.classifier INFO     ----- 82/180
+2025-12-22 21:28:29,791 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:28:29,791 opentapioca.classifier INFO     {'precision': 0.20806673543554663, 'recall': 0.5272382680610529, 'f1': 0.2980161842289031}
+2025-12-22 21:28:32,174 opentapioca.classifier INFO     ----- 83/180
+2025-12-22 21:28:32,174 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:28:32,174 opentapioca.classifier INFO     {'precision': 0.2087714959268348, 'recall': 0.5272382680610529, 'f1': 0.2987644780171129}
+2025-12-22 21:28:34,595 opentapioca.classifier INFO     ----- 84/180
+2025-12-22 21:28:34,595 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:28:34,595 opentapioca.classifier INFO     {'precision': 0.21060612275082558, 'recall': 0.5345487502115294, 'f1': 0.3018708187436143}
+2025-12-22 21:28:36,866 opentapioca.classifier INFO     ----- 85/180
+2025-12-22 21:28:36,866 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:28:36,866 opentapioca.classifier INFO     {'precision': 0.20558874570559538, 'recall': 0.5227677385905234, 'f1': 0.2947845220705292}
+2025-12-22 21:28:39,175 opentapioca.classifier INFO     ----- 86/180
+2025-12-22 21:28:39,175 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:28:39,175 opentapioca.classifier INFO     {'precision': 0.20689388482464735, 'recall': 0.5250898546766845, 'f1': 0.2964792265991766}
+2025-12-22 21:28:41,442 opentapioca.classifier INFO     ----- 87/180
+2025-12-22 21:28:41,442 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:28:41,442 opentapioca.classifier INFO     {'precision': 0.2074883506040857, 'recall': 0.5250898546766845, 'f1': 0.29710129046193484}
+2025-12-22 21:28:43,719 opentapioca.classifier INFO     ----- 88/180
+2025-12-22 21:28:43,719 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:28:43,719 opentapioca.classifier INFO     {'precision': 0.20775613202833626, 'recall': 0.5253487729735774, 'f1': 0.29747279679541766}
+2025-12-22 21:28:46,081 opentapioca.classifier INFO     ----- 89/180
+2025-12-22 21:28:46,081 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 75, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:28:46,081 opentapioca.classifier INFO     {'precision': 0.2100118382188641, 'recall': 0.5320664934553428, 'f1': 0.30086885025649995}
+2025-12-22 21:28:49,482 opentapioca.classifier INFO     ----- 90/180
+2025-12-22 21:28:49,482 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:28:49,482 opentapioca.classifier INFO     {'precision': 0.21583132166723729, 'recall': 0.5391674461223601, 'f1': 0.30813849506044483}
+(best so far)
+2025-12-22 21:28:52,762 opentapioca.classifier INFO     ----- 91/180
+2025-12-22 21:28:52,762 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:28:52,762 opentapioca.classifier INFO     {'precision': 0.21738315703400307, 'recall': 0.541414637133596, 'f1': 0.3100679342820449}
+(best so far)
+2025-12-22 21:28:56,061 opentapioca.classifier INFO     ----- 92/180
+2025-12-22 21:28:56,061 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:28:56,061 opentapioca.classifier INFO     {'precision': 0.21667852767300372, 'recall': 0.5391419098608687, 'f1': 0.3089593808622508}
+2025-12-22 21:28:59,096 opentapioca.classifier INFO     ----- 93/180
+2025-12-22 21:28:59,096 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:28:59,096 opentapioca.classifier INFO     {'precision': 0.21781607887161422, 'recall': 0.5413652483201623, 'f1': 0.31046584977385294}
+(best so far)
+2025-12-22 21:29:02,390 opentapioca.classifier INFO     ----- 94/180
+2025-12-22 21:29:02,390 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:29:02,390 opentapioca.classifier INFO     {'precision': 0.21728738090218164, 'recall': 0.534645844128848, 'f1': 0.30875518042757844}
+2025-12-22 21:29:05,668 opentapioca.classifier INFO     ----- 95/180
+2025-12-22 21:29:05,668 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:29:05,668 opentapioca.classifier INFO     {'precision': 0.21563395022794168, 'recall': 0.5391674461223601, 'f1': 0.30792397650094583}
+2025-12-22 21:29:08,666 opentapioca.classifier INFO     ----- 96/180
+2025-12-22 21:29:08,667 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:29:08,667 opentapioca.classifier INFO     {'precision': 0.21716170252076006, 'recall': 0.541414637133596, 'f1': 0.30983256263020664}
+2025-12-22 21:29:11,833 opentapioca.classifier INFO     ----- 97/180
+2025-12-22 21:29:11,833 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:29:11,833 opentapioca.classifier INFO     {'precision': 0.21575981437878036, 'recall': 0.5368947188496328, 'f1': 0.30762772853159803}
+2025-12-22 21:29:14,903 opentapioca.classifier INFO     ----- 98/180
+2025-12-22 21:29:14,903 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:29:14,903 opentapioca.classifier INFO     {'precision': 0.21652231935867663, 'recall': 0.5369696439245579, 'f1': 0.30841478326129645}
+2025-12-22 21:29:17,973 opentapioca.classifier INFO     ----- 99/180
+2025-12-22 21:29:17,973 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:29:17,973 opentapioca.classifier INFO     {'precision': 0.2181529821797305, 'recall': 0.534645844128848, 'f1': 0.309644195540841}
+2025-12-22 21:29:21,067 opentapioca.classifier INFO     ----- 100/180
+2025-12-22 21:29:21,067 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:29:21,067 opentapioca.classifier INFO     {'precision': 0.2137731404443176, 'recall': 0.5277202778731722, 'f1': 0.30411130297915084}
+2025-12-22 21:29:24,056 opentapioca.classifier INFO     ----- 101/180
+2025-12-22 21:29:24,057 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:29:24,057 opentapioca.classifier INFO     {'precision': 0.216006028985801, 'recall': 0.5347718417267557, 'f1': 0.30753722427226826}
+2025-12-22 21:29:27,136 opentapioca.classifier INFO     ----- 102/180
+2025-12-22 21:29:27,136 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:29:27,136 opentapioca.classifier INFO     {'precision': 0.216182600906559, 'recall': 0.5347718417267557, 'f1': 0.3077118000743589}
+2025-12-22 21:29:30,131 opentapioca.classifier INFO     ----- 103/180
+2025-12-22 21:29:30,131 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:29:30,131 opentapioca.classifier INFO     {'precision': 0.21733325219762573, 'recall': 0.5347718417267557, 'f1': 0.3088493191756547}
+2025-12-22 21:29:33,122 opentapioca.classifier INFO     ----- 104/180
+2025-12-22 21:29:33,123 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:29:33,123 opentapioca.classifier INFO     {'precision': 0.2193101038579243, 'recall': 0.534386925831955, 'f1': 0.3107769687576554}
+(best so far)
+2025-12-22 21:29:36,506 opentapioca.classifier INFO     ----- 105/180
+2025-12-22 21:29:36,506 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:29:36,506 opentapioca.classifier INFO     {'precision': 0.21583132166723729, 'recall': 0.5391674461223601, 'f1': 0.30813849506044483}
+2025-12-22 21:29:39,609 opentapioca.classifier INFO     ----- 106/180
+2025-12-22 21:29:39,609 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:29:39,609 opentapioca.classifier INFO     {'precision': 0.21738315703400307, 'recall': 0.541414637133596, 'f1': 0.3100679342820449}
+2025-12-22 21:29:42,854 opentapioca.classifier INFO     ----- 107/180
+2025-12-22 21:29:42,854 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:29:42,854 opentapioca.classifier INFO     {'precision': 0.21667852767300372, 'recall': 0.5391419098608687, 'f1': 0.3089593808622508}
+2025-12-22 21:29:45,979 opentapioca.classifier INFO     ----- 108/180
+2025-12-22 21:29:45,979 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:29:45,979 opentapioca.classifier INFO     {'precision': 0.21781607887161422, 'recall': 0.5413652483201623, 'f1': 0.31046584977385294}
+2025-12-22 21:29:49,220 opentapioca.classifier INFO     ----- 109/180
+2025-12-22 21:29:49,221 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:29:49,221 opentapioca.classifier INFO     {'precision': 0.21728738090218164, 'recall': 0.534645844128848, 'f1': 0.30875518042757844}
+2025-12-22 21:29:52,315 opentapioca.classifier INFO     ----- 110/180
+2025-12-22 21:29:52,315 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:29:52,315 opentapioca.classifier INFO     {'precision': 0.21563395022794168, 'recall': 0.5391674461223601, 'f1': 0.30792397650094583}
+2025-12-22 21:29:55,418 opentapioca.classifier INFO     ----- 111/180
+2025-12-22 21:29:55,418 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:29:55,418 opentapioca.classifier INFO     {'precision': 0.21716170252076006, 'recall': 0.541414637133596, 'f1': 0.30983256263020664}
+2025-12-22 21:29:58,690 opentapioca.classifier INFO     ----- 112/180
+2025-12-22 21:29:58,690 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:29:58,690 opentapioca.classifier INFO     {'precision': 0.21575981437878036, 'recall': 0.5368947188496328, 'f1': 0.30762772853159803}
+2025-12-22 21:30:01,845 opentapioca.classifier INFO     ----- 113/180
+2025-12-22 21:30:01,845 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:30:01,845 opentapioca.classifier INFO     {'precision': 0.21652231935867663, 'recall': 0.5369696439245579, 'f1': 0.30841478326129645}
+2025-12-22 21:30:05,272 opentapioca.classifier INFO     ----- 114/180
+2025-12-22 21:30:05,272 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:30:05,272 opentapioca.classifier INFO     {'precision': 0.2181529821797305, 'recall': 0.534645844128848, 'f1': 0.309644195540841}
+2025-12-22 21:30:08,435 opentapioca.classifier INFO     ----- 115/180
+2025-12-22 21:30:08,435 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:30:08,435 opentapioca.classifier INFO     {'precision': 0.2137731404443176, 'recall': 0.5277202778731722, 'f1': 0.30411130297915084}
+2025-12-22 21:30:11,555 opentapioca.classifier INFO     ----- 116/180
+2025-12-22 21:30:11,555 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:30:11,555 opentapioca.classifier INFO     {'precision': 0.216006028985801, 'recall': 0.5347718417267557, 'f1': 0.30753722427226826}
+2025-12-22 21:30:14,700 opentapioca.classifier INFO     ----- 117/180
+2025-12-22 21:30:14,700 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:30:14,701 opentapioca.classifier INFO     {'precision': 0.216182600906559, 'recall': 0.5347718417267557, 'f1': 0.3077118000743589}
+2025-12-22 21:30:17,868 opentapioca.classifier INFO     ----- 118/180
+2025-12-22 21:30:17,868 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:30:17,868 opentapioca.classifier INFO     {'precision': 0.21733325219762573, 'recall': 0.5347718417267557, 'f1': 0.3088493191756547}
+2025-12-22 21:30:21,123 opentapioca.classifier INFO     ----- 119/180
+2025-12-22 21:30:21,123 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:30:21,123 opentapioca.classifier INFO     {'precision': 0.2193101038579243, 'recall': 0.534386925831955, 'f1': 0.3107769687576554}
+2025-12-22 21:30:24,306 opentapioca.classifier INFO     ----- 120/180
+2025-12-22 21:30:24,306 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:30:24,306 opentapioca.classifier INFO     {'precision': 0.21583132166723729, 'recall': 0.5391674461223601, 'f1': 0.30813849506044483}
+2025-12-22 21:30:27,661 opentapioca.classifier INFO     ----- 121/180
+2025-12-22 21:30:27,661 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:30:27,661 opentapioca.classifier INFO     {'precision': 0.21738315703400307, 'recall': 0.541414637133596, 'f1': 0.3100679342820449}
+2025-12-22 21:30:30,986 opentapioca.classifier INFO     ----- 122/180
+2025-12-22 21:30:30,986 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:30:30,986 opentapioca.classifier INFO     {'precision': 0.21667852767300372, 'recall': 0.5391419098608687, 'f1': 0.3089593808622508}
+2025-12-22 21:30:34,206 opentapioca.classifier INFO     ----- 123/180
+2025-12-22 21:30:34,206 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:30:34,206 opentapioca.classifier INFO     {'precision': 0.21781607887161422, 'recall': 0.5413652483201623, 'f1': 0.31046584977385294}
+2025-12-22 21:30:37,476 opentapioca.classifier INFO     ----- 124/180
+2025-12-22 21:30:37,476 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:30:37,476 opentapioca.classifier INFO     {'precision': 0.21728738090218164, 'recall': 0.534645844128848, 'f1': 0.30875518042757844}
+2025-12-22 21:30:40,674 opentapioca.classifier INFO     ----- 125/180
+2025-12-22 21:30:40,674 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:30:40,674 opentapioca.classifier INFO     {'precision': 0.21563395022794168, 'recall': 0.5391674461223601, 'f1': 0.30792397650094583}
+2025-12-22 21:30:44,002 opentapioca.classifier INFO     ----- 126/180
+2025-12-22 21:30:44,002 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:30:44,002 opentapioca.classifier INFO     {'precision': 0.21716170252076006, 'recall': 0.541414637133596, 'f1': 0.30983256263020664}
+2025-12-22 21:30:47,231 opentapioca.classifier INFO     ----- 127/180
+2025-12-22 21:30:47,231 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:30:47,231 opentapioca.classifier INFO     {'precision': 0.21575981437878036, 'recall': 0.5368947188496328, 'f1': 0.30762772853159803}
+2025-12-22 21:30:50,627 opentapioca.classifier INFO     ----- 128/180
+2025-12-22 21:30:50,627 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:30:50,627 opentapioca.classifier INFO     {'precision': 0.21652231935867663, 'recall': 0.5369696439245579, 'f1': 0.30841478326129645}
+2025-12-22 21:30:53,887 opentapioca.classifier INFO     ----- 129/180
+2025-12-22 21:30:53,887 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:30:53,887 opentapioca.classifier INFO     {'precision': 0.2181529821797305, 'recall': 0.534645844128848, 'f1': 0.309644195540841}
+2025-12-22 21:30:57,013 opentapioca.classifier INFO     ----- 130/180
+2025-12-22 21:30:57,013 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:30:57,013 opentapioca.classifier INFO     {'precision': 0.2137731404443176, 'recall': 0.5277202778731722, 'f1': 0.30411130297915084}
+2025-12-22 21:31:00,332 opentapioca.classifier INFO     ----- 131/180
+2025-12-22 21:31:00,332 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:31:00,332 opentapioca.classifier INFO     {'precision': 0.216006028985801, 'recall': 0.5347718417267557, 'f1': 0.30753722427226826}
+2025-12-22 21:31:03,499 opentapioca.classifier INFO     ----- 132/180
+2025-12-22 21:31:03,499 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:31:03,499 opentapioca.classifier INFO     {'precision': 0.216182600906559, 'recall': 0.5347718417267557, 'f1': 0.3077118000743589}
+2025-12-22 21:31:06,813 opentapioca.classifier INFO     ----- 133/180
+2025-12-22 21:31:06,813 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:31:06,813 opentapioca.classifier INFO     {'precision': 0.21733325219762573, 'recall': 0.5347718417267557, 'f1': 0.3088493191756547}
+2025-12-22 21:31:09,977 opentapioca.classifier INFO     ----- 134/180
+2025-12-22 21:31:09,977 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 150, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:31:09,977 opentapioca.classifier INFO     {'precision': 0.2193101038579243, 'recall': 0.534386925831955, 'f1': 0.3107769687576554}
+2025-12-22 21:31:13,961 opentapioca.classifier INFO     ----- 135/180
+2025-12-22 21:31:13,961 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:31:13,961 opentapioca.classifier INFO     {'precision': 0.21656049910602976, 'recall': 0.5344873871683714, 'f1': 0.3080774132289364}
+2025-12-22 21:31:17,539 opentapioca.classifier INFO     ----- 136/180
+2025-12-22 21:31:17,539 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:31:17,539 opentapioca.classifier INFO     {'precision': 0.21995093420400524, 'recall': 0.5390073054523347, 'f1': 0.3121894592548219}
+(best so far)
+2025-12-22 21:31:21,478 opentapioca.classifier INFO     ----- 137/180
+2025-12-22 21:31:21,478 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:31:21,478 opentapioca.classifier INFO     {'precision': 0.21973348131939147, 'recall': 0.5392662237492276, 'f1': 0.31199659946708}
+2025-12-22 21:31:25,229 opentapioca.classifier INFO     ----- 138/180
+2025-12-22 21:31:25,229 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:31:25,229 opentapioca.classifier INFO     {'precision': 0.2219246791094545, 'recall': 0.5413635646106134, 'f1': 0.31460340525356106}
+(best so far)
+2025-12-22 21:31:29,142 opentapioca.classifier INFO     ----- 139/180
+2025-12-22 21:31:29,142 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:31:29,142 opentapioca.classifier INFO     {'precision': 0.22233092391403547, 'recall': 0.5368436463266502, 'f1': 0.3141637860688296}
+2025-12-22 21:31:32,954 opentapioca.classifier INFO     ----- 140/180
+2025-12-22 21:31:32,954 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:31:32,954 opentapioca.classifier INFO     {'precision': 0.21614907936153943, 'recall': 0.5344873871683714, 'f1': 0.3076672995097263}
+2025-12-22 21:31:36,530 opentapioca.classifier INFO     ----- 141/180
+2025-12-22 21:31:36,530 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:31:36,530 opentapioca.classifier INFO     {'precision': 0.21933992364668664, 'recall': 0.5390073054523347, 'f1': 0.3115952535685694}
+2025-12-22 21:31:40,127 opentapioca.classifier INFO     ----- 142/180
+2025-12-22 21:31:40,127 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:31:40,127 opentapioca.classifier INFO     {'precision': 0.21880125139579687, 'recall': 0.5367345781796073, 'f1': 0.3106658733098645}
+2025-12-22 21:31:43,850 opentapioca.classifier INFO     ----- 143/180
+2025-12-22 21:31:43,850 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:31:43,850 opentapioca.classifier INFO     {'precision': 0.22093306273668875, 'recall': 0.5391657624128112, 'f1': 0.3132044620995199}
+2025-12-22 21:31:47,441 opentapioca.classifier INFO     ----- 144/180
+2025-12-22 21:31:47,441 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:31:47,441 opentapioca.classifier INFO     {'precision': 0.22183950811567998, 'recall': 0.5345964553154142, 'f1': 0.31328148392576705}
+2025-12-22 21:31:51,087 opentapioca.classifier INFO     ----- 145/180
+2025-12-22 21:31:51,087 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.8}
+2025-12-22 21:31:51,087 opentapioca.classifier INFO     {'precision': 0.21494700824833834, 'recall': 0.5322401961571355, 'f1': 0.3060562251050496}
+2025-12-22 21:31:54,649 opentapioca.classifier INFO     ----- 146/180
+2025-12-22 21:31:54,649 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.6}
+2025-12-22 21:31:54,649 opentapioca.classifier INFO     {'precision': 0.2168759911131356, 'recall': 0.5345129234298627, 'f1': 0.3083180378190854}
+2025-12-22 21:31:58,237 opentapioca.classifier INFO     ----- 147/180
+2025-12-22 21:31:58,237 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.5}
+2025-12-22 21:31:58,237 opentapioca.classifier INFO     {'precision': 0.219615968516273, 'recall': 0.5390328417138259, 'f1': 0.3118321340966803}
+2025-12-22 21:32:01,773 opentapioca.classifier INFO     ----- 148/180
+2025-12-22 21:32:01,773 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}
+2025-12-22 21:32:01,773 opentapioca.classifier INFO     {'precision': 0.21883395563415275, 'recall': 0.532473578192537, 'f1': 0.3099208807439634}
+2025-12-22 21:32:05,345 opentapioca.classifier INFO     ----- 149/180
+2025-12-22 21:32:05,346 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.3}
+2025-12-22 21:32:05,346 opentapioca.classifier INFO     {'precision': 0.22172161387277667, 'recall': 0.5368436463266502, 'f1': 0.3134965340565811}
+2025-12-22 21:32:09,123 opentapioca.classifier INFO     ----- 150/180
+2025-12-22 21:32:09,124 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:32:09,124 opentapioca.classifier INFO     {'precision': 0.21656049910602976, 'recall': 0.5344873871683714, 'f1': 0.3080774132289364}
+2025-12-22 21:32:12,715 opentapioca.classifier INFO     ----- 151/180
+2025-12-22 21:32:12,715 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:32:12,715 opentapioca.classifier INFO     {'precision': 0.21995093420400524, 'recall': 0.5390073054523347, 'f1': 0.3121894592548219}
+2025-12-22 21:32:16,519 opentapioca.classifier INFO     ----- 152/180
+2025-12-22 21:32:16,519 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:32:16,519 opentapioca.classifier INFO     {'precision': 0.21973348131939147, 'recall': 0.5392662237492276, 'f1': 0.31199659946708}
+2025-12-22 21:32:20,269 opentapioca.classifier INFO     ----- 153/180
+2025-12-22 21:32:20,269 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:32:20,269 opentapioca.classifier INFO     {'precision': 0.2219246791094545, 'recall': 0.5413635646106134, 'f1': 0.31460340525356106}
+2025-12-22 21:32:23,880 opentapioca.classifier INFO     ----- 154/180
+2025-12-22 21:32:23,880 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:32:23,880 opentapioca.classifier INFO     {'precision': 0.22233092391403547, 'recall': 0.5368436463266502, 'f1': 0.3141637860688296}
+2025-12-22 21:32:27,563 opentapioca.classifier INFO     ----- 155/180
+2025-12-22 21:32:27,563 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:32:27,563 opentapioca.classifier INFO     {'precision': 0.21614907936153943, 'recall': 0.5344873871683714, 'f1': 0.3076672995097263}
+2025-12-22 21:32:31,204 opentapioca.classifier INFO     ----- 156/180
+2025-12-22 21:32:31,204 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:32:31,204 opentapioca.classifier INFO     {'precision': 0.21933992364668664, 'recall': 0.5390073054523347, 'f1': 0.3115952535685694}
+2025-12-22 21:32:35,022 opentapioca.classifier INFO     ----- 157/180
+2025-12-22 21:32:35,022 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:32:35,022 opentapioca.classifier INFO     {'precision': 0.21880125139579687, 'recall': 0.5367345781796073, 'f1': 0.3106658733098645}
+2025-12-22 21:32:38,654 opentapioca.classifier INFO     ----- 158/180
+2025-12-22 21:32:38,654 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:32:38,654 opentapioca.classifier INFO     {'precision': 0.22093306273668875, 'recall': 0.5391657624128112, 'f1': 0.3132044620995199}
+2025-12-22 21:32:42,429 opentapioca.classifier INFO     ----- 159/180
+2025-12-22 21:32:42,429 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:32:42,429 opentapioca.classifier INFO     {'precision': 0.22183950811567998, 'recall': 0.5345964553154142, 'f1': 0.31328148392576705}
+2025-12-22 21:32:45,974 opentapioca.classifier INFO     ----- 160/180
+2025-12-22 21:32:45,974 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.8}
+2025-12-22 21:32:45,974 opentapioca.classifier INFO     {'precision': 0.21494700824833834, 'recall': 0.5322401961571355, 'f1': 0.3060562251050496}
+2025-12-22 21:32:49,498 opentapioca.classifier INFO     ----- 161/180
+2025-12-22 21:32:49,498 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.6}
+2025-12-22 21:32:49,498 opentapioca.classifier INFO     {'precision': 0.2168759911131356, 'recall': 0.5345129234298627, 'f1': 0.3083180378190854}
+2025-12-22 21:32:53,211 opentapioca.classifier INFO     ----- 162/180
+2025-12-22 21:32:53,211 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.5}
+2025-12-22 21:32:53,211 opentapioca.classifier INFO     {'precision': 0.219615968516273, 'recall': 0.5390328417138259, 'f1': 0.3118321340966803}
+2025-12-22 21:32:56,738 opentapioca.classifier INFO     ----- 163/180
+2025-12-22 21:32:56,738 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.4}
+2025-12-22 21:32:56,738 opentapioca.classifier INFO     {'precision': 0.21883395563415275, 'recall': 0.532473578192537, 'f1': 0.3099208807439634}
+2025-12-22 21:33:00,444 opentapioca.classifier INFO     ----- 164/180
+2025-12-22 21:33:00,444 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.1, 'similarity_smoothing': 0.3}
+2025-12-22 21:33:00,444 opentapioca.classifier INFO     {'precision': 0.22172161387277667, 'recall': 0.5368436463266502, 'f1': 0.3134965340565811}
+2025-12-22 21:33:04,135 opentapioca.classifier INFO     ----- 165/180
+2025-12-22 21:33:04,135 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:33:04,135 opentapioca.classifier INFO     {'precision': 0.21656049910602976, 'recall': 0.5344873871683714, 'f1': 0.3080774132289364}
+2025-12-22 21:33:07,779 opentapioca.classifier INFO     ----- 166/180
+2025-12-22 21:33:07,779 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:33:07,779 opentapioca.classifier INFO     {'precision': 0.21995093420400524, 'recall': 0.5390073054523347, 'f1': 0.3121894592548219}
+2025-12-22 21:33:11,513 opentapioca.classifier INFO     ----- 167/180
+2025-12-22 21:33:11,513 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:33:11,513 opentapioca.classifier INFO     {'precision': 0.21973348131939147, 'recall': 0.5392662237492276, 'f1': 0.31199659946708}
+2025-12-22 21:33:15,208 opentapioca.classifier INFO     ----- 168/180
+2025-12-22 21:33:15,208 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:33:15,208 opentapioca.classifier INFO     {'precision': 0.2219246791094545, 'recall': 0.5413635646106134, 'f1': 0.31460340525356106}
+2025-12-22 21:33:19,057 opentapioca.classifier INFO     ----- 169/180
+2025-12-22 21:33:19,057 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:33:19,057 opentapioca.classifier INFO     {'precision': 0.22233092391403547, 'recall': 0.5368436463266502, 'f1': 0.3141637860688296}
+2025-12-22 21:33:22,788 opentapioca.classifier INFO     ----- 170/180
+2025-12-22 21:33:22,788 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:33:22,788 opentapioca.classifier INFO     {'precision': 0.21614907936153943, 'recall': 0.5344873871683714, 'f1': 0.3076672995097263}
+2025-12-22 21:33:26,661 opentapioca.classifier INFO     ----- 171/180
+2025-12-22 21:33:26,661 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:33:26,661 opentapioca.classifier INFO     {'precision': 0.21933992364668664, 'recall': 0.5390073054523347, 'f1': 0.3115952535685694}
+2025-12-22 21:33:30,379 opentapioca.classifier INFO     ----- 172/180
+2025-12-22 21:33:30,379 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:33:30,379 opentapioca.classifier INFO     {'precision': 0.21880125139579687, 'recall': 0.5367345781796073, 'f1': 0.3106658733098645}
+2025-12-22 21:33:34,059 opentapioca.classifier INFO     ----- 173/180
+2025-12-22 21:33:34,059 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:33:34,059 opentapioca.classifier INFO     {'precision': 0.22093306273668875, 'recall': 0.5391657624128112, 'f1': 0.3132044620995199}
+2025-12-22 21:33:37,868 opentapioca.classifier INFO     ----- 174/180
+2025-12-22 21:33:37,868 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 1.0, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:33:37,868 opentapioca.classifier INFO     {'precision': 0.22183950811567998, 'recall': 0.5345964553154142, 'f1': 0.31328148392576705}
+2025-12-22 21:33:41,450 opentapioca.classifier INFO     ----- 175/180
+2025-12-22 21:33:41,451 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.8}
+2025-12-22 21:33:41,451 opentapioca.classifier INFO     {'precision': 0.21494700824833834, 'recall': 0.5322401961571355, 'f1': 0.3060562251050496}
+2025-12-22 21:33:45,195 opentapioca.classifier INFO     ----- 176/180
+2025-12-22 21:33:45,195 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.6}
+2025-12-22 21:33:45,195 opentapioca.classifier INFO     {'precision': 0.2168759911131356, 'recall': 0.5345129234298627, 'f1': 0.3083180378190854}
+2025-12-22 21:33:48,804 opentapioca.classifier INFO     ----- 177/180
+2025-12-22 21:33:48,804 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.5}
+2025-12-22 21:33:48,804 opentapioca.classifier INFO     {'precision': 0.219615968516273, 'recall': 0.5390328417138259, 'f1': 0.3118321340966803}
+2025-12-22 21:33:52,382 opentapioca.classifier INFO     ----- 178/180
+2025-12-22 21:33:52,382 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.4}
+2025-12-22 21:33:52,382 opentapioca.classifier INFO     {'precision': 0.21883395563415275, 'recall': 0.532473578192537, 'f1': 0.3099208807439634}
+2025-12-22 21:33:56,233 opentapioca.classifier INFO     ----- 179/180
+2025-12-22 21:33:56,233 opentapioca.classifier INFO     {'nb_steps': 4, 'max_similarity_distance': 200, 'C': 0.1, 'similarity': 'one_step', 'beta': 0.3, 'similarity_smoothing': 0.3}
+2025-12-22 21:33:56,233 opentapioca.classifier INFO     {'precision': 0.22172161387277667, 'recall': 0.5368436463266502, 'f1': 0.3134965340565811}
+#########
+({'nb_steps': 4, 'max_similarity_distance': 200, 'C': 10.0, 'similarity': 'one_step', 'beta': 0.2, 'similarity_smoothing': 0.4}, 0.31460340525356106)

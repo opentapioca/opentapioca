@@ -1,0 +1,115 @@
+{
+    "schema": {
+        "name": "artifact-card",
+        "release": "v0.1.3",
+        "data_source": "wikidump",
+        "dump_language": "en",
+        "dump_date": "2025-12-10"
+        },
+
+    "artifacts" : [
+        {   
+            "artifact_type": "unigram_language_model",
+            "tokenizer_vocab_size": 648833128,
+
+            "hyperparameters": {
+                "smoothing": "add_one",
+                "threshold": 2
+            },
+            "source_file": "wd_2025-12-10.bow.pkl"
+        },
+
+        {
+            "artifact_type": "page_rank",
+            "matrix_dims": [137312328, 137312328],
+
+            "hyperparameters": {
+                "k_iterations": 16,
+                "tolerance": 0.005301977678141681
+            },
+            "source_file": "wd_2025-12-10.pgrank.npy"
+
+        },
+
+
+        {
+            "FIXhere_artifact_type": "LinearSVC",
+            "data": ["istex_train.ttl"],
+
+            "hyperparameters": {
+                "nb_steps": 4, 
+                "max_similarity_distance": 200,
+                "C": 1.0,
+                "similarity": "one_step",
+                "beta": 0.2,
+                "similarity_smoothing": 0.4
+            },
+
+            "evaluation": {
+                "train": {
+                    "model_selection": "k_fold_cross_validation",
+                    "k": 5,
+                    "mean_precision": 0.7932820145266064,
+                    "mean_recall":  0.7922703009135263,
+                    "mean_f1_score": 0.7926637294178498
+                    }
+                },
+            "sklearn_version": "1.8.0",
+            "source_file": "my_istex_classifier.pkl"
+        },
+
+        {
+            "artifact_type": "LinearSVC",
+            "data": ["merged_RSS-500_and_istex_train.ttl"],
+
+            "hyperparameters": {
+                "nb_steps": 4, 
+                "max_similarity_distance": 200,
+                "C": 1.0,
+                "similarity": "one_step",
+                "beta": 0.2,
+                "similarity_smoothing": 0.3
+            },
+
+            "evaluation": {
+                "train": {
+                    "model_selection": "k_fold_cross_validation",
+                    "k": 5,
+                    "mean_precision": 0.6246668927131396,
+                    "mean_recall":  0.7514777516382419,
+                    "mean_f1_score": 0.6820627907750836
+                    }
+                },
+            "sklearn_version": "1.8.0",
+            "source_file": "my_merged_classifier.pkl"
+        },
+
+        {
+            "artifact_type": "LinearSVC",
+            "data": ["RSS-500_wd.train.ttl"],
+
+            "hyperparameters": {
+                "nb_steps": 4, 
+                "max_similarity_distance": 200,
+                "C": 10.0,
+                "similarity": "one_step",
+                "beta": 0.2,
+                "similarity_smoothing": 0.4
+            },
+
+            "evaluation": {
+                "train": {
+                    "model_selection": "k_fold_cross_validation",
+                    "k": 5,
+                    "mean_precision": 0.2219246791094545,
+                    "mean_recall":  0.5413635646106134,
+                    "mean_f1_score": 0.31460340525356106
+                    }
+                },
+            "sklearn_version": "1.8.0",
+            "source_file": "my_rss_classifier.pkl"
+        }
+
+    ]
+}
+
