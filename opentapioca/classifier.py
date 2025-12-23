@@ -152,6 +152,9 @@ class SimpleTagClassifier(object):
 
 
         self.fit = best_classifier
+        # Fix Issue #59: set the best parameters  
+        for param, val in best_params.items():
+            setattr(self, param, val)
         return best_params, best_f1
 
     def train_model(self, dataset, docids=None, docid_to_mentions=None, max_iter=100):
