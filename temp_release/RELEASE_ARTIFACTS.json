@@ -33,7 +33,7 @@
 
 
         {
-            "FIXhere_artifact_type": "LinearSVC",
+            "artifact_type": "LinearSVC",
             "data": ["istex_train.ttl"],
 
             "hyperparameters": {
