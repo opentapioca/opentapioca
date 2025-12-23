@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.6", "3.7", "3.8", "3.9"]
+        python-version: ["3.9"]
         solr-version: ["7.4", "7.5", "7.6", "7.7", "8.0", "8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "8.7"]
     steps:
       - name: checkout
