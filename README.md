@@ -5,6 +5,8 @@ OpenTapioca
 OpenTapioca is a simple and fast [Named Entity Linking system](https://en.wikipedia.org/wiki/Entity_linking) for [Wikidata](https://www.wikidata.org/). It is kept synchronous with Wikidata in real time, encouraging users to improve the results of their entity linking
 tasks by contributing back to Wikidata.
 
+The tool can be run locally and [pre-trained models](https://drive.google.com/drive/folders/1Gb0UcUclGUOKGdXsK4oxTMMeZ5fOzbQH?usp=drive_link) are available.
+
 A live instance is running at https://opentapioca.org/. To run it on a server that is powerful enough, I would need 50€/month: [please help fund the service if you can](https://en.liberapay.com/OpenTapioca).
 
 A [NIF endpoint](https://github.com/dice-group/gerbil/wiki/How-to-create-a-NIF-based-web-service) is available at:
