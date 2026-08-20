@@ -64,6 +64,6 @@ class OneStepSimilarity(EdgeSimilarityMeasure):
         if qid_a in edges_b:
             proba += beta*(1-beta)/len(edges_b)
         if len_common:
-            proba += (1-beta)*(1-beta)*(len_common/len(edges_a))*(len_common/len(edges_b))
+            proba += (1-beta)*(1-beta)*( len_common / (len(edges_a) * len(edges_b)) )
 
         return proba
