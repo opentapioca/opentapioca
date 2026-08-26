@@ -6,7 +6,7 @@ requests
 requests-cache
 requests_mock
 unidecode
-pytest==7.0.1
+pytest==9.0.3
 py==1.11.0
 pytest_mock==3.6.1
 click
